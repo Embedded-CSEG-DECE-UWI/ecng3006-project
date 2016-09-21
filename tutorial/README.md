@@ -8,7 +8,8 @@ This folder contains the files to review the following points in MPLAB-X
 5. Settings for the toolchain  
 6. Running code in the simulator  
 7. Running code using the PICKit3 debugger  
-8. Running code after programming with no debugger  
-9. Rebuiding functions in the PIC18 library  
-10. Cloning a github repository  
-11. Committing changes to a github repository  
+8. Using an oscilloscope to probe the outputs
+9. Running code after programming with no debugger  
+10. Rebuiding functions in the PIC18 library  
+11. Cloning a github repository  
+12. Committing changes to a github repository  

@@ -1,2 +1,2 @@
-# ecng3006
-Files submitted by each group
+# GroupFProject
+ECNG 3006 Group Project

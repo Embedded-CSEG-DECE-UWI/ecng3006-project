@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=cof
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c
+SOURCEFILES_QUOTED_IF_SPACED="C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c"
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o
+OBJECTFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o
 
 # Source Files
-SOURCEFILES=C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c
+SOURCEFILES=C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c
 
 
 CFLAGS=
@@ -87,7 +87,7 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=18F452
 MP_PROCESSOR_OPTION_LD=18f452
@@ -101,35 +101,35 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o: C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1443285687" 
-	@${RM} ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o   C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1196627710" 
+	@${RM} ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
-${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o: C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1443285687" 
-	@${RM} ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o   C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1443285687/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1196627710" 
+	@${RM} ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
+dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_PK3=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_PK3=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
+dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION_LD)  -w  -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/GroupFProject.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_LD} $(MP_EXTRA_LD_PRE)   -p$(MP_PROCESSOR_OPTION_LD)  -w  -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/ecng3006-project.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
 endif
 
 

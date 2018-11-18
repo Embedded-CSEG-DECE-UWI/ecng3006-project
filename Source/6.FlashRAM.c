@@ -1,5 +1,3 @@
-#include <p18cxxx.h>
-
 /* Set configuration bits for use with PICKit3 */
 #include <p18f452.h> 
 #include <stdlib.h>

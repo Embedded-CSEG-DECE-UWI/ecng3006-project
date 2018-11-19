@@ -14,7 +14,12 @@ void start(void);
 void number(void);
 void intervals(void);
 void storage(void);
+void menuinit(void);
 void menu(void);
+void checkkey(void);
+
+char key[1];
+char changekey[1];
 
 #pragma code low_vector=0x18        //taken from C18 users guide page 29
 
@@ -32,65 +37,76 @@ void low_isr(void)
 {
     WriteCmdXLCD(0b00000001);   //clears the LCD display
     keypress();                 //call the keypad function
+    changekey[0]='1';
     INTCON3bits.INT1IF = 0;     //clears the external interrupt flag
 }
 
 
 void keypress(void)  //function used to determine which key is pressed
 {
+  if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+    {
+        key[0] = '1';
+    }
+  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+    {
+        key[0] = '2';
+    } 
+  if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4)
+    {
+        key[0] = '3';
+    } 
+  if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4)
+    {
+        key[0] = '4';
+    }
+  if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+    {
+        key[0] = '5';
+    }
+  if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+    {
+        key[0] = '6';
+    }
+  if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+    {
+        key[0] = '7';
+    }
+  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+    {
+        key[0] = '8';
+    }
+  if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+    {
+        key[0] = '9';
+    }
+  if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+    {
+        key[0] = '0';
+    }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    start();
-    putrsXLCD("INSERT PROCESS 1");
-    Delay10KTCYx(200);
-    menu();
+        key[0] = 'A';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    number();
-    putrsXLCD("INSERT PROCESS 2");
-    Delay10KTCYx(200);
-    menu();
+        key[0] = 'B';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    intervals();
-    putrsXLCD("INSERT PROCESS 3");
-    Delay10KTCYx(200);
-    menu();
+        key[0] = 'C';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    storage();
-    putrsXLCD("INSERT PROCESS 4");
-    Delay10KTCYx(200);
-    menu();
+        key[0] = 'D';
     }
-    if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+  if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("INTERVALS(C)  <F");
-    SetDDRamAddr(0x10);
-    putrsXLCD("STORAGE(D)       ");
-    while(BusyXLCD());
+        key[0] = 'E';
     }
   if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("START(A)      >E");
-    SetDDRamAddr(0x10);
-    putrsXLCD("# OF READINGS(B) ");
-    while(BusyXLCD());
+        key[0] = 'F';
     }
 }
 
@@ -98,6 +114,7 @@ void start(void){}
 void number(void){}
 void intervals(void){}
 void storage(void){}
+
 void DelayFor18TCY(void) //delay
 {
      Nop();
@@ -159,6 +176,14 @@ void keypadsetup(void)
     TRISDbits.RD4 = 1; //D
 }
 
+void menuinit(void){
+    while(BusyXLCD());      //command to stall when the lcd is busy
+    putrsXLCD("MENU TEST");    //writes to the screen
+    while(BusyXLCD());
+    Delay10KTCYx(200);
+    while(BusyXLCD());
+    WriteCmdXLCD(0b00000001);
+}
 void menu(void)
 {
     while(BusyXLCD());
@@ -168,17 +193,75 @@ void menu(void)
     putrsXLCD("# OF READINGS(B) ");
     while(BusyXLCD());
 }
+
+void checkkey(void){
+         if (key[0] == 'A'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            start();
+            putrsXLCD("INSERT PROCESS 1");
+            Delay10KTCYx(200);
+            WriteCmdXLCD(0b00000001);
+            menu();
+        }
+        if (key[0]== 'B'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            number();
+            putrsXLCD("INSERT PROCESS 2");
+            Delay10KTCYx(200);
+            WriteCmdXLCD(0b00000001);
+            menu();
+        }
+        if (key[0]== 'C'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            intervals();
+            putrsXLCD("INSERT PROCESS 3");
+            Delay10KTCYx(200);
+            WriteCmdXLCD(0b00000001);
+            menu();
+        }
+        if (key[0]== 'D'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            storage();
+            putrsXLCD("INSERT PROCESS 4");
+            Delay10KTCYx(200);
+            WriteCmdXLCD(0b00000001);
+            menu();
+        }
+        if (key[0]== 'E'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            putrsXLCD("INTERVALS(C)  <F");
+            SetDDRamAddr(0x10);
+            putrsXLCD("STORAGE(D)       ");
+            while(BusyXLCD());
+        }
+        if (key[0]== 'F'){
+            while(BusyXLCD());
+            SetDDRamAddr(0x00);
+            putrsXLCD("START(A)      >E");
+            SetDDRamAddr(0x10);
+            putrsXLCD("# OF READINGS(B) ");
+            while(BusyXLCD());  
+        }
+                 changekey[0]='0';
+}
 void main(void)         //main function
 {
     interruptinit();        //call interrupt setup function
     keypadsetup();          //call keypad setup function
     LCDinit();              //call lcd setup function
-    while(BusyXLCD());      //command to stall when the lcd is busy
-    putrsXLCD("MENU TEST");    //writes to the screen
-    while(BusyXLCD());
-    Delay10KTCYx(200);
-    while(BusyXLCD());
-    WriteCmdXLCD(0b00000001);
+    menuinit();
     menu();
-    while(1);               //waits
+    while(1){
+        if (changekey[0]=='1')
+        {
+            checkkey();
+        }
+        Delay10KTCYx(50);
+    }
+    
 }

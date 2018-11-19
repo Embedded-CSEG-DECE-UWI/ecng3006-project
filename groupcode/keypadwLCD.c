@@ -10,6 +10,7 @@
 
 void low_isr(void);
 void keypress(void);
+char key[1];
 
 #pragma code low_vector=0x18        //taken from C18 users guide page 29
 
@@ -35,100 +36,68 @@ void keypress(void)  //function used to determine which key is pressed
 {
   if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("1");
+        key[0] = '1';
     }
-  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+  /*if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("2");
+        key[0] = '2';
     } 
   if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4)
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("3");
+        key[0] = '3';
     } 
   if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4)
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("4");
+        key[0] = '4';
     }
   if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("5");
+        key[0] = '5';
     }
   if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("6");
+        key[0] = '6';
     }
   if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("7");
+        key[0] = '7';
     }
   if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("8");
+        key[0] = '8';
     }
   if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("9");
+        key[0] = '9';
     }
   if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("0");
+        key[0] = '0';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("A");
+        key[0] = 'A';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("B");
+        key[0] = 'B';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("C");
+        key[0] = 'C';
     }
   if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("D");
+        key[0] = 'D';
     }
   if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("E");
+        key[0] = 'E';
     }
   if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    putrsXLCD("F");
-    }
+        key[0] = 'F';
+    }*/
 }
 void DelayFor18TCY(void) //delay
 {
@@ -197,6 +166,15 @@ void main(void)         //main function
     LCDinit();              //call lcd setup function
     while(BusyXLCD());      //command to stall when the lcd is busy
     putrsXLCD("KEYPAD TEST");    //writes to the screen
+    Delay10KTCYx(200);
+    WriteCmdXLCD(0b00000001);
     while(BusyXLCD());
-    while(1);               //waits
+    key[0] = 'N';
+    key[1] = '\0';
+    putsXLCD(key);
+    while(1){        
+        putsXLCD(key);                  //write from data memory to screen
+        Delay10KTCYx(50);               //delay
+        WriteCmdXLCD(0b00000001);       //clears the screen
+    }                        
 }

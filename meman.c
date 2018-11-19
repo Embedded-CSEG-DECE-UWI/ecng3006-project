@@ -1,6 +1,6 @@
 #include "meman.h"
 #include "SST39S_v1.h"
-
+// see if git works
 float tempDisp[4] = {0.0, 0.0, 0.0, 0.0};
 float glucDisp[4] = {0.0, 0.0, 0.0, 0.0};
 float hrvDisp[4] = {0.0, 0.0, 0.0, 0.0};

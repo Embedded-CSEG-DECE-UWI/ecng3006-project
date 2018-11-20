@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <delays.h>
-#include "Source/ow.h"
+#include "ow.h"
 #include "xlcd.h"
 
 /* Set configuration bits for use with PICKit3 */
@@ -22,6 +22,9 @@ unsigned int temp_integer = 0;
 unsigned int temp_fraction = 0;
 unsigned int temp_sign = 0;
 
+unsigned int temp_hundreds = 0;
+unsigned int temp_tens = 0;
+unsigned int temp_ones = 0;
 
 float temp_float = 0.0;
 
@@ -30,6 +33,7 @@ char lcdVariable[20];                               //array that will contain th
 void readTemp (void);
 void obtainInteger (void);
 void obtainFraction (void);
+void approximation (void);
 void obtainSign (void); 
 void resetTempConversion (void);
 
@@ -83,7 +87,7 @@ void readTemp (void){
     ow_write_byte(0xCC);                                    //Skip ROM check command
     ow_write_byte(0x44);                                    //Begin temperature read and conversion
     
-    Delay10KTCYx(100);                                     //The required time needed for the temp conversion process is 750ms. 1s was implemented to give
+    Delay10KTCYx(80);                                     //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
                                                             //a sizeable error window
     ow_reset();
     ow_write_byte(0xCC);
@@ -114,16 +118,34 @@ void obtainFraction (void){
     }
     
     temp_fraction = temp_float*1000;
+     
+    approximation();
+}
+
+void approximation (void){
+    temp_hundreds = temp_fraction/100;
+    temp_tens = temp_fraction - (temp_hundreds*100);
+    
+    temp_tens = temp_tens/10;
+    temp_ones = temp_fraction - (temp_hundreds*100) - (temp_tens*10);
+    
+    if (temp_ones >= 5){
+        temp_tens += 1;
+    }
+    
+    if (temp_tens >= 5){
+        temp_hundreds +=1;
+    }
 }
 
 void obtainSign (void){
     temp_sign = (temp_read_MSB & 0xF8);
     
     if(temp_sign == 0){
-        sprintf(lcdVariable, "Temp: +%d.%03d%cC", temp_integer, temp_fraction, temp_degree);
+        sprintf(lcdVariable, "Temp:+%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
     }
     else{
-        sprintf(lcdVariable, "Temp: -%d.%03d%cC", temp_integer, temp_fraction, temp_degree);
+        sprintf(lcdVariable, "Temp:-%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
     }
 }
 

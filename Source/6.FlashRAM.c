@@ -56,9 +56,8 @@ void dataSubmit(unsigned int data)
 void sramLatch()
 {
     WE = 0;         //The address bus is latched on the falling edge of WE# or CE#
-    Delay10TCYx(4); //wait for Twp = 40 ns (min pulse width period)
+    Delay10TCYx(4);  //wait for 40 ns
     WE = 1;         //The data bus is latched on the rising edge of WE# or CE#
-    Delay10TCYx(3); //wait for Twph = 30 ns (min pulse width high)
     return;
 }
 
@@ -105,46 +104,66 @@ void sramSecErase()
     
 }
 
+void sramLoadDataPins(int data)
+{
+    D7 = data & 128;
+    D6 = data & 64;
+    D5 = data & 32;
+    D4 = data & 16;
+    D3 = data & 8;
+    D2 = data & 4;
+    D1 = data & 2;
+    D0 = data & 1;
+}
+
 void sramLoadSeq()
 {
     //Seq 1
         //Load data: AAH = 1010 1010b
-    D7 = 1;
-    D6 = 0;
-    D5 = 1;
-    D4 = 0;
-    D3 = 1;
-    D2 = 0;
-    D1 = 1;
-    D0 = 0;
+    // D7 = 1;
+    // D6 = 0;
+    // D5 = 1;
+    // D4 = 0;
+    // D3 = 1;
+    // D2 = 0;
+    // D1 = 1;
+    // D0 = 0;
+    sramLoadDataPins(0xAA);
     dataSubmit(0x5555);//Address: 5555H 
     sramLatch();
     
     //Seq 2
         //Load data: 55H =101 0101
-    D7 = 0;
-    D6 = 1;
-    D5 = 0;
-    D4 = 1;
-    D3 = 0;
-    D2 = 1;
-    D1 = 0;
-    D0 = 1;
+    // D7 = 0;
+    // D6 = 1;
+    // D5 = 0;
+    // D4 = 1;
+    // D3 = 0;
+    // D2 = 1;
+    // D1 = 0;
+    // D0 = 1;
+    sramLoadDataPins(0x55);
     dataSubmit(0x2AAAA);//Address: 2AAAAH
     sramLatch();
       
     //Seq 3
         //Load data: A0H = 1010 0000
-    D7 = 1;
-    D6 = 0;
-    D5 = 1;
-    D4 = 0;
-    D3 = 0;
-    D2 = 0;
-    D1 = 0;
-    D0 = 0;
+    // D7 = 1;
+    // D6 = 0;
+    // D5 = 1;
+    // D4 = 0;
+    // D3 = 0;
+    // D2 = 0;
+    // D1 = 0;
+    // D0 = 0;
+    sramLoadDataPins(0xA0);
     dataSubmit(0x5555);//Address: 5555H
     sramLatch();
+}
+
+void sramLoadData(int add, int data)
+{
+    
 }
 
 void sramByteProgramOp(int add, int data)
@@ -165,7 +184,7 @@ void sramByteProgramOp(int add, int data)
      */
     
     sramLoadSeq();//Step 1
-    //sramLoadData(add, data);//Step 2
+    sramLoadData(add, data);//Step 2
     //sramWait();//Step 3
     
 }

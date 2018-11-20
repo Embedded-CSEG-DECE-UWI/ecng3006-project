@@ -4,10 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-<<<<<<< HEAD
       <itemPath>C:/ECNG3006/Group_Project/GroupFProject/Source/ow.h</itemPath>
-=======
->>>>>>> Group-F-Flash_Ram-Shift_Reg_Test
       <itemPath>C:/ECNG3006/Group_Project/GroupFProject/xlcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -17,21 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-<<<<<<< HEAD
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/busyxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/openxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/putrxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/putsxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/readaddr.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/readdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/setcgram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/setddram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/wcmdxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/writdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/Source/2.TempSensor.c</itemPath>
-=======
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/Source/6.FlashRAM.c</itemPath>
->>>>>>> Group-F-Flash_Ram-Shift_Reg_Test
+      <itemPath>C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

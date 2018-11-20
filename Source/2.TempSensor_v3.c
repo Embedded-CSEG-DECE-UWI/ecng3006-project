@@ -26,7 +26,16 @@ unsigned int temp_hundreds = 0;
 unsigned int temp_tens = 0;
 unsigned int temp_ones = 0;
 
+int counter = 0;
+
 float temp_float = 0.0;
+
+int average1 = 0;
+int average2 = 0;
+int sum1 = 0;
+int sum2 = 0;
+int running_average1 = 0;
+int running_average2 = 0;
 
 char lcdVariable[20];                               //array that will contain the pulse count to display on the LCD
 
@@ -36,6 +45,9 @@ void obtainFraction (void);
 void approximation (void);
 void obtainSign (void); 
 void resetTempConversion (void);
+void runningAverage (void);
+
+void errorCalibration (void);
 
 void DelayFor18TCY(void){
     Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
@@ -65,29 +77,19 @@ void printTemp (void){
     while(BusyXLCD());
 }
 
-void main(void)
-{
-    init_lcd();
-        
-    while(1){        
-        readTemp();
-        obtainInteger();
-        obtainFraction();
-        obtainSign();
-        resetTempConversion();
-        printTemp();
-    }
-    
-    Sleep();
-}
-
 void readTemp (void){
     ow_reset();                                             //resets the D1822 thermometer
     
     ow_write_byte(0xCC);                                    //Skip ROM check command
-    ow_write_byte(0x44);                                    //Begin temperature read and conversion
+    ow_write_byte(0x4E);
+    ow_write_byte(0x00);
+    ow_write_byte(0x00);
+    ow_write_byte(0x5F);
     
-    Delay10KTCYx(80);                                     //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
+    ow_reset();
+    ow_write_byte(0xCC);
+    ow_write_byte(0x44);                                    //Begin temperature read and conversion
+    Delay10KTCYx(40);                                     //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
                                                             //a sizeable error window
     ow_reset();
     ow_write_byte(0xCC);
@@ -118,8 +120,6 @@ void obtainFraction (void){
     }
     
     temp_fraction = temp_float*1000;
-     
-    approximation();
 }
 
 void approximation (void){
@@ -142,7 +142,7 @@ void obtainSign (void){
     temp_sign = (temp_read_MSB & 0xF8);
     
     if(temp_sign == 0){
-        sprintf(lcdVariable, "Temp:+%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
+        sprintf(lcdVariable, "Temp:+%d.%d%cC", average1, average2, temp_degree);
     }
     else{
         sprintf(lcdVariable, "Temp:-%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
@@ -153,4 +153,63 @@ void resetTempConversion (void){
     temp_float = 0.0;
     temp_fraction = 0;
     temp_sign = 0;
+}
+
+void errorCalibration (void){
+    
+    while (counter != 200){
+        readTemp();
+        obtainInteger();
+        obtainFraction();
+        approximation();
+        
+        sum1 += temp_integer;
+        sum2 += temp_hundreds;
+        resetTempConversion();
+        
+        WriteCmdXLCD(0x01);
+        while(BusyXLCD());
+        sprintf(lcdVariable, "Time: %d", counter);
+        putsXLCD(lcdVariable);
+        while(BusyXLCD());
+        
+        counter++;
+    }
+    
+    average1 = sum1/counter;
+    average2 = sum2/counter;
+}
+
+void runningAverage (void){
+    sum1 += temp_integer;
+    sum2 += temp_hundreds;
+    
+    counter += 1;
+    
+    average1 = sum1/counter;
+    average2 = sum2/counter;    
+}
+
+void main(void)
+{
+    init_lcd();
+    
+    errorCalibration();
+    approximation();
+    obtainSign();
+        
+    while(1){        
+        readTemp();
+        obtainInteger();
+        obtainFraction();
+        approximation();
+        
+        runningAverage();
+        
+        obtainSign();
+        resetTempConversion();
+        printTemp();
+    }
+    
+    Sleep();
 }

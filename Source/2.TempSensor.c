@@ -82,9 +82,15 @@ void readTemp (void){
     ow_reset();                                             //resets the D1822 thermometer
     
     ow_write_byte(0xCC);                                    //Skip ROM check command
-    ow_write_byte(0x44);                                    //Begin temperature read and conversion
+    ow_write_byte(0x4E);
+    ow_write_byte(0x00);
+    ow_write_byte(0x00);
+    ow_write_byte(0x5F);
     
-    Delay10KTCYx(100);                                     //The required time needed for the temp conversion process is 750ms. 1s was implemented to give
+    ow_reset();
+    ow_write_byte(0xCC);
+    ow_write_byte(0x44);                                    //Begin temperature read and conversion
+    Delay10KTCYx(40);                                     //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
                                                             //a sizeable error window
     ow_reset();
     ow_write_byte(0xCC);

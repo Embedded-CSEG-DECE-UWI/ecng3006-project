@@ -56,8 +56,9 @@ void dataSubmit(unsigned int data)
 void sramLatch()
 {
     WE = 0;         //The address bus is latched on the falling edge of WE# or CE#
-    Delay10TCYx(4);  //wait for 40 ns
+    Delay10TCYx(4); //wait for Twp = 40 ns (min pulse width period)
     WE = 1;         //The data bus is latched on the rising edge of WE# or CE#
+    Delay10TCYx(3); //wait for Twph = 30 ns (min pulse width high)
     return;
 }
 

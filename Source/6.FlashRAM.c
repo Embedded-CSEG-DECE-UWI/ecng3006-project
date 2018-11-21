@@ -36,6 +36,7 @@ void clock(void)
     Delay100TCYx(1);
     CLK_595 = 0;
     Delay100TCYx(1);
+    return;
 }
 
 
@@ -43,7 +44,7 @@ void clock(void)
 /*
  * This function will send the data to shift register
  */
-void dataSubmit(unsigned int data)
+void sramLoadAddPins(unsigned int data)
 {
     int i;
     for (i=0 ; i<16 ; i++)
@@ -51,28 +52,55 @@ void dataSubmit(unsigned int data)
         DATA_595 = (data >> i) & 0x01;
         clock();
     }
+    return;
+}
+
+int sramReadDataPins()
+{
+    int res = 0;
+    int idx = 0;
+    int i;
+    int data[8] = {D0,D1,D2,D3,D4,D5,D6,D7};
+    
+    for (i = 1; i<=128; i*=2)
+    {
+        res += data[idx]*i;
+        idx++;
+    }
+
+    return res;
+}
+
+void sramLoadDataPins(int data)
+{
+    D7 = (data & 128) && 128;
+    D6 = (data & 64)  && 64;
+    D5 = (data & 32)  && 32;
+    D4 = (data & 16)  && 16;
+    D3 = (data & 8)   && 8;
+    D2 = (data & 4)   && 4;
+    D1 = (data & 2)   && 2;
+    D0 = (data & 1);
+    return;
 }
 
 void sramLatch()
 {
     WE = 0;         //The address bus is latched on the falling edge of WE# or CE#
-    Delay10TCYx(4);  //wait for 40 ns
+    Delay1TCY();    //Twp wait for 40 ns
     WE = 1;         //The data bus is latched on the rising edge of WE# or CE#
     return;
 }
 
-void sramInitCmd()
+void sramLoadData(int add, int data)
 {
-    /*Commands are used to initiate the memory operation functions of the device. Commands are written
-    to the device using standard microprocessor write sequences. A command is written by asserting WE#
-    low while keeping CE# low. The address bus is latched on the falling edge of WE# or CE#, whichever
-    occurs last. The data bus is latched on the rising edge of WE# or CE#, whichever occurs first.*/
-    WE = 1;
-    OE = 1;
-    //CE = 0;
+    sramLoadDataPins(data);
+    sramLoadAddPins(add);
+    sramLatch();
+    return;
 }
 
-void sramRead()
+int sramRead()
 {
     /*
      The Read operation of the SST39SF010A/020A/040 is controlled by CE# and OE#, both have to be
@@ -81,39 +109,16 @@ void sramRead()
      gate data from the output pins. The data bus is in high impedance state when either CE# or OE# is
      high. Refer to the Read cycle timing diagram (Figure 5) for further details.
      */
-    
+
+    int res = 0;
     //CE = 0
+    WE = 1;
     OE = 0;
-  
-}
 
-void sramSecErase()
-{
-    /*
-        The Sector-Erase operation allows the system to erase the device on a sector-by-sector basis. The
-        sector architecture is based on uniform sector size of 4 KByte. The Sector-Erase operation is initiated
-        by executing a six-byte command load sequence for Software Data Protection with Sector-Erase command
-        (30H) and sector address (SA) in the last bus cycle. The sector address is latched on the falling
-        edge of the sixth WE# pulse, while the command (30H) is latched on the rising edge of the sixth WE#
-        pulse. The internal Erase operation begins after the sixth WE# pulse. The End-of-Erase can be determined
-        using either Data# Polling or Toggle Bit methods. See Figure 10 for timing waveforms. Any commands
-        written during the Sector-Erase operation will be ignored.
-     */
+    //Wait for Toe = ()
+    res = sramReadDataPins();
     
-    
-    
-}
-
-void sramLoadDataPins(int data)
-{
-    D7 = data & 128;
-    D6 = data & 64;
-    D5 = data & 32;
-    D4 = data & 16;
-    D3 = data & 8;
-    D2 = data & 4;
-    D1 = data & 2;
-    D0 = data & 1;
+    return;
 }
 
 void sramLoadSeq()
@@ -129,7 +134,7 @@ void sramLoadSeq()
     // D1 = 1;
     // D0 = 0;
     sramLoadDataPins(0xAA);
-    dataSubmit(0x5555);//Address: 5555H 
+    sramLoadAddPins(0x5555);//Address: 5555H 
     sramLatch();
     
     //Seq 2
@@ -143,7 +148,7 @@ void sramLoadSeq()
     // D1 = 0;
     // D0 = 1;
     sramLoadDataPins(0x55);
-    dataSubmit(0x2AAAA);//Address: 2AAAAH
+    sramLoadAddPins(0x2AAAA);//Address: 2AAAAH
     sramLatch();
       
     //Seq 3
@@ -157,13 +162,66 @@ void sramLoadSeq()
     // D1 = 0;
     // D0 = 0;
     sramLoadDataPins(0xA0);
-    dataSubmit(0x5555);//Address: 5555H
+    sramLoadAddPins(0x5555);//Address: 5555H
     sramLatch();
+    return;
 }
 
-void sramLoadData(int add, int data)
+void sramSecErase(int add)
 {
+    /*
+        The Sector-Erase operation allows the system to erase the device on a sector-by-sector basis. The
+        sector architecture is based on uniform sector size of 4 KByte. The Sector-Erase operation is initiated
+        by executing a six-byte command load sequence for Software Data Protection with Sector-Erase command
+        (30H) and sector address (SA) in the last bus cycle. The sector address is latched on the falling
+        edge of the sixth WE# pulse, while the command (30H) is latched on the rising edge of the sixth WE#
+        pulse. The internal Erase operation begins after the sixth WE# pulse. The End-of-Erase can be determined
+        using either Data# Polling or Toggle Bit methods. See Figure 10 for timing waveforms. Any commands
+        written during the Sector-Erase operation will be ignored.
+     */
+
+    WE = 1;
+    OE = 1;
     
+    //1st Bus Write Cycle
+    sramLoadDataPins(0xAA);
+    sramLoadAddPins(0x5555);
+    sramLatch();
+
+    //2nd Bus Write Cycle
+    sramLoadDataPins(0x55);
+    sramLoadAddPins(0x2AAA);
+    sramLatch();
+    
+    //3rd Bus Write Cycle 
+    sramLoadDataPins(0x80);
+    sramLoadAddPins(0x5555);
+    sramLatch();
+
+    //4th Bus Write Cycle
+    sramLoadDataPins(0xAA);
+    sramLoadAddPins(0x5555);
+    sramLatch();
+
+    //5th Bus Write Cycle
+    sramLoadDataPins(0x55);
+    sramLoadAddPins(0x2AAA);
+    sramLatch();
+
+    //6th Bus Write Cycle
+    sramLoadDataPins(0x30);
+    sramLoadAddPins(add);
+    sramLatch();
+
+    //Delay for Tse = 25ms;
+    Delay10TCYx(2);
+    Delay1TCY();
+    Delay1TCY();
+    Delay1TCY();
+    Delay1TCY();
+    Delay1TCY();
+
+    return;
 }
 
 void sramByteProgramOp(int add, int data)
@@ -174,7 +232,7 @@ void sramByteProgramOp(int add, int data)
         
      * The first step is the three-byte load sequence for Software Data Protection. 
      *
-     * The second step is to load byte address and byte data. During the Byte-Program operation, the addresses are latched on the falling
+     * The second step is to load    address and byte data. During the Byte-Program operation, the addresses are latched on the falling
         edge of either CE# or WE#, whichever occurs last. The data is latched on the rising edge of either
         CE# or WE#, whichever occurs first. 
      * 
@@ -183,10 +241,20 @@ void sramByteProgramOp(int add, int data)
        initiated, will be completed, within 20 ?s.
      */
     
-    sramLoadSeq();//Step 1
+    WE = 1;
+    OE = 1;
+
+    sramLoadSeq();          //Step 1
     sramLoadData(add, data);//Step 2
-    //sramWait();//Step 3
-    
+    //Step 3
+    //Wait on read/write operations before exiting routine.
+        //method 1: Poll Data#
+            //Nothing
+        //method 2: Poll Toggle Bit
+            //Nothing
+        //method 3: Lazy man wait: Tbp = 20us (Byte-Program Time)
+    Delay10TCYx(2);
+    return;
 }
 
 void main(void) 
@@ -201,5 +269,6 @@ void main(void)
 
 void systemInit(void)
 {
-  TRISA = 0x00;   
+  TRISA = 0x00; 
+  return;  
 }

@@ -123,6 +123,8 @@ int sramRead()
 
 void sramLoadSeq()
 {
+    WE = 1;
+    OE = 1;
     //Seq 1
         //Load data: AAH = 1010 1010b
     // D7 = 1;

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=GroupFProject
+PROJECTNAME=ecng3006-project
 
 # Active Configuration
 DEFAULTCONF=default

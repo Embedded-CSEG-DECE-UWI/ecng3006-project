@@ -28,6 +28,7 @@ float temp_float = 0.0;
 
 char lcdVariable[20];                               //array that will contain the pulse count to display on the LCD
 
+void configTemp (void);
 void readTemp (void);
 void obtainInteger (void);
 void obtainFraction (void);
@@ -65,7 +66,15 @@ void printTemp (void){
 void main(void)
 {
     init_lcd();
-        
+    
+    configTemp();
+    readTemp();
+    obtainInteger();
+    obtainFraction();
+    obtainSign();
+    resetTempConversion();
+    printTemp();
+    
     while(1){        
         readTemp();
         obtainInteger();
@@ -78,7 +87,7 @@ void main(void)
     Sleep();
 }
 
-void readTemp (void){
+void configTemp (void){
     ow_reset();                                             //resets the D1822 thermometer
     
     ow_write_byte(0xCC);                                    //Skip ROM check command
@@ -86,7 +95,9 @@ void readTemp (void){
     ow_write_byte(0x00);
     ow_write_byte(0x00);
     ow_write_byte(0x5F);
-    
+}
+
+void readTemp (void){    
     ow_reset();
     ow_write_byte(0xCC);
     ow_write_byte(0x44);                                    //Begin temperature read and conversion

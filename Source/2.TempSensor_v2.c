@@ -136,16 +136,18 @@ void approximation (void){
     if (temp_tens >= 5){
         temp_hundreds +=1;
     }
+    
+    temp_fraction = temp_hundreds;
 }
 
 void obtainSign (void){
     temp_sign = (temp_read_MSB & 0xF8);
     
     if(temp_sign == 0){
-        sprintf(lcdVariable, "Temp:+%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
+        sprintf(lcdVariable, "Temp:+%d.%d%cC", temp_integer, temp_fraction, temp_degree);
     }
     else{
-        sprintf(lcdVariable, "Temp:-%d.%d%cC", temp_integer, temp_hundreds, temp_degree);
+        sprintf(lcdVariable, "Temp:-%d.%d%cC", temp_integer, temp_fraction, temp_degree);
     }
 }
 

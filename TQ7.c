@@ -58,12 +58,22 @@ void main (void)
     ram_init();
     eeprom_init();
     writeEEPROM(HR_TRACK_STATUS,TRACKING);
-    writeEEPROM(HR_MAX_STORE, 0x08);
-    writeEEPROM(HR_RCCNT,0x03);  
+    writeEEPROM(HR_MAX_STORE, 0x0A);
+    writeEEPROM(HR_RCCNT,0x08);  
+    writeEEPROM(HRV_TRACK_STATUS,TRACKING);
+    writeEEPROM(HRV_MAX_STORE, 0x0A);
+    writeEEPROM(HRV_RCCNT,0x08);     
     //meman_init();
     RecordTrackInit(HR_TRACK_STATUS,HR_MAX_STORE,HR_RCCNT,INTSIZE,&HRreccnt,&HRMaxRecords,&HRwriteAdd, &HRreadAddX);
     openRecordsINT(HR_STORAGE_SECTOR, hrDisp, &HRreadAdd, &HRreccnt, &HRscrollCnt);
     scrollRecordsHR(HR_STORAGE_SECTOR, SCROLL_DOWN, INTSIZE);
+    
+    RecordTrackInit(HRV_TRACK_STATUS,HRV_MAX_STORE,HRV_RCCNT,FLOATSIZE,&HRVreccnt,&HRVMaxRecords,&HRVwriteAdd, &HRVreadAddX);
+    openRecordsFLOAT(HRV_STORAGE_SECTOR, hrvDisp, &HRVreadAdd, &HRVreccnt, &HRVscrollCnt);
+    scrollRecordsHRV(HRV_STORAGE_SECTOR, SCROLL_DOWN, FLOATSIZE);
+    MakeRecordHRV(HRV_STORAGE_SECTOR,HRV_RCCNT,HRV);
+    MakeRecordHR(HR_STORAGE_SECTOR,HR_RCCNT,HR);
+    
     while(1);
     
 }

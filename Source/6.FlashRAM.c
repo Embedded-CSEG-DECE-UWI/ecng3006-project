@@ -10,20 +10,28 @@
 //The system should allow a user to start storing a pre-de?ned set of measurements to external ?ash RAM, and to interrupt the ongoing storage of a set of measurements.
 
 #define DATA_595 PORTAbits.RA0
-#define STROBE_595 PORTAbits.RA2
 #define CLK_595 PORTAbits.RA1
-#define LED PORTBbits.RA3
-#define OE  PORTCbits.RC3
-#define WE  PORTDbits.RD3
-#define D0  PORTAbits.RA2
-#define D1  PORTAbits.RA3
-#define D2  PORTAbits.RA4
-#define D3  PORTAbits.RA5
-#define D4  PORTEbits.RE0
-#define D5  PORTEbits.RE1
-#define D6  PORTEbits.RE2
-#define D7  PORTCbits.RC0
-
+#define LED     PORTBbits.RA3
+#define OE      PORTCbits.RC3
+#define WE      PORTDbits.RD3
+#define D0      PORTAbits.RA2
+#define D1      PORTAbits.RA3
+#define D2      PORTAbits.RA4
+#define D3      PORTAbits.RA5
+#define D4      PORTEbits.RE0
+#define D5      PORTEbits.RE1
+#define D6      PORTEbits.RE2
+#define D7      PORTCbits.RC0
+#define OEtris  TRISCbits.RC3
+#define WEtris  TRISDbits.RD3
+#define D0tris  TRISAbits.RA2
+#define D1tris  TRISAbits.RA3
+#define D2tris  TRISAbits.RA4
+#define D3tris  TRISAbits.RA5
+#define D4tris  TRISEbits.RE0
+#define D5tris  TRISEbits.RE1
+#define D6tris  TRISEbits.RE2
+#define D7tris  TRISCbits.RC0
 
 void systemInit(void);
 
@@ -44,6 +52,19 @@ void clock(void)
 /*
  * This function will send the data to shift register
  */
+void sramSetDataPinTris(short int x)
+{
+    D0tris = x;
+    D1tris = x;
+    D2tris = x;
+    D3tris = x;
+    D4tris = x;
+    D5tris = x;
+    D6tris = x;
+    D7tris = x;
+    return;
+}
+
 void sramLoadAddPins(unsigned int data)
 {
     int i;
@@ -109,12 +130,12 @@ int sramRead()
      gate data from the output pins. The data bus is in high impedance state when either CE# or OE# is
      high. Refer to the Read cycle timing diagram (Figure 5) for further details.
      */
-
     int res = 0;
     //CE = 0
     WE = 1;
     OE = 0;
-
+    
+    sramSetDataPinTris(1);//Config Receiving GPIO pins on pic as inputs
     //Wait for Toe = ()
     res = sramReadDataPins();
     
@@ -123,8 +144,7 @@ int sramRead()
 
 void sramLoadSeq()
 {
-    WE = 1;
-    OE = 1;
+
     //Seq 1
         //Load data: AAH = 1010 1010b
     // D7 = 1;
@@ -150,7 +170,7 @@ void sramLoadSeq()
     // D1 = 0;
     // D0 = 1;
     sramLoadDataPins(0x55);
-    sramLoadAddPins(0x2AAAA);//Address: 2AAAAH
+    sramLoadAddPins(0x2AAA);//Address: 2AAAAH
     sramLatch();
       
     //Seq 3
@@ -181,7 +201,7 @@ void sramSecErase(int add)
         using either Data# Polling or Toggle Bit methods. See Figure 10 for timing waveforms. Any commands
         written during the Sector-Erase operation will be ignored.
      */
-
+    sramSetDataPinTris(0);//Set GPIO pins connected to the sram data pins to outputs
     WE = 1;
     OE = 1;
     
@@ -243,6 +263,7 @@ void sramByteProgramOp(int add, int data)
        initiated, will be completed, within 20 ?s.
      */
     
+    sramSetDataPinTris(0);//Set GPIO pins connect to the sram's data pins to outputs
     WE = 1;
     OE = 1;
 
@@ -271,6 +292,9 @@ void main(void)
 
 void systemInit(void)
 {
-  TRISA = 0x00; 
+  TRISA = 0x00;
+  //Set Output Enable and Write Enable pins as Outputs
+  WEtris = 0; 
+  OEtris = 0;
   return;  
 }

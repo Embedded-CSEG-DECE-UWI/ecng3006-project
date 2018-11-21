@@ -1,6 +1,7 @@
 /* Set configuration bits for use with PICKit3 */
 #include <p18f452.h> 
 #include <delays.h>
+#include "xlcd.h"
 
  /*Set configuration bits for use with PICKit3 and 4MHz oscillator*/
 #pragma config OSC = XT
@@ -33,7 +34,44 @@
 #define D6tris  TRISEbits.RE2
 #define D7tris  TRISCbits.RC0
 
+char lcdVariable[20]; //Variable to be printed to the LCD
+
 void systemInit(void);
+
+//LCD FUnctions
+void DelayFor18TCY(void){
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();         
+}
+ 
+void DelayXLCD(void)
+{                               //1000us = 1ms
+    Delay1KTCYx(5);  
+}
+ 
+void DelayPORXLCD(void)
+{
+    Delay1KTCYx(15);
+}
+ 
+void init_lcd(void){ 
+     OpenXLCD(FOUR_BIT & LINES_5X7);
+     while(BusyXLCD());
+     WriteCmdXLCD(SHIFT_DISP_LEFT);
+     while(BusyXLCD());
+}
+
+void print ()
+{
+    SetDDRamAddr(0x00);
+    while(BusyXLCD());
+    putsXLCD(lcdVariable);
+    while(BusyXLCD());
+    return;
+}
+//End of LCD Functions
+
 
 /*
  *This function will enable the Clock.
@@ -121,7 +159,7 @@ void sramLoadData(int add, int data)
     return;
 }
 
-int sramRead()
+int sramRead(int add)
 {
     /*
      The Read operation of the SST39SF010A/020A/040 is controlled by CE# and OE#, both have to be
@@ -133,13 +171,17 @@ int sramRead()
     int res = 0;
     //CE = 0
     WE = 1;
-    OE = 0;
+    OE = 1;
     
     sramSetDataPinTris(1);//Config Receiving GPIO pins on pic as inputs
+    sramLoadAddPins(add);//Choose address to read from;
+
+    OE = 0;
+
     //Wait for Toe = ()
     res = sramReadDataPins();
     
-    return;
+    return res;
 }
 
 void sramLoadSeq()
@@ -282,7 +324,16 @@ void sramByteProgramOp(int add, int data)
 
 void main(void) 
 {
-    systemInit(); // System getting ready    
+    systemInit(); // System getting ready 
+    
+    while(1)
+    {
+       sramSecErase(0x0001);
+       sramByteProgramOp(0x0001, 0xFF);
+       sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
+       print();
+    }
+       
     Sleep();
 }
     
@@ -296,5 +347,7 @@ void systemInit(void)
   //Set Output Enable and Write Enable pins as Outputs
   WEtris = 0; 
   OEtris = 0;
+  //Initialize LCD
+  init_lcd();
   return;  
 }

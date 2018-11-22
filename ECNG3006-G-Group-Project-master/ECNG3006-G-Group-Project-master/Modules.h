@@ -9,6 +9,7 @@
 #define	MODULES_H
 #include <p18f452.h>
 
+void InitPIC();
 void TemperatureStub(void);
 void HeartRateStub(void);
 void GlucoseStub(void);

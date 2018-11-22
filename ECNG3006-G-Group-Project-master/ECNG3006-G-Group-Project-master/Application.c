@@ -100,5 +100,6 @@ void KeyPressInterrupt(void){
 
 void main(void){
     ConfigKeypad();
+    InitPIC();
     while(1);
 }

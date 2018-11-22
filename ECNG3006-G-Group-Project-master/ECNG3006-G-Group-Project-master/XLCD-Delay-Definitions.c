@@ -20,3 +20,15 @@ void DelayXLCD(void)
 {
     Delay1KTCYx(5); /* Create a delay of 5 ms  */
 }
+
+void InitLCD (void)
+{
+    OpenXLCD(FOUR_BIT & LINES_5X7);
+    while(BusyXLCD());
+    SetDDRamAddr(0x00);
+    WriteCmdXLCD( SHIFT_DISP_LEFT );
+    while(BusyXLCD());
+    WriteCmdXLCD( BLINK_ON );
+    while(BusyXLCD());
+    return;
+}

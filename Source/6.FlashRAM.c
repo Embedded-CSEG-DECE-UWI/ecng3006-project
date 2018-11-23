@@ -106,10 +106,10 @@ void sramSetDataPinTris(short int x)
     return;
 }
 
-void sramLoadAddPins(unsigned int data)
+void sramLoadAddPins(short long data)
 {
-    int i;
-    for (i=0 ; i<16 ; i++)
+    short long i;
+    for (i=0 ; i<19 ; i++)
     {
         DATA_595 = (data >> i) & 0x01;
         clock();
@@ -362,24 +362,26 @@ void main(void)
 
      while(1)
      {
-    // D7 = 0;
-    // D6 = 0;
-    // D5 = 0;
-    // D4 = 0;
-    // D3 = 0;
-    // D2 = 0;
-    // D1 = 0;
-    // D0 = 0;
-    sramLoadAddPins(0b1111111111111111);
-    // sramLoadDataPins(0xAA);
-    Delay10KTCYx(100);
-    //sramSecErase(0b000010000000000000);
-    //sramByteProgramOp(0x0001, 0b10101010);
-    //sramRead(0x0001);
-    //    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
-    //    print();
+    D7 = 1;
+    D6 = 1;
+    D5 = 1;
+    D4 = 1;
+    D3 = 1;
+    D2 = 1;
+    D1 = 1;
+    D0 = 1;
+
+    // // sramLoadDataPins(0xAA);
+    // //Delay10KTCYx(100);
+    // //sramSecErase(0b000010000000000000);
+    // //sramByteProgramOp(0x0001, 0b10101010);
+    // //sramRead(0x0001);
+    // //    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
+    // //    print();
      }
-       
+
+    //sramLoadAddPins(0x00FFFF); //Testing Address loading function
+
     Sleep();
 }
     
@@ -389,21 +391,21 @@ void main(void)
 
 void systemInit(void)
 {
-  ADCON1bits.PCFG = 0b0111;
+ // ADCON1bits.PCFG = 0b0111;
   TRISA = 0x00;
-  PORTA  = 0x00;
-  TRISBbits.RB4 = 0;
-  TRISBbits.RB3 = 0;
-  //Set Output Enable and Write Enable pins as Outputs
-  WEtris = 0; 
-  OEtris = 0;
-  WE = 1;
-  OE = 1;
-  sramSetDataPinTris(0);
-  //Initialize LCD
-  init_lcd();
-  LED = 1;
-  LED2 = 0;
+//   PORTA  = 0x00;
+   TRISBbits.RB4 = 0;
+//   TRISBbits.RB3 = 0;
+//   //Set Output Enable and Write Enable pins as Outputs
+//   WEtris = 0; 
+//   OEtris = 0;
+//   WE = 1;
+//   OE = 1;
+   sramSetDataPinTris(0);
+//   //Initialize LCD
+//   init_lcd();
+     LED = 1;
+//   LED2 = 0;
 
   return;  
 }

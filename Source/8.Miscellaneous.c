@@ -7,8 +7,6 @@
 #pragma config LVP = OFF
 //#pragma config WDTPS = 128
 
-//1.The system has to estimate EITHER heart rate variability using pNN50 (as a %) OR a persons oxygen saturation level (as a %)
-//2. All sensors/system measurements should be calibrated and/or the error quanti?ed.
 
 void main(void)
 {

@@ -244,6 +244,7 @@ void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsign
     unsigned int records;
     unsigned int nextreadADD;
     records = *reccnt;
+    nextreadADD = 0;
     for(x =0; x < 4; x++)
     {
         dispArr[x] = 0xFFFF; 
@@ -267,9 +268,9 @@ void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsign
             {
                 readDATA(SECTOR,nextreadADD);
                 RXint.intCHAR[y] = RXbits.CHARBITS;
+                nextreadADD++;
             }
             dispArr[x] = RXint.intVAL;
-            nextreadADD = nextreadADD + INTSIZE;
         }
     }
     else
@@ -281,9 +282,9 @@ void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsign
             {
                 readDATA(SECTOR,nextreadADD);
                 RXint.intCHAR[y] = RXbits.CHARBITS;
+                nextreadADD++;
             }
             dispArr[x] = RXint.intVAL;
-            nextreadADD = nextreadADD + INTSIZE;
         }
     }
     *scrollreadAdd = nextreadADD;
@@ -300,6 +301,7 @@ void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned in
     unsigned int records;
     unsigned int nextreadADD;
     records = *reccnt;
+    nextreadADD = 0;
     for(x =0; x < 4; x++)
     {
         dispArr[x] = 0xFFFFFFFF; 
@@ -315,31 +317,30 @@ void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned in
     }
     
     if (records < 5)
-    {
-        nextreadADD = 0;
+    { 
         for(x = 0; x < records; x++)
         {
             for(y = 0; y < FLOATSIZE; y++)
             {
                 readDATA(SECTOR,nextreadADD);
                 RXfloat.floatCHAR[y] = RXbits.CHARBITS;
+                nextreadADD++;
             }
             dispArr[x] = RXfloat.floatVAL;
-            nextreadADD = nextreadADD + FLOATSIZE;
         }
     }
     else
     {
-        nextreadADD = 0;
         for(x = 0; x < 4; x++)
         {
             for(y = 0; y < FLOATSIZE; y++)
             {
                 readDATA(SECTOR,nextreadADD);
                 RXfloat.floatCHAR[y] = RXbits.CHARBITS;
+                nextreadADD++;
             }
             dispArr[x] = RXfloat.floatVAL;
-            nextreadADD = nextreadADD + FLOATSIZE;
+            
         }
     }
     *scrollreadAdd = nextreadADD;

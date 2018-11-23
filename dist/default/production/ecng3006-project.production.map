@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Wed Nov 21 12:28:10 2018
+Linker Map File - Created Fri Nov 23 12:47:59 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,62 +7,62 @@ Linker Map File - Created Wed Nov 21 12:28:10 2018
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
          .code_vfprintf.o       code   0x000008    program   0x000c22
-       .code_6.FlashRAM.o       code   0x000c2a    program   0x0006a2
-          .code_sprintf.o       code   0x0012cc    program   0x0000ac
-         .code_openxlcd.o       code   0x001378    program   0x0000a6
-               _cinit_scn       code   0x00141e    program   0x00009e
-             .code_putc.o       code   0x0014bc    program   0x000084
-          .code_fxm3232.o       code   0x001540    program   0x000070
-                   STRING       code   0x0015b0    program   0x000066
-                     PROG       code   0x001616    program   0x00005a
-         .code_setddram.o       code   0x001670    program   0x000056
-         .code_writdata.o       code   0x0016c6    program   0x000052
-         .code_wcmdxlcd.o       code   0x001718    program   0x000052
-         .code_putsxlcd.o       code   0x00176a    program   0x00004e
-         .code_fxd3232u.o       code   0x0017b8    program   0x000048
-             D10KTCYXCODE       code   0x001800    program   0x00002e
-         .code_busyxlcd.o       code   0x00182e    program   0x00002c
-                    CTYPE       code   0x00185a    program   0x000024
-              D1KTCYXCODE       code   0x00187e    program   0x000020
-                    .code       code   0x00189e    program   0x000020
-             _startup_scn       code   0x0018be    program   0x00001c
-                    STDIO       code   0x0018da    program   0x00001c
-             D100TCYXCODE       code   0x0018f6    program   0x00001c
-              D10TCYXCODE       code   0x001912    program   0x000016
-      .romdata_vfprintf.o    romdata   0x001928    program   0x000011
-             .stringtable    romdata   0x001939    program   0x00000e
-    .romdata__user_putc.o    romdata   0x001947    program   0x000000
-       .idata_sprintf.o_i    romdata   0x001947    program   0x000000
-       .romdata_sprintf.o    romdata   0x001947    program   0x000000
-      .idata_vfprintf.o_i    romdata   0x001947    program   0x000000
-          .idata_putc.o_i    romdata   0x001947    program   0x000000
-    .idata__user_putc.o_i    romdata   0x001947    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x001947    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x001947    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x001947    program   0x000000
-       .romdata_fxm3232.o    romdata   0x001947    program   0x000000
-          .romdata_putc.o    romdata   0x001947    program   0x000000
-         .idata_c018i.o_i    romdata   0x001947    program   0x000000
-         .romdata_c018i.o    romdata   0x001947    program   0x000000
-    .idata_6.FlashRAM.o_i    romdata   0x001947    program   0x000000
-    .romdata_6.FlashRAM.o    romdata   0x001947    program   0x000000
-      .idata_busyxlcd.o_i    romdata   0x001947    program   0x000000
-      .romdata_busyxlcd.o    romdata   0x001947    program   0x000000
-      .idata_openxlcd.o_i    romdata   0x001947    program   0x000000
-      .romdata_openxlcd.o    romdata   0x001947    program   0x000000
-      .idata_setddram.o_i    romdata   0x001947    program   0x000000
-      .romdata_setddram.o    romdata   0x001947    program   0x000000
-      .idata_wcmdxlcd.o_i    romdata   0x001947    program   0x000000
-      .romdata_wcmdxlcd.o    romdata   0x001947    program   0x000000
-        .idata___init.o_i    romdata   0x001947    program   0x000000
-        .romdata___init.o    romdata   0x001947    program   0x000000
-      .idata_putsxlcd.o_i    romdata   0x001947    program   0x000000
-      .romdata_putsxlcd.o    romdata   0x001947    program   0x000000
-      .idata_writdata.o_i    romdata   0x001947    program   0x000000
-      .romdata_writdata.o    romdata   0x001947    program   0x000000
-            .code_c018i.o       code   0x001948    program   0x000000
-       .code__user_putc.o       code   0x001948    program   0x000002
-           .code___init.o       code   0x00194a    program   0x000002
+       .code_6.FlashRAM.o       code   0x000c2a    program   0x0006d8
+          .code_sprintf.o       code   0x001302    program   0x0000ac
+         .code_openxlcd.o       code   0x0013ae    program   0x0000a6
+               _cinit_scn       code   0x001454    program   0x00009e
+             .code_putc.o       code   0x0014f2    program   0x000084
+          .code_fxm3232.o       code   0x001576    program   0x000070
+                   STRING       code   0x0015e6    program   0x000066
+                     PROG       code   0x00164c    program   0x00005a
+         .code_setddram.o       code   0x0016a6    program   0x000056
+         .code_writdata.o       code   0x0016fc    program   0x000052
+         .code_wcmdxlcd.o       code   0x00174e    program   0x000052
+         .code_putsxlcd.o       code   0x0017a0    program   0x00004e
+         .code_fxd3232u.o       code   0x0017ee    program   0x000048
+             D10KTCYXCODE       code   0x001836    program   0x00002e
+         .code_busyxlcd.o       code   0x001864    program   0x00002c
+                    CTYPE       code   0x001890    program   0x000024
+              D1KTCYXCODE       code   0x0018b4    program   0x000020
+                    .code       code   0x0018d4    program   0x000020
+             _startup_scn       code   0x0018f4    program   0x00001c
+                    STDIO       code   0x001910    program   0x00001c
+             D100TCYXCODE       code   0x00192c    program   0x00001c
+             .stringtable    romdata   0x001948    program   0x00001b
+      .idata_vfprintf.o_i    romdata   0x001963    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x001963    program   0x000000
+       .romdata_sprintf.o    romdata   0x001963    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x001963    program   0x000000
+          .idata_putc.o_i    romdata   0x001963    program   0x000000
+      .romdata_writdata.o    romdata   0x001963    program   0x000000
+      .idata_writdata.o_i    romdata   0x001963    program   0x000000
+    .idata__user_putc.o_i    romdata   0x001963    program   0x000000
+      .romdata_putsxlcd.o    romdata   0x001963    program   0x000000
+         .idata_c018i.o_i    romdata   0x001963    program   0x000000
+    .idata_6.FlashRAM.o_i    romdata   0x001963    program   0x000000
+      .romdata_busyxlcd.o    romdata   0x001963    program   0x000000
+      .romdata_openxlcd.o    romdata   0x001963    program   0x000000
+      .idata_setddram.o_i    romdata   0x001963    program   0x000000
+        .romdata___init.o    romdata   0x001963    program   0x000000
+              D10TCYXCODE       code   0x001964    program   0x000016
+      .romdata_vfprintf.o    romdata   0x00197a    program   0x000011
+      .idata_putsxlcd.o_i    romdata   0x00198b    program   0x000000
+         .romdata_c018i.o    romdata   0x00198b    program   0x000000
+    .romdata__user_putc.o    romdata   0x00198b    program   0x000000
+    .romdata_6.FlashRAM.o    romdata   0x00198b    program   0x000000
+          .romdata_putc.o    romdata   0x00198b    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00198b    program   0x000000
+      .idata_busyxlcd.o_i    romdata   0x00198b    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x00198b    program   0x000000
+      .idata_openxlcd.o_i    romdata   0x00198b    program   0x000000
+        .idata___init.o_i    romdata   0x00198b    program   0x000000
+      .romdata_wcmdxlcd.o    romdata   0x00198b    program   0x000000
+      .romdata_setddram.o    romdata   0x00198b    program   0x000000
+       .idata_sprintf.o_i    romdata   0x00198b    program   0x000000
+      .idata_wcmdxlcd.o_i    romdata   0x00198b    program   0x000000
+            .code_c018i.o       code   0x00198c    program   0x000000
+       .code__user_putc.o       code   0x00198c    program   0x000002
+           .code___init.o       code   0x00198e    program   0x000002
 .config_300001_6.FlashRAM.o    romdata   0x300001    program   0x000001
 .config_300003_6.FlashRAM.o    romdata   0x300003    program   0x000001
 .config_300006_6.FlashRAM.o    romdata   0x300006    program   0x000001
@@ -108,78 +108,78 @@ Linker Map File - Created Wed Nov 21 12:28:10 2018
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001946      
-                            0x001948    0x00194b      
+                            0x000000    0x001962      
+                            0x001964    0x00198a      
+                            0x00198c    0x00198f      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300006    0x300006      
-            6478 out of 33048 program addresses used, program memory utilization is 19%
+            6545 out of 33048 program addresses used, program memory utilization is 19%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                 BusyXLCD   0x00182e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
-                   D100_1   0x001904    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                    D100x   0x001902    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                   D10K_1   0x00180c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x001818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x00180a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10_1   0x001922    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x00191a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D1K_1   0x00188a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                     D1Kx   0x001888    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-             Delay100TCYx   0x0018f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-             Delay10KTCYx   0x001800    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-              Delay10TCYx   0x001912    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              Delay1KTCYx   0x00187e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                 BusyXLCD   0x001864    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
+                   D100_1   0x00193a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                    D100x   0x001938    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                   D10K_1   0x001842    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x00184e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x001840    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10_1   0x001974    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x00196c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D1K_1   0x0018c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x0018be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+             Delay100TCYx   0x00192c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+             Delay10KTCYx   0x001836    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+              Delay10TCYx   0x001964    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay1KTCYx   0x0018b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
             DelayFor18TCY   0x000c2a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
              DelayPORXLCD   0x000c5c    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                 DelayXLCD   0x000c50    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                 FXD3232U   0x0017b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                 FXM1616S   0x001616    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                  FXM3232   0x001540    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-                 OpenXLCD   0x001378    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
-             SetDDRamAddr   0x001670    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
-               TSIGN1616A   0x001662    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-             WriteCmdXLCD   0x001718    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
-            WriteDataXLCD   0x0016c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
-                   _2jEnd   0x001600    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-       _D100TCYXCODE_0008   0x0018fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0012   0x001908    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0018   0x00190e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D10KTCYXCODE_0010   0x001810    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x00181c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-        _D10TCYXCODE_000A   0x00191c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x00191e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x001920    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D1KTCYXCODE_0010   0x00188e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0016   0x001894    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-       ___return_lbl00000   0x000c4e    program     static                          
+                 FXD3232U   0x0017ee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x00164c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  FXM3232   0x001576    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                 OpenXLCD   0x0013ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
+             SetDDRamAddr   0x0016a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
+               TSIGN1616A   0x001698    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+             WriteCmdXLCD   0x00174e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
+            WriteDataXLCD   0x0016fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
+                   _2jEnd   0x001636    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+       _D100TCYXCODE_0008   0x001934    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x00193e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x001944    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D10KTCYXCODE_0010   0x001846    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x001852    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+        _D10TCYXCODE_000A   0x00196e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x001970    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x001972    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D1KTCYXCODE_0010   0x0018c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x0018ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x0017fe    program     static                          
-       ___return_lbl00000   0x0015ae    program     static                          
-       ___return_lbl00001   0x0018d8    program     static                          
-       ___return_lbl00002   0x0014ba    program     static                          
-       ___return_lbl00024   0x001042    program     static                          
-       ___return_lbl00028   0x001208    program     static                          
-       ___return_lbl00030   0x0012c0    program     static                          
-        ___while_lbl00031   0x001260    program     static                          
-        ___while_lbl00032   0x0012be    program     static                          
+       ___return_lbl00000   0x000c4e    program     static                          
+       ___return_lbl00000   0x0015e4    program     static                          
+       ___return_lbl00000   0x001834    program     static                          
+       ___return_lbl00001   0x00190e    program     static                          
+       ___return_lbl00002   0x0014f0    program     static                          
+       ___return_lbl00024   0x001078    program     static                          
+       ___return_lbl00033   0x0012d4    program     static                          
+        ___while_lbl00034   0x0012bc    program     static                          
+        ___while_lbl00035   0x0012d2    program     static                          
                __config_0   0x300001    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                __config_1   0x300003    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                __config_2   0x300006    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                   __init   0x00194a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __init   0x00198e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                    __pa_0   0x000948    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                   __pa_0   0x0017a8    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
-                   __pa_0   0x00170a    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
-                   __pa_0   0x00175c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
-                   __pa_0   0x00140c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
-                   __pa_0   0x0016b8    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
-                   __pa_0   0x001848    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
+                   __pa_0   0x001740    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
+                   __pa_0   0x0017de    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
+                   __pa_0   0x001792    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
+                   __pa_0   0x0016ee    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
+                   __pa_0   0x001442    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
+                   __pa_0   0x00187e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
+                   __pa_1   0x00144c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
                    __pa_1   0x000950    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                   __pa_1   0x001416    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
                   __pa_10   0x000a04    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   __pa_11   0x000a12    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   __pa_12   0x000a28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
@@ -225,60 +225,62 @@ Linker Map File - Created Wed Nov 21 12:28:10 2018
                    __pa_7   0x0009b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_8   0x0009c2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_9   0x0009e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-               __string_0   0x001939    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+               __string_0   0x001959    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+               __string_1   0x001948    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
               __tmplbl_42   0x000ade    program     static                          
               __tmplbl_43   0x000926    program     static                          
               __tmplbl_44   0x00090c    program     static                          
               __tmplbl_85   0x00005e    program     static                          
-            __zero_memory   0x00189e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                _do_cinit   0x00141e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x0018d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                _do_cinit   0x001454    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x0017fa    program     static                          
-                 _startup   0x0018be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              _usart_putc   0x0018da    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-               _user_putc   0x001948    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
+                   _false   0x001830    program     static                          
+                 _startup   0x0018f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              _usart_putc   0x001910    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+               _user_putc   0x00198c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
                     clock   0x000cb8    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                compare_l   0x0018b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                copy_loop   0x001490    program     static                          
-            copy_one_byte   0x001496    program     static                          
-                     done   0x0014ba    program     static                          
-             done_copying   0x0014a4    program     static                          
+                compare_l   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                copy_loop   0x0014c6    program     static                          
+            copy_one_byte   0x0014cc    program     static                          
+                     done   0x0014f0    program     static                          
+             done_copying   0x0014da    program     static                          
                  init_lcd   0x000c68    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                  isdigit   0x00185a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                     jEnd   0x001602    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x0015ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x0015ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x0015c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                   jMatch   0x00187a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x00187c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                     loop   0x0018ce    program     static                          
-                     loop   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x0017c6    program     static                          
-                   loop_h   0x0018ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x0018b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     main   0x00125e    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                  isdigit   0x001890    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                     jEnd   0x001638    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x001600    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0015f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x001620    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   jMatch   0x0018b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0018b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                     loop   0x001920    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x001904    program     static                          
+                     loop   0x0017fc    program     static                          
+                   loop_h   0x0018e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x0018ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     main   0x0012ba    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                     print   0x000c8e    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                     putc   0x0014bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                 putsXLCD   0x00176a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
-                 s_digits   0x001928    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                     putc   0x0014f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                 putsXLCD   0x0017a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
+                 s_digits   0x00197a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
             s_put_n_chars   0x000008    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                  sprintf   0x0012cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
-        sramByteProgramOp   0x001210    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                sramLatch   0x00103a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                  sprintf   0x001302    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
+             sramBusyData   0x0010b0    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+        sramByteProgramOp   0x00126c    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                sramLatch   0x001070    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
           sramLoadAddPins   0x000d42    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-             sramLoadData   0x001044    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+             sramLoadData   0x00107a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
          sramLoadDataPins   0x000f74    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-              sramLoadSeq   0x0010dc    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                 sramRead   0x00107a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+              sramLoadSeq   0x001128    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                 sramRead   0x0010c6    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
          sramReadDataPins   0x000db8    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-             sramSecErase   0x00112e    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+             sramSecErase   0x00117a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
        sramSetDataPinTris   0x000cd2    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                   strlen   0x0015b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x0015cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-               systemInit   0x0012c2    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                     test   0x001438    program     static                          
+                   strlen   0x0015e6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x001602    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+               systemInit   0x0012d6    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                     test   0x00146e    program     static                          
                  vfprintf   0x000034    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-               zero_block   0x0018ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x0018e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -556,96 +558,97 @@ Linker Map File - Created Wed Nov 21 12:28:10 2018
           sramLoadAddPins   0x000d42    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
          sramReadDataPins   0x000db8    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
          sramLoadDataPins   0x000f74    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                sramLatch   0x00103a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-       ___return_lbl00024   0x001042    program     static                          
-             sramLoadData   0x001044    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                 sramRead   0x00107a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-              sramLoadSeq   0x0010dc    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-             sramSecErase   0x00112e    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-       ___return_lbl00028   0x001208    program     static                          
-        sramByteProgramOp   0x001210    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                     main   0x00125e    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-        ___while_lbl00031   0x001260    program     static                          
-        ___while_lbl00032   0x0012be    program     static                          
-       ___return_lbl00030   0x0012c0    program     static                          
-               systemInit   0x0012c2    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-                  sprintf   0x0012cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
-                 OpenXLCD   0x001378    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
-                   __pa_0   0x00140c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
-                   __pa_1   0x001416    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
-                _do_cinit   0x00141e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x001438    program     static                          
-                copy_loop   0x001490    program     static                          
-            copy_one_byte   0x001496    program     static                          
-             done_copying   0x0014a4    program     static                          
-                     done   0x0014ba    program     static                          
-       ___return_lbl00002   0x0014ba    program     static                          
-                     putc   0x0014bc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                  FXM3232   0x001540    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x0015ae    program     static                          
-                   strlen   0x0015b0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x0015c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                     jEnd   0x0015ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x0015cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x0015ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x001600    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x001602    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                 FXM1616S   0x001616    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x001662    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-             SetDDRamAddr   0x001670    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
-                   __pa_0   0x0016b8    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
-            WriteDataXLCD   0x0016c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
-                   __pa_0   0x00170a    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
-             WriteCmdXLCD   0x001718    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
-                   __pa_0   0x00175c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
-                 putsXLCD   0x00176a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
-                   __pa_0   0x0017a8    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
-                 FXD3232U   0x0017b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x0017c6    program     static                          
-                   _false   0x0017fa    program     static                          
-       ___return_lbl00000   0x0017fe    program     static                          
-             Delay10KTCYx   0x001800    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x00180a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D10K_1   0x00180c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x001810    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x001818    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x00181c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                 BusyXLCD   0x00182e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
-                   __pa_0   0x001848    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
-                  isdigit   0x00185a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                   jMatch   0x00187a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x00187c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-              Delay1KTCYx   0x00187e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                     D1Kx   0x001888    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                    D1K_1   0x00188a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0010   0x00188e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0016   0x001894    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-            __zero_memory   0x00189e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               zero_block   0x0018ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_h   0x0018ac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                compare_l   0x0018b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x0018b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 _startup   0x0018be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0018ce    program     static                          
-       ___return_lbl00001   0x0018d8    program     static                          
-              _usart_putc   0x0018da    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-             Delay100TCYx   0x0018f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0008   0x0018fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                    D100x   0x001902    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                   D100_1   0x001904    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0012   0x001908    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0018   0x00190e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-              Delay10TCYx   0x001912    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x00191a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x00191c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x00191e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x001920    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x001922    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                 s_digits   0x001928    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-               __string_0   0x001939    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
-               _user_putc   0x001948    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
-                   __init   0x00194a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                sramLatch   0x001070    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+       ___return_lbl00024   0x001078    program     static                          
+             sramLoadData   0x00107a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+             sramBusyData   0x0010b0    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                 sramRead   0x0010c6    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+              sramLoadSeq   0x001128    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+             sramSecErase   0x00117a    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+        sramByteProgramOp   0x00126c    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                     main   0x0012ba    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+        ___while_lbl00034   0x0012bc    program     static                          
+        ___while_lbl00035   0x0012d2    program     static                          
+       ___return_lbl00033   0x0012d4    program     static                          
+               systemInit   0x0012d6    program     extern C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+                  sprintf   0x001302    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
+                 OpenXLCD   0x0013ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
+                   __pa_0   0x001442    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
+                   __pa_1   0x00144c    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\openxlcd.c
+                _do_cinit   0x001454    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x00146e    program     static                          
+                copy_loop   0x0014c6    program     static                          
+            copy_one_byte   0x0014cc    program     static                          
+             done_copying   0x0014da    program     static                          
+                     done   0x0014f0    program     static                          
+       ___return_lbl00002   0x0014f0    program     static                          
+                     putc   0x0014f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  FXM3232   0x001576    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0015e4    program     static                          
+                   strlen   0x0015e6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x0015f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x001600    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x001602    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x001620    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x001636    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x001638    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                 FXM1616S   0x00164c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x001698    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+             SetDDRamAddr   0x0016a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
+                   __pa_0   0x0016ee    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\setddram.c
+            WriteDataXLCD   0x0016fc    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
+                   __pa_0   0x001740    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\writdata.c
+             WriteCmdXLCD   0x00174e    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
+                   __pa_0   0x001792    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\wcmdxlcd.c
+                 putsXLCD   0x0017a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
+                   __pa_0   0x0017de    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\putsxlcd.c
+                 FXD3232U   0x0017ee    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x0017fc    program     static                          
+                   _false   0x001830    program     static                          
+       ___return_lbl00000   0x001834    program     static                          
+             Delay10KTCYx   0x001836    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x001840    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x001842    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x001846    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x00184e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x001852    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                 BusyXLCD   0x001864    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
+                   __pa_0   0x00187e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\XLCD\busyxlcd.c
+                  isdigit   0x001890    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x0018b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x0018b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+              Delay1KTCYx   0x0018b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x0018be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                    D1K_1   0x0018c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0010   0x0018c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x0018ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+            __zero_memory   0x0018d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x0018e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_h   0x0018e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                compare_l   0x0018ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x0018ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 _startup   0x0018f4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001904    program     static                          
+       ___return_lbl00001   0x00190e    program     static                          
+              _usart_putc   0x001910    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x001920    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+             Delay100TCYx   0x00192c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0008   0x001934    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                    D100x   0x001938    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                   D100_1   0x00193a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x00193e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x001944    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+               __string_1   0x001948    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+               __string_0   0x001959    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
+              Delay10TCYx   0x001964    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x00196c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x00196e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x001970    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x001972    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x001974    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                 s_digits   0x00197a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+               _user_putc   0x00198c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
+                   __init   0x00198e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                __config_1   0x300003    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c
                __config_2   0x300006    program     static C:\Users\Danny G\Dropbox\Personal\School\ECNG\Year 3\ECNG - 3006\Group_F_Stuff\NewRepo\ecng3006-project\Source\6.FlashRAM.c

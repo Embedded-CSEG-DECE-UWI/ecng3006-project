@@ -1,5 +1,7 @@
 /* Set configuration bits for use with PICKit3 */
 #include <p18f452.h> 
+#include <stdio.h>
+#include <stdlib.h>
 #include <delays.h>
 #include "xlcd.h"
 
@@ -10,9 +12,10 @@
 
 //The system should allow a user to start storing a pre-de?ned set of measurements to external ?ash RAM, and to interrupt the ongoing storage of a set of measurements.
 
-#define DATA_595 PORTAbits.RA0
+#define DATA_595 PORTAbits.RA0 
 #define CLK_595 PORTAbits.RA1
-#define LED     PORTBbits.RA3
+#define LED     PORTBbits.RB4
+#define LED2    PORTBbits.RB3
 #define OE      PORTCbits.RC3
 #define WE      PORTDbits.RD3
 #define D0      PORTAbits.RA2
@@ -120,7 +123,7 @@ int sramReadDataPins()
     int idx = 0;
     int i;
     int data[8] = {D0,D1,D2,D3,D4,D5,D6,D7};
-    
+        
     for (i = 1; i<=128; i*=2)
     {
         res += data[idx]*i;
@@ -132,6 +135,7 @@ int sramReadDataPins()
 
 void sramLoadDataPins(int data)
 {
+              
     D7 = (data & 128) && 128;
     D6 = (data & 64)  && 64;
     D5 = (data & 32)  && 32;
@@ -140,6 +144,11 @@ void sramLoadDataPins(int data)
     D2 = (data & 4)   && 4;
     D1 = (data & 2)   && 2;
     D0 = (data & 1);
+    
+    //sprintf (lcdVariable, "SRAM = %d%d%d%d%d%d%d%d", D7,D6,D5,D4,D3,D2,D1,D0);
+    sprintf(lcdVariable, "data = %d", data);
+    print();
+
     return;
 }
 
@@ -159,7 +168,26 @@ void sramLoadData(int add, int data)
     return;
 }
 
-int sramRead(int add)
+void sramBusyData()
+{ 
+    LED2 = 1;
+    D7tris = 1;
+    WE = 1;
+    OE = 1;
+
+    while (D7 == 0)
+    {
+        LED = 0;
+    }
+    LED = 1;
+
+    // WE = 1;
+    // OE = 0;
+    D7tris = 0;
+    return;
+}
+
+volatile int sramRead(int add)
 {
     /*
      The Read operation of the SST39SF010A/020A/040 is controlled by CE# and OE#, both have to be
@@ -168,7 +196,7 @@ int sramRead(int add)
      gate data from the output pins. The data bus is in high impedance state when either CE# or OE# is
      high. Refer to the Read cycle timing diagram (Figure 5) for further details.
      */
-    int res = 0;
+    volatile int res = 0;
     //CE = 0
     WE = 1;
     OE = 1;
@@ -179,6 +207,7 @@ int sramRead(int add)
     OE = 0;
 
     //Wait for Toe = ()
+    //Delay1TCY();
     res = sramReadDataPins();
     
     return res;
@@ -274,16 +303,21 @@ void sramSecErase(int add)
 
     //6th Bus Write Cycle
     sramLoadDataPins(0x30);
-    sramLoadAddPins(add);
+    sramLoadAddPins(add); //A18 - A12. For example: {111 111}1 1111 1111 1111
     sramLatch();
 
     //Delay for Tse = 25ms;
-    Delay10TCYx(2);
-    Delay1TCY();
-    Delay1TCY();
-    Delay1TCY();
-    Delay1TCY();
-    Delay1TCY();
+    // Delay10TCYx(2);
+    // Delay1TCY();
+    // Delay1TCY();
+    // Delay1TCY();
+    // Delay1TCY();
+    // Delay1TCY();
+
+    //Wait for Data# (DQ6)
+    sramBusyData();
+    sprintf(lcdVariable,"Erase Completed!");
+    print();
 
     return;
 }
@@ -325,14 +359,26 @@ void sramByteProgramOp(int add, int data)
 void main(void) 
 {
     systemInit(); // System getting ready 
-    
-    while(1)
-    {
-       sramSecErase(0x0001);
-       sramByteProgramOp(0x0001, 0xFF);
-       sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
-       print();
-    }
+
+     while(1)
+     {
+    // D7 = 0;
+    // D6 = 0;
+    // D5 = 0;
+    // D4 = 0;
+    // D3 = 0;
+    // D2 = 0;
+    // D1 = 0;
+    // D0 = 0;
+    sramLoadAddPins(0b1111111111111111);
+    // sramLoadDataPins(0xAA);
+    Delay10KTCYx(100);
+    //sramSecErase(0b000010000000000000);
+    //sramByteProgramOp(0x0001, 0b10101010);
+    //sramRead(0x0001);
+    //    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
+    //    print();
+     }
        
     Sleep();
 }
@@ -343,11 +389,21 @@ void main(void)
 
 void systemInit(void)
 {
+  ADCON1bits.PCFG = 0b0111;
   TRISA = 0x00;
+  PORTA  = 0x00;
+  TRISBbits.RB4 = 0;
+  TRISBbits.RB3 = 0;
   //Set Output Enable and Write Enable pins as Outputs
   WEtris = 0; 
   OEtris = 0;
+  WE = 1;
+  OE = 1;
+  sramSetDataPinTris(0);
   //Initialize LCD
   init_lcd();
+  LED = 1;
+  LED2 = 0;
+
   return;  
 }

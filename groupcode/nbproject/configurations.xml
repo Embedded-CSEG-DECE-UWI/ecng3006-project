@@ -26,6 +26,7 @@
       <itemPath>C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setddram.c</itemPath>
       <itemPath>C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/wcmdxlcd.c</itemPath>
       <itemPath>C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c</itemPath>
+      <itemPath>C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/LCD.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -126,6 +127,18 @@
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
       <item path="C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/keypadwLCD.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/menu.c"
             ex="true"
             overriding="false">
       </item>

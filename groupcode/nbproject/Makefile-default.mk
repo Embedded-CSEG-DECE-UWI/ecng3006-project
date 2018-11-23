@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED="C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/menu.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/openxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putrxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putsxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readaddr.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readdata.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setcgram.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setddram.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/wcmdxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c"
+SOURCEFILES_QUOTED_IF_SPACED="C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/openxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putrxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putsxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readaddr.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readdata.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setcgram.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setddram.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/wcmdxlcd.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c" "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/LCD.c"
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1978994463/busyxlcd.o ${OBJECTDIR}/_ext/1978994463/menu.o ${OBJECTDIR}/_ext/1978994463/openxlcd.o ${OBJECTDIR}/_ext/1978994463/putrxlcd.o ${OBJECTDIR}/_ext/1978994463/putsxlcd.o ${OBJECTDIR}/_ext/1978994463/readaddr.o ${OBJECTDIR}/_ext/1978994463/readdata.o ${OBJECTDIR}/_ext/1978994463/setcgram.o ${OBJECTDIR}/_ext/1978994463/setddram.o ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o ${OBJECTDIR}/_ext/1978994463/writdata.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1978994463/busyxlcd.o.d ${OBJECTDIR}/_ext/1978994463/menu.o.d ${OBJECTDIR}/_ext/1978994463/openxlcd.o.d ${OBJECTDIR}/_ext/1978994463/putrxlcd.o.d ${OBJECTDIR}/_ext/1978994463/putsxlcd.o.d ${OBJECTDIR}/_ext/1978994463/readaddr.o.d ${OBJECTDIR}/_ext/1978994463/readdata.o.d ${OBJECTDIR}/_ext/1978994463/setcgram.o.d ${OBJECTDIR}/_ext/1978994463/setddram.o.d ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1978994463/writdata.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1978994463/busyxlcd.o ${OBJECTDIR}/_ext/1978994463/openxlcd.o ${OBJECTDIR}/_ext/1978994463/putrxlcd.o ${OBJECTDIR}/_ext/1978994463/putsxlcd.o ${OBJECTDIR}/_ext/1978994463/readaddr.o ${OBJECTDIR}/_ext/1978994463/readdata.o ${OBJECTDIR}/_ext/1978994463/setcgram.o ${OBJECTDIR}/_ext/1978994463/setddram.o ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o ${OBJECTDIR}/_ext/1978994463/writdata.o ${OBJECTDIR}/_ext/1978994463/LCD.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1978994463/busyxlcd.o.d ${OBJECTDIR}/_ext/1978994463/openxlcd.o.d ${OBJECTDIR}/_ext/1978994463/putrxlcd.o.d ${OBJECTDIR}/_ext/1978994463/putsxlcd.o.d ${OBJECTDIR}/_ext/1978994463/readaddr.o.d ${OBJECTDIR}/_ext/1978994463/readdata.o.d ${OBJECTDIR}/_ext/1978994463/setcgram.o.d ${OBJECTDIR}/_ext/1978994463/setddram.o.d ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1978994463/writdata.o.d ${OBJECTDIR}/_ext/1978994463/LCD.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1978994463/busyxlcd.o ${OBJECTDIR}/_ext/1978994463/menu.o ${OBJECTDIR}/_ext/1978994463/openxlcd.o ${OBJECTDIR}/_ext/1978994463/putrxlcd.o ${OBJECTDIR}/_ext/1978994463/putsxlcd.o ${OBJECTDIR}/_ext/1978994463/readaddr.o ${OBJECTDIR}/_ext/1978994463/readdata.o ${OBJECTDIR}/_ext/1978994463/setcgram.o ${OBJECTDIR}/_ext/1978994463/setddram.o ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o ${OBJECTDIR}/_ext/1978994463/writdata.o
+OBJECTFILES=${OBJECTDIR}/_ext/1978994463/busyxlcd.o ${OBJECTDIR}/_ext/1978994463/openxlcd.o ${OBJECTDIR}/_ext/1978994463/putrxlcd.o ${OBJECTDIR}/_ext/1978994463/putsxlcd.o ${OBJECTDIR}/_ext/1978994463/readaddr.o ${OBJECTDIR}/_ext/1978994463/readdata.o ${OBJECTDIR}/_ext/1978994463/setcgram.o ${OBJECTDIR}/_ext/1978994463/setddram.o ${OBJECTDIR}/_ext/1978994463/wcmdxlcd.o ${OBJECTDIR}/_ext/1978994463/writdata.o ${OBJECTDIR}/_ext/1978994463/LCD.o
 
 # Source Files
-SOURCEFILES=C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/menu.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/openxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putrxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putsxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readaddr.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readdata.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setcgram.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setddram.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/wcmdxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c
+SOURCEFILES=C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/openxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putrxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/putsxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readaddr.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/readdata.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setcgram.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/setddram.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/wcmdxlcd.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/LCD.c
 
 
 CFLAGS=
@@ -108,14 +108,6 @@ ${OBJECTDIR}/_ext/1978994463/busyxlcd.o: C:/Users/amarp/Desktop/ECNG\ 3006/group
 	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/busyxlcd.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c" 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/busyxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1978994463/menu.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/menu.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
-	@${RM} ${OBJECTDIR}/_ext/1978994463/menu.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1978994463/menu.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/menu.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/menu.c" 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/menu.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/menu.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1978994463/openxlcd.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
@@ -189,6 +181,14 @@ ${OBJECTDIR}/_ext/1978994463/writdata.o: C:/Users/amarp/Desktop/ECNG\ 3006/group
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/_ext/1978994463/LCD.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/LCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
+	@${RM} ${OBJECTDIR}/_ext/1978994463/LCD.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1978994463/LCD.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/LCD.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/LCD.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/LCD.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/LCD.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/_ext/1978994463/busyxlcd.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
@@ -197,14 +197,6 @@ ${OBJECTDIR}/_ext/1978994463/busyxlcd.o: C:/Users/amarp/Desktop/ECNG\ 3006/group
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/busyxlcd.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/busyxlcd.c" 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/busyxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1978994463/menu.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/menu.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
-	@${RM} ${OBJECTDIR}/_ext/1978994463/menu.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1978994463/menu.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/menu.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/menu.c" 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/menu.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/menu.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1978994463/openxlcd.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
@@ -277,6 +269,14 @@ ${OBJECTDIR}/_ext/1978994463/writdata.o: C:/Users/amarp/Desktop/ECNG\ 3006/group
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/writdata.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/writdata.c" 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1978994463/LCD.o: C:/Users/amarp/Desktop/ECNG\ 3006/group\ project/ecng3006-project/groupcode/LCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1978994463" 
+	@${RM} ${OBJECTDIR}/_ext/1978994463/LCD.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1978994463/LCD.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1978994463/LCD.o   "C:/Users/amarp/Desktop/ECNG 3006/group project/ecng3006-project/groupcode/LCD.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1978994463/LCD.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1978994463/LCD.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

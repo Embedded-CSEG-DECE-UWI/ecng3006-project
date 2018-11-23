@@ -38,7 +38,7 @@ void keypress(void)  //function used to determine which key is pressed
     {
         key[0] = '1';
     }
-  /*if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
         key[0] = '2';
     } 
@@ -97,7 +97,7 @@ void keypress(void)  //function used to determine which key is pressed
   if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
         key[0] = 'F';
-    }*/
+    }
 }
 void DelayFor18TCY(void) //delay
 {
@@ -131,13 +131,13 @@ void DelayPORXLCD(void) //delay
 }
 void LCDinit(void)                  //function to initialize the LCD
 { 
-    OpenXLCD(FOUR_BIT & LINES_5X7);
+    OpenXLCD(FOUR_BIT & LINES_5X7);     //open the LCD and sets it to 4 bit and multiple line mode
     while(BusyXLCD());
-    SetDDRamAddr(0x00); 
+    SetDDRamAddr(0x00);                 //sets the cursor to the top left
     while(BusyXLCD()); 
-    WriteCmdXLCD(BLINK_ON);
-    while(BusyXLCD());
-    WriteCmdXLCD(SHIFT_DISP_LEFT);
+    WriteCmdXLCD(BLINK_ON);             //allow the cursor to blink
+    while(BusyXLCD());          
+    WriteCmdXLCD(SHIFT_DISP_LEFT);      //shift the display to the left
     while(BusyXLCD());
 }
 
@@ -166,12 +166,12 @@ void main(void)         //main function
     LCDinit();              //call lcd setup function
     while(BusyXLCD());      //command to stall when the lcd is busy
     putrsXLCD("KEYPAD TEST");    //writes to the screen
-    Delay10KTCYx(200);
-    WriteCmdXLCD(0b00000001);
+    Delay10KTCYx(200);           //Delay to stop flickering on the screen
+    WriteCmdXLCD(0b00000001);    //clears the screen
     while(BusyXLCD());
-    key[0] = 'N';
-    key[1] = '\0';
-    putsXLCD(key);
+    key[0] = 'N';               //Assign default value to key
+    key[1] = '\0';              //null
+    putsXLCD(key);              //write to the screen
     while(1){        
         putsXLCD(key);                  //write from data memory to screen
         Delay10KTCYx(50);               //delay

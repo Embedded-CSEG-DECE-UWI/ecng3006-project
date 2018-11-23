@@ -147,13 +147,13 @@ void DelayPORXLCD(void) //delay
 }
 void LCDinit(void)                  //function to initialize the LCD
 { 
-    OpenXLCD(FOUR_BIT & LINES_5X7);
+    OpenXLCD(FOUR_BIT & LINES_5X7);     //open the LCD and sets it to 4 bit and multiple line mode
     while(BusyXLCD());
-    SetDDRamAddr(0x00); 
+    SetDDRamAddr(0x00);                 //sets the cursor to the top left
     while(BusyXLCD()); 
-    WriteCmdXLCD(BLINK_ON);
-    while(BusyXLCD());
-    WriteCmdXLCD(SHIFT_DISP_LEFT);
+    WriteCmdXLCD(BLINK_ON);             //allow the cursor to blink
+    while(BusyXLCD());          
+    WriteCmdXLCD(SHIFT_DISP_LEFT);      //shift the display to the left
     while(BusyXLCD());
 }
 
@@ -176,7 +176,7 @@ void keypadsetup(void)
     TRISDbits.RD4 = 1; //D
 }
 
-void menuinit(void){
+void menuinit(void){        //menu initialisation 
     while(BusyXLCD());      //command to stall when the lcd is busy
     putrsXLCD("MENU TEST");    //writes to the screen
     while(BusyXLCD());
@@ -184,7 +184,7 @@ void menuinit(void){
     while(BusyXLCD());
     WriteCmdXLCD(0b00000001);
 }
-void menu(void)
+void menu(void)                 //first half of menu for initial setup
 {
     while(BusyXLCD());
     SetDDRamAddr(0x00);
@@ -194,7 +194,7 @@ void menu(void)
     while(BusyXLCD());
 }
 
-void checkkey(void){
+void checkkey(void){            //function used to check which key is pressed and display the appropriate options to the screen
          if (key[0] == 'A'){
             while(BusyXLCD());
             SetDDRamAddr(0x00);

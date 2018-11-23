@@ -349,7 +349,7 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
     {
         if (HRreadAdd != 0)
         {
-            if(scrollState == SCROLL_DOWN)
+            if(scrollState == SCROLL_DOWN && HRscrollCnt > 4)
             {
                 scrollState = SCROLL_UP;
                 HRreadAdd = HRreadAdd - 8;
@@ -428,7 +428,7 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
     
     if (message == SCROLL_UP && HRVreccnt > 4)
     {
-        if (HRVreadAdd != 0)
+        if (HRVreadAdd != 0 && HRVscrollCnt > 4)
         {
             if(scrollState == SCROLL_DOWN)
             {
@@ -509,7 +509,7 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
     
     if (message == SCROLL_UP && TEMPreccnt > 4)
     {
-        if (TEMPreadAdd != 0)
+        if (TEMPreadAdd != 0  && TEMPscrollCnt > 4)
         {
             if(scrollState == SCROLL_DOWN)
             {
@@ -575,6 +575,88 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
             }           
         }
         TEMPscrollCnt++;
+    }
+    else
+    {
+        return; // misra C 2004 rules 14.10 else if constructs shall be terminated with else
+    }
+}
+    
+
+void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
+{
+    union uFLOAT RXfloat;
+    int x;
+    
+    if (message == SCROLL_UP && GLUCreccnt > 4)
+    {
+        if (GLUCreadAdd != 0 && GLUCscrollCnt > 4)
+        {
+            if(scrollState == SCROLL_DOWN)
+            {
+                scrollState = SCROLL_UP;
+                GLUCreadAdd = GLUCreadAdd - 8;
+                for (x = 0; x < TYPESIZE; x++)
+                {
+                    readDATA(SECTOR, GLUCreadAdd + x);
+                    RXfloat.floatCHAR[x] = RXbits.CHARBITS;
+                }
+                glucDisp[3] = glucDisp[2];
+                glucDisp[2] = glucDisp[1]; 
+                glucDisp[1] = glucDisp[0];
+                glucDisp[0] = RXfloat.floatVAL;
+            }
+            else
+            {
+                GLUCreadAdd = GLUCreadAdd - TYPESIZE;
+                for (x = 0; x < TYPESIZE; x++)
+                {
+                    readDATA(SECTOR, GLUCreadAdd + x);
+                    RXfloat.floatCHAR[x] = RXbits.CHARBITS;
+                }
+                glucDisp[3] = glucDisp[2];
+                glucDisp[2] = glucDisp[1]; 
+                glucDisp[1] = glucDisp[0];
+                glucDisp[0] = RXfloat.floatVAL;
+            }
+            GLUCscrollCnt--;  
+        }
+    }
+        
+    else if(message == SCROLL_DOWN && GLUCreccnt > 4)
+    {
+        if(GLUCreadAdd != GLUCreadAddX)
+        {
+            if (scrollState == SCROLL_UP) 
+            {
+                scrollState = SCROLL_DOWN;
+                GLUCreadAdd = GLUCreadAdd + 8;
+                for (x = 0; x < TYPESIZE; x++)
+                {
+                    readDATA(SECTOR, GLUCreadAdd + x);
+                    RXfloat.floatCHAR[x] = RXbits.CHARBITS;
+                }
+                glucDisp[0] = glucDisp[1];
+                glucDisp[1] = glucDisp[2];
+                glucDisp[2] = glucDisp[3];
+                glucDisp[3] =  RXfloat.floatCHAR[x];
+            }
+            else
+            {
+                GLUCreadAdd = GLUCreadAdd + TYPESIZE;
+                GLUCreadAdd = GLUCreadAdd + 8;
+                for (x = 0; x < TYPESIZE; x++)
+                {
+                    readDATA(SECTOR, GLUCreadAdd + x);
+                    RXfloat.floatCHAR[x] = RXbits.CHARBITS;
+                }
+                glucDisp[0] = glucDisp[1];
+                glucDisp[1] = glucDisp[2];
+                glucDisp[2] = glucDisp[3];
+                glucDisp[3] =  RXfloat.floatCHAR[x];
+            }           
+        }
+        GLUCscrollCnt++;
     }
     else
     {

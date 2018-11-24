@@ -4,6 +4,7 @@
 #include <capture.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <pwm.h>
 #include "ow.h"
 #include "LCD stuff/xlcd.h"
 
@@ -26,6 +27,8 @@ bool COUNTING = FALSE;                                //state that defines wheth
 bool CAPTURING = FALSE;
 bool MEASUREMENT_COMPLETE = FALSE;
 bool KEY_PRESSED = FALSE;
+bool BROWN_OUT = FALSE;
+bool ALARM = FALSE;
 
 /*Keypad Variables*/
 char option = 0;
@@ -156,6 +159,27 @@ void resetTempConversion (void);
 void runningAverage (void);
 void errorCalibration (void);
 
+void configSpeaker (void);
+void alarm (void);
+void checkRange (void);
+
+/*Support Circuitry*/
+void configSupportCircuity (void){
+    TRISBbits.RB0 = 0xFF;
+    TRISBbits.RB3 = 0x00;
+    TRISBbits.RB4 = 0x00;
+    PORTBbits.RB4 = 0;
+}
+
+void checkBrownout (void){
+    if(PORTBbits.RB0 == 1){
+        BROWN_OUT = TRUE;
+    }
+    if(PORTBbits.RB0 == 0){
+        BROWN_OUT = FALSE;
+    }
+}
+
 #pragma code HIGH_INTERRUPT_VECTOR = 0x08               //tells the compiler that the high interrupt vector is located at 0x08
 void high_interrupt_vector(void){                   
     _asm                                                //allows asm code to be used into a C source file
@@ -173,17 +197,19 @@ void highISR (void){                                    //interrupt service rout
         INTCONbits.TMR0IE = 0;
         INTCONbits.TMR0IF = 0;
         
-        PORTBbits.RB0 = !PORTBbits.RB0;                 //toggles a debugging LED that indicates when TIMER 0 overflows
+        //PORTBbits.RB0 = !PORTBbits.RB0;                 //toggles a debugging LED that indicates when TIMER 0 overflows
         
         //readTemp();
         
         COUNTING = FALSE;
         MEASUREMENT_COMPLETE = TRUE;
+        ALARM = FALSE;
                     
         int1TotalPulse = (int1Events*6);                //calculation to obtain number of pulses in 1 min (10s*6)
-        int1Events = 0;                                 //resets the pulse count
         HRVMeasurement();
+        checkRange();
         
+        int1Events = 0;                                 //resets the pulse count        
         
         stopPulseInterval();
         startPulseInterval();                  
@@ -198,6 +224,8 @@ void highISR (void){                                    //interrupt service rout
         
         timer1_overflow_count += 1;
         
+        checkBrownout();
+        
         PIE1bits.TMR1IE = 1;
     }   
     
@@ -206,7 +234,7 @@ void highISR (void){                                    //interrupt service rout
         INTCON3bits.INT1IE = 0;
         INTCON3bits.INT1IF = 0;
         
-        PORTBbits.RB3 = !PORTBbits.RB3;                 //toggles a debugging LED that indicates when an external interrupt has occurred
+        //PORTBbits.RB3 = !PORTBbits.RB3;                 //toggles a debugging LED that indicates when an external interrupt has occurred
         
         COUNTING = TRUE; 
         int1Events++;                                   //increments the event counter
@@ -229,7 +257,7 @@ void highISR (void){                                    //interrupt service rout
         PIE1bits.CCP1IE = 0;
         PIR1bits.CCP1IF = 0;
         
-        PORTBbits.RB4 = !PORTBbits.RB4;
+        //PORTBbits.RB4 = !PORTBbits.RB4;
         
         CAPTURING = TRUE;
         HRV_pulse_count += 1;
@@ -280,7 +308,7 @@ void configInterrupts(void){
     INTCON3bits.INT2IE = 1;                              //enables the INT1 interrupt source
 }
 
-void configDebugLED (void){
+/*void configDebugLED (void){
     //This LED determines whether TIMER0 is interrupting every 15s
     TRISBbits.RB0 = 0; 
     PORTBbits.RB0 = 0;
@@ -290,7 +318,7 @@ void configDebugLED (void){
     //This LED determines whether the CCP1 interrupt is being serviced
     TRISBbits.RB4 = 0; 
     PORTBbits.RB4 = 0;
-}
+}*/
 
 void configTimers (void){
     OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
@@ -651,6 +679,24 @@ int checkPressedKey(){
     }
 }
 
+/*Speaker*/
+void configSpeaker (void){
+    TRISCbits.RC1 = 0;
+    SetDCPWM2(30);
+    
+    OpenTimer2(TIMER_INT_OFF & T2_PS_1_16 & T2_POST_1_1);
+}
+
+void alarm (void){
+    OpenPWM2(0x65);
+}
+
+void checkRange (void){
+    if((int1TotalPulse > 140) || (HRV_integer > 50)){
+        ALARM = TRUE;
+    }
+}
+
 void homeScreen (void){
     WriteCmdXLCD(0x01);
     while(BusyXLCD());
@@ -693,6 +739,7 @@ void menu (char key){
         case '0':
             homeScreen();
             stopPulseInterval();
+            ALARM = FALSE;
         break;
         
         default:
@@ -700,13 +747,13 @@ void menu (char key){
     }
 }
 
-int i = 0;
-int temp = 0;
-char l[20];
+int z = 0;
 
 void main (void){
     initLCD();
-    configDebugLED();
+    //configDebugLED();
+    configSupportCircuity();
+    configSpeaker();
     configInterrupts();
     configCCP();
     configTimers();    
@@ -717,8 +764,8 @@ void main (void){
     errorCalibration();   
     homeScreen();
     
-    while(1){    
-        
+    
+    while(1){     
         if (KEY_PRESSED == TRUE){
             checkPressedKey();
             menu(option);
@@ -739,6 +786,28 @@ void main (void){
             printHRV();
             printTemp();
             MEASUREMENT_COMPLETE = FALSE;
+        }
+        
+        if(BROWN_OUT == TRUE){
+            PORTBbits.RB3 = 1;
+            Delay10KTCYx(5);      
+            PORTBbits.RB3 = 0;
+            Delay10KTCYx(5);
+        }
+        
+        if(BROWN_OUT == FALSE){
+            PORTBbits.RB4 = 1;
+            Delay10KTCYx(5);      
+            PORTBbits.RB4 = 0;
+            Delay10KTCYx(5);
+        }
+        
+        if(ALARM == TRUE){
+            alarm();
+        }
+        
+        if(ALARM == FALSE){
+            ClosePWM2();
         }
     }
     

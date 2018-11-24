@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d ${OBJECTDIR}/_ext/1972699493/openxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d ${OBJECTDIR}/_ext/1972699493/readaddr.o.d ${OBJECTDIR}/_ext/1972699493/readdata.o.d ${OBJECTDIR}/_ext/1972699493/setcgram.o.d ${OBJECTDIR}/_ext/1972699493/setddram.o.d ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1972699493/writdata.o.d ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o ${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d ${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d ${OBJECTDIR}/_ext/1972699493/openxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d ${OBJECTDIR}/_ext/1972699493/readaddr.o.d ${OBJECTDIR}/_ext/1972699493/readdata.o.d ${OBJECTDIR}/_ext/1972699493/setcgram.o.d ${OBJECTDIR}/_ext/1972699493/setddram.o.d ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1972699493/writdata.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o
+OBJECTFILES=${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o ${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o
 
 # Source Files
-SOURCEFILES=C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c
+SOURCEFILES=C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c
 
 
 CFLAGS=
@@ -101,6 +101,14 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o: C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/805881893" 
+	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d 
+	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/_ext/1972699493/busyxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
 	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d 
@@ -181,15 +189,15 @@ ${OBJECTDIR}/_ext/1972699493/writdata.o: C:/ECNG3006/Group_Project/ecng3006-proj
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+else
 ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o: C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/805881893" 
 	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d 
 	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-else
 ${OBJECTDIR}/_ext/1972699493/busyxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
 	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d 
@@ -269,14 +277,6 @@ ${OBJECTDIR}/_ext/1972699493/writdata.o: C:/ECNG3006/Group_Project/ecng3006-proj
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/writdata.o   C:/ECNG3006/Group_Project/ecng3006-project/writdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o: C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/805881893" 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/805881893/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

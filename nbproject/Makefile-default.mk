@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED="C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c"
+SOURCEFILES_QUOTED_IF_SPACED="C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c" "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c"
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o ${OBJECTDIR}/_ext/1863107756/busyxlcd.o ${OBJECTDIR}/_ext/1863107756/openxlcd.o ${OBJECTDIR}/_ext/1863107756/putrxlcd.o ${OBJECTDIR}/_ext/1863107756/putsxlcd.o ${OBJECTDIR}/_ext/1863107756/readaddr.o ${OBJECTDIR}/_ext/1863107756/readdata.o ${OBJECTDIR}/_ext/1863107756/setcgram.o ${OBJECTDIR}/_ext/1863107756/setddram.o ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o ${OBJECTDIR}/_ext/1863107756/writdata.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d ${OBJECTDIR}/_ext/1863107756/busyxlcd.o.d ${OBJECTDIR}/_ext/1863107756/openxlcd.o.d ${OBJECTDIR}/_ext/1863107756/putrxlcd.o.d ${OBJECTDIR}/_ext/1863107756/putsxlcd.o.d ${OBJECTDIR}/_ext/1863107756/readaddr.o.d ${OBJECTDIR}/_ext/1863107756/readdata.o.d ${OBJECTDIR}/_ext/1863107756/setcgram.o.d ${OBJECTDIR}/_ext/1863107756/setddram.o.d ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1863107756/writdata.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o
+OBJECTFILES=${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o ${OBJECTDIR}/_ext/1863107756/busyxlcd.o ${OBJECTDIR}/_ext/1863107756/openxlcd.o ${OBJECTDIR}/_ext/1863107756/putrxlcd.o ${OBJECTDIR}/_ext/1863107756/putsxlcd.o ${OBJECTDIR}/_ext/1863107756/readaddr.o ${OBJECTDIR}/_ext/1863107756/readdata.o ${OBJECTDIR}/_ext/1863107756/setcgram.o ${OBJECTDIR}/_ext/1863107756/setddram.o ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o ${OBJECTDIR}/_ext/1863107756/writdata.o
 
 # Source Files
-SOURCEFILES=C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c
+SOURCEFILES=C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c
 
 
 CFLAGS=
@@ -109,6 +109,86 @@ ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o: C:/Users/Danny\ G/Dropbox/Personal/Sc
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/_ext/1863107756/busyxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/busyxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/openxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/openxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/putrxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/putrxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/putsxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/putsxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/readaddr.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/readaddr.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/readdata.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/readdata.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/setcgram.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/setcgram.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/setddram.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setddram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/setddram.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/writdata.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/writdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/writdata.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1196627710" 
@@ -117,6 +197,86 @@ ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o: C:/Users/Danny\ G/Dropbox/Personal/Sc
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/Source/6.FlashRAM.c" 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1196627710/6.FlashRAM.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/busyxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/busyxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/busyxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/openxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/openxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/openxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/putrxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/putrxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putrxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/putsxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/putsxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/putsxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/readaddr.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/readaddr.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readaddr.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/readdata.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/readdata.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/readdata.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/setcgram.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/setcgram.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setcgram.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/setddram.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setddram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/setddram.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/setddram.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/wcmdxlcd.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1863107756/writdata.o: C:/Users/Danny\ G/Dropbox/Personal/School/ECNG/Year\ 3/ECNG\ -\ 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1863107756" 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/writdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1863107756/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1863107756/writdata.o   "C:/Users/Danny G/Dropbox/Personal/School/ECNG/Year 3/ECNG - 3006/Group_F_Stuff/NewRepo/ecng3006-project/writdata.c" 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1863107756/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1863107756/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

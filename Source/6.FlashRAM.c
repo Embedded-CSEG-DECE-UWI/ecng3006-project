@@ -207,7 +207,7 @@ volatile int sramRead(int add)
     OE = 0;
 
     //Wait for Toe = ()
-    //Delay1TCY();
+    Delay1TCY();
     res = sramReadDataPins();
     
     return res;
@@ -287,7 +287,7 @@ void sramSecErase(int add)
     sramLatch();
     
     //3rd Bus Write Cycle 
-    sramLoadDataPins(0x80);
+    sramLoadDataPins(0x80); 
     sramLoadAddPins(0x5555);
     sramLatch();
 
@@ -307,17 +307,18 @@ void sramSecErase(int add)
     sramLatch();
 
     //Delay for Tse = 25ms;
-    // Delay10TCYx(2);
-    // Delay1TCY();
-    // Delay1TCY();
-    // Delay1TCY();
-    // Delay1TCY();
-    // Delay1TCY();
+    Delay10KTCYx(2);
+    Delay1KTCYx(1);
+    Delay1KTCYx(1);
+    Delay1KTCYx(1);
+    Delay1KTCYx(1);
+    Delay1KTCYx(1);
+    Delay1KTCYx(1);
 
     //Wait for Data# (DQ6)
-    sramBusyData();
-    sprintf(lcdVariable,"Erase Completed!");
-    print();
+    //sramBusyData();
+   // sprintf(lcdVariable,"Erase Completed!");
+   // print();
 
     return;
 }
@@ -362,22 +363,22 @@ void main(void)
 
      while(1)
      {
-    D7 = 1;
-    D6 = 1;
-    D5 = 1;
-    D4 = 1;
-    D3 = 1;
-    D2 = 1;
-    D1 = 1;
-    D0 = 1;
+    // D7 = 1;
+    // D6 = 0;
+    // D5 = 1;
+    // D4 = 0;
+    // D3 = 1;
+    // D2 = 0;
+    // D1 = 1;
+    // D0 = 1;
 
-    // // sramLoadDataPins(0xAA);
-    // //Delay10KTCYx(100);
-    // //sramSecErase(0b000010000000000000);
-    // //sramByteProgramOp(0x0001, 0b10101010);
-    // //sramRead(0x0001);
-    // //    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x0001));
-    // //    print();
+    //sramLoadDataPins(0xAA);
+    
+    sramSecErase(0x000000);
+    sramByteProgramOp(0x000001, 0b10101010);
+    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x000001));
+    print();
+    Delay10KTCYx(100);
      }
 
     //sramLoadAddPins(0x00FFFF); //Testing Address loading function
@@ -391,21 +392,21 @@ void main(void)
 
 void systemInit(void)
 {
- // ADCON1bits.PCFG = 0b0111;
-  TRISA = 0x00;
-//   PORTA  = 0x00;
-   TRISBbits.RB4 = 0;
-//   TRISBbits.RB3 = 0;
-//   //Set Output Enable and Write Enable pins as Outputs
-//   WEtris = 0; 
-//   OEtris = 0;
-//   WE = 1;
-//   OE = 1;
-   sramSetDataPinTris(0);
-//   //Initialize LCD
-//   init_lcd();
-     LED = 1;
-//   LED2 = 0;
+    ADCON1bits.PCFG = 0b0111;
+    TRISA = 0x00;
+    PORTA = 0x00;
+    TRISBbits.RB4 = 0;
+    TRISBbits.RB3 = 0;
+    //   //Set Output Enable and Write Enable pins as Outputs
+    WEtris = 0;
+    OEtris = 0;
+    WE = 1;
+    OE = 1;
+    sramSetDataPinTris(0);
+    //   //Initialize LCD
+    init_lcd();
+    LED = 1;
+    LED2 = 0;
 
-  return;  
+    return;
 }

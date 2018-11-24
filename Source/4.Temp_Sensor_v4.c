@@ -37,6 +37,21 @@ int sum_fraction = 0;
 int running_average_integer = 0;
 int running_average_fraction = 0;
 
+int temp_sum_fraction = 0;
+float decimal_division_initial_value = 0.0;
+float integer_division_initial_value = 0.0;
+
+float decimal_division_final_value = 0.0;
+int decimal_division_final_value_integer = 0;
+
+int integer_variable_extraction = 0;
+float integer_division_value_to_add = 0.0;
+
+float average_fraction_float = 0;
+
+int counter2 = 5;
+int test = 0;
+
 char lcdVariable[20];                               //array that will contain the pulse count to display on the LCD
 
 void configTemp (void);
@@ -165,18 +180,6 @@ void resetTempConversion (void){
     temp_sign = 0;
 }
 
-int temp_sum_fraction = 0;
-float decimal_division_initial_value = 0.0;
-float integer_division_initial_value = 0.0;
-
-float decimal_division_final_value = 0.0;
-int decimal_division_final_value_integer = 0;
-
-int integer_variable_extraction = 0;
-float integer_division_value_to_add = 0.0;
-
-float average_fraction_float = 0;
-
 void errorCalibration (void){
     counter = 0;
     
@@ -231,8 +234,6 @@ void errorCalibration (void){
     //resetTempConversion();
 }
 
-int counter2 = 5;
-int test = 0;
 void runningAverage (void){
     counter2 += 1;
     
@@ -285,11 +286,9 @@ void main(void)
     errorCalibration();
     obtainSign();
     printTemp();
-    print();
         
     while(1){ 
         resetTempConversion();
-        //Delay10KTCYx(200);
         readTemp();
         obtainInteger();
         obtainFraction();
@@ -297,8 +296,6 @@ void main(void)
         runningAverage();
         obtainSign();
         printTemp();
-        print();
     }
-    
     Sleep();
 }

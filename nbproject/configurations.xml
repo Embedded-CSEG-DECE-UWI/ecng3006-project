@@ -24,7 +24,7 @@
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setddram.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/writdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/4.Temp_Sensor_v4.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

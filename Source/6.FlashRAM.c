@@ -375,7 +375,7 @@ void main(void)
     //sramLoadDataPins(0xAA);
     
     sramSecErase(0x000000);
-    sramByteProgramOp(0x000001, 0b10101010);
+    sramByteProgramOp(0x000001, 0b00001111);
     sprintf(lcdVariable, "SRam Data: %d", sramRead(0x000001));
     print();
     Delay10KTCYx(100);

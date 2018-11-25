@@ -226,7 +226,7 @@ void MakeRecordGLUC(unsigned char storeSECTOR, unsigned char RECCNT_ADDRESS, uni
 }
 
 
-void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsigned int* scrollreadAdd, volatile unsigned char* reccnt, volatile unsigned char* scrollcount, volatile char scrollState)
+void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsigned int* scrollreadAdd, volatile unsigned char* reccnt, volatile unsigned char* scrollcount, volatile char* scrollState)
 {
     union uINT RXint;
     int x;
@@ -278,14 +278,14 @@ void openRecordsINT(unsigned char SECTOR, unsigned int* dispArr, volatile unsign
         }
     }
     *scrollreadAdd = nextreadADD - INTSIZE;
-    scrollState = SCROLL_DOWN;
+    *scrollState = SCROLL_DOWN;
     
 }
 
 
 
 
-void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned int* scrollreadAdd, volatile unsigned char* reccnt, volatile unsigned char* scrollcount, volatile char scrollState)
+void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned int* scrollreadAdd, volatile unsigned char* reccnt, volatile unsigned char* scrollcount, volatile char* scrollState)
 {
     union uFLOAT RXfloat;
     int x;
@@ -335,27 +335,27 @@ void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned in
         }
     }
     *scrollreadAdd = nextreadADD - FLOATSIZE;
-    scrollState = SCROLL_DOWN;
+    *scrollState = SCROLL_DOWN;
 }
 
 
 
-void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
+void scrollRecordsHR(char SECTOR, char message, volatile char* scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
 {
     union uINT RXint;
-    int x;
+    unsigned int x;
     
     if (message == SCROLL_UP && HRreccnt > 4)
     {
         if (HRreadAdd != 0)
         {
-            if(scrollState == SCROLL_DOWN && HRscrollCnt > 4)
+            if(*scrollState == SCROLL_DOWN)
             {
-                scrollState = SCROLL_UP;
-                HRreadAdd = HRreadAdd - 8;
+                *scrollState = SCROLL_UP;
+                HRreadAdd = (HRreadAdd - 8);
                 for (x = 0; x < TYPESIZE; x++)
                 {
-                    readDATA(SECTOR, HRreadAdd + x);
+                    readDATA(SECTOR, (HRreadAdd + x));
                     RXint.intCHAR[x] = RXbits.CHARBITS;
                 }
                 hrDisp[3] = hrDisp[2];
@@ -365,10 +365,10 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
             }
             else
             {
-                HRreadAdd = HRreadAdd - TYPESIZE;
+                HRreadAdd = (HRreadAdd - TYPESIZE);
                 for (x = 0; x < TYPESIZE; x++)
                 {
-                    readDATA(SECTOR, HRreadAdd + x);
+                    readDATA(SECTOR, (HRreadAdd + x));
                     RXint.intCHAR[x] = RXbits.CHARBITS;
                 }
                 hrDisp[3] = hrDisp[2];
@@ -384,9 +384,9 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
     {
         if(HRreadAdd != HRreadAddX)
         {
-            if (scrollState == SCROLL_UP) 
+            if (*scrollState == SCROLL_UP) 
             {
-                scrollState = SCROLL_DOWN;
+                *scrollState = SCROLL_DOWN;
                 HRreadAdd = HRreadAdd + 8;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -396,7 +396,7 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
                 hrDisp[0] = hrDisp[1];
                 hrDisp[1] = hrDisp[2];
                 hrDisp[2] = hrDisp[3];
-                hrDisp[3] =  RXint.intCHAR[x];
+                hrDisp[3] =  RXint.intVAL;
             }
             else
             {
@@ -409,10 +409,11 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
                 hrDisp[0] = hrDisp[1];
                 hrDisp[1] = hrDisp[2];
                 hrDisp[2] = hrDisp[3];
-                hrDisp[3] =  RXint.intCHAR[x];
-            }           
+                hrDisp[3] =  RXint.intVAL;
+            } 
+            HRscrollCnt++;
         }
-        HRscrollCnt++;
+        
     }
     else
     {
@@ -421,7 +422,7 @@ void scrollRecordsHR(char SECTOR, char message, volatile char scrollState, unsig
 }
     
 
-void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
+void scrollRecordsHRV(char SECTOR, char message, volatile char* scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
 {
     union uFLOAT RXfloat;
     int x;
@@ -430,9 +431,9 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
     {
         if (HRVreadAdd != 0 && HRVscrollCnt > 4)
         {
-            if(scrollState == SCROLL_DOWN)
+            if(*scrollState == SCROLL_DOWN)
             {
-                scrollState = SCROLL_UP;
+                *scrollState = SCROLL_UP;
                 HRVreadAdd = HRVreadAdd - 16;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -465,9 +466,9 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
     {
         if(HRVreadAdd != HRVreadAddX)
         {
-            if (scrollState == SCROLL_UP) 
+            if (*scrollState == SCROLL_UP) 
             {
-                scrollState = SCROLL_DOWN;
+                *scrollState = SCROLL_DOWN;
                 HRVreadAdd = HRVreadAdd + 16;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -477,7 +478,7 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
                 hrvDisp[0] = hrvDisp[1];
                 hrvDisp[1] = hrvDisp[2];
                 hrvDisp[2] = hrvDisp[3];
-                hrvDisp[3] =  RXfloat.floatCHAR[x];
+                hrvDisp[3] =  RXfloat.floatVAL;
             }
             else
             {
@@ -490,7 +491,7 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
                 hrvDisp[0] = hrvDisp[1];
                 hrvDisp[1] = hrvDisp[2];
                 hrvDisp[2] = hrvDisp[3];
-                hrvDisp[3] =  RXfloat.floatCHAR[x];
+                hrvDisp[3] =  RXfloat.floatVAL;
             }           
         }
         HRVscrollCnt++;
@@ -502,7 +503,7 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char scrollState, unsi
 }
     
 
-void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
+void scrollRecordsTEMP(char SECTOR, char message, volatile char* scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
 {
     union uFLOAT RXfloat;
     int x;
@@ -511,9 +512,9 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
     {
         if (TEMPreadAdd != 0  && TEMPscrollCnt > 4)
         {
-            if(scrollState == SCROLL_DOWN)
+            if(*scrollState == SCROLL_DOWN)
             {
-                scrollState = SCROLL_UP;
+                *scrollState = SCROLL_UP;
                 TEMPreadAdd = TEMPreadAdd - 16;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -546,9 +547,9 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
     {
         if(TEMPreadAdd != TEMPreadAddX)
         {
-            if (scrollState == SCROLL_UP) 
+            if (*scrollState == SCROLL_UP) 
             {
-                scrollState = SCROLL_DOWN;
+                *scrollState = SCROLL_DOWN;
                 TEMPreadAdd = TEMPreadAdd + 16;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -558,7 +559,7 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
                 tempDisp[0] = tempDisp[1];
                 tempDisp[1] = tempDisp[2];
                 tempDisp[2] = tempDisp[3];
-                tempDisp[3] =  RXfloat.floatCHAR[x];
+                tempDisp[3] =  RXfloat.floatVAL;
             }
             else
             {
@@ -571,7 +572,7 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
                 tempDisp[0] = tempDisp[1];
                 tempDisp[1] = tempDisp[2];
                 tempDisp[2] = tempDisp[3];
-                tempDisp[3] =  RXfloat.floatCHAR[x];
+                tempDisp[3] =  RXfloat.floatVAL;
             }           
         }
         TEMPscrollCnt++;
@@ -583,7 +584,7 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char scrollState, uns
 }
     
 
-void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
+void scrollRecordsGLUC(char SECTOR, char message,volatile char* scrollState, unsigned char TYPESIZE) /* message this will be replaced with void*/
 {
     union uFLOAT RXfloat;
     int x;
@@ -592,9 +593,9 @@ void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned cha
     {
         if (GLUCreadAdd != 0 && GLUCscrollCnt > 4)
         {
-            if(scrollState == SCROLL_DOWN)
+            if(*scrollState == SCROLL_DOWN)
             {
-                scrollState = SCROLL_UP;
+                *scrollState = SCROLL_UP;
                 GLUCreadAdd = GLUCreadAdd - 8;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -627,9 +628,9 @@ void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned cha
     {
         if(GLUCreadAdd != GLUCreadAddX)
         {
-            if (scrollState == SCROLL_UP) 
+            if (*scrollState == SCROLL_UP) 
             {
-                scrollState = SCROLL_DOWN;
+                *scrollState = SCROLL_DOWN;
                 GLUCreadAdd = GLUCreadAdd + 8;
                 for (x = 0; x < TYPESIZE; x++)
                 {
@@ -639,7 +640,7 @@ void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned cha
                 glucDisp[0] = glucDisp[1];
                 glucDisp[1] = glucDisp[2];
                 glucDisp[2] = glucDisp[3];
-                glucDisp[3] =  RXfloat.floatCHAR[x];
+                glucDisp[3] =  RXfloat.floatVAL;
             }
             else
             {
@@ -653,7 +654,7 @@ void scrollRecordsGLUC(char SECTOR, char message, char scrollState, unsigned cha
                 glucDisp[0] = glucDisp[1];
                 glucDisp[1] = glucDisp[2];
                 glucDisp[2] = glucDisp[3];
-                glucDisp[3] =  RXfloat.floatCHAR[x];
+                glucDisp[3] =  RXfloat.floatVAL;
             }           
         }
         GLUCscrollCnt++;

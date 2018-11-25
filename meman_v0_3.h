@@ -147,11 +147,11 @@ void MakeRecordTEMP(unsigned char,unsigned char,union uFLOAT);
 void MakeRecordGLUC(unsigned char,unsigned char,union uFLOAT);
 
 
-void openRecordsINT(unsigned char, unsigned int*, volatile unsigned int*, volatile unsigned char*,volatile unsigned char*,volatile char);
-void openRecordsFLOAT(unsigned char , float* , volatile unsigned int*, volatile unsigned char* ,volatile unsigned char*,volatile char );
+void openRecordsINT(unsigned char, unsigned int*, volatile unsigned int*, volatile unsigned char*,volatile unsigned char*,volatile char*);
+void openRecordsFLOAT(unsigned char , float* , volatile unsigned int*, volatile unsigned char* ,volatile unsigned char*,volatile char* );
 
-void scrollRecordsHR(char , char , volatile char, unsigned char );
-void scrollRecordsTEMP(char , char, volatile char, unsigned char );
-void scrollRecordsHRV(char , char, volatile char, unsigned char );
-void scrollRecordsGLUC(char, char, volatile char, unsigned char );
+void scrollRecordsHR(char , char , volatile char*, unsigned char );
+void scrollRecordsTEMP(char , char, volatile char*, unsigned char );
+void scrollRecordsHRV(char , char, volatile char*, unsigned char );
+void scrollRecordsGLUC(char, char, volatile char*, unsigned char );
 

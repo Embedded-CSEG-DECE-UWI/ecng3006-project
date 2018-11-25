@@ -310,6 +310,7 @@ void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned in
     
     if (records < 5)
     { 
+        nextreadADD = 0;
         for(x = 0; x < records; x++)
         {
             for(y = 0; y < FLOATSIZE; y++)
@@ -325,6 +326,7 @@ void openRecordsFLOAT(unsigned char SECTOR, float* dispArr, volatile unsigned in
     {
         for(x = 0; x < 4; x++)
         {
+            nextreadADD = 0;
             for(y = 0; y < FLOATSIZE; y++)
             {
                 readDATA(SECTOR,nextreadADD);
@@ -492,9 +494,9 @@ void scrollRecordsHRV(char SECTOR, char message, volatile char* scrollState, uns
                 hrvDisp[1] = hrvDisp[2];
                 hrvDisp[2] = hrvDisp[3];
                 hrvDisp[3] =  RXfloat.floatVAL;
-            }           
-        }
-        HRVscrollCnt++;
+            }
+            HRVscrollCnt++;
+        }     
     }
     else
     {
@@ -573,9 +575,10 @@ void scrollRecordsTEMP(char SECTOR, char message, volatile char* scrollState, un
                 tempDisp[1] = tempDisp[2];
                 tempDisp[2] = tempDisp[3];
                 tempDisp[3] =  RXfloat.floatVAL;
-            }           
+            }
+            TEMPscrollCnt++;
         }
-        TEMPscrollCnt++;
+        
     }
     else
     {
@@ -655,9 +658,10 @@ void scrollRecordsGLUC(char SECTOR, char message,volatile char* scrollState, uns
                 glucDisp[1] = glucDisp[2];
                 glucDisp[2] = glucDisp[3];
                 glucDisp[3] =  RXfloat.floatVAL;
-            }           
+            }  
+            GLUCscrollCnt++;
         }
-        GLUCscrollCnt++;
+        
     }
     else
     {

@@ -39,7 +39,7 @@ void DelayPORXLCD(void){
     Delay1KTCYx(15);
     return;
 }
-void LETTHISWORK (void)
+void LCDsetup (void)
 { 
     OpenXLCD(FOUR_BIT & LINES_5X7);
     while(BusyXLCD());
@@ -67,7 +67,7 @@ void low_isr(void)
 
     INTCONbits.GIEH =0;
     
-    LETTHISWORK();
+    LCDsetup();
     while(BusyXLCD());
     SetDDRamAddr(0x40);
     putrsXLCD("Test Two:");
@@ -99,7 +99,7 @@ void main(void)
     INTCON3bits.INT1IP = 0; //Set INT1 Priority bit to high priority  
     
         
-    LETTHISWORK();
+    LCDsetup();
     while(BusyXLCD());
     SetDDRamAddr(0x00);
     putrsXLCD("Test One");

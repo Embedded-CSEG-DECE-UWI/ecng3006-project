@@ -2,6 +2,7 @@
 #include <p18f452.h> 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <delays.h>
 #include "xlcd.h"
 
@@ -49,6 +50,7 @@ char lcdVariable[20]; //Variable to be printed to the LCD
 int sramCurrPtr; //Variable to manage the address of SRAM
 char option;
 int press = 0;
+int sramStorageInterval;
 
 void systemInit(void);
 
@@ -514,9 +516,9 @@ void sramByteProgramOp(int add, int data)
     sramLoadSeq();          //Step 1
     sramLoadData(add, data);//Step 2
     //Step 3
-    //Wait on read/write operations before exiting routine.
+    //Wait on read/write operations before exiting routine. Can choose to implement one of the three of the methods below:
         //method 1: Poll Data#
-            //Nothing
+            //Nothing Implemented
         //method 2: Poll Toggle Bit
             //Nothing
         //method 3: Lazy man wait: Tbp = 20us (Byte-Program Time)
@@ -586,6 +588,62 @@ void displayScrollMeasurement()
     return;
 }
 
+void setStorageInterval()
+{
+    /*
+    This function set the storage interval for the Flash Ram by reading in inputs from the keep pad and configuring Timer 3
+    to interrupt at user-defined intervals in an ISR routine that is called periodically.
+    */
+    char keypadInput;
+    press = 0; //Reset Keypad press detection variable
+
+    //Read input from keypad and store in the variable: 'interval'
+    // A - Enter
+    // B - Re-enter entire number
+    // C - Cancel
+    // D - Display Current Interval
+
+    sprintf(lcdVariable, "1. Store/10s");
+    printMeasurement(ROW1);
+    sprintf(lcdVariable, "2. Store/20s");
+    printMeasurement(ROW2);
+    sprintf(lcdVariable, "3. Store/40s");
+    printMeasurement(ROW3);
+    sprintf(lcdVariable,"4. [C]ancel");
+    printMeasurement(ROW4);
+
+  
+    
+    while (keypadInput != 'C')
+    {
+                //Update keypress
+        while (!press)
+        {
+            keypadInput = option;
+        }
+        
+        if (keypadInput == '1')
+        {
+           sramStorageInterval = 1;  
+           break;      
+        }
+        else if (keypadInput == '2')
+        {
+            //config timer 3 using interval 2;
+            sramStorageInterval = 2;
+            break;
+        }
+        else if (keypadInput ==  '3')
+        {
+            sramStorageInterval = 3;
+            break;
+        }
+        
+        press = 0;
+    }
+    WriteCmdXLCD(0x01);
+    return;
+}
 
 void initSecErase()
 {
@@ -609,22 +667,31 @@ void main(void)
 {
     systemInit(); // System getting ready 
 
-    sprintf(lcdVariable, "SRam Data: %d", sramRead(520192));
-    print();
+    //sprintf(lcdVariable, "SRam Data: %d", sramRead(520192));
+    //print();
     
      while(1)
      {
-
+          
    
-             if (press == 1)
+          if (press == 1)
           {
-            LED = 1;
-            displayScrollMeasurement();
-            press = 0;
-         }    
+              LED = 1;
+              if(option == '1')
+              {
+               displayScrollMeasurement();
+              }
+              if (option == '2')
+              {
+                 setStorageInterval();
+                 
+              }
+            
+         }   
          LED = 0; 
+         press = 0;
      }
-
+    
     Sleep();
 }
     
@@ -650,6 +717,6 @@ void systemInit(void)
     init_lcd();
     LED = 0;
     LED2 = 0;
-    initSecErase();
+    //initSecErase();
     return;
 }

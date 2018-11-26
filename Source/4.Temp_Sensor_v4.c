@@ -286,6 +286,7 @@ void main(void)
     errorCalibration();
     obtainSign();
     printTemp();
+    print();
         
     while(1){ 
         resetTempConversion();
@@ -296,6 +297,7 @@ void main(void)
         runningAverage();
         obtainSign();
         printTemp();
+        print();
     }
     Sleep();
 }

@@ -14,7 +14,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+Pulse+HRV+Temp+Speaker+SuppCircuit.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c</itemPath>
@@ -25,6 +24,7 @@
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setddram.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c</itemPath>
       <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/writdata.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/Modules + FlashRam.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

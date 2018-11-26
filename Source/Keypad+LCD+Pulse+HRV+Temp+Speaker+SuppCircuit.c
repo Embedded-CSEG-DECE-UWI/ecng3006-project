@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <pwm.h>
 #include "ow.h"
-#include "LCD stuff/xlcd.h"
+#include "xlcd.h"
 
 /* Set configuration bits for use with PICKit3 */
 #pragma config OSC = XT

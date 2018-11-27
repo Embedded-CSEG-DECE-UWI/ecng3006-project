@@ -106,30 +106,8 @@ void init_XLCD (void)
         
 //         putsXLCD(numtodisp);
 //     }
-// }
-
-// void HRVrefreshLCD(void)
-// {
-//     for (i=0; i < 4; i++)
-//     {
-//         while (BusyXLCD());
-//         WriteCmdXLCD(0b00000001);
-//         integers = hrvDisp[i];
-//         //decimals = ((values[i] * 100)%100);
-//         decimals = fmod((hrvDisp[i] * 10),10);
-//         //itoa(values[i], output);
-//         itoa(integers, integerchar);
-//         itoa(decimals, decimalchar);       
-//         while( BusyXLCD() );
-//         if (i == 0) SetDDRamAddr(0x03);
-//         if (i == 1) SetDDRamAddr(0x43);
-//         if (i == 2) SetDDRamAddr(0x13);
-//         if (i == 3) SetDDRamAddr(0x53);
-//         putsXLCD(integerchar);
-//         putrsXLCD(".");
-//         putsXLCD(decimalchar);
-//     }
 // }*/
+
 
 /*void HRtest2(void)
 {
@@ -190,10 +168,10 @@ union uFLOAT load;
 union uINT look;
 union uINT showme; 
 
-unsigned int tints[10] = {5,7,9,11,13,15,17,19,21,23};
+unsigned int tints[10] = {8,7,9,11,13,16,17,19,21,23};
 float toats[10] = {78.5,0.2,19.6,22.8,112.9,0.7,1.2,79.6,49.8,813.4};
-float taots2[10] = {1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.1};
-float toats2[10] = {101.1,202.2,303.3,404.4,505.5,606.6,707.7,808.8,909.9,10010.1};
+float toats2[10] = {1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.1};
+float toats3[10] = {101.1,202.2,303.3,404.4,505.5,606.6,707.7,808.8,909.9,10010.1};
 union uINT HRrx;
 char ID;
 char numtodisp[20];
@@ -206,28 +184,103 @@ int decimals;
 int paintbrush;
 char bpm[] = "bpm ";
 char slash[] = "/";
+char page[8];
+char totalpages[8];
 
 
+ void HRVrefreshLCD(void)
+ {
+ //    for (i=0; i < 4; i++)
+ //    {
+     itoa(HRscrollCnt, page);
+     itoa(HRreccnt, totalpages);
+         while (BusyXLCD());
+         WriteCmdXLCD(0b00000001);
+         itoa(hrDispL, numtodisp);
+         putsXLCD(numtodisp);      
+         while( BusyXLCD() );
+         SetDDRamAddr(0x00);
+         putrsXLCD("HR  :");
+         SetDDRamAddr(0x06);
+         putsXLCD(numtodisp);
+         
+         while( BusyXLCD() );
+         SetDDRamAddr(0x0B);
+         putsXLCD(page);
+         while( BusyXLCD() );
+         SetDDRamAddr(0x0D);
+         putrsXLCD("/");
+         while( BusyXLCD() );
+         SetDDRamAddr(0x0E);
+         putsXLCD(totalpages);
+         
+         integers = hrvDispL;
+         //decimals = ((values[i] * 100)%100);
+         decimals = fmod((hrvDispL * 10),10);
+         //itoa(values[i], output);
+         itoa(integers, integerchar);
+         itoa(decimals, decimalchar);
+         SetDDRamAddr(0x40);
+         putrsXLCD("HRV :");
+         while( BusyXLCD() );         
+         SetDDRamAddr(0x46);
+         putsXLCD(integerchar);
+         putrsXLCD(".");
+         putsXLCD(decimalchar);  
+         
+         
+         integers = tempDispL;
+         //decimals = ((values[i] * 100)%100);
+         decimals = fmod((tempDispL * 10),10);
+         //itoa(values[i], output);
+         itoa(integers, integerchar);
+         itoa(decimals, decimalchar);       
+         while( BusyXLCD() );         
+         SetDDRamAddr(0x10);
+         putrsXLCD("Temp:");
+         while( BusyXLCD() );         
+         SetDDRamAddr(0x16);
+         putsXLCD(integerchar);
+         putrsXLCD(".");
+         putsXLCD(decimalchar); 
+         
+         integers = glucDispL;
+         //decimals = ((values[i] * 100)%100);
+         decimals = fmod((glucDispL * 10),10);
+         //itoa(values[i], output);
+         itoa(integers, integerchar);
+         itoa(decimals, decimalchar);       
+         while( BusyXLCD() );         
+         SetDDRamAddr(0x50);
+         putrsXLCD("Gluc:");
+         while( BusyXLCD() );         
+         SetDDRamAddr(0x56);
+         putsXLCD(integerchar);
+         putrsXLCD(".");
+         putsXLCD(decimalchar);
+     
+ }
 void scrollLite(void)
 {
     openRecordsLite();
-    for(v = 0; v < 11; v++)
+    HRVrefreshLCD();
+    for(v = 0; v < 22; v++)
     {
         Delay10KTCYx(50);
         pageScrollLite(SCROLL_DOWN);
-        HRrefreshLCD();
+        HRVrefreshLCD();
     }
-    for(v = 0; v < 11; v++)
+    for(v = 0; v < 22; v++)
     {
         Delay10KTCYx(50);
         pageScrollLite(SCROLL_UP);
-        HRrefreshLCD();
+        HRVrefreshLCD();
     }
-    for(v = 0; v < 11; v++)
+    for(v = 0; v < 50; v++)
     {
         Delay10KTCYx(50);
         pageScrollLite(SCROLL_DOWN);
-        HRrefreshLCD();
+        HRVrefreshLCD();
     }
 
 }
@@ -243,7 +296,7 @@ void main (void)
     ram_init();
     eeprom_init();
     
-    writeEEPROM(HR_TRACK_STATUS,TRACKING);
+   /* writeEEPROM(HR_TRACK_STATUS,TRACKING);
     writeEEPROM(HR_MAX_STORE, 0x0B);
     writeEEPROM(HR_RCCNT,0x00);  
     
@@ -251,18 +304,23 @@ void main (void)
     writeEEPROM(HRV_MAX_STORE, 0x0B);
     writeEEPROM(HRV_RCCNT,0x00); 
     
-    writeEEPROM(TTEMP_TRACK_STATUS,TRACKING);
-    writeEEPROM(TTEMP_MAX_STORE, 0x0B);
-    writeEEPROM(TTEMP_RCCNT,0x00); 
-    
     writeEEPROM(TEMP_TRACK_STATUS,TRACKING);
     writeEEPROM(TEMP_MAX_STORE, 0x0B);
     writeEEPROM(TEMP_RCCNT,0x00); 
+    
+    writeEEPROM(GLUC_TRACK_STATUS,TRACKING);
+    writeEEPROM(GLUC_MAX_STORE, 0x0B);
+    writeEEPROM(GLUC_RCCNT,0x00); */
     //sectorErase(HR_STORAGE_SECTOR);
     //sectorErase(HRV_STORAGE_SECTOR);
-    chipErase();
+    //chipErase();
     
     //meman_init();
+    writeEEPROM(GLUC_MAX_STORE, 0xFF);
+    writeEEPROM(HRV_MAX_STORE, 0xFF);
+    writeEEPROM(HR_MAX_STORE, 0xFF);
+    writeEEPROM(TEMP_MAX_STORE, 0xFF);
+    
     RecordTrackInit(HR_TRACK_STATUS,HR_MAX_STORE,HR_RCCNT,INTSIZE,&HRreccnt,&HRMaxRecords,&HRwriteAdd, &HRreadAddX);
     RecordTrackInit(HRV_TRACK_STATUS,HRV_MAX_STORE,HRV_RCCNT,FLOATSIZE,&HRVreccnt,&HRVMaxRecords,&HRVwriteAdd, &HRVreadAddX);
     RecordTrackInit(TEMP_TRACK_STATUS,TEMP_MAX_STORE,TEMP_RCCNT,FLOATSIZE,&TEMPreccnt,&TEMPMaxRecords,&TEMPwriteAdd, &TEMPreadAddX);
@@ -273,6 +331,7 @@ void main (void)
         HR.intVAL = tints[v];
         MakeRecordHR(HR_STORAGE_SECTOR,HR_RCCNT,HR);
     }
+    v = 0;
     for (v = 0; v < 10; v++)
     {
         HRV.floatVAL = toats[v];
@@ -281,12 +340,12 @@ void main (void)
     for (v = 0; v < 10; v++)
     {
         TEMP.floatVAL = toats2[v];
-        MakeRecordHRV(TEMP_STORAGE_SECTOR,TEMP_RCCNT,TEMP);
+        MakeRecordTEMP(TEMP_STORAGE_SECTOR,TEMP_RCCNT,TEMP);
     }
     for (v = 0; v < 10; v++)
     {
         GLUC.floatVAL = toats3[v];
-        MakeRecordHRV(GLUC_STORAGE_SECTOR,GLUC_RCCNT,GLUC);
+        MakeRecordGLUC(GLUC_STORAGE_SECTOR,GLUC_RCCNT,GLUC);
     }
     
 //    numtodisp[0] = 'r';

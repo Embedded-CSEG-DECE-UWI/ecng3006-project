@@ -6,8 +6,8 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=GroupFProject.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/GroupFProject.production.hex
+CND_ARTIFACT_NAME_default=ecng3006-project.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/ecng3006-project.production.hex
 CND_PACKAGE_DIR_default=${CND_DISTDIR}/default/package
-CND_PACKAGE_NAME_default=groupfproject.tar
-CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/groupfproject.tar
+CND_PACKAGE_NAME_default=ecng3006-project.tar
+CND_PACKAGE_PATH_default=${CND_DISTDIR}/default/package/ecng3006-project.tar

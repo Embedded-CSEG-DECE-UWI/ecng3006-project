@@ -202,7 +202,7 @@ void main (void){
     configTimers();
     configCCP();
     
-    startTimer();
+    startTimer1();
     printHRV();
     
     while(1){

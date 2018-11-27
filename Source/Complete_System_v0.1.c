@@ -767,14 +767,13 @@ void homeScreen (void){
     while(BusyXLCD());
 }
 
-int z = 0;
-
 void systemInit(void)
 {
     configInterrupts();
     ADCON1bits.PCFG = 0b0111;
     TRISA = 0x00;
     PORTA = 0x00;
+    TRISBbits.RB3;
     //   //Set Output Enable and Write Enable pins as Outputs
     WEtris = 0;
     OEtris = 0;
@@ -783,7 +782,7 @@ void systemInit(void)
     sramSetDataPinTris(0);
     //   //Initialize LCD
     initLCD();
-    initSecErase();
+    //initSecErase();
     return;
 }
 
@@ -1103,8 +1102,10 @@ void printMeasurementScreen(short int ptr, short int addPtr)
     return;
 }
 
-void menu (char key){        
-    switch(key){
+void menu (char key)
+{ 
+        switch(key)
+        {
         case '1':
             WriteCmdXLCD(0x01);
             while(BusyXLCD());
@@ -1136,15 +1137,15 @@ void menu (char key){
         break;
         
         default:
-            break;                
-    }
+            break;        
+        }
 }
 
 void displayScrollMeasurement()
 {
     short long currPtr = sramCurrPtr;
     short long currSec = sramSecPtr;
-    int prevcurrPtr = 0;
+    short long prevcurrPtr = 0;
 
     char keypadInput = option; //Temporary input;
     press = 0;
@@ -1152,7 +1153,7 @@ void displayScrollMeasurement()
     while (option != 'D')
     {
         
-        if (keypadInput == 'A' && !(currPtr < 0 && currSec < 0))
+        if (keypadInput == 'A' && !(currPtr > sramSecPtr && currSec > sramSecPtr))
         {
             currPtr ++;
             if(currPtr%4096 == 0)
@@ -1165,7 +1166,7 @@ void displayScrollMeasurement()
                 currSec = 31;
             }
         }
-        else if (keypadInput == 'B' && !(currPtr > sramSecPtr && currSec > sramSecPtr))
+        else if (keypadInput == 'B' && !(currPtr < 0 && currSec < 0))
         {
             currPtr --;
             if (currPtr%4096 == 0)
@@ -1314,8 +1315,9 @@ void main (void){
             printPulse();                               //prints the result as long as the program is not currently counting
             printHRV();
             printTemp();
-            if((sramStorageIntCount%sramStorageInterval ==0)|| sramStorageInterval != 0)
+            if((sramStorageIntCount%sramStorageInterval ==0)||sramStorageInterval != 0)
             {
+                LED2 = 1;
                 if (sramCurrPtr!=0 && sramCurrPtr%4096)
                 {
                     sramCurrPtr = 0;//reset sramCurrPtr
@@ -1331,8 +1333,13 @@ void main (void){
                 sramByteProgramOp((sramSecPtr + 64)<<12 | sramCurrPtr, running_average_integer);
                 sramByteProgramOp((sramSecPtr + 96)<<12 | sramCurrPtr, 255);
                 
+                WriteCmdXLCD(0x01);
+                sprintf(lcdVariable, "The temp %d",(sramSecPtr)<<12 | sramCurrPtr);
+                print();
+                Delay10KTCYx(100);
                 sramCurrPtr++;
                 sramStorageIntCount++;
+                LED2 = 0;
             }
             MEASUREMENT_COMPLETE = FALSE;
         }

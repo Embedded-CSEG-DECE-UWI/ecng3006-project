@@ -655,8 +655,8 @@ void initSecErase()
    for(i = 4096, count = 0; i<=520192; i+=4096, count++)
    {
        sramSecErase(i);
-       if (count%2)sramByteProgramOp(i,count);
-       else sramByteProgramOp(i,count);
+    //    if (count%2)sramByteProgramOp(i,count);
+    //    else sramByteProgramOp(i,count);
    }
    sprintf(lcdVariable, "SRAM Initialized");
    print();
@@ -666,31 +666,35 @@ void initSecErase()
 void main(void) 
 {
     systemInit(); // System getting ready 
-
-    //sprintf(lcdVariable, "SRam Data: %d", sramRead(520192));
-    //print();
+    WriteCmdXLCD(0x01);
+    sramByteProgramOp(0x12, 254);
+    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x12));
+    print();
+    sramByteProgramOp(4096, 21);
+    sprintf(lcdVariable, "SRam Data: %d", sramRead(4096));
+    printMeasurement(ROW2);
     
-     while(1)
-     {
+    //  while(1)
+    //  {
           
    
-          if (press == 1)
-          {
-              LED = 1;
-              if(option == '1')
-              {
-               displayScrollMeasurement();
-              }
-              if (option == '2')
-              {
-                 setStorageInterval();
+    //       if (press == 1)
+    //       {
+    //           LED = 1;
+    //           if(option == '1')
+    //           {
+    //            displayScrollMeasurement();
+    //           }
+    //         //   if (option == '2')
+    //         //   {
+    //         //      setStorageInterval();
                  
-              }
+    //         //   }
             
-         }   
-         LED = 0; 
-         press = 0;
-     }
+    //      }   
+    //      LED = 0; 
+    //      press = 0;
+    //  }
     
     Sleep();
 }
@@ -717,6 +721,6 @@ void systemInit(void)
     init_lcd();
     LED = 0;
     LED2 = 0;
-    //initSecErase();
+    initSecErase();
     return;
 }

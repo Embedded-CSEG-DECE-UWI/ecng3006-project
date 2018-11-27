@@ -7,10 +7,6 @@
 #define WRT7 0b10000000
 #define WRT8 0b00000000
 
-#define HR_TRACK_SECTOR  0x11 
-#define HRV_TRACK_SECTOR 0x23 
-#define TEMP_TRACK_SECTOR 0x35
-#define GLUC_TRACK_SECTOR 0x47 
 
 #define SCROLL_UP  0xAA
 #define SCROLL_DOWN 0x55

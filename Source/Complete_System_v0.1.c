@@ -132,8 +132,10 @@ short long sramCurrPtr = 0; //Variable to manage the address of SRAM
 short long sramSecPtr = 0; //Ptr to sector addresses
 int press = 0;
 int sramStorageInterval = 0;
-
-
+int sramMeasurementCount = 0;
+short long sramStorageIntCount = 0; //To help keep track of storage intervals for the sram
+int sramStorageIntCount2 = 0; //To help keep track of the storage interval;
+short long sramNumOfStorage = 0; //Helps keep track user defined number of measurements to be taken.
 
 
 /*LCD Variables*/
@@ -783,7 +785,7 @@ void systemInit(void)
     sramSetDataPinTris(0);
     //   //Initialize LCD
     initLCD();
-    //initSecErase();
+    initSecErase();
     return;
 }
 
@@ -887,7 +889,7 @@ void sramLatch()
     return;
 }
 
-void sramLoadData(int add, int data)
+void sramLoadData(short long add, int data)
 {
     sramLoadDataPins(data);
     sramLoadAddPins(add);
@@ -914,7 +916,7 @@ void sramBusyData()
     return;
 }
 
-volatile int sramRead(int add)
+ int sramRead(short long add)
 {
     /*
      The Read operation of the SST39SF010A/020A/040 is controlled by CE# and OE#, both have to be
@@ -923,7 +925,7 @@ volatile int sramRead(int add)
      gate data from the output pins. The data bus is in high impedance state when either CE# or OE# is
      high. Refer to the Read cycle timing diagram (Figure 5) for further details.
      */
-    volatile int res = 0;
+    int res = 0;
     //CE = 0
     WE = 1;
     OE = 1;
@@ -1053,7 +1055,7 @@ void sramSecErase(int add)
 }
 
 
-void sramByteProgramOp(int add, int data)
+void sramByteProgramOp(short long add, int data)
 {
     /*
      * The SST39SF010A/020A/040 are programmed on a byte-by-byte basis. Before programming, the sector
@@ -1089,15 +1091,15 @@ void sramByteProgramOp(int add, int data)
 
 
 /*SCROLL*/
-void printMeasurementScreen(short int ptr, short int addPtr)
+void printMeasurementScreen(short long add)
 {
-    sprintf(lcdVariable, "Heart R. = %d", sramRead((ptr << 12)|addPtr));
+    sprintf(lcdVariable, "Heart R. = %d", sramRead(add));
     printMeasurement(ROW1);
-    sprintf(lcdVariable, "Temp = %d", sramRead(((ptr + 32) << 12)) | addPtr);
+    sprintf(lcdVariable, "HRV = %d", sramRead(add+1));
     printMeasurement(ROW2);
-    sprintf(lcdVariable, "HRV = %d", sramRead(((ptr + 64) << 12) | addPtr));
+    sprintf(lcdVariable, "Temp = %d", sramRead(add+2));
     printMeasurement(ROW3);
-    sprintf(lcdVariable,"Gluc. Lvl = %d", sramRead(((ptr + 96) << 12) | addPtr));
+    sprintf(lcdVariable,"Gluc. Lvl = %d", sramRead(add+3));
     printMeasurement(ROW4);
 
     return;
@@ -1123,6 +1125,7 @@ void menu (char key)
             WriteCmdXLCD(0x01);
             while(BusyXLCD());
             setStorageInterval();
+            setMeasurementNumber();
             break;  
         
         case '3':
@@ -1144,46 +1147,37 @@ void menu (char key)
 
 void displayScrollMeasurement()
 {
-    short long currPtr = sramCurrPtr;
-    short long currSec = sramSecPtr;
-    short long prevcurrPtr = 0;
-
+    short long upperLimit = sramStorageIntCount*4;
+    short long currPtr = upperLimit;
+    short long prevPtr = -1;
     char keypadInput = option; //Temporary input;
     press = 0;
-    printMeasurementScreen(currSec, currPtr);
+    printMeasurementScreen(currPtr);
     while (option != 'D')
     {
         
-        if (keypadInput == 'A' && !(currPtr > sramSecPtr && currSec > sramSecPtr))
+        if (keypadInput == 'A' && !(currPtr > upperLimit))
         {
-            currPtr ++;
-            if(currPtr%4096 == 0)
+            currPtr +=4;
+            if(currPtr>upperLimit)
             {
-                currPtr = 0;
-                currSec++;
-            }
-            if (currSec > 31)
-            {
-                currSec = 31;
+                currPtr = upperLimit;
             }
         }
-        else if (keypadInput == 'B' && !(currPtr < 0 && currSec < 0))
+        else if (keypadInput == 'B' && !(currPtr < 0))
         {
-            currPtr --;
-            if (currPtr%4096 == 0)
+            currPtr -=4;
+
+            if (currPtr < 0)
             {
-                currPtr = 4095;
-                currSec = 0;
-            }
-            if (currSec < 0)
-            {
-                currSec = 0;
+                currPtr = 0;
             }
         }
 
-        if (prevcurrPtr != currPtr)
+        if (prevPtr != currPtr)
         {
-            printMeasurementScreen(currSec, currPtr);
+            WriteCmdXLCD(0x01);
+            printMeasurementScreen(currPtr);
         }
 
         //Wait for new input
@@ -1193,7 +1187,7 @@ void displayScrollMeasurement()
             keypadInput = option;
         }
         
-        prevcurrPtr = currPtr;
+        prevPtr = currPtr;
         press = 0;
     }
     menu(option);
@@ -1207,46 +1201,39 @@ void setStorageInterval()
     This function set the storage interval for the Flash Ram by reading in inputs from the keep pad and configuring Timer 3
     to interrupt at user-defined intervals in an ISR routine that is called periodically.
     */
-    char keypadInput;
+    char keypadInput = 0;
     press = 0; //Reset Keypad press detection variable
-
-    //Read input from keypad and store in the variable: 'interval'
-    // A - Enter
-    // B - Re-enter entire number
-    // C - Cancel
-    // D - Display Current Interval
 
     sprintf(lcdVariable, "1.Store/10s");
     printMeasurement(ROW1);
     sprintf(lcdVariable, "2.Store/20s");
     printMeasurement(ROW2);
-    sprintf(lcdVariable, "3.Store/40s");
+    sprintf(lcdVariable, "3.Store/30s");
     printMeasurement(ROW3);
     sprintf(lcdVariable,"4.[C]ancel");
     printMeasurement(ROW4);
 
   
     
-    while (keypadInput != 'C')
+    while (option != 'C')
     {
                 //Update keypress
         while (!press)
         {
-            keypadInput = option;
+            //keypadInput = option;
         }
         
-        if (keypadInput == '1')
+        if (option == '1')
         {
            sramStorageInterval = 1;  
            break;      
         }
-        else if (keypadInput == '2')
+        if (option == '2')
         {
-            //config timer 3 using interval 2;
             sramStorageInterval = 2;
             break;
         }
-        else if (keypadInput ==  '3')
+        if (option ==  '3')
         {
             sramStorageInterval = 3;
             break;
@@ -1254,7 +1241,9 @@ void setStorageInterval()
         
         press = 0;    
     }
-    setMeasurementNumber();
+    press = 0;
+    sramStorageIntCount2 = 0; //Reset Storage interval counter
+    //setMeasurementNumber();
     
     //WriteCmdXLCD(0x01);
     return;
@@ -1262,42 +1251,47 @@ void setStorageInterval()
 
 /*DANIEL GLADSTONE - Function to set the number of intervals to be stored in the FLASH RAM*/
 void setMeasurementNumber(){
-    int measurementCount = 0;
-    char keypadInput  = ' ';
+    char keypadInput = 0;
+    press = 0;
     
     sprintf(lcdVariable, "1.Store 1 reading");
     printMeasurement(ROW1);
-    sprintf(lcdVariable, "2.Store 5 readings");
+    sprintf(lcdVariable, "2.Store 2 readings");
     printMeasurement(ROW2);
-    sprintf(lcdVariable, "3.Store 10 readings");
+    sprintf(lcdVariable, "3.Store 3 readings");
     printMeasurement(ROW3);
     sprintf(lcdVariable,"4.[C]ancel");
     printMeasurement(ROW4);
     
-    while(keypadInput != 'C'){
+    while(option != 'C'){
          while (!press)
         {
-            keypadInput = option;
+            //keypadInput = option;
         }
         
-        if(keypadInput == '1'){
-            measurementCount = 1;
+        if(option == '1'){
+            sramMeasurementCount = 1;
             break;
         }
-        else if(keypadInput == '2'){
-            measurementCount = 5;
+        if(option == '2'){
+            sramMeasurementCount = 2;
             break;
         }
-        else if(keypadInput == '3'){
-            measurementCount = 10;
+        if(option == '3'){
+            sramMeasurementCount = 3;
             break;
         }
+         
         press = 0;
-        
-
     } 
-    //sprintf(lcdVariable, "Num is: ", measurementCount);
-    //printMeasurement(ROW1);
+    press = 0;
+    /*sprintf(lcdVariable, "Interval:%d", sramStorageInterval);
+    printMeasurement(ROW1);
+    sprintf(lcdVariable, "MeasureCount:%d", sramMeasurementCount);
+    printMeasurement(ROW2);
+    sprintf(lcdVariable, "Option: %c", option);
+    printMeasurement(ROW3);
+    Delay10KTCYx(200);*/
     homeScreen();
     return;
 }
@@ -1309,7 +1303,7 @@ void initSecErase()
     */
    
    short long secAdd, count;
-   for(secAdd = 4096, count = 0; secAdd<=520192; secAdd+=4096, count++)
+   for(secAdd = 0, count = 0; secAdd<=520192; secAdd+=4096, count++)
    {
        sramSecErase(secAdd);
        //if (count%2)sramByteProgramOp(i,count);
@@ -1322,18 +1316,27 @@ void initSecErase()
 
 
 void main (void){
-    short long sramStorageIntCount = 0; //To help keep track of storage intervals for the sram
+
     
     configSupportCircuity();
     configSpeaker();
-    systemInit();
     configCCP();
     configTimers();
     
+    systemInit();
+    
+    sramMeasurementCount = 0;
     sramStorageInterval = 0;
+
     sramCurrPtr = 0;
+    
     /*This is for the Keypad data lines*/
-    TRISC = 0xFF;
+    //TRISC = 0xFF;
+    TRISCbits.RC4 = 1;
+    TRISCbits.RC5 = 1;
+    TRISCbits.RC6 = 1;
+    TRISCbits.RC7 = 1;
+    
     
     errorCalibration();   
     homeScreen();
@@ -1343,6 +1346,7 @@ void main (void){
         if (KEY_PRESSED == TRUE){
             menu(option);
             KEY_PRESSED = FALSE;
+            press = 0;
         }
         
         if(MEASUREMENT_COMPLETE == TRUE && COUNTING == FALSE){
@@ -1359,32 +1363,38 @@ void main (void){
             printPulse();                               //prints the result as long as the program is not currently counting
             printHRV();
             printTemp();
-            if((sramStorageIntCount%sramStorageInterval ==0)||sramStorageInterval != 0)
+            //Delay10KTCYx(100);
+            if(((sramStorageIntCount2%sramStorageInterval) == 0) && (sramStorageInterval != 0) && (sramMeasurementCount >= 1))
             {
-                LED2 = 1;
-                if (sramCurrPtr!=0 && sramCurrPtr%4096)
-                {
-                    sramCurrPtr = 0;//reset sramCurrPtr
-                    sramSecPtr++;
-                }
-                if(sramSecPtr > (127 << 12))
-                {
-                    sramSecPtr = 0; //Reset Sector Address
-                }
-                                    
-                sramByteProgramOp((sramSecPtr)<<12 | sramCurrPtr, int1TotalPulse);
-                sramByteProgramOp((sramSecPtr + 32)<<12 | sramCurrPtr, HRV_integer);
-                sramByteProgramOp((sramSecPtr + 64)<<12 | sramCurrPtr, running_average_integer);
-                sramByteProgramOp((sramSecPtr + 96)<<12 | sramCurrPtr, 255);
+                short long add1 = sramStorageIntCount*4;
+                short long add2 = add1 + 1;
+                short long add3 = add2 + 1;
+                short long add4 = add3 + 1;
                 
-                WriteCmdXLCD(0x01);
-                sprintf(lcdVariable, "The temp %d",(sramSecPtr)<<12 | sramCurrPtr);
-                print();
-                Delay10KTCYx(100);
-                sramCurrPtr++;
-                sramStorageIntCount++;
+                LED2 = 1;
+                   
+                sramByteProgramOp(add1, int1TotalPulse);
+                sramByteProgramOp(add2, HRV_integer);
+                sramByteProgramOp(add3, running_average_integer);
+                sramByteProgramOp(add4, 10);
+                
+               /* WriteCmdXLCD(0x01);
+                sprintf(lcdVariable, "The HR %d", sramRead(add1));
+                printMeasurement(ROW1);
+                sprintf(lcdVariable, "The HRV %d", sramRead(add2));
+                printMeasurement(ROW2);
+               sprintf(lcdVariable, "The temp %d", sramRead(add3));
+                printMeasurement(ROW3);
+                sprintf(lcdVariable, "The Gluc %dmg/dl", sramRead(add4));
+                printMeasurement(ROW4);*/
+                //Delay10KTCYx(100);
+
                 LED2 = 0;
+                sramStorageIntCount+=1;
+                sramMeasurementCount-=1;
             }
+            sramStorageIntCount2+=1;
+            
             MEASUREMENT_COMPLETE = FALSE;
         }
         

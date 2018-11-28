@@ -1280,102 +1280,18 @@ void initSecErase()
 void main(void) 
 {
     short long sramStorageIntCount = 0; //To help keep track of storage intervals for the sram
-    
-    configSupportCircuity();
-    configSpeaker();
     systemInit();
-    configCCP();
-    configTimers();
+
     
     sramStorageInterval = 0;
     sramCurrPtr = 0;
-    /*This is for the Keypad data lines*/
-    TRISC = 0xFF;
-    
-    errorCalibration();   
-    homeScreen();
 
-    //while(1)
-    //{
-        /*
-        if (KEY_PRESSED == TRUE)
-        {
-            menu(option);
-            KEY_PRESSED = FALSE;
-        }
+    sramByteProgramOp(0x12, 12);
+    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x12));
+    printMeasurement(ROW4);
+    Delay10KTCYx(100);
 
-        if (MEASUREMENT_COMPLETE == TRUE && COUNTING == FALSE)
-        {
-            sramStorageIntCount++; //count here will increment and the modulus of it will be taken with the sramStorageInterval
-            WriteCmdXLCD(0x01);
-            while (BusyXLCD());
-            resetTempConversion();
-            readTemp();
-            obtainInteger();
-            obtainFraction();
-            temp_fraction = approximation(temp_fraction);
-            runningAverage();
-            obtainSign();
-            printPulse(); //prints the result as long as the program is not currently counting
-            printHRV();
-            printTemp();
-            /*if((sramStorageIntCount%sramStorageInterval ==0)||sramStorageInterval != 0)
-            {
-                LED2 = 1;
-                if (sramCurrPtr!=0 && sramCurrPtr%4096)
-                {
-                    sramCurrPtr = 0;//reset sramCurrPtr
-                    sramSecPtr++;
-                }
-                if(sramSecPtr > (127 << 12))
-                {
-                    sramSecPtr = 0; //Reset Sector Address
-                }
-                                    
-                sramByteProgramOp((sramSecPtr)<<12 | sramCurrPtr, int1TotalPulse);
-                sramByteProgramOp((sramSecPtr + 32)<<12 | sramCurrPtr, HRV_integer);
-                sramByteProgramOp((sramSecPtr + 64)<<12 | sramCurrPtr, running_average_integer);
-                sramByteProgramOp((sramSecPtr + 96)<<12 | sramCurrPtr, 255);*/
-            sramByteProgramOp(0x12, 12);
-            sprintf(lcdVariable, "SRam Data: %d", sramRead(0x12));
-            printMeasurement(ROW4);
 
-            Delay10KTCYx(100);
-
-            //sramCurrPtr++;
-            //sramStorageIntCount++;
-            //LED2 = 0;
-            //}
-
-            MEASUREMENT_COMPLETE = FALSE;
-        //}
-
-        /*if (BROWN_OUT == TRUE)
-        {
-            PORTBbits.RB3 = 1;
-            Delay10KTCYx(5);
-            PORTBbits.RB3 = 0;
-            Delay10KTCYx(5);
-        }
-
-        if (BROWN_OUT == FALSE)
-        {
-            PORTBbits.RB4 = 1;
-            Delay10KTCYx(5);
-            PORTBbits.RB4 = 0;
-            Delay10KTCYx(5);
-        }
-
-        if (ALARM == TRUE)
-        {
-            alarm();
-        }
-
-        if (ALARM == FALSE)
-        {
-            ClosePWM2();
-        }*/
-    //}
 
     Sleep();
 }

@@ -209,6 +209,7 @@ void checkRange (void);
 void sramSetDataPinTris(short int x);
 void displayScrollMeasurement (void);
 void setStorageInterval (void);
+void setMeasurementNumber (void);
 void initSecErase(void);
 
 /*Support Circuitry*/
@@ -1215,13 +1216,13 @@ void setStorageInterval()
     // C - Cancel
     // D - Display Current Interval
 
-    sprintf(lcdVariable, "1. Store/10s");
+    sprintf(lcdVariable, "1.Store/10s");
     printMeasurement(ROW1);
-    sprintf(lcdVariable, "2. Store/20s");
+    sprintf(lcdVariable, "2.Store/20s");
     printMeasurement(ROW2);
-    sprintf(lcdVariable, "3. Store/40s");
+    sprintf(lcdVariable, "3.Store/40s");
     printMeasurement(ROW3);
-    sprintf(lcdVariable,"4. [C]ancel");
+    sprintf(lcdVariable,"4.[C]ancel");
     printMeasurement(ROW4);
 
   
@@ -1251,10 +1252,53 @@ void setStorageInterval()
             break;
         }
         
-        press = 0;
+        press = 0;    
     }
-    homeScreen();
+    setMeasurementNumber();
+    
     //WriteCmdXLCD(0x01);
+    return;
+}
+
+/*DANIEL GLADSTONE - Function to set the number of intervals to be stored in the FLASH RAM*/
+void setMeasurementNumber(){
+    int measurementCount = 0;
+    char keypadInput  = ' ';
+    
+    sprintf(lcdVariable, "1.Store 1 reading");
+    printMeasurement(ROW1);
+    sprintf(lcdVariable, "2.Store 5 readings");
+    printMeasurement(ROW2);
+    sprintf(lcdVariable, "3.Store 10 readings");
+    printMeasurement(ROW3);
+    sprintf(lcdVariable,"4.[C]ancel");
+    printMeasurement(ROW4);
+    
+    while(keypadInput != 'C'){
+         while (!press)
+        {
+            keypadInput = option;
+        }
+        
+        if(keypadInput == '1'){
+            measurementCount = 1;
+            break;
+        }
+        else if(keypadInput == '2'){
+            measurementCount = 5;
+            break;
+        }
+        else if(keypadInput == '3'){
+            measurementCount = 10;
+            break;
+        }
+        press = 0;
+        
+
+    } 
+    //sprintf(lcdVariable, "Num is: ", measurementCount);
+    //printMeasurement(ROW1);
+    homeScreen();
     return;
 }
 

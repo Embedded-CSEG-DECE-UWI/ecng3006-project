@@ -47,11 +47,11 @@ void keypress(void)  //function used to determine which key is pressed
 {
     if (key[0]=='B')
     {
-        if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+        if (PORTBbits.RB7 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB4)
             {
                 ivl[0]='1';       //5 second interval;
             }
-        if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+        if (PORTBbits.RB7 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB4)
             {
                 ivl[0]='2';       //10 second interval function
             }
@@ -60,69 +60,70 @@ void keypress(void)  //function used to determine which key is pressed
     }
     else
     {
-  if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = '1';
     }
-  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (PORTBbits.RB7 && PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = '2';
     } 
-  if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4)
+  if (!PORTBbits.RB7 && PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB4)
     {
         key[0] = '3';
     } 
-  if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4)
+  if (!PORTBbits.RB7 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB4)
     {
         key[0] = '4';
     }
-  if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (PORTBbits.RB7 && PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = '5';
     }
-  if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = '6';
     }
-  if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && !PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = '7';
     }
-  if (PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+  if (PORTBbits.RB7 && PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = '8';
     }
-  if (!PORTDbits.RD7 && PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = '9';
     }
-  if (!PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && !PORTBbits.RB6 && PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = '0';
     }
-  if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (PORTBbits.RB7 && !PORTBbits.RB6 && !PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = 'A';
     }
-  if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
+  if (PORTBbits.RB7 && !PORTBbits.RB6 && PORTBbits.RB5 && !PORTBbits.RB4 )
     {
         key[0] = 'B';
     }
-  if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && PORTDbits.RD4 )
+  if (PORTBbits.RB7 && !PORTBbits.RB6 && !PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = 'C';
     }
-  if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+  if (PORTBbits.RB7 && !PORTBbits.RB6 && PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = 'D';
     }
-  if (!PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+  if (!PORTBbits.RB7 && PORTBbits.RB6 && PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = 'E';
     }
-  if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
+  if (PORTBbits.RB7 && PORTBbits.RB6 && PORTBbits.RB5 && PORTBbits.RB4 )
     {
         key[0] = 'F';
+    
     }
     }
 }
@@ -187,10 +188,10 @@ void interruptinit(void)          //function to initialize the interrupt
 
 void keypadsetup(void)
 {
-    TRISDbits.RD7 = 1; //A
-    TRISDbits.RD6 = 1; //B
-    TRISDbits.RD5 = 1; //C
-    TRISDbits.RD4 = 1; //D
+    TRISBbits.RB7 = 1; //A
+    TRISBbits.RB6 = 1; //B
+    TRISBbits.RB5 = 1; //C
+    TRISBbits.RB4 = 1; //D
 }
 
 void menuinit(void){        //menu initialisation 

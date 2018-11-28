@@ -18,9 +18,8 @@ void menuinit(void);
 void menu(void);
 void checkkey(void);
 
-char key[1];                        //variable for key pressed
-char ivl[1];                      //variable for interval choice
-char changekey[1];                  //variable for when the key is changed
+char key[1];
+char changekey[1];
 
 #pragma code low_vector=0x18        //taken from C18 users guide page 29
 
@@ -45,21 +44,6 @@ void low_isr(void)
 
 void keypress(void)  //function used to determine which key is pressed
 {
-    if (key[0]=='B')
-    {
-        if (PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
-            {
-                ivl[0]='1';       //5 second interval;
-            }
-        if (PORTDbits.RD7 && !PORTDbits.RD6 && PORTDbits.RD5 && !PORTDbits.RD4 )
-            {
-                ivl[0]='2';       //10 second interval function
-            }
-        key[0]='n';
-        menu();
-    }
-    else
-    {
   if (!PORTDbits.RD7 && !PORTDbits.RD6 && !PORTDbits.RD5 && !PORTDbits.RD4 )
     {
         key[0] = '1';
@@ -123,7 +107,6 @@ void keypress(void)  //function used to determine which key is pressed
   if (PORTDbits.RD7 && PORTDbits.RD6 && PORTDbits.RD5 && PORTDbits.RD4 )
     {
         key[0] = 'F';
-    }
     }
 }
 
@@ -224,11 +207,11 @@ void checkkey(void){            //function used to check which key is pressed an
         if (key[0]== 'B'){
             while(BusyXLCD());
             SetDDRamAddr(0x00);
-            putrsXLCD("5 SECONDS (A)");
-            SetDDRamAddr(0x10);
-            putrsXLCD("10 SECONDS (B)");
-            while(BusyXLCD());
-            while(1);
+            number();
+            putrsXLCD("INSERT PROCESS 2");
+            Delay10KTCYx(200);
+            WriteCmdXLCD(0b00000001);
+            menu();
         }
         if (key[0]== 'C'){
             while(BusyXLCD());
@@ -251,7 +234,7 @@ void checkkey(void){            //function used to check which key is pressed an
         if (key[0]== 'E'){
             while(BusyXLCD());
             SetDDRamAddr(0x00);
-            putrsXLCD("# OF READINGS(C)  <F");
+            putrsXLCD("INTERVALS(C)  <F");
             SetDDRamAddr(0x10);
             putrsXLCD("STORAGE(D)       ");
             while(BusyXLCD());
@@ -261,7 +244,7 @@ void checkkey(void){            //function used to check which key is pressed an
             SetDDRamAddr(0x00);
             putrsXLCD("START(A)      >E");
             SetDDRamAddr(0x10);
-            putrsXLCD("INTERVALS(B) ");
+            putrsXLCD("# OF READINGS(B) ");
             while(BusyXLCD());  
         }
                  changekey[0]='0';

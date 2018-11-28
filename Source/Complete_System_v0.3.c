@@ -15,10 +15,10 @@
 
 //The system should allow a user to start storing a pre-de?ned set of measurements to external ?ash RAM, and to interrupt the ongoing storage of a set of measurements.
 
-#define DATA_595 PORTAbits.RA0 
+#define DATA_595 PORTBbits.RB3 
 #define CLK_595 PORTAbits.RA1
 #define LED     PORTBbits.RB4
-#define LED2    PORTBbits.RB3
+//#define LED2    PORTBbits.RB3
 #define OE      PORTCbits.RC3
 #define WE      PORTDbits.RD3
 #define D0      PORTAbits.RA2
@@ -125,6 +125,7 @@ int counter2 = 5;
 int test = 0;
 int approx_value = 0;
 
+int glucoseMeasurement = 102;
 
 
 /*FLASHRAM*/
@@ -143,6 +144,9 @@ char lcdVariable[20];
 char hrVariable[20];                                   //array that will contain the pulse count to display on the LCD
 char hrvVariable[20];
 char tempVariable[20];
+char glucoseVariable[20];
+
+int brownOutSave = 0;
 
 /*Delays for 18 instruction cycles*/
 void DelayFor18TCY(void){
@@ -189,6 +193,7 @@ void printPulse (void);
 void readCurrentCount (void);
 void nn50IntervalMeasurement (void);
 void printHRV (void);
+void printGlucose (void);
 void resetVariables (void);
 void startTimer1 (void);
 void resetTimer1 (void);
@@ -217,7 +222,7 @@ void initSecErase(void);
 /*Support Circuitry*/
 void configSupportCircuity (void){
     TRISBbits.RB0 = 0xFF;
-    TRISBbits.RB3 = 0x00;
+    TRISBbits.RB3 = 0;
     TRISBbits.RB4 = 0x00;
     PORTBbits.RB4 = 0;
 }
@@ -479,6 +484,13 @@ void printTemp (void){
     while(BusyXLCD());
     putsXLCD(tempVariable);
     while(BusyXLCD());
+}
+
+void printGlucose (void){
+    SetDDRamAddr((0x50));
+    while(BusyXLCD());
+    sprintf(glucoseVariable, "Glucose: %dmg/dL", glucoseMeasurement);
+    putsXLCD(glucoseVariable);
 }
 
 void configTemp (void){
@@ -776,7 +788,7 @@ void systemInit(void)
     ADCON1bits.PCFG = 0b0111;
     TRISA = 0x00;
     PORTA = 0x00;
-    TRISBbits.RB3;
+    TRISBbits.RB3 = 0;
     //   //Set Output Enable and Write Enable pins as Outputs
     WEtris = 0;
     OEtris = 0;
@@ -899,7 +911,7 @@ void sramLoadData(short long add, int data)
 
 void sramBusyData()
 { 
-    LED2 = 1;
+    //LED2 = 1;
     D7tris = 1;
     WE = 1;
     OE = 1;
@@ -1337,6 +1349,8 @@ void eraseFlashRamStartup (void){
     
 }
 
+int brownoutCount = 0;
+
 void main (void){    
     configSupportCircuity();
     configSpeaker();
@@ -1382,6 +1396,7 @@ void main (void){
             printPulse();                               //prints the result as long as the program is not currently counting
             printHRV();
             printTemp();
+            printGlucose();
             //Delay10KTCYx(100);
             if(((sramStorageIntCount2%sramStorageInterval) == 0) && (sramStorageInterval != 0) && (sramMeasurementCount >= 1))
             {
@@ -1391,13 +1406,13 @@ void main (void){
                 short long add4 = add3 + 1;
                 short long add5 = add4 + 1;
                 
-                LED2 = 1;
+                //LED2 = 1;
                    
                 sramByteProgramOp(add1, int1TotalPulse);
                 sramByteProgramOp(add2, HRV_integer);
                 sramByteProgramOp(add3, running_average_integer);
                 sramByteProgramOp(add4, running_average_fraction);
-                sramByteProgramOp(add5, 10);
+                sramByteProgramOp(add5, glucoseMeasurement);
                 
                /* WriteCmdXLCD(0x01);
                 sprintf(lcdVariable, "The HR %d", sramRead(add1));
@@ -1410,7 +1425,7 @@ void main (void){
                 printMeasurement(ROW4);*/
                 //Delay10KTCYx(100);
 
-                LED2 = 0;
+                //LED2 = 0;
                 sramStorageIntCount+=1;
                 sramMeasurementCount-=1;
             }
@@ -1420,15 +1435,29 @@ void main (void){
         }
         
         if(BROWN_OUT == TRUE){
-            PORTBbits.RB3 = 1;
-            Delay10KTCYx(5);      
-            PORTBbits.RB3 = 0;
-            Delay10KTCYx(5);
-            sramByteProgramOp((sramStorageIntCount*5), int1TotalPulse);
-            sramByteProgramOp((sramStorageIntCount*5)+1, HRV_integer);
-            sramByteProgramOp((sramStorageIntCount*5)+2, running_average_integer);
-            sramByteProgramOp((sramStorageIntCount*5)+3, running_average_fraction);
-            sramByteProgramOp((sramStorageIntCount*5)+4, 10);
+            brownOutSave+=1;
+            //PORTBbits.RB3 = 1;
+            //Delay10KTCYx(5);      
+            //PORTBbits.RB3 = 0;
+            //Delay10KTCYx(5);
+            
+            if(brownOutSave == 1){
+                sramByteProgramOp(4096 + brownoutCount , int1TotalPulse);
+                sprintf(lcdVariable, "Saved: %dbpm", sramRead(4096 + brownoutCount));
+                WriteCmdXLCD(0x01);
+                printMeasurement(ROW1);
+                sramByteProgramOp(4097 + brownoutCount, HRV_integer);
+                sprintf(lcdVariable, "Saved: %d%", sramRead(4097 + brownoutCount));
+                printMeasurement(ROW2);
+                sramByteProgramOp(4098 + brownoutCount, running_average_integer);
+                sramByteProgramOp(4099 + brownoutCount, running_average_fraction);
+                sprintf(lcdVariable, "Saved: +%d.%d%cC", sramRead(4098 + brownoutCount), sramRead(4099 + brownoutCount), temp_degree);;
+                printMeasurement(ROW3);
+                sramByteProgramOp(4100 + brownoutCount, glucoseMeasurement);
+                sprintf(lcdVariable, "Saved: %dmg/dL", sramRead(4100 + brownoutCount));
+                printMeasurement(ROW4);
+            }   
+            brownoutCount += 5;
         }
         
         if(BROWN_OUT == FALSE){
@@ -1436,6 +1465,7 @@ void main (void){
             Delay10KTCYx(5);      
             PORTBbits.RB4 = 0;
             Delay10KTCYx(5);
+            brownOutSave = 0;
         }
         
         if(ALARM == TRUE){

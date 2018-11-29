@@ -1,0 +1,3 @@
+This are the files used in the demonstration, meman_v0_4.h and meman_v0_4.c contain the function prototypes for the 'Lite' versions of the scrolling functions (no display arrays, single variables, smaller, faster code)
+
+In the repository, meman_v0_3.h and meman_v0_3.c contain function prototypes and definitions respectively, for the single quantity scrolling functionality described on the wiki (using the display arrays)... it's worth taking a look

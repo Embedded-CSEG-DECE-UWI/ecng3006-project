@@ -94,7 +94,7 @@ void highISR (void){                                    //interrupt service rout
         isCounting = FALSE;
                 
         PORTBbits.RB2 = !PORTBbits.RB2;                 //toggles a debugging LED that indicates when TIMER 0 overflows 
-        int1TotalPulse = (int1Events*4);                //calculation to obtain number of pulses in 1 min (15s*4)
+        int1TotalPulse = (int1Events*6);                //calculation to obtain number of pulses in 1 min (15s*4)
         int1Events = 0;                                 //resets the pulse count
         
         stopPulseInterval();
@@ -116,7 +116,7 @@ void main (void)
     
     startPulseInterval();
     
-    TRISBbits.RB1 = 1;
+    /*TRISBbits.RB1 = 1;
     PORTBbits.INT1 = 1;
     PORTBbits.INT1 = 0;
     PORTBbits.INT1 = 1;
@@ -126,7 +126,7 @@ void main (void)
     PORTBbits.INT1 = 1;
     PORTBbits.INT1 = 0;
     PORTBbits.INT1 = 1;
-    PORTBbits.INT1 = 0;
+    PORTBbits.INT1 = 0;*/
     
     while (1){
         PORTBbits.RB4 = !PORTBbits.RB4;

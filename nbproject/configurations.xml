@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/xlcd.h</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/xlcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -13,17 +13,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/busyxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/openxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/putrxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/putsxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/readaddr.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/readdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/setcgram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/setddram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/wcmdxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/writdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/GroupFProject/Source/3.IR_pulse_sensor_v2.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/readdata.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setddram.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/writdata.c</itemPath>
+      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/3.IR_pulse_sensor_v3.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -33,6 +33,9 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>C:\ECNG3006\Group_Project\GroupFProject</Elem>
+    <Elem>C:\ECNG3006\Group_Project\ecng3006-project</Elem>
+    <Elem>C:/ECNG3006/Group_Project/GroupFProject/Source</Elem>
+    <Elem>C:/ECNG3006/Group_Project/GroupFProject/Source/LCD stuff</Elem>
     <Elem>Source</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
@@ -43,7 +46,7 @@
         <targetDevice>PIC18F452</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
         <platform>3</platform>
@@ -173,7 +176,7 @@
         <property key="codecoverage.report" value=""/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
-        <property key="oscillator.frequency" value="1"/>
+        <property key="oscillator.frequency" value="4"/>
         <property key="oscillator.frequencyunit" value="Mega"/>
         <property key="oscillator.rcfrequency" value="250"/>
         <property key="oscillator.rcfrequencyunit" value="Kilo"/>

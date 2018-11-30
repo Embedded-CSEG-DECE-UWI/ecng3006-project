@@ -1147,7 +1147,7 @@ void menu (char key)
 
 void displayScrollMeasurement()
 {
-    short long upperLimit = sramStorageIntCount*4;
+    short long upperLimit = (sramStorageIntCount-1)*4;
     short long currPtr = upperLimit;
     short long prevPtr = -1;
     char keypadInput = option; //Temporary input;
@@ -1155,8 +1155,7 @@ void displayScrollMeasurement()
     printMeasurementScreen(currPtr);
     while (option != 'D')
     {
-        
-        if (keypadInput == 'A' && !(currPtr > upperLimit))
+        if ((option == 'A') && !(currPtr > upperLimit))
         {
             currPtr +=4;
             if(currPtr>upperLimit)
@@ -1164,7 +1163,7 @@ void displayScrollMeasurement()
                 currPtr = upperLimit;
             }
         }
-        else if (keypadInput == 'B' && !(currPtr < 0))
+        if ((option == 'B') && !(currPtr < 0))
         {
             currPtr -=4;
 
@@ -1315,9 +1314,7 @@ void initSecErase()
 }
 
 
-void main (void){
-
-    
+void main (void){    
     configSupportCircuity();
     configSpeaker();
     configCCP();
@@ -1350,7 +1347,7 @@ void main (void){
         }
         
         if(MEASUREMENT_COMPLETE == TRUE && COUNTING == FALSE){
-            sramStorageIntCount++;//count here will increment and the modulus of it will be taken with the sramStorageInterval
+            //sramStorageIntCount++;//count here will increment and the modulus of it will be taken with the sramStorageInterval
             WriteCmdXLCD(0x01);
             while(BusyXLCD());
             resetTempConversion();
@@ -1423,4 +1420,5 @@ void main (void){
     
     Sleep();
 }
+
 

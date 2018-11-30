@@ -1,5 +1,9 @@
 MPLINK 5.00, LINKER
+<<<<<<< HEAD
 Linker Map File - Created Wed Nov 28 10:56:01 2018
+=======
+Linker Map File - Created Wed Nov 28 14:38:54 2018
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,7 +11,11 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
                      PROG       code   0x000008    program   0x00026e
+<<<<<<< HEAD
              .code_gluc.o       code   0x000276    program   0x0000f6
+=======
+             .code_Gluc.o       code   0x000276    program   0x0000f6
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                _cinit_scn       code   0x00036c    program   0x00009e
           .code_adcopen.o       code   0x00040a    program   0x000048
                     .code       code   0x000452    program   0x000020
@@ -30,12 +38,18 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
       .idata_adcclose.o_i    romdata   0x0004cc    program   0x000000
        .romdata_adcbusy.o    romdata   0x0004cc    program   0x000000
        .idata_adcbusy.o_i    romdata   0x0004cc    program   0x000000
+<<<<<<< HEAD
           .romdata_gluc.o    romdata   0x0004cc    program   0x000000
           .idata_gluc.o_i    romdata   0x0004cc    program   0x000000
+=======
+          .romdata_Gluc.o    romdata   0x0004cc    program   0x000000
+          .idata_Gluc.o_i    romdata   0x0004cc    program   0x000000
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
             .code_c018i.o       code   0x0004cc    program   0x000000
          .romdata_c018i.o    romdata   0x0004cc    program   0x000000
          .idata_c018i.o_i    romdata   0x0004cc    program   0x000000
                     dbgP0       code   0x007dc0    program   0x000240
+<<<<<<< HEAD
     .config_300001_gluc.o    romdata   0x300001    program   0x000001
     .config_300003_gluc.o    romdata   0x300003    program   0x000001
     .config_300006_gluc.o    romdata   0x300006    program   0x000001
@@ -43,6 +57,15 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                  .tmpdata      udata   0x000014       data   0x000008
            .udata_c018i.o      udata   0x000080       data   0x00000a
             .udata_gluc.o      udata   0x00008a       data   0x000006
+=======
+    .config_300001_Gluc.o    romdata   0x300001    program   0x000001
+    .config_300003_Gluc.o    romdata   0x300003    program   0x000001
+    .config_300006_Gluc.o    romdata   0x300006    program   0x000001
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x000008
+           .udata_c018i.o      udata   0x000080       data   0x00000a
+            .udata_Gluc.o      udata   0x00008a       data   0x000006
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
           .idata___init.o      idata   0x000090       data   0x000000
           .udata___init.o      udata   0x000090       data   0x000000
          .idata_adcread.o      idata   0x000090       data   0x000000
@@ -55,7 +78,11 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
         .udata_adcclose.o      udata   0x000090       data   0x000000
          .idata_adcbusy.o      idata   0x000090       data   0x000000
          .udata_adcbusy.o      udata   0x000090       data   0x000000
+<<<<<<< HEAD
             .idata_gluc.o      idata   0x000090       data   0x000000
+=======
+            .idata_Gluc.o      idata   0x000090       data   0x000000
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
            .idata_c018i.o      idata   0x000090       data   0x000000
                    .stack      udata   0x000400       data   0x000100
                     dbgD0      udata   0x0005f4       data   0x00000c
@@ -113,9 +140,15 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
         ___while_lbl00002   0x000368    program     static                          
         ___while_lbl00003   0x000294    program     static                          
         ___while_lbl00004   0x00029e    program     static                          
+<<<<<<< HEAD
                __config_0   0x300001    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_1   0x300003    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_2   0x300006    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+               __config_0   0x300001    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+               __config_1   0x300003    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+               __config_2   0x300006    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                    __init   0x0004ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
             __zero_memory   0x000452    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 _do_cinit   0x00036c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -155,7 +188,11 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                      loop   0x000482    program     static                          
                    loop_h   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    loop_l   0x00046a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+<<<<<<< HEAD
                      main   0x000276    program     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                     main   0x000276    program     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                      test   0x000386    program     static                          
                zero_block   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -354,14 +391,24 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                  __TEMPB3   0x000010       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                   __tmp_0   0x000014       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
                   __tmp_0   0x000014       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+<<<<<<< HEAD
                   __tmp_0   0x000014       data     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
               conversionG   0x00008e       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
               conversionV   0x00008c       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                  __tmp_0   0x000014       data     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+              conversionG   0x00008e       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+              conversionV   0x00008c       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                 curr_byte   0x000083       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000085       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                      prom   0x000080       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+<<<<<<< HEAD
                    result   0x00008a       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                   result   0x00008a       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
 
 
 
@@ -412,7 +459,11 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                   jUnpkB1   0x000254    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                  jUnpkBNZ   0x000262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                   jUnpkB2   0x00026c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+<<<<<<< HEAD
                      main   0x000276    program     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                     main   0x000276    program     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
         ___while_lbl00001   0x000276    program     static                          
         ___while_lbl00003   0x000294    program     static                          
         ___while_lbl00004   0x00029e    program     static                          
@@ -445,9 +496,15 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                  CloseADC   0x0004c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcclose.c
                ConvertADC   0x0004c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
                    __init   0x0004ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+<<<<<<< HEAD
                __config_0   0x300001    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_1   0x300003    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_2   0x300006    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+               __config_0   0x300001    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+               __config_1   0x300003    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+               __config_2   0x300006    program     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                   __REMB3   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB7   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -476,14 +533,24 @@ Linker Map File - Created Wed Nov 28 10:56:01 2018
                  __TEMPB0   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                   __tmp_0   0x000014       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
                   __tmp_0   0x000014       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+<<<<<<< HEAD
                   __tmp_0   0x000014       data     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                  __tmp_0   0x000014       data     static C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                      prom   0x000080       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 curr_byte   0x000083       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000085       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000087       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+<<<<<<< HEAD
                    result   0x00008a       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
               conversionV   0x00008c       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
               conversionG   0x00008e       data     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
+=======
+                   result   0x00008a       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+              conversionV   0x00008c       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+              conversionG   0x00008e       data     extern C:\ECNG3006\Group_Project\ecng3006-project\Source\Gluc.c
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
                 PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm

@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/7.WDT.c</file>
             <file>file:/C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c</file>
             <file>file:/C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/8.Miscellaneous.c</file>
             <file>file:/C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Modules%20+%20FlashRam.c</file>
+=======
+            <file>file:/C:/ECNG3006/Group_Project/ecng3006-project/Source/Keypad+LCD+RAM-New%20Integration.c</file>
+            <file>file:/C:/ECNG3006/Group_Project/ecng3006-project/Source/Complete_System_v0.2.c</file>
+            <file>file:/C:/ECNG3006/Group_Project/ecng3006-project/Source/Complete_System_v0.1.c</file>
+>>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
         </group>
     </open-files>
 </project-private>

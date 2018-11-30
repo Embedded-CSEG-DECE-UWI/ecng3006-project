@@ -1,14 +1,16 @@
-#include <p18f452.h>
+/* Set configuration bits for use with PICKit3 */
+#include <p18f452.h> 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <delays.h>
 #include <timers.h>
 #include <capture.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <pwm.h>
 #include "ow.h"
 #include "xlcd.h"
 
-/* Set configuration bits for use with PICKit3 */
+ /*Set configuration bits for use with PICKit3 and 4MHz oscillator*/
 #pragma config OSC = XT
 #pragma config WDT = OFF
 #pragma config LVP = OFF
@@ -60,14 +62,36 @@ bool KEY_PRESSED = FALSE;
 bool BROWN_OUT = FALSE;
 bool ALARM = FALSE;
 
-/*Keypad Variables*/
+/*||||||||||||||||||||||||||||||||||
+-----------LCD VARIABLES------------
+||||||||||||||||||||||||||||||||||*/
+char lcdVariable[20]; //Variable to be printed to the LCD
+char hrVariable[20];  //array that will contain the pulse count to display on the LCD
+char hrvVariable[20];
+char tempVariable[20];
+
+/*||||||||||||||||||||||||||||||||||
+--------------FLASHRAM--------------
+||||||||||||||||||||||||||||||||||*/
+short long sramCurrPtr = 0; //Variable to manage the address of SRAM
+short long sramSecPtr = 0;
+int press = 0;
+int sramStorageInterval = 0;
+
+/*||||||||||||||||||||||||||||||||||
+---------------KEYPAD---------------
+||||||||||||||||||||||||||||||||||*/
 char option = 0;
 
-/*Heart Rate Variables*/
+/*||||||||||||||||||||||||||||||||||
+--------PULSE RATE VARIABLES--------
+||||||||||||||||||||||||||||||||||*/
 volatile int int1Events = 0;                           //stores the event/pulse count received by INT1
 unsigned int int1TotalPulse = 0;                       //stores the adjusted pulse count that gives the number of pulses in 1 min
 
-/*Heart Rate Variability Variables*/
+/*||||||||||||||||||||||||||||||||||
+--HEART RATE VARIABILITY VARIABLES--
+||||||||||||||||||||||||||||||||||*/
 volatile int timer1_overflow_count = 0;
 unsigned int CCP1_value = 0;
 float nn = 0;
@@ -83,25 +107,23 @@ unsigned int previous_value = 0;
 unsigned int interval = 0;
 float temp_interval = 0;
 
-/*Temperature Variables*/
-unsigned char temp_read_LSB;// = 10;
-unsigned char temp_read_MSB;// = 65000;
+/*||||||||||||||||||||||||||||||||||
+----TEMPERATURE SENSOR VARIABLES----
+||||||||||||||||||||||||||||||||||*/
+unsigned char temp_read_LSB;
+unsigned char temp_read_MSB;
 unsigned char temp_degree = 0xDF;
-
 unsigned int temp_LSB = 0;
 unsigned int temp_MSB = 0;
 unsigned int temp_integer = 0;
 unsigned int temp_fraction = 0;
 unsigned int temp_sign = 0;
-
 unsigned int temp_hundreds = 0;
 unsigned int temp_tens = 0;
 unsigned int temp_ones = 0;
 
-int counter = 0;
-
 float temp_float = 0.0;
-
+int counter = 0;
 int average_integer = 0;
 int average_fraction = 0;
 int sum_integer = 0;
@@ -112,76 +134,28 @@ int running_average_fraction = 0;
 int temp_sum_fraction = 0;
 float decimal_division_initial_value = 0.0;
 float integer_division_initial_value = 0.0;
-
 float decimal_division_final_value = 0.0;
 int decimal_division_final_value_integer = 0;
-
 int integer_variable_extraction = 0;
 float integer_division_value_to_add = 0.0;
-
 float average_fraction_float = 0;
-
 int counter2 = 5;
 int test = 0;
 int approx_value = 0;
 
+/*||||||||||||||||||||||||||||||||||
+---------FUNCTION PROTOTYPES--------
+||||||||||||||||||||||||||||||||||*/
+void systemInit(void);
 
-
-/*FLASHRAM*/
-short long sramCurrPtr = 0; //Variable to manage the address of SRAM
-short long sramSecPtr = 0; //Ptr to sector addresses
-int press = 0;
-int sramStorageInterval = 0;
-int sramMeasurementCount = 0;
-short long sramStorageIntCount = 0; //To help keep track of storage intervals for the sram
-int sramStorageIntCount2 = 0; //To help keep track of the storage interval;
-short long sramNumOfStorage = 0; //Helps keep track user defined number of measurements to be taken.
-
-
-/*LCD Variables*/
-char lcdVariable[20];
-char hrVariable[20];                                   //array that will contain the pulse count to display on the LCD
-char hrvVariable[20];
-char tempVariable[20];
-
-/*Delays for 18 instruction cycles*/
-void DelayFor18TCY(void){
-    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
-    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
-    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();         
-}
- 
-/*Delays for 5ms*/
-void DelayXLCD(void){                                   //1000us = 1ms
-    Delay1KTCYx(5);  
- }
- 
-/*Delays for 15ms*/
-void DelayPORXLCD(void){
-    Delay1KTCYx(15);
- }
- 
-/*Initializes LCD screen for use*/
-void initLCD(void){
-     OpenXLCD(FOUR_BIT & LINES_5X7);
-     while(BusyXLCD());
-     WriteCmdXLCD(FOUR_BIT & LINES_5X7);
-     while(BusyXLCD());
-     WriteCmdXLCD(SHIFT_DISP_LEFT);
-     while(BusyXLCD());
-     WriteCmdXLCD(DON & BLINK_OFF);
-     while(BusyXLCD());     
-}
-
-/*Function Prototypes*/
 void highISR (void);
 void lowISR (void);
 int checkPressedKey (void);
 
+void configInterrupts(void);
 void configDebugLED (void);
 void configTimers (void);
 void configCCP (void);
-void configInterrupts (void);
 void startPulseInterval (void);
 void stopPulseInterval (void);
 void printPulse (void);
@@ -208,11 +182,61 @@ void configSpeaker (void);
 void alarm (void);
 void checkRange (void);
 
+void homeScreen (void);
+void menu (char);
+
 void sramSetDataPinTris(short int x);
 void displayScrollMeasurement (void);
 void setStorageInterval (void);
-void setMeasurementNumber (void);
 void initSecErase(void);
+
+//LCD FUnctions
+void DelayFor18TCY(void){
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();
+    Nop(); Nop(); Nop(); Nop(); Nop(); Nop();         
+}
+ 
+void DelayXLCD(void)
+{                               //1000us = 1ms
+    Delay1KTCYx(5);  
+}
+ 
+void DelayPORXLCD(void)
+{
+    Delay1KTCYx(15);
+}
+ 
+void init_lcd(void)
+{
+    OpenXLCD(FOUR_BIT & LINES_5X7);
+    while (BusyXLCD());
+    WriteCmdXLCD(SHIFT_DISP_LEFT);
+    while (BusyXLCD());
+    WriteCmdXLCD(FOUR_BIT & LINES_5X7);
+    while (BusyXLCD());
+    WriteCmdXLCD(DON & BLINK_OFF);
+    while(BusyXLCD());
+}
+
+void print ()
+{
+    SetDDRamAddr(0x00);
+    while(BusyXLCD());
+    putsXLCD(lcdVariable);
+    while(BusyXLCD());
+    return;
+}
+
+void printMeasurement (int lcdAdd)
+{
+    SetDDRamAddr(lcdAdd);
+    while(BusyXLCD());
+    putsXLCD(lcdVariable);
+    while(BusyXLCD());
+    return;
+}
+//End of LCD Functions
 
 /*Support Circuitry*/
 void configSupportCircuity (void){
@@ -230,6 +254,7 @@ void checkBrownout (void){
         BROWN_OUT = FALSE;
     }
 }
+
 
 #pragma code HIGH_INTERRUPT_VECTOR = 0x08               //tells the compiler that the high interrupt vector is located at 0x08
 void high_interrupt_vector(void){                   
@@ -292,8 +317,7 @@ void highISR (void){                                    //interrupt service rout
         
         INTCON3bits.INT1IE = 1;
     }
-    
-    /*Routine for external interrupt on INT2*/
+    /*Routine for external interrupt on INT1*/
     if(INTCON3bits.INT2IF == 1){
         INTCON3bits.INT2IE = 0;
         INTCON3bits.INT2IF = 0;
@@ -301,10 +325,9 @@ void highISR (void){                                    //interrupt service rout
         checkPressedKey();
         KEY_PRESSED = TRUE;
         press = 1;
-        
         INTCON3bits.INT2IE = 1;
-    }   
-        
+    }
+
     /*Routine for CCP1 interrupt*/
     if(PIR1bits.CCP1IF == 1){
         PIE1bits.CCP1IE = 0;
@@ -320,7 +343,7 @@ void highISR (void){                                    //interrupt service rout
         
         PIE1bits.CCP1IE = 1;
     }
-    
+
     INTCONbits.GIE = 1;
 }
 
@@ -339,6 +362,92 @@ void lowISR (void){                                    //interrupt service routi
     INTCONbits.GIE = 1;
 }
 
+int checkPressedKey(){
+    if(k3==0 && k2==0 && k1==0 && k0==0){
+        option = '1';
+        return option;
+    }
+    
+    if(k3==0 && k2==1 && k1==0 && k0==0){
+        option = '2';
+        return option;
+    }
+    
+    if(k3==1 && k2==0 && k1==0 && k0==0){
+        option = '3';
+        return option;
+    }
+    
+    if(k3==0 && k2==0 && k1==0 && k0==1){
+        option = '4';
+        return option;
+    }
+    
+    if(k3==0 && k2==1 && k1==0 && k0==1){
+        option = '5';
+        return option;
+    }
+    
+    if(k3==1 && k2==0 && k1==0 && k0==1){
+        option = '6';
+        return option;
+    }
+    
+    if(k3==0 && k2==0 && k1==1 && k0==0){
+        option = '7';
+        return option;
+    }
+    
+    if(k3==0 && k2==1 && k1==1 && k0==0){
+        option = '8';
+        return option;
+    }
+    
+    if(k3==1 && k2==0 && k1==1 && k0==0){
+        option = '9';
+        return option;
+    }
+    
+    if(k3==0 && k2==0 && k1==1 && k0==1){
+        option = '0';
+        return option;
+    }
+    
+    if(k3==1 && k2==1 && k1==0 && k0==0){
+        option = 'A';
+        return option;
+    }
+    
+    if(k3==1 && k2==1 && k1==0 && k0==1){
+        option = 'B';
+        return option;
+    }
+    
+    if(k3==1 && k2==1 && k1==1 && k0==0){
+        option = 'C';
+        return option;
+    }
+    
+    if(k3==1 && k2==1 && k1==1 && k0==1){
+        option = 'D';
+        return option;
+    }
+    
+    if(k3==1 && k2==0 && k1==1 && k0==1){
+        option = 'E';
+        return option;
+    }
+    
+    if(k3==0 && k2==1 && k1==1 && k0==1){
+        option = 'F';
+        return option;
+    }
+}
+//End of Keypad Stuff
+
+/*|||||||||||||||||||||||||||||||||||||||
+--------CONFIGURATION FUNCTIONS----------
+|||||||||||||||||||||||||||||||||||||||*/
 void configInterrupts(void){
     RCONbits.IPEN = 1;                                  //allows the priority level interrupts to be used
     INTCONbits.GIE = 1;                                 //enables global interrupt sources
@@ -361,18 +470,6 @@ void configInterrupts(void){
     INTCON3bits.INT2IE = 1;                              //enables the INT1 interrupt source
 }
 
-/*void configDebugLED (void){
-    //This LED determines whether TIMER0 is interrupting every 15s
-    TRISBbits.RB0 = 0; 
-    PORTBbits.RB0 = 0;
-    //This LED determines whether the external interrupt is being serviced
-    TRISBbits.RB3 = 0; 
-    PORTBbits.RB3 = 0;
-    //This LED determines whether the CCP1 interrupt is being serviced
-    TRISBbits.RB4 = 0; 
-    PORTBbits.RB4 = 0;
-}*/
-
 void configTimers (void){
     OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
     T0CONbits.TMR0ON = 0;
@@ -385,6 +482,9 @@ void configCCP (void){
     OpenCapture1(CAPTURE_INT_ON & C1_EVERY_RISE_EDGE);
 }
 
+/*|||||||||||||||||||||||||||||||||||||||
+------------TIMER FUNCTIONS--------------
+|||||||||||||||||||||||||||||||||||||||*/
 void startPulseInterval (void){
     WriteTimer0(0x6769);                                  //0x6769 is the value obtained that is need to be written to TIMER 0 with a ps of 256 to obtain a 10s interval
     T0CONbits.TMR0ON = 1;
@@ -404,83 +504,10 @@ void resetTimer1 (void){
     T1CONbits.TMR1ON = 1;
 }
 
-void readCurrentCount (void){    
-    nn+=1;
-    
-    if(HRV_pulse_count == 1){
-        CCP1_value = ReadCapture1();
-        previous_value = (65535*timer1_overflow_count) + CCP1_value;
-    }
-    if(HRV_pulse_count == 2){
-        CCP1_value = ReadCapture1();
-        new_value = (65535*timer1_overflow_count) + CCP1_value;
-    }
-    if(HRV_pulse_count > 2){
-        CCP1_value = ReadCapture1();
-        previous_value = new_value;
-        new_value = (65535*timer1_overflow_count) + CCP1_value;
-    } 
-    if(HRV_pulse_count >= 2){
-        nn50IntervalMeasurement();
-    }
-}
 
-void nn50IntervalMeasurement (void){
-    interval = new_value - previous_value;
-    temp_interval = interval/1000;
-    
-    if( temp_interval > 50){
-        nn50+=1;
-    }
-}
-
-void HRVMeasurement (void){
-    CAPTURING = FALSE;  
-    
-    if(nn == 0){
-        HRV_integer = 0;
-    }  
-    
-    else{
-      pnn50 = (nn50/nn);
-      HRV = pnn50*100;
-      HRV_integer = HRV;
-    }  
-    
-    resetVariables();
-}
-
-void resetVariables (void){
-    HRV_pulse_count = 0;
-    nn = 0;
-    nn50 = 0;   
-    
-    timer1_overflow_count = 0;
-}
-
-void printPulse (void){
-    SetDDRamAddr(0x00);
-    while(BusyXLCD());
-    sprintf(hrVariable, "Heartbeat:%d", int1TotalPulse);
-    putsXLCD(hrVariable);
-    while(BusyXLCD());
-}
-
-void printHRV (void){
-    SetDDRamAddr(0x40);
-    while(BusyXLCD());
-    sprintf(hrvVariable, "HRV:%d%", HRV_integer);
-    putsXLCD(hrvVariable);
-    while(BusyXLCD());
-}
-
-void printTemp (void){
-    SetDDRamAddr(0x10);
-    while(BusyXLCD());
-    putsXLCD(tempVariable);
-    while(BusyXLCD());
-}
-
+/*|||||||||||||||||||||||||||||||||||||||
+---------TEMPERATURE FUNCTIONS-----------
+|||||||||||||||||||||||||||||||||||||||*/
 void configTemp (void){
     ow_reset();                                             //resets the D1822 thermometer
     
@@ -650,89 +677,92 @@ void runningAverage (void){
     running_average_fraction = approximation(running_average_fraction);
 }
 
-int checkPressedKey(){
-    if(k3==0 && k2==0 && k1==0 && k0==0){
-        option = '1';
-        return option;
-    }
+/*|||||||||||||||||||||||||||||||||||||||
+-------------HRV FUNCTIONS---------------
+|||||||||||||||||||||||||||||||||||||||*/
+void readCurrentCount (void){    
+    nn+=1;
     
-    if(k3==0 && k2==1 && k1==0 && k0==0){
-        option = '2';
-        return option;
+    if(HRV_pulse_count == 1){
+        CCP1_value = ReadCapture1();
+        previous_value = (65535*timer1_overflow_count) + CCP1_value;
     }
-    
-    if(k3==1 && k2==0 && k1==0 && k0==0){
-        option = '3';
-        return option;
+    if(HRV_pulse_count == 2){
+        CCP1_value = ReadCapture1();
+        new_value = (65535*timer1_overflow_count) + CCP1_value;
     }
-    
-    if(k3==0 && k2==0 && k1==0 && k0==1){
-        option = '4';
-        return option;
-    }
-    
-    if(k3==0 && k2==1 && k1==0 && k0==1){
-        option = '5';
-        return option;
-    }
-    
-    if(k3==1 && k2==0 && k1==0 && k0==1){
-        option = '6';
-        return option;
-    }
-    
-    if(k3==0 && k2==0 && k1==1 && k0==0){
-        option = '7';
-        return option;
-    }
-    
-    if(k3==0 && k2==1 && k1==1 && k0==0){
-        option = '8';
-        return option;
-    }
-    
-    if(k3==1 && k2==0 && k1==1 && k0==0){
-        option = '9';
-        return option;
-    }
-    
-    if(k3==0 && k2==0 && k1==1 && k0==1){
-        option = '0';
-        return option;
-    }
-    
-    if(k3==1 && k2==1 && k1==0 && k0==0){
-        option = 'A';
-        return option;
-    }
-    
-    if(k3==1 && k2==1 && k1==0 && k0==1){
-        option = 'B';
-        return option;
-    }
-    
-    if(k3==1 && k2==1 && k1==1 && k0==0){
-        option = 'C';
-        return option;
-    }
-    
-    if(k3==1 && k2==1 && k1==1 && k0==1){
-        option = 'D';
-        return option;
-    }
-    
-    if(k3==1 && k2==0 && k1==1 && k0==1){
-        option = 'E';
-        return option;
-    }
-    
-    if(k3==0 && k2==1 && k1==1 && k0==1){
-        option = 'F';
-        return option;
+    if(HRV_pulse_count > 2){
+        CCP1_value = ReadCapture1();
+        previous_value = new_value;
+        new_value = (65535*timer1_overflow_count) + CCP1_value;
+    } 
+    if(HRV_pulse_count >= 2){
+        nn50IntervalMeasurement();
     }
 }
 
-/*Speaker*/
+void nn50IntervalMeasurement (void){
+    interval = new_value - previous_value;
+    temp_interval = interval/1000;
+    
+    if( temp_interval > 50){
+        nn50+=1;
+    }
+}
+
+void HRVMeasurement (void){
+    CAPTURING = FALSE;  
+    
+    if(nn == 0){
+        HRV_integer = 0;
+    }  
+    
+    else{
+      pnn50 = (nn50/nn);
+      HRV = pnn50*100;
+      HRV_integer = HRV;
+    }  
+    
+    resetVariables();
+}
+
+void resetVariables (void){
+    HRV_pulse_count = 0;
+    nn = 0;
+    nn50 = 0;   
+    
+    timer1_overflow_count = 0;
+}
+
+/*|||||||||||||||||||||||||||||||||||||||
+------------PRINT FUNCTIONS--------------
+|||||||||||||||||||||||||||||||||||||||*/
+void printPulse (void){
+    SetDDRamAddr(0x00);
+    while(BusyXLCD());
+    sprintf(hrVariable, "Heartbeat:%d", int1TotalPulse);
+    putsXLCD(hrVariable);
+    while(BusyXLCD());
+}
+
+void printHRV (void){
+    SetDDRamAddr(0x40);
+    while(BusyXLCD());
+    sprintf(hrvVariable, "HRV:%d%", HRV_integer);
+    putsXLCD(hrvVariable);
+    while(BusyXLCD());
+}
+
+void printTemp (void){
+    SetDDRamAddr(0x10);
+    while(BusyXLCD());
+    putsXLCD(tempVariable);
+    while(BusyXLCD());
+}
+
+/*|||||||||||||||||||||||||||||||||||||||
+-----------SPEAKER FUNCTIONS-------------
+|||||||||||||||||||||||||||||||||||||||*/
 void configSpeaker (void){
     TRISCbits.RC1 = 0;
     SetDCPWM2(30);
@@ -750,62 +780,7 @@ void checkRange (void){
     }
 }
 
-void homeScreen (void){
-    WriteCmdXLCD(0x01);
-    while(BusyXLCD());
-    SetDDRamAddr(0x00);
-    while(BusyXLCD());
-    putrsXLCD("Please choose: ");
-    while(BusyXLCD());
-    SetDDRamAddr(0x40);
-    while(BusyXLCD());
-    putrsXLCD("1.Measure");
-    while(BusyXLCD());
-    SetDDRamAddr(0x10);
-    while(BusyXLCD());
-    putrsXLCD("2.Store");
-    while(BusyXLCD());
-    SetDDRamAddr(0x50);
-    putrsXLCD("3.Retrieve");
-    while(BusyXLCD());
-}
 
-void systemInit(void)
-{
-    configInterrupts();
-    ADCON1bits.PCFG = 0b0111;
-    TRISA = 0x00;
-    PORTA = 0x00;
-    TRISBbits.RB3;
-    //   //Set Output Enable and Write Enable pins as Outputs
-    WEtris = 0;
-    OEtris = 0;
-    WE = 1;
-    OE = 1;
-    sramSetDataPinTris(0);
-    //   //Initialize LCD
-    initLCD();
-    initSecErase();
-    return;
-}
-
-void print ()
-{
-    SetDDRamAddr(0x00);
-    while(BusyXLCD());
-    putsXLCD(lcdVariable);
-    while(BusyXLCD());
-    return;
-}
-
-void printMeasurement (int lcdAdd)
-{
-    SetDDRamAddr(lcdAdd);
-    while(BusyXLCD());
-    putsXLCD(lcdVariable);
-    while(BusyXLCD());
-    return;
-}
 
 /*
  *This function will enable the Clock.
@@ -818,6 +793,8 @@ void clock(void)
     Delay100TCYx(1);
     return;
 }
+
+
 
 /*
  * This function will send the data to shift register
@@ -889,7 +866,7 @@ void sramLatch()
     return;
 }
 
-void sramLoadData(short long add, int data)
+void sramLoadData(int add, int data)
 {
     sramLoadDataPins(data);
     sramLoadAddPins(add);
@@ -916,7 +893,7 @@ void sramBusyData()
     return;
 }
 
- int sramRead(short long add)
+volatile int sramRead(int add)
 {
     /*
      The Read operation of the SST39SF010A/020A/040 is controlled by CE# and OE#, both have to be
@@ -925,7 +902,7 @@ void sramBusyData()
      gate data from the output pins. The data bus is in high impedance state when either CE# or OE# is
      high. Refer to the Read cycle timing diagram (Figure 5) for further details.
      */
-    int res = 0;
+    volatile int res = 0;
     //CE = 0
     WE = 1;
     OE = 1;
@@ -941,7 +918,6 @@ void sramBusyData()
     
     return res;
 }
-
 
 void sramLoadSeq()
 {
@@ -989,7 +965,6 @@ void sramLoadSeq()
     sramLatch();
     return;
 }
-
 
 void sramSecErase(int add)
 {
@@ -1054,8 +1029,7 @@ void sramSecErase(int add)
     return;
 }
 
-
-void sramByteProgramOp(short long add, int data)
+void sramByteProgramOp(int add, int data)
 {
     /*
      * The SST39SF010A/020A/040 are programmed on a byte-by-byte basis. Before programming, the sector
@@ -1089,20 +1063,160 @@ void sramByteProgramOp(short long add, int data)
     return;
 }
 
-
-/*SCROLL*/
-void printMeasurementScreen(short long add)
+void printMeasurementScreen(short int ptr, short int addPtr)
 {
-    sprintf(lcdVariable, "Heart R. = %d", sramRead(add));
+    sprintf(lcdVariable, "Heart R. = %d", sramRead(ptr << 12));
     printMeasurement(ROW1);
-    sprintf(lcdVariable, "HRV = %d", sramRead(add+1));
+    sprintf(lcdVariable, "Temp = %d", sramRead((ptr + (97)) << 12));
     printMeasurement(ROW2);
-    sprintf(lcdVariable, "Temp = %d", sramRead(add+2));
+    sprintf(lcdVariable, "HRV = %d", sramRead((ptr + (64) << 12)));
     printMeasurement(ROW3);
-    sprintf(lcdVariable,"Gluc. Lvl = %d", sramRead(add+3));
+    sprintf(lcdVariable,"Gluc. Lvl = %d", sramRead((ptr + 32) << 12));
     printMeasurement(ROW4);
 
     return;
+}
+
+void displayScrollMeasurement()
+{
+    short long currPtr = sramCurrPtr;
+    short long currSec = sramSecPtr;
+    short long prevcurrPtr = 0;
+
+    char keypadInput = option; //Temporary input;
+    press = 0;
+    printMeasurementScreen(currSec, currPtr);
+    while (option != 'D')
+    {
+        
+        if (keypadInput == 'A' && !(currPtr > sramSecPtr && currSec > sramSecPtr))
+        {
+            currPtr ++;
+            if(currPtr%4096 == 0)
+            {
+                currPtr = 0;
+                currSec++;
+            }
+            if (currSec > 31)
+            {
+                currSec = 31;
+            }
+        }
+        else if (keypadInput == 'B' && !(currPtr < 0 && currSec < 0))
+        {
+            currPtr --;
+            if (currPtr%4096 == 0)
+            {
+                currPtr = 4095;
+                currSec = 0;
+            }
+            if (currSec < 0)
+            {
+                currSec = 0;
+            }
+        }
+
+        if (prevcurrPtr != currPtr)
+        {
+            printMeasurementScreen(currSec, currPtr);
+        }
+
+        //Wait for new input
+        
+        while(!press)
+        {
+            keypadInput = option;
+        }
+        
+        prevcurrPtr = currPtr;
+        press = 0;
+    }
+    menu(option);
+    //WriteCmdXLCD(0x01);
+    return;
+}
+
+
+void setStorageInterval()
+{
+    /*
+    This function set the storage interval for the Flash Ram by reading in inputs from the keep pad and configuring Timer 3
+    to interrupt at user-defined intervals in an ISR routine that is called periodically.
+    */
+    char keypadInput;
+    press = 0; //Reset Keypad press detection variable
+
+    //Read input from keypad and store in the variable: 'interval'
+    // A - Enter
+    // B - Re-enter entire number
+    // C - Cancel
+    // D - Display Current Interval
+
+    sprintf(lcdVariable, "1. Store/10s");
+    printMeasurement(ROW1);
+    sprintf(lcdVariable, "2. Store/20s");
+    printMeasurement(ROW2);
+    sprintf(lcdVariable, "3. Store/40s");
+    printMeasurement(ROW3);
+    sprintf(lcdVariable,"4. [C]ancel");
+    printMeasurement(ROW4);
+
+  
+    
+    while (keypadInput != 'C')
+    {
+                //Update keypress
+        while (!press)
+        {
+            keypadInput = option;
+        }
+        
+        if (keypadInput == '1')
+        {
+           sramStorageInterval = 1;  
+           break;      
+        }
+        else if (keypadInput == '2')
+        {
+            //config timer 3 using interval 2;
+            sramStorageInterval = 2;
+            break;
+        }
+        else if (keypadInput ==  '3')
+        {
+            sramStorageInterval = 3;
+            break;
+        }
+        
+        press = 0;
+    }
+    homeScreen();
+    //WriteCmdXLCD(0x01);
+    return;
+}
+
+
+/*|||||||||||||||||||||||||||||||||||||||
+-------------MENU FUNCTIONS--------------
+|||||||||||||||||||||||||||||||||||||||*/
+void homeScreen (void){
+    WriteCmdXLCD(0x01);
+    while(BusyXLCD());
+    SetDDRamAddr(0x00);
+    while(BusyXLCD());
+    putrsXLCD("Please choose: ");
+    while(BusyXLCD());
+    SetDDRamAddr(0x40);
+    while(BusyXLCD());
+    putrsXLCD("1.Measure");
+    while(BusyXLCD());
+    SetDDRamAddr(0x10);
+    while(BusyXLCD());
+    putrsXLCD("2.Store");
+    while(BusyXLCD());
+    SetDDRamAddr(0x50);
+    putrsXLCD("3.Retrieve");
+    while(BusyXLCD());
 }
 
 void menu (char key)
@@ -1125,7 +1239,6 @@ void menu (char key)
             WriteCmdXLCD(0x01);
             while(BusyXLCD());
             setStorageInterval();
-            setMeasurementNumber();
             break;  
         
         case '3':
@@ -1145,156 +1258,6 @@ void menu (char key)
         }
 }
 
-void displayScrollMeasurement()
-{
-    short long upperLimit = sramStorageIntCount*4;
-    short long currPtr = upperLimit;
-    short long prevPtr = -1;
-    char keypadInput = option; //Temporary input;
-    press = 0;
-    printMeasurementScreen(currPtr);
-    while (option != 'D')
-    {
-        
-        if (keypadInput == 'A' && !(currPtr > upperLimit))
-        {
-            currPtr +=4;
-            if(currPtr>upperLimit)
-            {
-                currPtr = upperLimit;
-            }
-        }
-        else if (keypadInput == 'B' && !(currPtr < 0))
-        {
-            currPtr -=4;
-
-            if (currPtr < 0)
-            {
-                currPtr = 0;
-            }
-        }
-
-        if (prevPtr != currPtr)
-        {
-            WriteCmdXLCD(0x01);
-            printMeasurementScreen(currPtr);
-        }
-
-        //Wait for new input
-        
-        while(!press)
-        {
-            keypadInput = option;
-        }
-        
-        prevPtr = currPtr;
-        press = 0;
-    }
-    menu(option);
-    //WriteCmdXLCD(0x01);
-    return;
-}
-
-void setStorageInterval()
-{
-    /*
-    This function set the storage interval for the Flash Ram by reading in inputs from the keep pad and configuring Timer 3
-    to interrupt at user-defined intervals in an ISR routine that is called periodically.
-    */
-    char keypadInput = 0;
-    press = 0; //Reset Keypad press detection variable
-
-    sprintf(lcdVariable, "1.Store/10s");
-    printMeasurement(ROW1);
-    sprintf(lcdVariable, "2.Store/20s");
-    printMeasurement(ROW2);
-    sprintf(lcdVariable, "3.Store/30s");
-    printMeasurement(ROW3);
-    sprintf(lcdVariable,"4.[C]ancel");
-    printMeasurement(ROW4);
-
-  
-    
-    while (option != 'C')
-    {
-                //Update keypress
-        while (!press)
-        {
-            //keypadInput = option;
-        }
-        
-        if (option == '1')
-        {
-           sramStorageInterval = 1;  
-           break;      
-        }
-        if (option == '2')
-        {
-            sramStorageInterval = 2;
-            break;
-        }
-        if (option ==  '3')
-        {
-            sramStorageInterval = 3;
-            break;
-        }
-        
-        press = 0;    
-    }
-    press = 0;
-    sramStorageIntCount2 = 0; //Reset Storage interval counter
-    //setMeasurementNumber();
-    
-    //WriteCmdXLCD(0x01);
-    return;
-}
-
-/*DANIEL GLADSTONE - Function to set the number of intervals to be stored in the FLASH RAM*/
-void setMeasurementNumber(){
-    char keypadInput = 0;
-    press = 0;
-    
-    sprintf(lcdVariable, "1.Store 1 reading");
-    printMeasurement(ROW1);
-    sprintf(lcdVariable, "2.Store 2 readings");
-    printMeasurement(ROW2);
-    sprintf(lcdVariable, "3.Store 3 readings");
-    printMeasurement(ROW3);
-    sprintf(lcdVariable,"4.[C]ancel");
-    printMeasurement(ROW4);
-    
-    while(option != 'C'){
-         while (!press)
-        {
-            //keypadInput = option;
-        }
-        
-        if(option == '1'){
-            sramMeasurementCount = 1;
-            break;
-        }
-        if(option == '2'){
-            sramMeasurementCount = 2;
-            break;
-        }
-        if(option == '3'){
-            sramMeasurementCount = 3;
-            break;
-        }
-         
-        press = 0;
-    } 
-    press = 0;
-    /*sprintf(lcdVariable, "Interval:%d", sramStorageInterval);
-    printMeasurement(ROW1);
-    sprintf(lcdVariable, "MeasureCount:%d", sramMeasurementCount);
-    printMeasurement(ROW2);
-    sprintf(lcdVariable, "Option: %c", option);
-    printMeasurement(ROW3);
-    Delay10KTCYx(200);*/
-    homeScreen();
-    return;
-}
 
 void initSecErase()
 {
@@ -1302,125 +1265,60 @@ void initSecErase()
     initial sector erase for the entire Flash Ram
     */
    
-   short long secAdd, count;
-   for(secAdd = 0, count = 0; secAdd<=520192; secAdd+=4096, count++)
+   short long i, count;
+   for(i = 4096, count = 0; i<=520192; i+=4096, count++)
    {
-       sramSecErase(secAdd);
-       //if (count%2)sramByteProgramOp(i,count);
-       //else sramByteProgramOp(i,count);
+       sramSecErase(i);
+    //    if (count%2)sramByteProgramOp(i,count);
+    //    else sramByteProgramOp(i,count);
    }
    sprintf(lcdVariable, "SRAM Initialized");
    print();
    return;
 }
 
-
-void main (void){
-
-    
-    configSupportCircuity();
-    configSpeaker();
-    configCCP();
-    configTimers();
-    
+void main(void) 
+{
+    short long sramStorageIntCount = 0; //To help keep track of storage intervals for the sram
     systemInit();
+
     
-    sramMeasurementCount = 0;
     sramStorageInterval = 0;
-
     sramCurrPtr = 0;
-    
-    /*This is for the Keypad data lines*/
-    //TRISC = 0xFF;
-    TRISCbits.RC4 = 1;
-    TRISCbits.RC5 = 1;
-    TRISCbits.RC6 = 1;
-    TRISCbits.RC7 = 1;
-    
-    
-    errorCalibration();   
-    homeScreen();
-    
-    
-    while(1){     
-        if (KEY_PRESSED == TRUE){
-            menu(option);
-            KEY_PRESSED = FALSE;
-            press = 0;
-        }
-        
-        if(MEASUREMENT_COMPLETE == TRUE && COUNTING == FALSE){
-            sramStorageIntCount++;//count here will increment and the modulus of it will be taken with the sramStorageInterval
-            WriteCmdXLCD(0x01);
-            while(BusyXLCD());
-            resetTempConversion();
-            readTemp();
-            obtainInteger();
-            obtainFraction();
-            temp_fraction = approximation(temp_fraction);
-            runningAverage();
-            obtainSign();
-            printPulse();                               //prints the result as long as the program is not currently counting
-            printHRV();
-            printTemp();
-            //Delay10KTCYx(100);
-            if(((sramStorageIntCount2%sramStorageInterval) == 0) && (sramStorageInterval != 0) && (sramMeasurementCount >= 1))
-            {
-                short long add1 = sramStorageIntCount*4;
-                short long add2 = add1 + 1;
-                short long add3 = add2 + 1;
-                short long add4 = add3 + 1;
-                
-                LED2 = 1;
-                   
-                sramByteProgramOp(add1, int1TotalPulse);
-                sramByteProgramOp(add2, HRV_integer);
-                sramByteProgramOp(add3, running_average_integer);
-                sramByteProgramOp(add4, 10);
-                
-               /* WriteCmdXLCD(0x01);
-                sprintf(lcdVariable, "The HR %d", sramRead(add1));
-                printMeasurement(ROW1);
-                sprintf(lcdVariable, "The HRV %d", sramRead(add2));
-                printMeasurement(ROW2);
-               sprintf(lcdVariable, "The temp %d", sramRead(add3));
-                printMeasurement(ROW3);
-                sprintf(lcdVariable, "The Gluc %dmg/dl", sramRead(add4));
-                printMeasurement(ROW4);*/
-                //Delay10KTCYx(100);
 
-                LED2 = 0;
-                sramStorageIntCount+=1;
-                sramMeasurementCount-=1;
-            }
-            sramStorageIntCount2+=1;
-            
-            MEASUREMENT_COMPLETE = FALSE;
-        }
-        
-        if(BROWN_OUT == TRUE){
-            PORTBbits.RB3 = 1;
-            Delay10KTCYx(5);      
-            PORTBbits.RB3 = 0;
-            Delay10KTCYx(5);
-        }
-        
-        if(BROWN_OUT == FALSE){
-            PORTBbits.RB4 = 1;
-            Delay10KTCYx(5);      
-            PORTBbits.RB4 = 0;
-            Delay10KTCYx(5);
-        }
-        
-        if(ALARM == TRUE){
-            alarm();
-        }
-        
-        if(ALARM == FALSE){
-            ClosePWM2();
-        }
-    }
-    
+    sramByteProgramOp(0x12, 12);
+    sprintf(lcdVariable, "SRam Data: %d", sramRead(0x12));
+    printMeasurement(ROW4);
+    Delay10KTCYx(100);
+
+
+
     Sleep();
+}
+
+/*
+ This Function is for system initiation.
+ */
+
+void systemInit(void)
+{
+    configInterrupts();
+    ADCON1bits.PCFG = 0b0111;
+    TRISA = 0x00;
+    PORTA = 0x00;
+    TRISBbits.RB4 = 0;
+    TRISBbits.RB3 = 0;
+    //   //Set Output Enable and Write Enable pins as Outputs
+    WEtris = 0;
+    OEtris = 0;
+    WE = 1;
+    OE = 1;
+    sramSetDataPinTris(0);
+    //   //Initialize LCD
+    init_lcd();
+    LED = 0;
+    LED2 = 0;
+    initSecErase();
+    return;
 }
 

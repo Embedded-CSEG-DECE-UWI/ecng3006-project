@@ -19,7 +19,6 @@
 #define DATA_595 PORTBbits.RB3 
 #define CLK_595 PORTAbits.RA1
 #define LED     PORTBbits.RB4
-//#define LED2    PORTBbits.RB3
 #define OE      PORTCbits.RC3
 #define WE      PORTDbits.RD3
 #define D0      PORTAbits.RA2
@@ -261,10 +260,6 @@ void highISR (void){                                    //interrupt service rout
         INTCONbits.TMR0IE = 0;
         INTCONbits.TMR0IF = 0;
         
-        //PORTBbits.RB0 = !PORTBbits.RB0;                 //toggles a debugging LED that indicates when TIMER 0 overflows
-        
-        //readTemp();
-        
         COUNTING = FALSE;
         MEASUREMENT_COMPLETE = TRUE;
         ALARM = FALSE;
@@ -298,8 +293,6 @@ void highISR (void){                                    //interrupt service rout
         INTCON3bits.INT1IE = 0;
         INTCON3bits.INT1IF = 0;
         
-        //PORTBbits.RB3 = !PORTBbits.RB3;                 //toggles a debugging LED that indicates when an external interrupt has occurred
-        
         COUNTING = TRUE; 
         int1Events++;                                   //increments the event counter
         
@@ -322,8 +315,6 @@ void highISR (void){                                    //interrupt service rout
     if(PIR1bits.CCP1IF == 1){
         PIE1bits.CCP1IE = 0;
         PIR1bits.CCP1IF = 0;
-        
-        //PORTBbits.RB4 = !PORTBbits.RB4;
         
         CAPTURING = TRUE;
         HRV_pulse_count += 1;
@@ -373,18 +364,6 @@ void configInterrupts(void){
     INTCON3bits.INT2IP = 1;
     INTCON3bits.INT2IE = 1;                              //enables the INT1 interrupt source
 }
-
-/*void configDebugLED (void){
-    //This LED determines whether TIMER0 is interrupting every 15s
-    TRISBbits.RB0 = 0; 
-    PORTBbits.RB0 = 0;
-    //This LED determines whether the external interrupt is being serviced
-    TRISBbits.RB3 = 0; 
-    PORTBbits.RB3 = 0;
-    //This LED determines whether the CCP1 interrupt is being serviced
-    TRISBbits.RB4 = 0; 
-    PORTBbits.RB4 = 0;
-}*/
 
 void configTimers (void){
     OpenTimer0(TIMER_INT_ON & T0_16BIT & T0_SOURCE_INT & T0_PS_1_256);
@@ -515,7 +494,7 @@ void readTemp (void){
     ow_reset();
     ow_write_byte(0xCC);
     ow_write_byte(0x44);                                    //Begin temperature read and conversion
-    Delay10KTCYx(40);                                     //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
+    Delay10KTCYx(40);                                       //The required time needed for the temp conversion process is 750ms. 800ms was implemented to give
                                                             //a sizeable error window
     ow_reset();
     ow_write_byte(0xCC);
@@ -637,7 +616,6 @@ void errorCalibration (void){
     average_fraction = decimal_division_final_value_integer;
     
     average_fraction = approximation(average_fraction);
-    //resetTempConversion();
 }
 
 void runningAverage (void){
@@ -1210,7 +1188,7 @@ void displayScrollMeasurement()
         press = 0;
     }
     menu(option);
-    //WriteCmdXLCD(0x01);
+ 
     return;
 }
 
@@ -1262,9 +1240,7 @@ void setStorageInterval()
     }
     press = 0;
     sramStorageIntCount2 = 0; //Reset Storage interval counter
-    //setMeasurementNumber();
-    
-    //WriteCmdXLCD(0x01);
+
     return;
 }
 
@@ -1304,13 +1280,7 @@ void setMeasurementNumber(){
         press = 0;
     } 
     press = 0;
-    /*sprintf(lcdVariable, "Interval:%d", sramStorageInterval);
-    printMeasurement(ROW1);
-    sprintf(lcdVariable, "MeasureCount:%d", sramMeasurementCount);
-    printMeasurement(ROW2);
-    sprintf(lcdVariable, "Option: %c", option);
-    printMeasurement(ROW3);
-    Delay10KTCYx(200);*/
+ 
     homeScreen();
     return;
 }
@@ -1325,8 +1295,6 @@ void initSecErase()
    for(secAdd = 0, count = 0; secAdd<=520192; secAdd+=4096, count++)
    {
        sramSecErase(secAdd);
-       //if (count%2)sramByteProgramOp(i,count);
-       //else sramByteProgramOp(i,count);
    }
    sprintf(lcdVariable, "SRAM Initialized");
    print();
@@ -1378,7 +1346,6 @@ void main (void){
     configTimers();
     
     systemInit();
-    //configADC();
     
     sramMeasurementCount = 0;
     sramStorageInterval = 0;
@@ -1386,7 +1353,6 @@ void main (void){
     sramCurrPtr = 0;
     
     /*This is for the Keypad data lines*/
-    //TRISC = 0xFF;
     TRISCbits.RC4 = 1;
     TRISCbits.RC5 = 1;
     TRISCbits.RC6 = 1;
@@ -1404,7 +1370,6 @@ void main (void){
         }
         
         if(MEASUREMENT_COMPLETE == TRUE && COUNTING == FALSE){
-            //sramStorageIntCount++;//count here will increment and the modulus of it will be taken with the sramStorageInterval
             WriteCmdXLCD(0x01);
             while(BusyXLCD());
             resetTempConversion();
@@ -1439,20 +1404,9 @@ void main (void){
                 sramByteProgramOp(add3, running_average_integer);
                 sramByteProgramOp(add4, running_average_fraction);
                 sramByteProgramOp(add5, glucoseMeasurement);
-                
-               /* WriteCmdXLCD(0x01);
-                sprintf(lcdVariable, "The HR %d", sramRead(add1));
-                printMeasurement(ROW1);
-                sprintf(lcdVariable, "The HRV %d", sramRead(add2));
-                printMeasurement(ROW2);
-               sprintf(lcdVariable, "The temp %d", sramRead(add3));
-                printMeasurement(ROW3);
-                sprintf(lcdVariable, "The Gluc %dmg/dl", sramRead(add4));
-                printMeasurement(ROW4);*/
-                //Delay10KTCYx(100);
 
                 //LED2 = 0;
-                sramStorageIntCount+=1;
+                sramStorageIntCount+=1;                 //count here will increment and the modulus of it will be taken with the sramStorageInterval
                 sramMeasurementCount-=1;
             }
             sramStorageIntCount2+=1;
@@ -1462,10 +1416,6 @@ void main (void){
         
         if(BROWN_OUT == TRUE){
             brownOutSave+=1;
-            //PORTBbits.RB3 = 1;
-            //Delay10KTCYx(5);      
-            //PORTBbits.RB3 = 0;
-            //Delay10KTCYx(5);
             
             if(brownOutSave == 1){
                 sramByteProgramOp(4096 + brownoutCount , int1TotalPulse);
@@ -1501,11 +1451,6 @@ void main (void){
         if(ALARM == FALSE){
             ClosePWM2();
         }
-    }
-    
+    }  
     Sleep();
 }
-
-
-
-

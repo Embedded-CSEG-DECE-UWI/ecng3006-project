@@ -57,31 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-<<<<<<< HEAD
-SOURCEFILES_QUOTED_IF_SPACED=C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/166778241/gluc.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/166778241/gluc.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/768539767/busyxlcd.o ${OBJECTDIR}/_ext/768539767/openxlcd.o ${OBJECTDIR}/_ext/768539767/putrxlcd.o ${OBJECTDIR}/_ext/768539767/putsxlcd.o ${OBJECTDIR}/_ext/768539767/readaddr.o ${OBJECTDIR}/_ext/768539767/readdata.o ${OBJECTDIR}/_ext/768539767/setcgram.o ${OBJECTDIR}/_ext/768539767/setddram.o ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o ${OBJECTDIR}/_ext/768539767/writdata.o ${OBJECTDIR}/_ext/166778241/Final.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/768539767/busyxlcd.o.d ${OBJECTDIR}/_ext/768539767/openxlcd.o.d ${OBJECTDIR}/_ext/768539767/putrxlcd.o.d ${OBJECTDIR}/_ext/768539767/putsxlcd.o.d ${OBJECTDIR}/_ext/768539767/readaddr.o.d ${OBJECTDIR}/_ext/768539767/readdata.o.d ${OBJECTDIR}/_ext/768539767/setcgram.o.d ${OBJECTDIR}/_ext/768539767/setddram.o.d ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o.d ${OBJECTDIR}/_ext/768539767/writdata.o.d ${OBJECTDIR}/_ext/166778241/Final.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/166778241/gluc.o
+OBJECTFILES=${OBJECTDIR}/_ext/768539767/busyxlcd.o ${OBJECTDIR}/_ext/768539767/openxlcd.o ${OBJECTDIR}/_ext/768539767/putrxlcd.o ${OBJECTDIR}/_ext/768539767/putsxlcd.o ${OBJECTDIR}/_ext/768539767/readaddr.o ${OBJECTDIR}/_ext/768539767/readdata.o ${OBJECTDIR}/_ext/768539767/setcgram.o ${OBJECTDIR}/_ext/768539767/setddram.o ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o ${OBJECTDIR}/_ext/768539767/writdata.o ${OBJECTDIR}/_ext/166778241/Final.o
 
 # Source Files
-SOURCEFILES=C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c
-=======
-SOURCEFILES_QUOTED_IF_SPACED=C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c
-
-# Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o ${OBJECTDIR}/_ext/805881893/Final.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d ${OBJECTDIR}/_ext/1972699493/openxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d ${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d ${OBJECTDIR}/_ext/1972699493/readaddr.o.d ${OBJECTDIR}/_ext/1972699493/readdata.o.d ${OBJECTDIR}/_ext/1972699493/setcgram.o.d ${OBJECTDIR}/_ext/1972699493/setddram.o.d ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1972699493/writdata.o.d ${OBJECTDIR}/_ext/805881893/Final.o.d
-
-# Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1972699493/busyxlcd.o ${OBJECTDIR}/_ext/1972699493/openxlcd.o ${OBJECTDIR}/_ext/1972699493/putrxlcd.o ${OBJECTDIR}/_ext/1972699493/putsxlcd.o ${OBJECTDIR}/_ext/1972699493/readaddr.o ${OBJECTDIR}/_ext/1972699493/readdata.o ${OBJECTDIR}/_ext/1972699493/setcgram.o ${OBJECTDIR}/_ext/1972699493/setddram.o ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o ${OBJECTDIR}/_ext/1972699493/writdata.o ${OBJECTDIR}/_ext/805881893/Final.o
-
-# Source Files
-SOURCEFILES=C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c C:/ECNG3006/Group_Project/ecng3006-project/readdata.c C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c C:/ECNG3006/Group_Project/ecng3006-project/setddram.c C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c C:/ECNG3006/Group_Project/ecng3006-project/writdata.c C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c
->>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
+SOURCEFILES=C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c
 
 
 CFLAGS=
@@ -115,201 +101,182 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-<<<<<<< HEAD
-${OBJECTDIR}/_ext/166778241/gluc.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/768539767/busyxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/busyxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/openxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/openxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/putrxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/putrxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/putsxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/putsxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/readaddr.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/readaddr.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/readdata.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/readdata.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/setcgram.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/setcgram.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/setddram.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setddram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/setddram.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/wcmdxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/writdata.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/writdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/writdata.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/166778241/Final.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/166778241" 
-	@${RM} ${OBJECTDIR}/_ext/166778241/gluc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/166778241/gluc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/166778241/gluc.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/166778241/gluc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/166778241/gluc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/166778241/Final.o.d 
+	@${RM} ${OBJECTDIR}/_ext/166778241/Final.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/166778241/Final.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/166778241/Final.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/166778241/Final.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
-${OBJECTDIR}/_ext/166778241/gluc.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/768539767/busyxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/busyxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/openxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/openxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/putrxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/putrxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/putsxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/putsxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/readaddr.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/readaddr.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/readdata.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/readdata.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/setcgram.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/setcgram.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/setddram.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setddram.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/setddram.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/wcmdxlcd.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/768539767/writdata.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/768539767" 
+	@${RM} ${OBJECTDIR}/_ext/768539767/writdata.o.d 
+	@${RM} ${OBJECTDIR}/_ext/768539767/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/768539767/writdata.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/768539767/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/768539767/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/166778241/Final.o: C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/166778241" 
-	@${RM} ${OBJECTDIR}/_ext/166778241/gluc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/166778241/gluc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/166778241/gluc.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/166778241/gluc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/166778241/gluc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-=======
-${OBJECTDIR}/_ext/1972699493/busyxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/busyxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/busyxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/openxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/openxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/openxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/openxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/putrxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/putrxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/putrxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/putsxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/putsxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/putsxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/readaddr.o: C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readaddr.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/readaddr.o   C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/readaddr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/readdata.o: C:/ECNG3006/Group_Project/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/readdata.o   C:/ECNG3006/Group_Project/ecng3006-project/readdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/readdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/setcgram.o: C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setcgram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/setcgram.o   C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/setcgram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/setddram.o: C:/ECNG3006/Group_Project/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setddram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/setddram.o   C:/ECNG3006/Group_Project/ecng3006-project/setddram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/setddram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/writdata.o: C:/ECNG3006/Group_Project/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/writdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/writdata.o   C:/ECNG3006/Group_Project/ecng3006-project/writdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/writdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/805881893/Final.o: C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/805881893" 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Final.o.d 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Final.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Final.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/805881893/Final.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/805881893/Final.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-else
-${OBJECTDIR}/_ext/1972699493/busyxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/busyxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/busyxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/openxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/openxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/openxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/openxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/putrxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/putrxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/putrxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/putsxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/putsxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/putsxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/readaddr.o: C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readaddr.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/readaddr.o   C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/readaddr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/readdata.o: C:/ECNG3006/Group_Project/ecng3006-project/readdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/readdata.o   C:/ECNG3006/Group_Project/ecng3006-project/readdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/readdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/setcgram.o: C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setcgram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/setcgram.o   C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/setcgram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/setddram.o: C:/ECNG3006/Group_Project/ecng3006-project/setddram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setddram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/setddram.o   C:/ECNG3006/Group_Project/ecng3006-project/setddram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/setddram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o: C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o   C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1972699493/writdata.o: C:/ECNG3006/Group_Project/ecng3006-project/writdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1972699493" 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/writdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1972699493/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1972699493/writdata.o   C:/ECNG3006/Group_Project/ecng3006-project/writdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1972699493/writdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1972699493/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/805881893/Final.o: C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/805881893" 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Final.o.d 
-	@${RM} ${OBJECTDIR}/_ext/805881893/Final.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ml -oa- -Ls -o-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/805881893/Final.o   C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/805881893/Final.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/805881893/Final.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
->>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
+	@${RM} ${OBJECTDIR}/_ext/166778241/Final.o.d 
+	@${RM} ${OBJECTDIR}/_ext/166778241/Final.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/166778241/Final.o   C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/166778241/Final.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/166778241/Final.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

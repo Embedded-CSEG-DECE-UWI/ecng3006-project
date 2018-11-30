@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/ow.h</itemPath>
       <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/xlcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -13,21 +14,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-<<<<<<< HEAD
-      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/gluc.c</itemPath>
-=======
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/busyxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/openxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/putrxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/putsxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/readaddr.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/readdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setcgram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/setddram.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/wcmdxlcd.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/writdata.c</itemPath>
-      <itemPath>C:/ECNG3006/Group_Project/ecng3006-project/Source/Final.c</itemPath>
->>>>>>> f7ad59a901df15dd5a56f4b03df8797480bf5bc7
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/busyxlcd.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/openxlcd.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putrxlcd.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/putsxlcd.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readaddr.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/readdata.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setcgram.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/setddram.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/wcmdxlcd.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/writdata.c</itemPath>
+      <itemPath>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source/Final.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -37,7 +34,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>C:\ECNG3006\Group_Project\GroupFProject</Elem>
-    <Elem>C:/Users/816000924/MPLABXProjects/Group_Project/ecng3006-project/Source</Elem>
+    <Elem>C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project</Elem>
+    <Elem>C:\ECNG3006\Group_Project\ecng3006-project</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -80,12 +78,12 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C18>
-        <property key="code-model" value="ml"/>
+        <property key="code-model" value="ms"/>
         <property key="data-model" value="oa-"/>
         <property key="default-char-unsigned" value="false"/>
-        <property key="enable-all-optimizations" value="false"/>
+        <property key="enable-all-optimizations" value="true"/>
         <property key="enable-int-promotion" value="false"/>
-        <property key="enable-multi-bank-stack-model" value="true"/>
+        <property key="enable-multi-bank-stack-model" value="false"/>
         <property key="enable-ob" value="true"/>
         <property key="enable-od" value="true"/>
         <property key="enable-om" value="true"/>
@@ -98,7 +96,7 @@
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
         <property key="extra-include-directories" value=""/>
-        <property key="optimization-master" value="Disable all"/>
+        <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value=""/>
         <property key="procedural-abstraction-passes" value="4"/>
         <property key="storage-class" value="sca"/>
@@ -136,6 +134,7 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

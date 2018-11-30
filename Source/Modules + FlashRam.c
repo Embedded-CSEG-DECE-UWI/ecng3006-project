@@ -764,8 +764,6 @@ void homeScreen (void){
     while(BusyXLCD());
 }
 
-int z = 0;
-
 void systemInit(void)
 {
     configInterrupts();
@@ -1100,7 +1098,7 @@ void printMeasurementScreen(short int ptr)
     return;
 }
 
-void menu (char key){        
+void menu (char key){   
     switch(key){
         case '1':
             WriteCmdXLCD(0x01);

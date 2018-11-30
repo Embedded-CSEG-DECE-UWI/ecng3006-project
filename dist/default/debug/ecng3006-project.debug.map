@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Wed Nov 28 10:44:03 2018
+Linker Map File - Created Wed Nov 28 10:56:01 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,34 +7,35 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
                      PROG       code   0x000008    program   0x00026e
-             .code_gluc.o       code   0x000276    program   0x0000fe
-               _cinit_scn       code   0x000374    program   0x00009e
-          .code_adcopen.o       code   0x000412    program   0x000048
-                    .code       code   0x00045a    program   0x000020
-             _startup_scn       code   0x00047a    program   0x00001c
-              D10TCYXCODE       code   0x000496    program   0x000016
-          .code_adcread.o       code   0x0004ac    program   0x000012
-          .code_adcbusy.o       code   0x0004be    program   0x00000a
-         .code_adcclose.o       code   0x0004c8    program   0x000006
-          .code_adcconv.o       code   0x0004ce    program   0x000004
-           .code___init.o       code   0x0004d2    program   0x000002
-       .idata_adcopen.o_i    romdata   0x0004d4    program   0x000000
-       .romdata_adcopen.o    romdata   0x0004d4    program   0x000000
-       .idata_adcread.o_i    romdata   0x0004d4    program   0x000000
-       .romdata_adcread.o    romdata   0x0004d4    program   0x000000
-        .idata___init.o_i    romdata   0x0004d4    program   0x000000
-        .romdata___init.o    romdata   0x0004d4    program   0x000000
-       .romdata_adcconv.o    romdata   0x0004d4    program   0x000000
-       .idata_adcconv.o_i    romdata   0x0004d4    program   0x000000
-      .romdata_adcclose.o    romdata   0x0004d4    program   0x000000
-      .idata_adcclose.o_i    romdata   0x0004d4    program   0x000000
-       .romdata_adcbusy.o    romdata   0x0004d4    program   0x000000
-       .idata_adcbusy.o_i    romdata   0x0004d4    program   0x000000
-          .romdata_gluc.o    romdata   0x0004d4    program   0x000000
-          .idata_gluc.o_i    romdata   0x0004d4    program   0x000000
-            .code_c018i.o       code   0x0004d4    program   0x000000
-         .romdata_c018i.o    romdata   0x0004d4    program   0x000000
-         .idata_c018i.o_i    romdata   0x0004d4    program   0x000000
+             .code_gluc.o       code   0x000276    program   0x0000f6
+               _cinit_scn       code   0x00036c    program   0x00009e
+          .code_adcopen.o       code   0x00040a    program   0x000048
+                    .code       code   0x000452    program   0x000020
+             _startup_scn       code   0x000472    program   0x00001c
+              D10TCYXCODE       code   0x00048e    program   0x000016
+          .code_adcread.o       code   0x0004a4    program   0x000012
+          .code_adcbusy.o       code   0x0004b6    program   0x00000a
+         .code_adcclose.o       code   0x0004c0    program   0x000006
+          .code_adcconv.o       code   0x0004c6    program   0x000004
+           .code___init.o       code   0x0004ca    program   0x000002
+       .romdata_adcconv.o    romdata   0x0004cc    program   0x000000
+       .idata_adcopen.o_i    romdata   0x0004cc    program   0x000000
+       .romdata_adcopen.o    romdata   0x0004cc    program   0x000000
+       .idata_adcread.o_i    romdata   0x0004cc    program   0x000000
+       .romdata_adcread.o    romdata   0x0004cc    program   0x000000
+        .idata___init.o_i    romdata   0x0004cc    program   0x000000
+        .romdata___init.o    romdata   0x0004cc    program   0x000000
+       .idata_adcconv.o_i    romdata   0x0004cc    program   0x000000
+      .romdata_adcclose.o    romdata   0x0004cc    program   0x000000
+      .idata_adcclose.o_i    romdata   0x0004cc    program   0x000000
+       .romdata_adcbusy.o    romdata   0x0004cc    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x0004cc    program   0x000000
+          .romdata_gluc.o    romdata   0x0004cc    program   0x000000
+          .idata_gluc.o_i    romdata   0x0004cc    program   0x000000
+            .code_c018i.o       code   0x0004cc    program   0x000000
+         .romdata_c018i.o    romdata   0x0004cc    program   0x000000
+         .idata_c018i.o_i    romdata   0x0004cc    program   0x000000
+                    dbgP0       code   0x007dc0    program   0x000240
     .config_300001_gluc.o    romdata   0x300001    program   0x000001
     .config_300003_gluc.o    romdata   0x300003    program   0x000001
     .config_300006_gluc.o    romdata   0x300006    program   0x000001
@@ -56,7 +57,8 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
          .udata_adcbusy.o      udata   0x000090       data   0x000000
             .idata_gluc.o      idata   0x000090       data   0x000000
            .idata_c018i.o      idata   0x000090       data   0x000000
-                   .stack      udata   0x000500       data   0x000100
+                   .stack      udata   0x000400       data   0x000100
+                    dbgD0      udata   0x0005f4       data   0x00000c
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -64,32 +66,33 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0004d3      
+                            0x000000    0x0004cb      
+                            0x007dc0    0x007fff      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300006    0x300006      
-            1239 out of 33048 program addresses used, program memory utilization is 3%
+            1807 out of 33048 program addresses used, program memory utilization is 5%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                  BusyADC   0x0004be    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
-                 CloseADC   0x0004c8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcclose.c
-               ConvertADC   0x0004ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                    D10_1   0x0004a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x00049e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              Delay10TCYx   0x000496    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                  BusyADC   0x0004b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
+                 CloseADC   0x0004c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcclose.c
+               ConvertADC   0x0004c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                    D10_1   0x00049e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x000496    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay10TCYx   0x00048e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
                  FLO1632S   0x00000c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
                  FLO1632U   0x000008    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
                     FPM32   0x000032    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
                   INT3216   0x00010c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  OpenADC   0x000412    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-                  ReadADC   0x0004ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
-        _D10TCYXCODE_000A   0x0004a0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0004a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0004a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                  OpenADC   0x00040a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                  ReadADC   0x0004a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
+        _D10TCYXCODE_000A   0x000498    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00049a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00049c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
                  __FpExit   0x000176    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
                  __FpPack   0x0001a2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
             __FpReturnNaN   0x00016a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
@@ -102,25 +105,27 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
               __FpReturnW   0x0001fa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
               __FpUnPackA   0x00021a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
               __FpUnPackB   0x00024a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-       ___return_lbl00000   0x000372    program     static                          
+       ___return_lbl00000   0x00036a    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000494    program     static                          
-       ___return_lbl00002   0x000410    program     static                          
-        ___while_lbl00001   0x000294    program     static                          
-        ___while_lbl00002   0x00029e    program     static                          
+       ___return_lbl00001   0x00048c    program     static                          
+       ___return_lbl00002   0x000408    program     static                          
+        ___while_lbl00001   0x000276    program     static                          
+        ___while_lbl00002   0x000368    program     static                          
+        ___while_lbl00003   0x000294    program     static                          
+        ___while_lbl00004   0x00029e    program     static                          
                __config_0   0x300001    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_1   0x300003    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_2   0x300006    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
-                   __init   0x0004d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00045a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                _do_cinit   0x000374    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x0004ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x000452    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                _do_cinit   0x00036c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x00047a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000470    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                copy_loop   0x0003e6    program     static                          
-            copy_one_byte   0x0003ec    program     static                          
-                     done   0x000410    program     static                          
-             done_copying   0x0003fa    program     static                          
+                 _startup   0x000472    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                copy_loop   0x0003de    program     static                          
+            copy_one_byte   0x0003e4    program     static                          
+                     done   0x000408    program     static                          
+             done_copying   0x0003f2    program     static                          
                  jANotInf   0x000050    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
               jBothFinite   0x00005e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
              jBothNotZero   0x00006a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
@@ -147,12 +152,12 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
                  jUnpkNaN   0x000246    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                     jZero   0x000132    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
                jZero1and2   0x00018a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                     loop   0x00048a    program     static                          
-                   loop_h   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x000472    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     loop   0x000482    program     static                          
+                   loop_h   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x00046a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      main   0x000276    program     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
-                     test   0x00038e    program     static                          
-               zero_block   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     test   0x000386    program     static                          
+               zero_block   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -408,36 +413,38 @@ Linker Map File - Created Wed Nov 28 10:44:03 2018
                  jUnpkBNZ   0x000262    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                   jUnpkB2   0x00026c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
                      main   0x000276    program     extern C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
-        ___while_lbl00001   0x000294    program     static                          
-        ___while_lbl00002   0x00029e    program     static                          
-       ___return_lbl00000   0x000372    program     static                          
-                _do_cinit   0x000374    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x00038e    program     static                          
-                copy_loop   0x0003e6    program     static                          
-            copy_one_byte   0x0003ec    program     static                          
-             done_copying   0x0003fa    program     static                          
-       ___return_lbl00002   0x000410    program     static                          
-                     done   0x000410    program     static                          
-                  OpenADC   0x000412    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-            __zero_memory   0x00045a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_h   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               zero_block   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                compare_l   0x000470    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x000472    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 _startup   0x00047a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x00048a    program     static                          
-       ___return_lbl00001   0x000494    program     static                          
-              Delay10TCYx   0x000496    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x00049e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x0004a0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x0004a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x0004a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x0004a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                  ReadADC   0x0004ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
-                  BusyADC   0x0004be    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
-                 CloseADC   0x0004c8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcclose.c
-               ConvertADC   0x0004ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                   __init   0x0004d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+        ___while_lbl00001   0x000276    program     static                          
+        ___while_lbl00003   0x000294    program     static                          
+        ___while_lbl00004   0x00029e    program     static                          
+        ___while_lbl00002   0x000368    program     static                          
+       ___return_lbl00000   0x00036a    program     static                          
+                _do_cinit   0x00036c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x000386    program     static                          
+                copy_loop   0x0003de    program     static                          
+            copy_one_byte   0x0003e4    program     static                          
+             done_copying   0x0003f2    program     static                          
+                     done   0x000408    program     static                          
+       ___return_lbl00002   0x000408    program     static                          
+                  OpenADC   0x00040a    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+            __zero_memory   0x000452    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_h   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x000460    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                compare_l   0x000468    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x00046a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 _startup   0x000472    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x000482    program     static                          
+       ___return_lbl00001   0x00048c    program     static                          
+              Delay10TCYx   0x00048e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x000496    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x000498    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x00049a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x00049c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x00049e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                  ReadADC   0x0004a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcread.c
+                  BusyADC   0x0004b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcbusy.c
+                 CloseADC   0x0004c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcclose.c
+               ConvertADC   0x0004c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                   __init   0x0004ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_1   0x300003    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c
                __config_2   0x300006    program     static C:\Users\816000924\MPLABXProjects\Group_Project\ecng3006-project\Source\gluc.c

@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Nov 05 17:47:58 2019
+Linker Map File - Created Tue Nov 05 18:03:46 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -12,35 +12,73 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
              .code_port.o       code   0x004b00    program   0x00099a
            .code_heap_4.o       code   0x00549a    program   0x00081a
              .code_list.o       code   0x005cb4    program   0x000528
-               _cinit_scn       code   0x0061dc    program   0x00009e
-                   STRING       code   0x00627a    program   0x000056
-           .code_t1open.o       code   0x0062d0    program   0x000042
-                    .code       code   0x006312    program   0x000020
-             _startup_scn       code   0x006332    program   0x00001c
-             .stringtable    romdata   0x00634e    program   0x000005
-        .romdata_t1open.o    romdata   0x006353    program   0x000000
-        .idata_t1open.o_i    romdata   0x006353    program   0x000000
-        .idata___init.o_i    romdata   0x006353    program   0x000000
-        .romdata___init.o    romdata   0x006353    program   0x000000
-         .romdata_c018i.o    romdata   0x006353    program   0x000000
-         .idata_c018i.o_i    romdata   0x006353    program   0x000000
-          .romdata_port.o    romdata   0x006353    program   0x000000
-          .idata_port.o_i    romdata   0x006353    program   0x000000
-        .romdata_heap_4.o    romdata   0x006353    program   0x000000
-         .romdata_tasks.o    romdata   0x006353    program   0x000000
-         .romdata_queue.o    romdata   0x006353    program   0x000000
-         .idata_queue.o_i    romdata   0x006353    program   0x000000
-          .romdata_list.o    romdata   0x006353    program   0x000000
-          .idata_list.o_i    romdata   0x006353    program   0x000000
-          .romdata_main.o    romdata   0x006353    program   0x000000
-          .idata_main.o_i    romdata   0x006353    program   0x000000
-            .code_c018i.o       code   0x006354    program   0x000000
-             .code_main.o       code   0x006354    program   0x000002
-           .code___init.o       code   0x006356    program   0x000002
-         .idata_tasks.o_i    romdata   0x006358    program   0x000011
-        .idata_heap_4.o_i    romdata   0x006369    program   0x00000a
+         .code_openxlcd.o       code   0x0061dc    program   0x0000da
+               _cinit_scn       code   0x0062b6    program   0x00009e
+         .code_putrxlcd.o       code   0x006354    program   0x000070
+.code_DelayXLCDFunctions.o       code   0x0063c4    program   0x00006c
+         .code_setddram.o       code   0x006430    program   0x00005a
+         .code_setcgram.o       code   0x00648a    program   0x00005a
+         .code_writdata.o       code   0x0064e4    program   0x000058
+         .code_wcmdxlcd.o       code   0x00653c    program   0x000058
+                   STRING       code   0x006594    program   0x000056
+         .code_putsxlcd.o       code   0x0065ea    program   0x000056
+         .code_readdata.o       code   0x006640    program   0x000050
+         .code_readaddr.o       code   0x006690    program   0x000050
+           .code_t1open.o       code   0x0066e0    program   0x000042
+         .code_busyxlcd.o       code   0x006722    program   0x000036
+             D10KTCYXCODE       code   0x006758    program   0x00002e
+              D1KTCYXCODE       code   0x006786    program   0x000020
+                    .code       code   0x0067a6    program   0x000020
+             _startup_scn       code   0x0067c6    program   0x00001c
+              D10TCYXCODE       code   0x0067e2    program   0x000016
+             .stringtable    romdata   0x0067f8    program   0x000005
+      .idata_writdata.o_i    romdata   0x0067fd    program   0x000000
+        .romdata_t1open.o    romdata   0x0067fd    program   0x000000
+      .idata_readdata.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_readdata.o    romdata   0x0067fd    program   0x000000
+        .idata_t1open.o_i    romdata   0x0067fd    program   0x000000
+      .idata_setcgram.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_setcgram.o    romdata   0x0067fd    program   0x000000
+      .idata_setddram.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_setddram.o    romdata   0x0067fd    program   0x000000
+        .idata___init.o_i    romdata   0x0067fd    program   0x000000
+      .idata_wcmdxlcd.o_i    romdata   0x0067fd    program   0x000000
+        .romdata___init.o    romdata   0x0067fd    program   0x000000
+      .romdata_wcmdxlcd.o    romdata   0x0067fd    program   0x000000
+      .romdata_writdata.o    romdata   0x0067fd    program   0x000000
+         .idata_c018i.o_i    romdata   0x0067fd    program   0x000000
+         .romdata_c018i.o    romdata   0x0067fd    program   0x000000
+          .idata_main.o_i    romdata   0x0067fd    program   0x000000
+          .romdata_main.o    romdata   0x0067fd    program   0x000000
+          .idata_list.o_i    romdata   0x0067fd    program   0x000000
+          .romdata_list.o    romdata   0x0067fd    program   0x000000
+         .idata_queue.o_i    romdata   0x0067fd    program   0x000000
+         .romdata_queue.o    romdata   0x0067fd    program   0x000000
+         .romdata_tasks.o    romdata   0x0067fd    program   0x000000
+        .romdata_heap_4.o    romdata   0x0067fd    program   0x000000
+          .idata_port.o_i    romdata   0x0067fd    program   0x000000
+          .romdata_port.o    romdata   0x0067fd    program   0x000000
+      .romdata_readaddr.o    romdata   0x0067fd    program   0x000000
+      .idata_readaddr.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_putsxlcd.o    romdata   0x0067fd    program   0x000000
+      .idata_putsxlcd.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_putrxlcd.o    romdata   0x0067fd    program   0x000000
+      .idata_putrxlcd.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_openxlcd.o    romdata   0x0067fd    program   0x000000
+      .idata_openxlcd.o_i    romdata   0x0067fd    program   0x000000
+      .romdata_busyxlcd.o    romdata   0x0067fd    program   0x000000
+      .idata_busyxlcd.o_i    romdata   0x0067fd    program   0x000000
+.romdata_DelayXLCDFunctions.o    romdata   0x0067fd    program   0x000000
+.idata_DelayXLCDFunctions.o_i    romdata   0x0067fd    program   0x000000
+             .code_main.o       code   0x0067fe    program   0x000002
+            .code_c018i.o       code   0x0067fe    program   0x000000
+           .code___init.o       code   0x006800    program   0x000002
+         .idata_tasks.o_i    romdata   0x006802    program   0x000011
+        .idata_heap_4.o_i    romdata   0x006813    program   0x00000a
                 MATH_DATA      udata   0x000000       data   0x00000b
                  .tmpdata      udata   0x00000b       data   0x000008
+                DELAYDAT2      udata   0x000013       data   0x000001
+                DELAYDAT1      udata   0x000014       data   0x000001
                    .stack      udata   0x000080       data   0x000060
           .udata_heap_4.o      udata   0x0000e0       data   0x000204
            .udata_tasks.o      udata   0x0002e4       data   0x00004c
@@ -48,18 +86,40 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            .idata_tasks.o      idata   0x000358       data   0x000011
            .udata_c018i.o      udata   0x000369       data   0x00000a
           .idata_heap_4.o      idata   0x000373       data   0x00000a
-            .idata_list.o      idata   0x00037d       data   0x000000
-           .idata_queue.o      idata   0x00037d       data   0x000000
-            .udata_list.o      udata   0x00037d       data   0x000000
-            .idata_main.o      idata   0x00037d       data   0x000000
+        .udata_readdata.o      udata   0x00037d       data   0x000000
+        .idata_readdata.o      idata   0x00037d       data   0x000000
+        .udata_setcgram.o      udata   0x00037d       data   0x000000
+        .idata_setcgram.o      idata   0x00037d       data   0x000000
+        .udata_setddram.o      udata   0x00037d       data   0x000000
+        .idata_setddram.o      idata   0x00037d       data   0x000000
+        .udata_wcmdxlcd.o      udata   0x00037d       data   0x000000
+        .idata_wcmdxlcd.o      idata   0x00037d       data   0x000000
+        .udata_writdata.o      udata   0x00037d       data   0x000000
+        .idata_writdata.o      idata   0x00037d       data   0x000000
             .udata_main.o      udata   0x00037d       data   0x000000
-            .udata_port.o      udata   0x00037d       data   0x000000
-            .idata_port.o      idata   0x00037d       data   0x000000
+           .idata_c018i.o      idata   0x00037d       data   0x000000
           .udata_t1open.o      udata   0x00037d       data   0x000000
           .idata_t1open.o      idata   0x00037d       data   0x000000
           .udata___init.o      udata   0x00037d       data   0x000000
           .idata___init.o      idata   0x00037d       data   0x000000
-           .idata_c018i.o      idata   0x00037d       data   0x000000
+            .idata_main.o      idata   0x00037d       data   0x000000
+            .udata_list.o      udata   0x00037d       data   0x000000
+            .idata_list.o      idata   0x00037d       data   0x000000
+           .idata_queue.o      idata   0x00037d       data   0x000000
+            .udata_port.o      udata   0x00037d       data   0x000000
+            .idata_port.o      idata   0x00037d       data   0x000000
+.udata_DelayXLCDFunctions.o      udata   0x00037d       data   0x000000
+.idata_DelayXLCDFunctions.o      idata   0x00037d       data   0x000000
+        .udata_busyxlcd.o      udata   0x00037d       data   0x000000
+        .idata_busyxlcd.o      idata   0x00037d       data   0x000000
+        .udata_openxlcd.o      udata   0x00037d       data   0x000000
+        .idata_openxlcd.o      idata   0x00037d       data   0x000000
+        .udata_putrxlcd.o      udata   0x00037d       data   0x000000
+        .idata_putrxlcd.o      idata   0x00037d       data   0x000000
+        .udata_putsxlcd.o      udata   0x00037d       data   0x000000
+        .idata_putsxlcd.o      idata   0x00037d       data   0x000000
+        .udata_readaddr.o      udata   0x00037d       data   0x000000
+        .idata_readaddr.o      idata   0x00037d       data   0x000000
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -69,18 +129,47 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
                            ---------   ---------      
                             0x000000    0x000005      
                             0x000008    0x000011      
-                            0x00003a    0x006352      
-                            0x006354    0x006372      
-            25416 out of 33048 program addresses used, program memory utilization is 76%
+                            0x00003a    0x0067fc      
+                            0x0067fe    0x00681c      
+            26610 out of 33048 program addresses used, program memory utilization is 80%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-               OpenTimer1   0x0062d0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-              _4jContinue   0x0062ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                   _5jEnd   0x0062b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                 BusyXLCD   0x006722    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\busyxlcd.c
+                   D10K_1   0x006764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x006770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x006762    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10_1   0x0067f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0067ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D1K_1   0x006792    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x006790    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+             Delay10KTCYx   0x006758    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+              Delay10TCYx   0x0067e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay1KTCYx   0x006786    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+            DelayFor18TCY   0x0063c4    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+             DelayPORXLCD   0x0063d0    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+                DelayXLCD   0x0063dc    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+                  InitLCD   0x0063e8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+               OpenTimer1   0x0066e0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                 OpenXLCD   0x0061dc    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\openxlcd.c
+             ReadAddrXLCD   0x006690    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\readaddr.c
+             ReadDataXLCD   0x006640    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\readdata.c
+             SetCGRamAddr   0x00648a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\setcgram.c
+             SetDDRamAddr   0x006430    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\setddram.c
+             WriteCmdXLCD   0x00653c    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\wcmdxlcd.c
+            WriteDataXLCD   0x0064e4    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\writdata.c
+              _4jContinue   0x0065c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                   _5jEnd   0x0065d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+       _D10KTCYXCODE_0010   0x006768    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x006774    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+        _D10TCYXCODE_000A   0x0067ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0067ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0067f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D1KTCYXCODE_0010   0x006796    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x00679c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
            ___?:_lbl00001   0x002a50    program     static                          
            ___?:_lbl00002   0x002a4e    program     static                          
            ___?:_lbl00029   0x002f00    program     static                          
@@ -106,8 +195,8 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___do_lbl00134   0x0010fc    program     static                          
          ___else_lbl00004   0x002a86    program     static                          
          ___else_lbl00006   0x002a88    program     static                          
-         ___else_lbl00008   0x002a8a    program     static                          
          ___else_lbl00008   0x005048    program     static                          
+         ___else_lbl00008   0x002a8a    program     static                          
          ___else_lbl00016   0x005202    program     static                          
          ___else_lbl00022   0x000552    program     static                          
          ___else_lbl00024   0x000592    program     static                          
@@ -221,8 +310,8 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___if_lbl00042   0x0007a6    program     static                          
            ___if_lbl00043   0x002f90    program     static                          
            ___if_lbl00044   0x0007ac    program     static                          
-           ___if_lbl00045   0x0007ce    program     static                          
            ___if_lbl00045   0x002f96    program     static                          
+           ___if_lbl00045   0x0007ce    program     static                          
            ___if_lbl00046   0x002fd0    program     static                          
            ___if_lbl00047   0x003000    program     static                          
            ___if_lbl00047   0x0007ce    program     static                          
@@ -246,8 +335,8 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___if_lbl00095   0x00352e    program     static                          
            ___if_lbl00097   0x00352e    program     static                          
            ___if_lbl00098   0x000cba    program     static                          
-           ___if_lbl00099   0x000d3c    program     static                          
            ___if_lbl00099   0x003534    program     static                          
+           ___if_lbl00099   0x000d3c    program     static                          
            ___if_lbl00100   0x00356e    program     static                          
            ___if_lbl00101   0x000d3e    program     static                          
            ___if_lbl00101   0x00359e    program     static                          
@@ -267,23 +356,23 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___if_lbl00126   0x001056    program     static                          
            ___if_lbl00127   0x0010da    program     static                          
            ___if_lbl00127   0x003812    program     static                          
-           ___if_lbl00129   0x0010ee    program     static                          
            ___if_lbl00129   0x003812    program     static                          
+           ___if_lbl00129   0x0010ee    program     static                          
            ___if_lbl00131   0x003818    program     static                          
-           ___if_lbl00132   0x003852    program     static                          
            ___if_lbl00132   0x00110a    program     static                          
+           ___if_lbl00132   0x003852    program     static                          
            ___if_lbl00133   0x003882    program     static                          
            ___if_lbl00134   0x003888    program     static                          
-           ___if_lbl00135   0x003912    program     static                          
            ___if_lbl00135   0x00111c    program     static                          
+           ___if_lbl00135   0x003912    program     static                          
            ___if_lbl00136   0x003914    program     static                          
            ___if_lbl00137   0x001132    program     static                          
            ___if_lbl00138   0x003972    program     static                          
            ___if_lbl00139   0x001132    program     static                          
            ___if_lbl00140   0x001134    program     static                          
            ___if_lbl00140   0x00398c    program     static                          
-           ___if_lbl00142   0x003a16    program     static                          
            ___if_lbl00142   0x00113a    program     static                          
+           ___if_lbl00142   0x003a16    program     static                          
            ___if_lbl00143   0x003a16    program     static                          
            ___if_lbl00144   0x003a1c    program     static                          
            ___if_lbl00144   0x001184    program     static                          
@@ -304,10 +393,10 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___if_lbl00174   0x003d14    program     static                          
            ___if_lbl00176   0x003d14    program     static                          
            ___if_lbl00192   0x001a90    program     static                          
-           ___if_lbl00196   0x003fca    program     static                          
            ___if_lbl00196   0x001c16    program     static                          
-           ___if_lbl00198   0x001c16    program     static                          
+           ___if_lbl00196   0x003fca    program     static                          
            ___if_lbl00198   0x004048    program     static                          
+           ___if_lbl00198   0x001c16    program     static                          
            ___if_lbl00200   0x001c16    program     static                          
            ___if_lbl00202   0x001c1c    program     static                          
            ___if_lbl00226   0x001f10    program     static                          
@@ -321,10 +410,10 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
            ___if_lbl00245   0x0047d6    program     static                          
            ___if_lbl00250   0x00489c    program     static                          
            ___if_lbl00252   0x0048a2    program     static                          
-       ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x002ae4    program     static                          
-       ___return_lbl00001   0x00634c    program     static                          
-       ___return_lbl00002   0x006278    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00001   0x0067e0    program     static                          
+       ___return_lbl00002   0x006352    program     static                          
        ___return_lbl00004   0x005056    program     static                          
        ___return_lbl00010   0x00520c    program     static                          
        ___return_lbl00017   0x000010    program     static                          
@@ -343,8 +432,8 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
        ___return_lbl00194   0x001c20    program     static                          
        ___return_lbl00195   0x003fce    program     static                          
        ___return_lbl00197   0x00404c    program     static                          
-       ___return_lbl00223   0x001f20    program     static                          
        ___return_lbl00223   0x004788    program     static                          
+       ___return_lbl00223   0x001f20    program     static                          
        ___return_lbl00242   0x0047da    program     static                          
        ___return_lbl00249   0x0048a6    program     static                          
         ___while_lbl00005   0x004f92    program     static                          
@@ -361,12 +450,12 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
         ___while_lbl00123   0x0010dc    program     static                          
         ___while_lbl00224   0x001eb4    program     static                          
         ___while_lbl00224   0x004638    program     static                          
-        ___while_lbl00225   0x001f20    program     static                          
         ___while_lbl00225   0x0046b2    program     static                          
+        ___while_lbl00225   0x001f20    program     static                          
         ___while_lbl00233   0x0046ee    program     static                          
         ___while_lbl00234   0x00476c    program     static                          
-                   __init   0x006356    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __string_0   0x00634e    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
+                   __init   0x006800    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __string_0   0x0067f8    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
                __tmplbl_0   0x002ea8    program     static                          
                __tmplbl_1   0x002ea0    program     static                          
               __tmplbl_10   0x00464a    program     static                          
@@ -375,22 +464,22 @@ Linker Map File - Created Tue Nov 05 17:47:58 2019
                __tmplbl_5   0x000c38    program     static                          
                __tmplbl_6   0x001b9c    program     static                          
                __tmplbl_7   0x001b6c    program     static                          
-            __zero_memory   0x006312    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                _do_cinit   0x0061dc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x0067a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                _do_cinit   0x0062b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x006332    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x006328    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                copy_loop   0x00624e    program     static                          
-            copy_one_byte   0x006254    program     static                          
-                     done   0x006278    program     static                          
-             done_copying   0x006262    program     static                          
-                     jEnd   0x0062be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                    jLoop   0x0062a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                     loop   0x006342    program     static                          
-                   loop_h   0x006320    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x00632a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     main   0x006354    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\main.c
-                   memcpy   0x00627a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                 _startup   0x0067c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x0067bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                copy_loop   0x006328    program     static                          
+            copy_one_byte   0x00632e    program     static                          
+                     done   0x006352    program     static                          
+             done_copying   0x00633c    program     static                          
+                     jEnd   0x0065d8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x0065bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                     loop   0x0067d6    program     static                          
+                   loop_h   0x0067b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x0067be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     main   0x0067fe    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\main.c
+                   memcpy   0x006594    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
            pcQueueGetName   0x0049c0    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
             pcTaskGetName   0x0011f0    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
 prvAddCurrentTaskToDelayedList   0x002762    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
@@ -415,11 +504,13 @@ prvResetNextTaskUnblockTime   0x001f84    program     static C:\Users\815008434\
    prvTaskIsTaskSuspended   0x000b1c    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
                prvTickISR   0x00520e    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\port.c
            prvUnlockQueue   0x004606    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
+                putrsXLCD   0x006354    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\putrxlcd.c
+                 putsXLCD   0x0065ea    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\putsxlcd.c
              pvPortMalloc   0x00549a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
 pvTaskGetThreadLocalStoragePointer   0x001d14    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
 pvTaskIncrementMutexHeldCount   0x00273e    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
     pxPortInitialiseStack   0x004b00    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\port.c
-                     test   0x0061f6    program     static                          
+                     test   0x0062d0    program     static                          
              uxListRemove   0x006094    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\list.c
    uxQueueMessagesWaiting   0x003f94    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
 uxQueueMessagesWaitingFromISR   0x00405e    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
@@ -482,7 +573,7 @@ xTaskGetCurrentTaskHandle   0x002010    program     extern C:\Users\815008434\MP
  xTaskRemoveFromEventList   0x001752    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
            xTaskResumeAll   0x000f6e    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
        xTaskResumeFromISR   0x000d56    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
-               zero_block   0x006320    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x0067b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -511,6 +602,8 @@ xTaskGetCurrentTaskHandle   0x002010    program     extern C:\Users\815008434\MP
                  DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+            DelayCounter1   0x000014       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+            DelayCounter2   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
                     EEADR   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -724,21 +817,21 @@ xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\8150084
          ___else_lbl00028   0x000554    program     static                          
          ___else_lbl00024   0x000592    program     static                          
            ___if_lbl00023   0x000592    program     static                          
-         ___else_lbl00026   0x000594    program     static                          
            ___if_lbl00025   0x000594    program     static                          
+         ___else_lbl00026   0x000594    program     static                          
            ___if_lbl00027   0x000594    program     static                          
            ___if_lbl00029   0x0005d2    program     static                          
            ___if_lbl00030   0x000638    program     static                          
-         ___else_lbl00032   0x00066c    program     static                          
            ___if_lbl00031   0x00066c    program     static                          
-           ___if_lbl00033   0x00066e    program     static                          
+         ___else_lbl00032   0x00066c    program     static                          
        ___return_lbl00020   0x00066e    program     static                          
          ___else_lbl00034   0x00066e    program     static                          
+           ___if_lbl00033   0x00066e    program     static                          
               vTaskDelete   0x00067a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
            ___?:_lbl00037   0x0006b0    program     static                          
            ___?:_lbl00036   0x0006bc    program     static                          
-           ___if_lbl00038   0x0006f2    program     static                          
          ___else_lbl00039   0x0006f2    program     static                          
+           ___if_lbl00038   0x0006f2    program     static                          
            ___if_lbl00040   0x00073a    program     static                          
          ___else_lbl00041   0x00073a    program     static                          
          ___else_lbl00043   0x00078e    program     static                          
@@ -746,41 +839,41 @@ xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\8150084
            ___if_lbl00044   0x0007ac    program     static                          
        ___return_lbl00035   0x0007ce    program     static                          
            ___if_lbl00047   0x0007ce    program     static                          
-           ___if_lbl00045   0x0007ce    program     static                          
          ___else_lbl00046   0x0007ce    program     static                          
+           ___if_lbl00045   0x0007ce    program     static                          
           vTaskDelayUntil   0x0007de    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
                vTaskDelay   0x000960    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
              vTaskSuspend   0x0009c0    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
            ___?:_lbl00068   0x0009f6    program     static                          
            ___?:_lbl00067   0x000a02    program     static                          
-         ___else_lbl00070   0x000a38    program     static                          
            ___if_lbl00069   0x000a38    program     static                          
-           ___if_lbl00071   0x000a80    program     static                          
+         ___else_lbl00070   0x000a38    program     static                          
          ___else_lbl00072   0x000a80    program     static                          
+           ___if_lbl00071   0x000a80    program     static                          
            ___if_lbl00073   0x000aba    program     static                          
            ___if_lbl00074   0x000ad0    program     static                          
-         ___else_lbl00076   0x000ad2    program     static                          
            ___if_lbl00075   0x000ad2    program     static                          
+         ___else_lbl00076   0x000ad2    program     static                          
          ___else_lbl00080   0x000af4    program     static                          
          ___else_lbl00078   0x000b06    program     static                          
-           ___if_lbl00077   0x000b0a    program     static                          
            ___if_lbl00079   0x000b0a    program     static                          
-       ___return_lbl00066   0x000b0c    program     static                          
-         ___else_lbl00082   0x000b0c    program     static                          
+           ___if_lbl00077   0x000b0a    program     static                          
            ___if_lbl00081   0x000b0c    program     static                          
+         ___else_lbl00082   0x000b0c    program     static                          
+       ___return_lbl00066   0x000b0c    program     static                          
    prvTaskIsTaskSuspended   0x000b1c    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
               vTaskResume   0x000c02    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
                __tmplbl_5   0x000c38    program     static                          
                __tmplbl_4   0x000c48    program     static                          
            ___if_lbl00098   0x000cba    program     static                          
-           ___if_lbl00099   0x000d3c    program     static                          
          ___else_lbl00100   0x000d3c    program     static                          
+           ___if_lbl00099   0x000d3c    program     static                          
            ___if_lbl00101   0x000d3e    program     static                          
          ___else_lbl00102   0x000d3e    program     static                          
            ___if_lbl00103   0x000d44    program     static                          
+       ___return_lbl00096   0x000d46    program     static                          
          ___else_lbl00105   0x000d46    program     static                          
            ___if_lbl00104   0x000d46    program     static                          
-       ___return_lbl00096   0x000d46    program     static                          
        xTaskResumeFromISR   0x000d56    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
       vTaskStartScheduler   0x000ee4    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
         vTaskEndScheduler   0x000f5e    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
@@ -790,22 +883,22 @@ xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\8150084
            ___?:_lbl00125   0x000fb4    program     static                          
            ___?:_lbl00124   0x000fb6    program     static                          
            ___if_lbl00126   0x001056    program     static                          
-           ___if_lbl00127   0x0010da    program     static                          
          ___else_lbl00128   0x0010da    program     static                          
+           ___if_lbl00127   0x0010da    program     static                          
         ___while_lbl00123   0x0010dc    program     static                          
            ___if_lbl00129   0x0010ee    program     static                          
            ___do_lbl00134   0x0010fc    program     static                          
-           ___if_lbl00132   0x00110a    program     static                          
          ___else_lbl00133   0x00110a    program     static                          
+           ___if_lbl00132   0x00110a    program     static                          
            ___do_lbl00130   0x00110e    program     static                          
            ___do_lbl00131   0x001116    program     static                          
-         ___else_lbl00136   0x00111c    program     static                          
            ___if_lbl00135   0x00111c    program     static                          
-           ___if_lbl00139   0x001132    program     static                          
+         ___else_lbl00136   0x00111c    program     static                          
            ___if_lbl00137   0x001132    program     static                          
+           ___if_lbl00139   0x001132    program     static                          
          ___else_lbl00138   0x001132    program     static                          
-         ___else_lbl00141   0x001134    program     static                          
            ___if_lbl00140   0x001134    program     static                          
+         ___else_lbl00141   0x001134    program     static                          
            ___if_lbl00142   0x00113a    program     static                          
        ___return_lbl00121   0x001140    program     static                          
         xTaskGetTickCount   0x00115c    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
@@ -830,9 +923,9 @@ vTaskInternalSetTimeOutState   0x001a9c    program     extern C:\Users\815008434
                __tmplbl_6   0x001b9c    program     static                          
          ___else_lbl00199   0x001ba2    program     static                          
          ___else_lbl00197   0x001c02    program     static                          
-           ___if_lbl00200   0x001c16    program     static                          
-           ___if_lbl00198   0x001c16    program     static                          
            ___if_lbl00196   0x001c16    program     static                          
+           ___if_lbl00198   0x001c16    program     static                          
+           ___if_lbl00200   0x001c16    program     static                          
            ___if_lbl00202   0x001c1c    program     static                          
        ___return_lbl00194   0x001c20    program     static                          
          vTaskMissedYield   0x001c3c    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
@@ -857,8 +950,8 @@ prvAddCurrentTaskToDelayedList   0x002762    program     static C:\Users\8150084
        xQueueGenericReset   0x0028f2    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
            ___?:_lbl00002   0x002a4e    program     static                          
            ___?:_lbl00001   0x002a50    program     static                          
-           ___if_lbl00003   0x002a86    program     static                          
          ___else_lbl00004   0x002a86    program     static                          
+           ___if_lbl00003   0x002a86    program     static                          
            ___if_lbl00005   0x002a88    program     static                          
          ___else_lbl00006   0x002a88    program     static                          
          ___else_lbl00008   0x002a8a    program     static                          
@@ -876,20 +969,20 @@ xQueueCreateCountingSemaphore   0x002dbe    program     extern C:\Users\81500843
                __tmplbl_0   0x002ea8    program     static                          
            ___?:_lbl00030   0x002efe    program     static                          
            ___?:_lbl00029   0x002f00    program     static                          
-         ___else_lbl00032   0x002f3a    program     static                          
            ___if_lbl00031   0x002f3a    program     static                          
+         ___else_lbl00032   0x002f3a    program     static                          
          ___else_lbl00036   0x002f3c    program     static                          
            ___if_lbl00033   0x002f48    program     static                          
-         ___else_lbl00034   0x002f48    program     static                          
            ___if_lbl00035   0x002f48    program     static                          
+         ___else_lbl00034   0x002f48    program     static                          
            ___if_lbl00037   0x002f4e    program     static                          
          ___else_lbl00044   0x002f54    program     static                          
            ___if_lbl00038   0x002f6c    program     static                          
          ___else_lbl00042   0x002f72    program     static                          
          ___else_lbl00040   0x002f90    program     static                          
+           ___if_lbl00043   0x002f90    program     static                          
            ___if_lbl00039   0x002f90    program     static                          
            ___if_lbl00041   0x002f90    program     static                          
-           ___if_lbl00043   0x002f90    program     static                          
            ___if_lbl00045   0x002f96    program     static                          
            ___if_lbl00046   0x002fd0    program     static                          
            ___if_lbl00047   0x003000    program     static                          
@@ -900,66 +993,66 @@ xQueueCreateCountingSemaphore   0x002dbe    program     extern C:\Users\81500843
          ___else_lbl00053   0x0030be    program     static                          
           ___for_lbl00026   0x0030da    program     static                          
            ___if_lbl00052   0x0030da    program     static                          
-       ___return_lbl00025   0x0030dc    program     static                          
           ___for_lbl00027   0x0030dc    program     static                          
+       ___return_lbl00025   0x0030dc    program     static                          
  xQueueGenericSendFromISR   0x0030f8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
         xQueueGiveFromISR   0x003278    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
             xQueueReceive   0x0033ea    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
           ___for_lbl00111   0x003420    program     static                          
            ___?:_lbl00086   0x0034a8    program     static                          
            ___?:_lbl00085   0x0034aa    program     static                          
-         ___else_lbl00088   0x0034e4    program     static                          
            ___if_lbl00087   0x0034e4    program     static                          
+         ___else_lbl00088   0x0034e4    program     static                          
          ___else_lbl00090   0x0034e6    program     static                          
            ___if_lbl00089   0x0034e6    program     static                          
            ___if_lbl00091   0x0034ec    program     static                          
          ___else_lbl00098   0x0034f2    program     static                          
            ___if_lbl00092   0x00350a    program     static                          
          ___else_lbl00096   0x003510    program     static                          
-           ___if_lbl00093   0x00352e    program     static                          
          ___else_lbl00094   0x00352e    program     static                          
+           ___if_lbl00093   0x00352e    program     static                          
            ___if_lbl00095   0x00352e    program     static                          
            ___if_lbl00097   0x00352e    program     static                          
            ___if_lbl00099   0x003534    program     static                          
            ___if_lbl00100   0x00356e    program     static                          
            ___if_lbl00101   0x00359e    program     static                          
            ___if_lbl00102   0x0035a4    program     static                          
-           ___if_lbl00103   0x003642    program     static                          
          ___else_lbl00104   0x003642    program     static                          
+           ___if_lbl00103   0x003642    program     static                          
          ___else_lbl00106   0x003644    program     static                          
            ___if_lbl00105   0x00365c    program     static                          
          ___else_lbl00110   0x00365e    program     static                          
-         ___else_lbl00108   0x003694    program     static                          
           ___for_lbl00083   0x003694    program     static                          
-           ___if_lbl00107   0x003694    program     static                          
            ___if_lbl00109   0x003694    program     static                          
+           ___if_lbl00107   0x003694    program     static                          
+         ___else_lbl00108   0x003694    program     static                          
        ___return_lbl00082   0x003696    program     static                          
           ___for_lbl00084   0x003696    program     static                          
       xQueueSemaphoreTake   0x0036b2    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
           ___for_lbl00148   0x0036ec    program     static                          
-           ___if_lbl00115   0x003770    program     static                          
          ___else_lbl00116   0x003770    program     static                          
+           ___if_lbl00115   0x003770    program     static                          
            ___?:_lbl00118   0x00378c    program     static                          
            ___?:_lbl00117   0x00378e    program     static                          
-           ___if_lbl00119   0x0037c8    program     static                          
          ___else_lbl00120   0x0037c8    program     static                          
+           ___if_lbl00119   0x0037c8    program     static                          
          ___else_lbl00122   0x0037ca    program     static                          
            ___if_lbl00121   0x0037ca    program     static                          
            ___if_lbl00123   0x0037d0    program     static                          
          ___else_lbl00130   0x0037d6    program     static                          
            ___if_lbl00124   0x0037ee    program     static                          
          ___else_lbl00128   0x0037f4    program     static                          
-         ___else_lbl00126   0x003812    program     static                          
-           ___if_lbl00125   0x003812    program     static                          
-           ___if_lbl00127   0x003812    program     static                          
            ___if_lbl00129   0x003812    program     static                          
+           ___if_lbl00127   0x003812    program     static                          
+           ___if_lbl00125   0x003812    program     static                          
+         ___else_lbl00126   0x003812    program     static                          
            ___if_lbl00131   0x003818    program     static                          
            ___if_lbl00132   0x003852    program     static                          
            ___if_lbl00133   0x003882    program     static                          
            ___if_lbl00134   0x003888    program     static                          
            ___if_lbl00135   0x003912    program     static                          
-           ___if_lbl00136   0x003914    program     static                          
          ___else_lbl00137   0x003914    program     static                          
+           ___if_lbl00136   0x003914    program     static                          
          ___else_lbl00139   0x003972    program     static                          
            ___if_lbl00138   0x003972    program     static                          
          ___else_lbl00141   0x003974    program     static                          
@@ -967,10 +1060,10 @@ xQueueCreateCountingSemaphore   0x002dbe    program     extern C:\Users\81500843
          ___else_lbl00147   0x00398e    program     static                          
            ___if_lbl00143   0x003a16    program     static                          
            ___if_lbl00142   0x003a16    program     static                          
-           ___if_lbl00146   0x003a1c    program     static                          
-         ___else_lbl00145   0x003a1c    program     static                          
            ___if_lbl00144   0x003a1c    program     static                          
+           ___if_lbl00146   0x003a1c    program     static                          
           ___for_lbl00113   0x003a1c    program     static                          
+         ___else_lbl00145   0x003a1c    program     static                          
        ___return_lbl00112   0x003a1e    program     static                          
           ___for_lbl00114   0x003a1e    program     static                          
                xQueuePeek   0x003a3a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
@@ -985,16 +1078,16 @@ xQueueCreateCountingSemaphore   0x002dbe    program     extern C:\Users\81500843
          ___else_lbl00165   0x003b72    program     static                          
            ___if_lbl00159   0x003b8a    program     static                          
          ___else_lbl00163   0x003b90    program     static                          
-         ___else_lbl00161   0x003bae    program     static                          
-           ___if_lbl00164   0x003bae    program     static                          
            ___if_lbl00162   0x003bae    program     static                          
+           ___if_lbl00164   0x003bae    program     static                          
            ___if_lbl00160   0x003bae    program     static                          
+         ___else_lbl00161   0x003bae    program     static                          
            ___if_lbl00166   0x003bb4    program     static                          
            ___if_lbl00167   0x003bee    program     static                          
            ___if_lbl00168   0x003c1e    program     static                          
            ___if_lbl00169   0x003c24    program     static                          
-           ___if_lbl00170   0x003cc2    program     static                          
          ___else_lbl00171   0x003cc2    program     static                          
+           ___if_lbl00170   0x003cc2    program     static                          
          ___else_lbl00173   0x003cc4    program     static                          
            ___if_lbl00172   0x003cdc    program     static                          
          ___else_lbl00177   0x003cde    program     static                          
@@ -1002,8 +1095,8 @@ xQueueCreateCountingSemaphore   0x002dbe    program     extern C:\Users\81500843
           ___for_lbl00150   0x003d14    program     static                          
            ___if_lbl00176   0x003d14    program     static                          
            ___if_lbl00174   0x003d14    program     static                          
-       ___return_lbl00149   0x003d16    program     static                          
           ___for_lbl00151   0x003d16    program     static                          
+       ___return_lbl00149   0x003d16    program     static                          
      xQueueReceiveFromISR   0x003d32    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
         xQueuePeekFromISR   0x003eaa    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
    uxQueueMessagesWaiting   0x003f94    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
@@ -1022,8 +1115,8 @@ prvGetDisinheritPriorityAfterTimeout   0x004106    program     static C:\Users\8
               __tmplbl_10   0x00464a    program     static                          
            ___?:_lbl00227   0x00466e    program     static                          
            ___?:_lbl00226   0x004670    program     static                          
-           ___if_lbl00228   0x0046aa    program     static                          
          ___else_lbl00229   0x0046aa    program     static                          
+           ___if_lbl00228   0x0046aa    program     static                          
          ___else_lbl00231   0x0046ac    program     static                          
            ___if_lbl00230   0x0046ae    program     static                          
         ___while_lbl00225   0x0046b2    program     static                          
@@ -1077,8 +1170,8 @@ xQueueIsQueueEmptyFromISR   0x0047e8    program     extern C:\Users\815008434\MP
         ___while_lbl00023   0x00530a    program     static                          
         ___while_lbl00024   0x005320    program     static                          
          ___else_lbl00026   0x0053c0    program     static                          
-           ___if_lbl00025   0x0053ca    program     static                          
        ___return_lbl00019   0x0053ca    program     static                          
+           ___if_lbl00025   0x0053ca    program     static                          
    prvSetupTimerInterrupt   0x0053cc    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\port.c
              pvPortMalloc   0x00549a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
                 vPortFree   0x0057b8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
@@ -1092,38 +1185,69 @@ prvInsertBlockIntoFreeList   0x005a84    program     static C:\Users\815008434\M
            vListInsertEnd   0x005dd8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\list.c
               vListInsert   0x005ed8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\list.c
              uxListRemove   0x006094    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\list.c
-                _do_cinit   0x0061dc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0061f6    program     static                          
-                copy_loop   0x00624e    program     static                          
-            copy_one_byte   0x006254    program     static                          
-             done_copying   0x006262    program     static                          
-                     done   0x006278    program     static                          
-       ___return_lbl00002   0x006278    program     static                          
-                   memcpy   0x00627a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                    jLoop   0x0062a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-              _4jContinue   0x0062ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                   _5jEnd   0x0062b8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-                     jEnd   0x0062be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
-               OpenTimer1   0x0062d0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-            __zero_memory   0x006312    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_h   0x006320    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               zero_block   0x006320    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                compare_l   0x006328    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x00632a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 _startup   0x006332    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x006342    program     static                          
-       ___return_lbl00001   0x00634c    program     static                          
-               __string_0   0x00634e    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
-                     main   0x006354    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\main.c
-                   __init   0x006356    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                  __REMB3   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 OpenXLCD   0x0061dc    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\openxlcd.c
+                _do_cinit   0x0062b6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0062d0    program     static                          
+                copy_loop   0x006328    program     static                          
+            copy_one_byte   0x00632e    program     static                          
+             done_copying   0x00633c    program     static                          
+       ___return_lbl00002   0x006352    program     static                          
+                     done   0x006352    program     static                          
+                putrsXLCD   0x006354    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\putrxlcd.c
+            DelayFor18TCY   0x0063c4    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+             DelayPORXLCD   0x0063d0    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+                DelayXLCD   0x0063dc    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+                  InitLCD   0x0063e8    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\DelayXLCDFunctions.c
+             SetDDRamAddr   0x006430    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\setddram.c
+             SetCGRamAddr   0x00648a    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\setcgram.c
+            WriteDataXLCD   0x0064e4    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\writdata.c
+             WriteCmdXLCD   0x00653c    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\wcmdxlcd.c
+                   memcpy   0x006594    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x0065bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+              _4jContinue   0x0065c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                   _5jEnd   0x0065d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                     jEnd   0x0065d8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memcpy.asm
+                 putsXLCD   0x0065ea    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\putsxlcd.c
+             ReadDataXLCD   0x006640    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\readdata.c
+             ReadAddrXLCD   0x006690    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\readaddr.c
+               OpenTimer1   0x0066e0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                 BusyXLCD   0x006722    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\busyxlcd.c
+             Delay10KTCYx   0x006758    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x006762    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x006764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x006768    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x006770    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x006774    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+              Delay1KTCYx   0x006786    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x006790    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                    D1K_1   0x006792    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0010   0x006796    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x00679c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+            __zero_memory   0x0067a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_h   0x0067b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x0067b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                compare_l   0x0067bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x0067be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 _startup   0x0067c6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0067d6    program     static                          
+       ___return_lbl00001   0x0067e0    program     static                          
+              Delay10TCYx   0x0067e2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0067ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x0067ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0067ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0067f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x0067f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+               __string_0   0x0067f8    program     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
+                     main   0x0067fe    program     extern C:\Users\815008434\MPLABXProjects\ecng3006-project\main.c
+                   __init   0x006800    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                  __AARGB7   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000000       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB6   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000001       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB1   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000002       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB0   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000003       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB3   0x000004       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB2   0x000005       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB1   0x000006       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -1132,11 +1256,13 @@ prvInsertBlockIntoFreeList   0x005a84    program     static C:\Users\815008434\M
                      SIGN   0x000009       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x00000a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x00000a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\port.c
                   __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
                   __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\queue.c
                   __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\list.c
                   __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
-                  __tmp_0   0x00000b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\port.c
+            DelayCounter2   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
+            DelayCounter1   0x000014       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
                    ucHeap   0x0000e0       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
                    xStart   0x0002e0       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
         pxReadyTasksLists   0x0002e4       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\tasks.c
@@ -1170,58 +1296,58 @@ uxDeletedTasksWaitingCleanUp   0x00035a       data     static C:\Users\815008434
       xFreeBytesRemaining   0x000377       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
 xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
        xBlockAllocatedBit   0x00037b       data     static C:\Users\815008434\MPLABXProjects\ecng3006-project\heap_4.c
-                PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTD   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTDbits   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTD   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PORTE   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTEbits   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATDbits   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATD   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATDbits   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 TRISEbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  PIE2bits   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  PIR2bits   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIR2   0x000fa1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  IPR2bits   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     IPR2   0x000fa2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    EECON1   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                EECON1bits   0x000fa6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -1238,55 +1364,55 @@ xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\8150084
                     T3CON   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR3L   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR3H   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   CCP2CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     CCPR2   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR2H   0x000fbc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     CCPR1   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR1H   0x000fbf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               ADCON1bits   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               ADCON1bits   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     ADRES   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   ADRESL   0x000fc3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADRESH   0x000fc4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              SSPCON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   SSPCON2   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              SSPCON2bits   0x000fc5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   SSPCON1   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              SSPCON1bits   0x000fc6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   SSPSTAT   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              SSPSTATbits   0x000fc7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    SSPADD   0x000fc8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    SSPBUF   0x000fc9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    T2CON   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 T2CONbits   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    T2CON   0x000fca       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                       PR2   0x000fcb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      TMR2   0x000fcc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 T1CONbits   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    T1CON   0x000fcd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR1L   0x000fce       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR1H   0x000fcf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      RCON   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 RCONbits   0x000fd0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                WDTCONbits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    WDTCON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    LVDCON   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                LVDCONbits   0x000fd2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    OSCCON   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               OSCCONbits   0x000fd3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 T0CONbits   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     T0CON   0x000fd5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR0L   0x000fd6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR0H   0x000fd7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                STATUSbits   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    STATUS   0x000fd8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     FSR2L   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     FSR2   0x000fd9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     FSR2H   0x000fda       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    PLUSW2   0x000fdb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   PREINC2   0x000fdc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -1312,20 +1438,20 @@ xMinimumEverFreeBytesRemaining   0x000379       data     static C:\Users\8150084
                  POSTDEC0   0x000fed       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  POSTINC0   0x000fee       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     INDF0   0x000fef       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                  INTCON3   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
               INTCON3bits   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                  INTCON2   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                  INTCON3   0x000ff0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
               INTCON2bits   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                  INTCON1   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              INTCON1bits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                  INTCON2   0x000ff1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                INTCONbits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              INTCON1bits   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                  INTCON1   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   INTCON   0x000ff2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PRODL   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     PROD   0x000ff3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PRODH   0x000ff4       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    TABLAT   0x000ff5       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   TBLPTRL   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   TBLPTR   0x000ff6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   TBLPTRH   0x000ff7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   TBLPTRU   0x000ff8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                        PC   0x000ff9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm

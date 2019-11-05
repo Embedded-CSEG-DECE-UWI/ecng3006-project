@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c list.c queue.c tasks.c heap_4.c port.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/list.o.d ${OBJECTDIR}/queue.o.d ${OBJECTDIR}/tasks.o.d ${OBJECTDIR}/heap_4.o.d ${OBJECTDIR}/port.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/list.o.d ${OBJECTDIR}/queue.o.d ${OBJECTDIR}/tasks.o.d ${OBJECTDIR}/heap_4.o.d ${OBJECTDIR}/port.o.d ${OBJECTDIR}/DelayXLCDFunctions.o.d ${OBJECTDIR}/busyxlcd.o.d ${OBJECTDIR}/openxlcd.o.d ${OBJECTDIR}/putrxlcd.o.d ${OBJECTDIR}/putsxlcd.o.d ${OBJECTDIR}/readaddr.o.d ${OBJECTDIR}/readdata.o.d ${OBJECTDIR}/setcgram.o.d ${OBJECTDIR}/setddram.o.d ${OBJECTDIR}/wcmdxlcd.o.d ${OBJECTDIR}/writdata.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o
 
 # Source Files
-SOURCEFILES=main.c list.c queue.c tasks.c heap_4.c port.c
+SOURCEFILES=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c
 
 
 CFLAGS=
@@ -149,6 +149,94 @@ ${OBJECTDIR}/port.o: port.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/port.o 
 	@${FIXDEPS} "${OBJECTDIR}/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/DelayXLCDFunctions.o: DelayXLCDFunctions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DelayXLCDFunctions.o.d 
+	@${RM} ${OBJECTDIR}/DelayXLCDFunctions.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/DelayXLCDFunctions.o   DelayXLCDFunctions.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/DelayXLCDFunctions.o 
+	@${FIXDEPS} "${OBJECTDIR}/DelayXLCDFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/busyxlcd.o: busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/busyxlcd.o   busyxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/openxlcd.o: openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/openxlcd.o   openxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/putrxlcd.o: putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/putrxlcd.o   putrxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/putsxlcd.o: putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/putsxlcd.o   putsxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/readaddr.o: readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/readaddr.o   readaddr.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/readdata.o: readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/readdata.o.d 
+	@${RM} ${OBJECTDIR}/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/readdata.o   readdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/setcgram.o: setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/setcgram.o   setcgram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/setddram.o: setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/setddram.o.d 
+	@${RM} ${OBJECTDIR}/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/setddram.o   setddram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/wcmdxlcd.o: wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/wcmdxlcd.o   wcmdxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/writdata.o: writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/writdata.o.d 
+	@${RM} ${OBJECTDIR}/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/writdata.o   writdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -197,6 +285,94 @@ ${OBJECTDIR}/port.o: port.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/port.o   port.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/port.o 
 	@${FIXDEPS} "${OBJECTDIR}/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/DelayXLCDFunctions.o: DelayXLCDFunctions.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DelayXLCDFunctions.o.d 
+	@${RM} ${OBJECTDIR}/DelayXLCDFunctions.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/DelayXLCDFunctions.o   DelayXLCDFunctions.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/DelayXLCDFunctions.o 
+	@${FIXDEPS} "${OBJECTDIR}/DelayXLCDFunctions.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/busyxlcd.o: busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/busyxlcd.o.d 
+	@${RM} ${OBJECTDIR}/busyxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/busyxlcd.o   busyxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/busyxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/openxlcd.o: openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/openxlcd.o.d 
+	@${RM} ${OBJECTDIR}/openxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/openxlcd.o   openxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/openxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/putrxlcd.o: putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/putrxlcd.o.d 
+	@${RM} ${OBJECTDIR}/putrxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/putrxlcd.o   putrxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/putrxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/putsxlcd.o: putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/putsxlcd.o.d 
+	@${RM} ${OBJECTDIR}/putsxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/putsxlcd.o   putsxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/putsxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/readaddr.o: readaddr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/readaddr.o.d 
+	@${RM} ${OBJECTDIR}/readaddr.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/readaddr.o   readaddr.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/readaddr.o 
+	@${FIXDEPS} "${OBJECTDIR}/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/readdata.o: readdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/readdata.o.d 
+	@${RM} ${OBJECTDIR}/readdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/readdata.o   readdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/readdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/setcgram.o: setcgram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/setcgram.o.d 
+	@${RM} ${OBJECTDIR}/setcgram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/setcgram.o   setcgram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/setcgram.o 
+	@${FIXDEPS} "${OBJECTDIR}/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/setddram.o: setddram.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/setddram.o.d 
+	@${RM} ${OBJECTDIR}/setddram.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/setddram.o   setddram.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/setddram.o 
+	@${FIXDEPS} "${OBJECTDIR}/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/wcmdxlcd.o: wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/wcmdxlcd.o.d 
+	@${RM} ${OBJECTDIR}/wcmdxlcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/wcmdxlcd.o   wcmdxlcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/wcmdxlcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/writdata.o: writdata.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/writdata.o.d 
+	@${RM} ${OBJECTDIR}/writdata.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/writdata.o   writdata.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/writdata.o 
+	@${FIXDEPS} "${OBJECTDIR}/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

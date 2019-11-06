@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c Z4_Keypad.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/list.o.d ${OBJECTDIR}/queue.o.d ${OBJECTDIR}/tasks.o.d ${OBJECTDIR}/heap_4.o.d ${OBJECTDIR}/port.o.d ${OBJECTDIR}/DelayXLCDFunctions.o.d ${OBJECTDIR}/busyxlcd.o.d ${OBJECTDIR}/openxlcd.o.d ${OBJECTDIR}/putrxlcd.o.d ${OBJECTDIR}/putsxlcd.o.d ${OBJECTDIR}/readaddr.o.d ${OBJECTDIR}/readdata.o.d ${OBJECTDIR}/setcgram.o.d ${OBJECTDIR}/setddram.o.d ${OBJECTDIR}/wcmdxlcd.o.d ${OBJECTDIR}/writdata.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o ${OBJECTDIR}/Z4_Keypad.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/list.o.d ${OBJECTDIR}/queue.o.d ${OBJECTDIR}/tasks.o.d ${OBJECTDIR}/heap_4.o.d ${OBJECTDIR}/port.o.d ${OBJECTDIR}/DelayXLCDFunctions.o.d ${OBJECTDIR}/busyxlcd.o.d ${OBJECTDIR}/openxlcd.o.d ${OBJECTDIR}/putrxlcd.o.d ${OBJECTDIR}/putsxlcd.o.d ${OBJECTDIR}/readaddr.o.d ${OBJECTDIR}/readdata.o.d ${OBJECTDIR}/setcgram.o.d ${OBJECTDIR}/setddram.o.d ${OBJECTDIR}/wcmdxlcd.o.d ${OBJECTDIR}/writdata.o.d ${OBJECTDIR}/Z4_Keypad.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/list.o ${OBJECTDIR}/queue.o ${OBJECTDIR}/tasks.o ${OBJECTDIR}/heap_4.o ${OBJECTDIR}/port.o ${OBJECTDIR}/DelayXLCDFunctions.o ${OBJECTDIR}/busyxlcd.o ${OBJECTDIR}/openxlcd.o ${OBJECTDIR}/putrxlcd.o ${OBJECTDIR}/putsxlcd.o ${OBJECTDIR}/readaddr.o ${OBJECTDIR}/readdata.o ${OBJECTDIR}/setcgram.o ${OBJECTDIR}/setddram.o ${OBJECTDIR}/wcmdxlcd.o ${OBJECTDIR}/writdata.o ${OBJECTDIR}/Z4_Keypad.o
 
 # Source Files
-SOURCEFILES=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c
+SOURCEFILES=main.c list.c queue.c tasks.c heap_4.c port.c DelayXLCDFunctions.c busyxlcd.c openxlcd.c putrxlcd.c putsxlcd.c readaddr.c readdata.c setcgram.c setddram.c wcmdxlcd.c writdata.c Z4_Keypad.c
 
 
 CFLAGS=
@@ -237,6 +237,14 @@ ${OBJECTDIR}/writdata.o: writdata.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Z4_Keypad.o: Z4_Keypad.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Z4_Keypad.o.d 
+	@${RM} ${OBJECTDIR}/Z4_Keypad.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Z4_Keypad.o   Z4_Keypad.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Z4_Keypad.o 
+	@${FIXDEPS} "${OBJECTDIR}/Z4_Keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -373,6 +381,14 @@ ${OBJECTDIR}/writdata.o: writdata.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/writdata.o   writdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Z4_Keypad.o: Z4_Keypad.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Z4_Keypad.o.d 
+	@${RM} ${OBJECTDIR}/Z4_Keypad.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../Program Files (x86)/Microchip/mplabc18/v3.47/h" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/include" -I"../FreeRTOSv10.2.1/FreeRTOS/Source/portable/MPLAB/PIC18F" -I"C:/Program Files (x86)/Microchip/mplabc18/v3.47/h" -ml -oa- -Ls  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Z4_Keypad.o   Z4_Keypad.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Z4_Keypad.o 
+	@${FIXDEPS} "${OBJECTDIR}/Z4_Keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

@@ -95,9 +95,9 @@ extern volatile TCB_t * volatile pxCurrentTCB;
 #define portBIT_CLEAR	( ( uint8_t ) 0 )
 
 /*
- * The serial port ISR's are defined in serial.c, but are called from portable
- * as they use the same vector as the tick ISR.
+ * Keypad press ISR
  */
+void keypadISR ( void );
 
 /*
  * Perform hardware setup to enable ticks.
@@ -524,6 +524,14 @@ static void prvLowInterrupt( void )
 			goto prvTickISR
 		_endasm
 	}
+    
+    /* Was the interrupt the keypad? */
+    if( INTCONbits.INT0F )
+    {
+        _asm
+            goto keypadISR
+        _endasm
+    }
 }
 #pragma code
 

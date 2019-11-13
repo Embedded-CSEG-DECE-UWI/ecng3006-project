@@ -170,6 +170,8 @@ void main(void) {
     initSpeakerModule();
     while (1) {
         
+        // We should state a condition in which this can occur
+        
         OW_reset_pulse(); //reset 1822P
         OW_write_byte(0x0C); // Skip ROM Check
         

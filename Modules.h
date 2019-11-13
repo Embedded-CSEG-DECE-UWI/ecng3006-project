@@ -52,7 +52,8 @@ void KeyPressInterrupt(void);
 
 /******************HEART RATE MODULE********************/
 void heartRateModule(void);
-void configBPMTimer(void);
+void timer10sIsr(void);
+void bpmCountIsr(void);
 
 /***********************SPEAKER MODULE**************************/
 void initSpeakerModule(void);

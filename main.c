@@ -9,7 +9,7 @@
 #pragma config LVP = OFF
 #define XTAL_FREQ 4000000
 
-unsigned char TempMSB;
+unsigned char TempMSB;              //Are all these variables for the main function ?
 unsigned char TempLSB;
 unsigned int MSBTemporary = 0;
 unsigned int LSBTemporary = 0;
@@ -27,21 +27,46 @@ char Temperature[20];
 //Global Variable
 int key;
 
-//Setting up interrupts
+
+//Setting up interrupts High Interrupt
 #pragma code HIGH_INTERRUPT_VECTOR = 0x08
 
 void high_ISR(void) {
+    if (INTCONbits.TMR0IF == 1)
+    {
     _asm
-            goto KeyPressInterrupt
-            _endasm
+            goto timer10sIsr
+    _endasm
+    }
+    if (INTCONbits.INT0IF == 1)
+    {
+        _asm
+        goto bpmCountIsr
+        _endasm
+    }
 }
+#pragma interrupt timer10sIsr
+#pragma interrupt bpmCountIsr
 #pragma code
 
-#pragma interrupt KeyPressInterrupt
+//Setting up Low Interrupts
+#pragma code LOW_INTERRUPT_VECTOR = 0x18
 
-void KeyPressInterrupt(void) {
-    if (INTCONbits.INT0IF == 1) {
-        INTCONbits.GIE = 0;
+void low_ISR(void)
+
+{
+    if (INTCON3bits.INT2IF == 1)
+    _asm
+            goto KeyPressInterrupt
+    _endasm
+    
+}
+
+#pragma interrupt KeyPressInterrupt
+#pragma code
+
+void KeyPressInterrupt(void) 
+{
         key = (BIT0 * 1 + BIT1 * 2 + BIT2 * 4 + BIT3 * 8);
         switch (key) {
             case (0):
@@ -157,11 +182,9 @@ void KeyPressInterrupt(void) {
                 break;
         }
 
-        //Re-enable interrupts and Clear the external interrupt flag.
-        INTCONbits.GIE = 1;
-        INTCONbits.INT0IF = 0;
+       
+        INTCONbits.INT0IF = 0;   //Clear the external interrupt flag.
         return;
-    }
 }
 
 void main(void) {

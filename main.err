@@ -1,0 +1,5 @@
+Warning[2058] C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c 76 : call of function without prototype
+Warning[2058] C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c 207 : call of function without prototype
+Warning[2054] C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c 216 : suspicious pointer conversion
+Error[1211] C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c 216 : missing definition for interrupt function 'bpmCountIsr'
+Error[1211] C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c 216 : missing definition for interrupt function 'timer10sIsr'

@@ -31,7 +31,7 @@ void InitLCD (void)
     while(BusyXLCD());
     WriteCmdXLCD( SHIFT_DISP_LEFT );
     while(BusyXLCD());
-    WriteCmdXLCD( BLINK_OFF );
+    WriteCmdXLCD( BLINK_ON );
     while(BusyXLCD());
     return;
 }

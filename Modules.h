@@ -54,31 +54,10 @@ void KeyPressInterrupt(void);
 void heartRateModule(void);
 void timer10sIsr(void);
 void bpmCountIsr(void);
+//void hrVarTmrIsr(void);
 
 /***********************SPEAKER MODULE**************************/
 void initSpeakerModule(void);
 void bpmAlert(void);
 #endif	/* MODULES_H */
-
-/**********TEMPERATURE SENSOR MODULE**********/
-
-#define OW_PIN_DIRECTION 	LATDbits.LATD3
-#define OW_WRITE_PIN  		TRISDbits.TRISD3
-#define OW_READ_PIN			PORTDbits.RD3
-
-#define	HIGH	1
-#define	LOW		0
-#define	OUTPUT	0
-#define	INPUT 	1
-#define	SET		1
-#define	CLEAR	0
-
-void drive_one_wire_low (void);
-void drive_one_wire_high (void);
-unsigned char read__one_wire (void);
-void OW_write_bit (unsigned char write_data);
-unsigned char OW_read_bit (void);
-unsigned char OW_reset_pulse(void);
-void OW_write_byte (unsigned char write_data);
-unsigned char OW_read_byte (void);
 

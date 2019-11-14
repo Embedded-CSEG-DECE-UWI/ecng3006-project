@@ -2,6 +2,7 @@
 #include    <stdio.h>
 #include    "Modules.h"
 #include    "xlcd_GpE.h"
+#include    <delays.h>
 
 
 #pragma config OSC = HS
@@ -9,29 +10,14 @@
 #pragma config LVP = OFF
 #define XTAL_FREQ 4000000
 
-unsigned char TempMSB;              //Are all these variables for the main function ?
-unsigned char TempLSB;
-unsigned int MSBTemporary = 0;
-unsigned int LSBTemporary = 0;
-unsigned int TempInt = 0;
-unsigned char degree = 0xDF;
-unsigned char demi;
-unsigned char fract;
-
-float fracFloat = 0.0000;
-int sign = 0;
-int fracInt = 0;
-int x = 0;
-char Temperature[20];
-
 //Global Variable
 int key;
 
-
 //Setting up interrupts High Interrupt
-#pragma code HIGH_INTERRUPT_VECTOR = 0x08
+#pragma high_vector = 0x08
 
-void high_ISR(void) {
+void high_interrupt(void) 
+{
     if (INTCONbits.TMR0IF == 1)
     {
     _asm
@@ -41,30 +27,39 @@ void high_ISR(void) {
     if (INTCONbits.INT0IF == 1)
     {
         _asm
-        goto bpmCountIsr
+            goto bpmCountIsr
         _endasm
     }
-}
-#pragma interrupt timer10sIsr
-#pragma interrupt bpmCountIsr
-#pragma code
-
-//Setting up Low Interrupts
-#pragma code LOW_INTERRUPT_VECTOR = 0x18
-
-void low_ISR(void)
-
-{
+    
+    /*if (PIR1bits.TMR1IF == 1)
+    {
+        _asm
+        goto hrVarTmrIsr
+        _endasm
+    }*/
+    
     if (INTCON3bits.INT2IF == 1)
+    {
     _asm
             goto KeyPressInterrupt
     _endasm
-    
+    }
 }
 
-#pragma interrupt KeyPressInterrupt
 #pragma code
 
+//Setting up Low Interrupts
+/*
+#pragma code low_vector = 0x18
+void low_interrupt (void)
+{
+    _asm
+            goto KeyPressInterrupt
+    _endasm
+}
+#pragma code*/
+
+#pragma interrupt KeyPressInterrupt
 void KeyPressInterrupt(void) 
 {
         key = (BIT0 * 1 + BIT1 * 2 + BIT2 * 4 + BIT3 * 8);
@@ -188,31 +183,22 @@ void KeyPressInterrupt(void)
 }
 
 void main(void) {
+    int portAstate = 0;
+    //RCONbits.IPEN = 1;
+    //INTCONbits.GIEH = 1;
+    //INTCONbits.GIEL = 1;
     configKeypad();
     InitLCD();
-    initSpeakerModule();
-    while (1) {
-        
-        // We should state a condition in which this can occur
-        
-        OW_reset_pulse(); //reset 1822P
-        OW_write_byte(0x0C); // Skip ROM Check
-        
-        OW_reset_pulse(); //reset 1822P
-        OW_write_byte(0x45); // Skip ROM Check
-        
-        OW_reset_pulse(); //reset 1822P
-        OW_write_byte(0xEE); //
-        
-        Delay10KTCYx(80);
-        
-        OW_reset_pulse(); //reset device
-        OW_write_byte(0xAA); //skip ROM check
-        TempLSB = OW_read_byte(); //Read first byte, LS and store in TempLSB
+    TRISBbits.RB4 = 0;
+    PORTBbits.RB4 = 0;
+    //initSpeakerModule();
+    //heartRateModule();
+    
+    //Enabling Priority Interrupts
 
-        while (BusyXLCD());
-        SetDDRamAddr(0x50); //Set cursor to top line
-        while (BusyXLCD());
-        putsXLCD(TempLSB); //Write top line value
+    while (1)
+    {
+
     }
+
 }

@@ -11,16 +11,8 @@ volatile float NN50Count = 0.0;
 volatile int BPM = 0;
 volatile int state = 0;
 
-/*void configBPMTimer(void) {
-    OpenTimer0(TIMER_INT_OFF &
-            T0_8BIT &
-            T0_SOURCE_EXT &
-            T0_EDGE_RISE &
-            T0_PS_1_1);
-    WriteTimer0(0x00);
-}*/
 
-void configBPMTimer(void)       //This is in charge of providing a 10 second delay
+void configBPMTimer(void)           //This is in charge of providing a 10 second delay
 {
     INTCONbits.TMR0IF = 0;
     OpenTimer0(TIMER_INT_ON &
@@ -41,7 +33,7 @@ void configBpmCount(void)
     INTCONbits.GIE = 1;             //Enable Global interrupt
 }
 
-void configBpmHrVarTmr (void)
+void configBpmHrVarTmr (void)       //Timer1 used in calculation of heart rate variability designed to overflow every 50 ms
 {
     OpenTimer1(TIMER_INT_OFF &
                 T1_16BIT_RW &
@@ -56,56 +48,13 @@ void configBpmHrVarTmr (void)
 void heartRateModule(void) {
     
     while(BusyXLCD());
-    SetDDRamAddr(0x00);
+    SetDDRamAddr(0x50);
     while(BusyXLCD());
-    putrsXLCD("Hold still");
+    putrsXLCD("Reading...");
     while(BusyXLCD());
     INTCON3bits.INT2IE = 0; //Disables the RB2(Keypad) interrupt
     configBPMTimer();
     configBpmCount();
-    
-    /*static int i;
-    volatile int bpmCount = 0;
-    char bpmDisplay[4] = "";
-    char xlcdBPM[16] = "HR: ";
-    char xlcdBPMUnit[4] = "bpm";
-    configBPMTimer();
-    //InitLCD();        Why are we initializing the LCD here a second time ??
-    while (BusyXLCD());
-    SetDDRamAddr(0x00);
-    while (BusyXLCD());
-    putrsXLCD("READING BPM.");
-    while (BusyXLCD());
-    SetDDRamAddr(0x40);
-    while (BusyXLCD());
-    putrsXLCD("HOLD STILL.");
-    WriteTimer0(0x00);
-    for (i = 0; i < 10; i++) {
-        Delay10KTCYx(100);
-    }
-    bpmCount = TMR0L;
-    bpmCount = bpmCount * 6;
-
-    itoa(bpmCount, bpmDisplay);
-    strncat(xlcdBPM, bpmDisplay, 4);
-    strncat(xlcdBPM, xlcdBPMUnit, 4);
-
-    while (BusyXLCD());
-    SetDDRamAddr(0x40);
-    while (BusyXLCD());
-    putsXLCD(xlcdBPM);
-    while (BusyXLCD());
-
-    if (bpmCount > 110 || bpmCount < 50) {
-        while (BusyXLCD());
-        SetDDRamAddr(0x10);
-        while (BusyXLCD());
-        putrsXLCD("HR-ALERT!");
-        while (BusyXLCD());
-        bpmAlert();
-    }
-    ClosePWM1();*/
-    
     
 }
 
@@ -114,10 +63,18 @@ void timer10sIsr(void)
 {
     int hrVar = 0;
     int bpm = 0;
-    char hrVarOutput[16];
-    char bpmOutput[16];
+    char hrVarOutput[4];       //Maximum of 4 outputs
+    char bpmOutput[4];         //Maximum of 3 characters
 
-
+    while (BusyXLCD());
+    SetDDRamAddr(0x50);
+    while (BusyXLCD());
+    putrsXLCD("          ");
+    while (BusyXLCD());
+    SetDDRamAddr(0x50);
+    while (BusyXLCD());
+    putrsXLCD("Done !");
+    while (BusyXLCD());
 
     INTCONbits.TMR0IF = 0;
     INTCONbits.GIE = 0;
@@ -127,26 +84,53 @@ void timer10sIsr(void)
     CloseTimer0();              //Disable 10 second Timer
     
     //Perform BPM and Heart Rate variability calculations here !!!!!!!!!!!!
-    hrVar = (NN50Count / NNCount) * 100;
-    itoa(hrVar,hrVarOutput);
+    if (NN50Count > 0)
+    {
+        hrVar = (NN50Count / NNCount) * 100;        //Calculating HR Var
+        itoa(hrVar,hrVarOutput);
+        while(BusyXLCD());
+        SetDDRamAddr(0x0C);
+        while(BusyXLCD());
+        putrsXLCD("    ");
+        while(BusyXLCD());                          //Outputting HR Var
+        SetDDRamAddr(0x0C);    
+        while(BusyXLCD());
+        putsXLCD(hrVarOutput);
+        while(BusyXLCD());
+    }
+    else
+    {
+        while(BusyXLCD());
+        SetDDRamAddr(0x0C);
+        while(BusyXLCD());
+        putrsXLCD("    ");
+        while (BusyXLCD());
+        SetDDRamAddr(0x0C);
+        while (BusyXLCD());
+        putrsXLCD("Err");
+    }
+
+
+    //Calculating BPM
     bpm = NNCount * 6;
     itoa(bpm,bpmOutput);
     
-    //Outputting Values
+    //Outputting BPM
     while(BusyXLCD());
-    SetDDRamAddr(0x00);
+    SetDDRamAddr(0x04);
+    while(BusyXLCD());    
+    putrsXLCD("   ");
+    while(BusyXLCD());
+    SetDDRamAddr(0x04);
     while(BusyXLCD());    
     putsXLCD(bpmOutput);
-    while(BusyXLCD());
-    SetDDRamAddr(0x40);    
-    while(BusyXLCD());
-    putsXLCD(hrVarOutput);
-    while(BusyXLCD());
+
     
 
-    NNCount = 0;    //Reinitialized NNcount
-    NN50Count = 0.0;  //Reinitialized NN50count
-    configKeypad(); //Enables back the RB2(Keypad) interrupt
+    NNCount = 0;        //Reinitialized NNcount
+    NN50Count = 0.0;    //Reinitialized NN50count
+    state = 0;          //Reset the state bit in order to re enable Timer1 to start back heart rate variability 
+    configKeypad();     //Enables back the RB2(Keypad) interrupt
     
 
 }
@@ -168,6 +152,7 @@ void bpmCountIsr(void)
     
     if (PIR1bits.TMR1IF == 1)
     {
+        PIR1bits.TMR1IF = 0;
         NN50Count = NN50Count + 1;
     }
     

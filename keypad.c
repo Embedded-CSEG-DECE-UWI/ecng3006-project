@@ -11,7 +11,6 @@ void configKeypad(void) {
     INTCON3bits.INT2IF = 0; //Clear the interrupt flag
     INTCON2bits.INTEDG2 = 1; //RB2 Interrupt triggered at Rising edge
     INTCON3bits.INT2IE = 1; //Enable the RB2 interrupt
-    //INTCON3bits.INT2IP = 0; //Sets RB2 interrupt as low priority
     INTCONbits.GIE = 1; //Enable Global interrupt
     return;
 }

@@ -14,8 +14,7 @@
 int key;
 
 //Setting up interrupts High Interrupt
-#pragma high_vector = 0x08
-
+#pragma code high_vector = 0x08
 void high_interrupt(void) 
 {
     if (INTCONbits.TMR0IF == 1)
@@ -30,13 +29,6 @@ void high_interrupt(void)
             goto bpmCountIsr
         _endasm
     }
-    
-    /*if (PIR1bits.TMR1IF == 1)
-    {
-        _asm
-        goto hrVarTmrIsr
-        _endasm
-    }*/
     
     if (INTCON3bits.INT2IF == 1)
     {
@@ -68,7 +60,7 @@ void KeyPressInterrupt(void)
                 heartRateModule();
                 break;
             case (1):
-                TestBeep();
+                //TestBeep();
                 break;
             case (2):
                 while (BusyXLCD());
@@ -183,22 +175,15 @@ void KeyPressInterrupt(void)
 }
 
 void main(void) {
-    int portAstate = 0;
-    //RCONbits.IPEN = 1;
-    //INTCONbits.GIEH = 1;
-    //INTCONbits.GIEL = 1;
-    configKeypad();
     InitLCD();
     TRISBbits.RB4 = 0;
     PORTBbits.RB4 = 0;
-    //initSpeakerModule();
-    //heartRateModule();
-    
-    //Enabling Priority Interrupts
+    configKeypad();         //This Function also enables all interrupts
+
 
     while (1)
     {
-
+        
     }
 
 }

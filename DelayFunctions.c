@@ -2,6 +2,8 @@
 #include <delays.h>
 #include "xlcd_GpE.h"
 
+//Function Declaration
+void mainScreen (void);
 
 void DelayFor18TCY( void )
 {
@@ -33,5 +35,30 @@ void InitLCD (void)
     while(BusyXLCD());
     WriteCmdXLCD( BLINK_ON );
     while(BusyXLCD());
+    mainScreen();
     return;
+}
+
+void mainScreen(void)           //Setup of main screen 
+{
+    while(BusyXLCD());
+    SetDDRamAddr(0x00);
+    while(BusyXLCD());
+    putrsXLCD("BPM:");
+    
+    while(BusyXLCD());
+    SetDDRamAddr(0x08);
+    while(BusyXLCD());
+    putrsXLCD("HRV:");
+    
+    while(BusyXLCD());
+    SetDDRamAddr(0x40);
+    while(BusyXLCD());
+    putrsXLCD("Glucose:");
+    
+    while(BusyXLCD());
+    SetDDRamAddr(0x10);
+    while(BusyXLCD());
+    putrsXLCD("TEMP:");
+           
 }

@@ -24,8 +24,9 @@
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/setddram.c</itemPath>
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c</itemPath>
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/writdata.c</itemPath>
-      <itemPath>C:/MPLabXProjects/Heart_Rate.X/pulse_counting.c</itemPath>
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -35,6 +36,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>C:\MPLabXProjects\Heart_Rate.X</Elem>
+    <Elem>C:\MPLabXProjects\Group_Project\ecng3006-project\Heart_Rate.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -125,9 +127,149 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <item path="C:/MPLabXProjects/Heart_Rate.X/pulse_counting.c"
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
             ex="true"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/openxlcd.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/readaddr.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/readdata.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/setcgram.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/setddram.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/writdata.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -137,7 +279,6 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

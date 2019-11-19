@@ -71,7 +71,7 @@ void lcdSetup (void)
     while(BusyXLCD());
     WriteCmdXLCD(SHIFT_DISP_LEFT);
     while(BusyXLCD());
-    putrsXLCD("Press A");
+    putrsXLCD("Press A Test");
 }
 
 void keypadSetup(){
@@ -172,5 +172,6 @@ void main()
     INTCONbits.GIEH = 1;        //Global Interrupt Enable bit
     RCONbits.IPEN = 1;          //Enable Interrupt Priority 
     INTCONbits.PEIE =1;         //Enable Peripheral Interrupt Enable bit
+ 
     while(1);
 }

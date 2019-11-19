@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Nov 19 09:33:32 2019
+Linker Map File - Created Tue Nov 19 09:33:59 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -36,6 +36,7 @@ Linker Map File - Created Tue Nov 19 09:33:32 2019
                     .code       code   0x000682    program   0x000020
              _startup_scn       code   0x0006a2    program   0x00001c
 .idata_hrv_capture_test.o_i    romdata   0x0006be    program   0x00001c
+                    dbgP0       code   0x007dc0    program   0x000240
 .config_300001_hrv_capture_test.o    romdata   0x300001    program   0x000001
 .config_300003_hrv_capture_test.o    romdata   0x300003    program   0x000001
 .config_300006_hrv_capture_test.o    romdata   0x300006    program   0x000001
@@ -59,6 +60,7 @@ Linker Map File - Created Tue Nov 19 09:33:32 2019
          .udata_cp2open.o      udata   0x0004a8       data   0x000000
            .idata_c018i.o      idata   0x0004a8       data   0x000000
 .udata_hrv_capture_test.o      udata   0x0004a8       data   0x000000
+                    dbgD0      udata   0x0005f4       data   0x00000c
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -68,10 +70,11 @@ Linker Map File - Created Tue Nov 19 09:33:32 2019
                            ---------   ---------      
                             0x000000    0x00000d      
                             0x000018    0x0006d9      
+                            0x007dc0    0x007fff      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300006    0x300006      
-            1747 out of 33048 program addresses used, program memory utilization is 5%
+            2323 out of 33048 program addresses used, program memory utilization is 7%
 
 
 

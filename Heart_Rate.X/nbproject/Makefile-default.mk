@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Heart_Rate.X/readdata.c C:/MPLabXProjects/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Heart_Rate.X/setddram.c C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Heart_Rate.X/writdata.c C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1466390338/busyxlcd.o ${OBJECTDIR}/_ext/1466390338/openxlcd.o ${OBJECTDIR}/_ext/1466390338/putrxlcd.o ${OBJECTDIR}/_ext/1466390338/putsxlcd.o ${OBJECTDIR}/_ext/1466390338/readaddr.o ${OBJECTDIR}/_ext/1466390338/readdata.o ${OBJECTDIR}/_ext/1466390338/setcgram.o ${OBJECTDIR}/_ext/1466390338/setddram.o ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o ${OBJECTDIR}/_ext/1466390338/writdata.o ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1466390338/busyxlcd.o.d ${OBJECTDIR}/_ext/1466390338/openxlcd.o.d ${OBJECTDIR}/_ext/1466390338/putrxlcd.o.d ${OBJECTDIR}/_ext/1466390338/putsxlcd.o.d ${OBJECTDIR}/_ext/1466390338/readaddr.o.d ${OBJECTDIR}/_ext/1466390338/readdata.o.d ${OBJECTDIR}/_ext/1466390338/setcgram.o.d ${OBJECTDIR}/_ext/1466390338/setddram.o.d ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1466390338/writdata.o.d ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1466390338/busyxlcd.o ${OBJECTDIR}/_ext/1466390338/openxlcd.o ${OBJECTDIR}/_ext/1466390338/putrxlcd.o ${OBJECTDIR}/_ext/1466390338/putsxlcd.o ${OBJECTDIR}/_ext/1466390338/readaddr.o ${OBJECTDIR}/_ext/1466390338/readdata.o ${OBJECTDIR}/_ext/1466390338/setcgram.o ${OBJECTDIR}/_ext/1466390338/setddram.o ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o ${OBJECTDIR}/_ext/1466390338/writdata.o ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o
+OBJECTFILES=${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o
 
 # Source Files
-SOURCEFILES=C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Heart_Rate.X/readdata.c C:/MPLabXProjects/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Heart_Rate.X/setddram.c C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Heart_Rate.X/writdata.c C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c
+SOURCEFILES=C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c
 
 
 CFLAGS=
@@ -101,182 +101,22 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1466390338/busyxlcd.o: C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o: C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/busyxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/busyxlcd.o   C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/busyxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/openxlcd.o: C:/MPLabXProjects/Heart_Rate.X/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/openxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/openxlcd.o   C:/MPLabXProjects/Heart_Rate.X/openxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/openxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/putrxlcd.o: C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putrxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/putrxlcd.o   C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/putrxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/putsxlcd.o: C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putsxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/putsxlcd.o   C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/putsxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/readaddr.o: C:/MPLabXProjects/Heart_Rate.X/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readaddr.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/readaddr.o   C:/MPLabXProjects/Heart_Rate.X/readaddr.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/readaddr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/readdata.o: C:/MPLabXProjects/Heart_Rate.X/readdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/readdata.o   C:/MPLabXProjects/Heart_Rate.X/readdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/readdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/setcgram.o: C:/MPLabXProjects/Heart_Rate.X/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setcgram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/setcgram.o   C:/MPLabXProjects/Heart_Rate.X/setcgram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/setcgram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/setddram.o: C:/MPLabXProjects/Heart_Rate.X/setddram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setddram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/setddram.o   C:/MPLabXProjects/Heart_Rate.X/setddram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/setddram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o: C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o   C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/writdata.o: C:/MPLabXProjects/Heart_Rate.X/writdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/writdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/writdata.o   C:/MPLabXProjects/Heart_Rate.X/writdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/writdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o: C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o   C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o   C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
-${OBJECTDIR}/_ext/1466390338/busyxlcd.o: C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o: C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/busyxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/busyxlcd.o   C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/busyxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/openxlcd.o: C:/MPLabXProjects/Heart_Rate.X/openxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/openxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/openxlcd.o   C:/MPLabXProjects/Heart_Rate.X/openxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/openxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/putrxlcd.o: C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putrxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/putrxlcd.o   C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/putrxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/putsxlcd.o: C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putsxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/putsxlcd.o   C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/putsxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/readaddr.o: C:/MPLabXProjects/Heart_Rate.X/readaddr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readaddr.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/readaddr.o   C:/MPLabXProjects/Heart_Rate.X/readaddr.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/readaddr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/readdata.o: C:/MPLabXProjects/Heart_Rate.X/readdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/readdata.o   C:/MPLabXProjects/Heart_Rate.X/readdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/readdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/setcgram.o: C:/MPLabXProjects/Heart_Rate.X/setcgram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setcgram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/setcgram.o   C:/MPLabXProjects/Heart_Rate.X/setcgram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/setcgram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/setddram.o: C:/MPLabXProjects/Heart_Rate.X/setddram.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setddram.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/setddram.o   C:/MPLabXProjects/Heart_Rate.X/setddram.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/setddram.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o: C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o   C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/writdata.o: C:/MPLabXProjects/Heart_Rate.X/writdata.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/writdata.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/writdata.o   C:/MPLabXProjects/Heart_Rate.X/writdata.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/writdata.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o: C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1466390338" 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o   C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/heart_rate_variability.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o   C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1466390338/hrv_capture_test.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

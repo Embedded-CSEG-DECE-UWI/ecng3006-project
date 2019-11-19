@@ -14,7 +14,7 @@
 
 #define _XTAL_FREQ 4000000 //4Mhz clock
 
-void low_isr(void);
+void low_isr(void); 
 void keypress(void);
 int keyvalue = 0;
 char keyvaluechar[3];

@@ -40,17 +40,6 @@ void high_interrupt(void)
 
 #pragma code
 
-//Setting up Low Interrupts
-/*
-#pragma code low_vector = 0x18
-void low_interrupt (void)
-{
-    _asm
-            goto KeyPressInterrupt
-    _endasm
-}
-#pragma code*/
-
 #pragma interrupt KeyPressInterrupt
 void KeyPressInterrupt(void) 
 {

@@ -155,6 +155,14 @@
       <item path="C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/Timer0.c"
             ex="true"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>

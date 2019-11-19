@@ -20,7 +20,7 @@ void configBPMTimer(void)           //This is in charge of providing a 10 second
                 T0_SOURCE_INT &
                 T0_EDGE_RISE &
                 T0_PS_1_256);
-    WriteTimer0(6776960);
+    WriteTimer0(26472);             //Value changed from last version to be tested
 }
 
 void configBpmCount(void)

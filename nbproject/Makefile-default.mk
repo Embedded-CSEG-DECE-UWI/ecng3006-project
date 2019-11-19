@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/busyxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/openxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putrxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putsxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readaddr.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setcgram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setddram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/wcmdxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/writdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/busyxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/openxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putrxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putsxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readaddr.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setcgram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setddram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/wcmdxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/writdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1177338910/heartrate.o ${OBJECTDIR}/_ext/1177338910/keypad.o ${OBJECTDIR}/_ext/1177338910/main.o ${OBJECTDIR}/_ext/1177338910/speaker.o ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o ${OBJECTDIR}/_ext/1177338910/busyxlcd.o ${OBJECTDIR}/_ext/1177338910/openxlcd.o ${OBJECTDIR}/_ext/1177338910/putrxlcd.o ${OBJECTDIR}/_ext/1177338910/putsxlcd.o ${OBJECTDIR}/_ext/1177338910/readaddr.o ${OBJECTDIR}/_ext/1177338910/readdata.o ${OBJECTDIR}/_ext/1177338910/setcgram.o ${OBJECTDIR}/_ext/1177338910/setddram.o ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o ${OBJECTDIR}/_ext/1177338910/writdata.o ${OBJECTDIR}/_ext/1177338910/t2close.o ${OBJECTDIR}/_ext/1177338910/t2open.o ${OBJECTDIR}/_ext/1177338910/t2read.o ${OBJECTDIR}/_ext/1177338910/t2write.o ${OBJECTDIR}/_ext/1177338910/pw1close.o ${OBJECTDIR}/_ext/1177338910/pw1open.o ${OBJECTDIR}/_ext/1177338910/pw1setdc.o ${OBJECTDIR}/_ext/1177338910/pw1setoc.o ${OBJECTDIR}/_ext/1177338910/t0close.o ${OBJECTDIR}/_ext/1177338910/t0open.o ${OBJECTDIR}/_ext/1177338910/t0read.o ${OBJECTDIR}/_ext/1177338910/t0write.o ${OBJECTDIR}/_ext/1177338910/t1close.o ${OBJECTDIR}/_ext/1177338910/t1open.o ${OBJECTDIR}/_ext/1177338910/t1read.o ${OBJECTDIR}/_ext/1177338910/t1write.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1177338910/heartrate.o.d ${OBJECTDIR}/_ext/1177338910/keypad.o.d ${OBJECTDIR}/_ext/1177338910/main.o.d ${OBJECTDIR}/_ext/1177338910/speaker.o.d ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o.d ${OBJECTDIR}/_ext/1177338910/busyxlcd.o.d ${OBJECTDIR}/_ext/1177338910/openxlcd.o.d ${OBJECTDIR}/_ext/1177338910/putrxlcd.o.d ${OBJECTDIR}/_ext/1177338910/putsxlcd.o.d ${OBJECTDIR}/_ext/1177338910/readaddr.o.d ${OBJECTDIR}/_ext/1177338910/readdata.o.d ${OBJECTDIR}/_ext/1177338910/setcgram.o.d ${OBJECTDIR}/_ext/1177338910/setddram.o.d ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1177338910/writdata.o.d ${OBJECTDIR}/_ext/1177338910/t2close.o.d ${OBJECTDIR}/_ext/1177338910/t2open.o.d ${OBJECTDIR}/_ext/1177338910/t2read.o.d ${OBJECTDIR}/_ext/1177338910/t2write.o.d ${OBJECTDIR}/_ext/1177338910/pw1close.o.d ${OBJECTDIR}/_ext/1177338910/pw1open.o.d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d ${OBJECTDIR}/_ext/1177338910/t0close.o.d ${OBJECTDIR}/_ext/1177338910/t0open.o.d ${OBJECTDIR}/_ext/1177338910/t0read.o.d ${OBJECTDIR}/_ext/1177338910/t0write.o.d ${OBJECTDIR}/_ext/1177338910/t1close.o.d ${OBJECTDIR}/_ext/1177338910/t1open.o.d ${OBJECTDIR}/_ext/1177338910/t1read.o.d ${OBJECTDIR}/_ext/1177338910/t1write.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1177338910/pw1close.o ${OBJECTDIR}/_ext/1177338910/pw1open.o ${OBJECTDIR}/_ext/1177338910/pw1setdc.o ${OBJECTDIR}/_ext/1177338910/pw1setoc.o ${OBJECTDIR}/_ext/1177338910/t2close.o ${OBJECTDIR}/_ext/1177338910/t2open.o ${OBJECTDIR}/_ext/1177338910/t2read.o ${OBJECTDIR}/_ext/1177338910/t2write.o ${OBJECTDIR}/_ext/1177338910/t0close.o ${OBJECTDIR}/_ext/1177338910/t0open.o ${OBJECTDIR}/_ext/1177338910/t0read.o ${OBJECTDIR}/_ext/1177338910/t0write.o ${OBJECTDIR}/_ext/1177338910/t1close.o ${OBJECTDIR}/_ext/1177338910/t1open.o ${OBJECTDIR}/_ext/1177338910/t1read.o ${OBJECTDIR}/_ext/1177338910/t1write.o ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o ${OBJECTDIR}/_ext/1177338910/busyxlcd.o ${OBJECTDIR}/_ext/1177338910/openxlcd.o ${OBJECTDIR}/_ext/1177338910/putrxlcd.o ${OBJECTDIR}/_ext/1177338910/putsxlcd.o ${OBJECTDIR}/_ext/1177338910/readaddr.o ${OBJECTDIR}/_ext/1177338910/readdata.o ${OBJECTDIR}/_ext/1177338910/setcgram.o ${OBJECTDIR}/_ext/1177338910/setddram.o ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o ${OBJECTDIR}/_ext/1177338910/writdata.o ${OBJECTDIR}/_ext/1177338910/heartrate.o ${OBJECTDIR}/_ext/1177338910/keypad.o ${OBJECTDIR}/_ext/1177338910/main.o ${OBJECTDIR}/_ext/1177338910/speaker.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1177338910/pw1close.o.d ${OBJECTDIR}/_ext/1177338910/pw1open.o.d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d ${OBJECTDIR}/_ext/1177338910/t2close.o.d ${OBJECTDIR}/_ext/1177338910/t2open.o.d ${OBJECTDIR}/_ext/1177338910/t2read.o.d ${OBJECTDIR}/_ext/1177338910/t2write.o.d ${OBJECTDIR}/_ext/1177338910/t0close.o.d ${OBJECTDIR}/_ext/1177338910/t0open.o.d ${OBJECTDIR}/_ext/1177338910/t0read.o.d ${OBJECTDIR}/_ext/1177338910/t0write.o.d ${OBJECTDIR}/_ext/1177338910/t1close.o.d ${OBJECTDIR}/_ext/1177338910/t1open.o.d ${OBJECTDIR}/_ext/1177338910/t1read.o.d ${OBJECTDIR}/_ext/1177338910/t1write.o.d ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o.d ${OBJECTDIR}/_ext/1177338910/busyxlcd.o.d ${OBJECTDIR}/_ext/1177338910/openxlcd.o.d ${OBJECTDIR}/_ext/1177338910/putrxlcd.o.d ${OBJECTDIR}/_ext/1177338910/putsxlcd.o.d ${OBJECTDIR}/_ext/1177338910/readaddr.o.d ${OBJECTDIR}/_ext/1177338910/readdata.o.d ${OBJECTDIR}/_ext/1177338910/setcgram.o.d ${OBJECTDIR}/_ext/1177338910/setddram.o.d ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1177338910/writdata.o.d ${OBJECTDIR}/_ext/1177338910/heartrate.o.d ${OBJECTDIR}/_ext/1177338910/keypad.o.d ${OBJECTDIR}/_ext/1177338910/main.o.d ${OBJECTDIR}/_ext/1177338910/speaker.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1177338910/heartrate.o ${OBJECTDIR}/_ext/1177338910/keypad.o ${OBJECTDIR}/_ext/1177338910/main.o ${OBJECTDIR}/_ext/1177338910/speaker.o ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o ${OBJECTDIR}/_ext/1177338910/busyxlcd.o ${OBJECTDIR}/_ext/1177338910/openxlcd.o ${OBJECTDIR}/_ext/1177338910/putrxlcd.o ${OBJECTDIR}/_ext/1177338910/putsxlcd.o ${OBJECTDIR}/_ext/1177338910/readaddr.o ${OBJECTDIR}/_ext/1177338910/readdata.o ${OBJECTDIR}/_ext/1177338910/setcgram.o ${OBJECTDIR}/_ext/1177338910/setddram.o ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o ${OBJECTDIR}/_ext/1177338910/writdata.o ${OBJECTDIR}/_ext/1177338910/t2close.o ${OBJECTDIR}/_ext/1177338910/t2open.o ${OBJECTDIR}/_ext/1177338910/t2read.o ${OBJECTDIR}/_ext/1177338910/t2write.o ${OBJECTDIR}/_ext/1177338910/pw1close.o ${OBJECTDIR}/_ext/1177338910/pw1open.o ${OBJECTDIR}/_ext/1177338910/pw1setdc.o ${OBJECTDIR}/_ext/1177338910/pw1setoc.o ${OBJECTDIR}/_ext/1177338910/t0close.o ${OBJECTDIR}/_ext/1177338910/t0open.o ${OBJECTDIR}/_ext/1177338910/t0read.o ${OBJECTDIR}/_ext/1177338910/t0write.o ${OBJECTDIR}/_ext/1177338910/t1close.o ${OBJECTDIR}/_ext/1177338910/t1open.o ${OBJECTDIR}/_ext/1177338910/t1read.o ${OBJECTDIR}/_ext/1177338910/t1write.o
+OBJECTFILES=${OBJECTDIR}/_ext/1177338910/pw1close.o ${OBJECTDIR}/_ext/1177338910/pw1open.o ${OBJECTDIR}/_ext/1177338910/pw1setdc.o ${OBJECTDIR}/_ext/1177338910/pw1setoc.o ${OBJECTDIR}/_ext/1177338910/t2close.o ${OBJECTDIR}/_ext/1177338910/t2open.o ${OBJECTDIR}/_ext/1177338910/t2read.o ${OBJECTDIR}/_ext/1177338910/t2write.o ${OBJECTDIR}/_ext/1177338910/t0close.o ${OBJECTDIR}/_ext/1177338910/t0open.o ${OBJECTDIR}/_ext/1177338910/t0read.o ${OBJECTDIR}/_ext/1177338910/t0write.o ${OBJECTDIR}/_ext/1177338910/t1close.o ${OBJECTDIR}/_ext/1177338910/t1open.o ${OBJECTDIR}/_ext/1177338910/t1read.o ${OBJECTDIR}/_ext/1177338910/t1write.o ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o ${OBJECTDIR}/_ext/1177338910/busyxlcd.o ${OBJECTDIR}/_ext/1177338910/openxlcd.o ${OBJECTDIR}/_ext/1177338910/putrxlcd.o ${OBJECTDIR}/_ext/1177338910/putsxlcd.o ${OBJECTDIR}/_ext/1177338910/readaddr.o ${OBJECTDIR}/_ext/1177338910/readdata.o ${OBJECTDIR}/_ext/1177338910/setcgram.o ${OBJECTDIR}/_ext/1177338910/setddram.o ${OBJECTDIR}/_ext/1177338910/wcmdxlcd.o ${OBJECTDIR}/_ext/1177338910/writdata.o ${OBJECTDIR}/_ext/1177338910/heartrate.o ${OBJECTDIR}/_ext/1177338910/keypad.o ${OBJECTDIR}/_ext/1177338910/main.o ${OBJECTDIR}/_ext/1177338910/speaker.o
 
 # Source Files
-SOURCEFILES=C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/busyxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/openxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putrxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putsxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readaddr.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setcgram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setddram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/wcmdxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/writdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c
+SOURCEFILES=C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/busyxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/openxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putrxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/putsxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readaddr.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/readdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setcgram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/setddram.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/wcmdxlcd.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/writdata.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c
 
 
 CFLAGS=
@@ -101,37 +101,133 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1177338910/heartrate.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/pw1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/heartrate.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/heartrate.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/heartrate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/keypad.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/pw1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/keypad.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/keypad.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/main.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/pw1setdc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/main.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setdc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/speaker.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/pw1setoc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/speaker.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/speaker.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/speaker.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setoc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
@@ -221,140 +317,11 @@ ${OBJECTDIR}/_ext/1177338910/writdata.o: C:/Users/vasis/Documents/ECNG3006/ecng3
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/t2close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t2open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t2read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t2write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1setdc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setdc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1setoc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setoc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-else
 ${OBJECTDIR}/_ext/1177338910/heartrate.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/heartrate.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/heartrate.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/heartrate.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/heartrate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -362,7 +329,7 @@ ${OBJECTDIR}/_ext/1177338910/keypad.o: C:/Users/vasis/Documents/ECNG3006/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/keypad.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/keypad.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/keypad.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -370,7 +337,7 @@ ${OBJECTDIR}/_ext/1177338910/main.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/main.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/main.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -378,9 +345,138 @@ ${OBJECTDIR}/_ext/1177338910/speaker.o: C:/Users/vasis/Documents/ECNG3006/ecng30
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/speaker.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/speaker.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/speaker.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/speaker.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+else
+${OBJECTDIR}/_ext/1177338910/pw1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/pw1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/pw1setdc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setdc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/pw1setoc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setoc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t2write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t0write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1close.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1open.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1read.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1177338910/t1write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1write.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1177338910/DelayFunctions.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/DelayFunctions.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
@@ -470,133 +566,37 @@ ${OBJECTDIR}/_ext/1177338910/writdata.o: C:/Users/vasis/Documents/ECNG3006/ecng3
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/t2close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/heartrate.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/heartrate.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/heartrate.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/heartrate.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/heartrate.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/heartrate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/t2open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/keypad.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/keypad.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/keypad.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/keypad.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/t2read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/main.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/main.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1177338910/t2write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/_ext/1177338910/speaker.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t2write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t2write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t2write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t2write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t2write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1setdc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setdc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setdc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setdc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setdc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/pw1setoc.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/pw1setoc.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/pw1setoc.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/pw1setoc.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/pw1setoc.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t0write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t0write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t0write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t0write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t0write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t0write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1close.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1close.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1close.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1close.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1close.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1close.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1open.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1open.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1open.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1open.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1open.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1open.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1read.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1read.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1read.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1read.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1read.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1read.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1177338910/t1write.o: C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1177338910" 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1177338910/t1write.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/t1write.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/t1write.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/t1write.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/t1write.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1177338910/speaker.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1177338910/speaker.o   C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1177338910/speaker.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1177338910/speaker.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

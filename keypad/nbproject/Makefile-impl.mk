@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=keypad1
+PROJECTNAME=keypad
 
 # Active Configuration
 DEFAULTCONF=default

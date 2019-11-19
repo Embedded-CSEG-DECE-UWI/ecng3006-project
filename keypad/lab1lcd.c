@@ -1,4 +1,4 @@
-// Adapted from Amar Pustam 2018
+// Adapted from Amar Pustam 2018 
 #include <p18f452.h> 
 #include "delays.h"
 #include "xlcd.h"

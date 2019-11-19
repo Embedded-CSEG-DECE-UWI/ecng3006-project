@@ -4,29 +4,29 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/xlcd.h</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/delays.h</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/delays.h</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/xlcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/lab1_i.lkr</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/lab1_i.lkr</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/openxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/putrxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/putsxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/readaddr.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/readdata.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/setcgram.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/setddram.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/wcmdxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/writdata.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/busyxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/lab1lcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/keypad1/KeypadUnitTest.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/busyxlcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/KeypadUnitTest.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/lab1lcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/openxlcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/putrxlcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/putsxlcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/readaddr.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/readdata.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/setcgram.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/setddram.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/wcmdxlcd.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/keypad/writdata.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -37,6 +37,7 @@
   <sourceRootList>
     <Elem>C:\Users\amarp\Desktop\keypad1</Elem>
     <Elem>F:\ECNG3006\Group_Project\keypad1</Elem>
+    <Elem>F:\ECNG3006\Group_Project\ecng3006-project\keypad</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -127,17 +128,9 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <item path="F:/ECNG3006/Group_Project/keypad1/KeypadUnitTest.c"
+      <item path="F:/ECNG3006/Group_Project/ecng3006-project/keypad/KeypadUnitTest.c"
             ex="true"
             overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
       </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>

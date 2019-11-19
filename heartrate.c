@@ -47,6 +47,10 @@ void configBpmHrVarTmr (void)       //Timer1 used in calculation of heart rate v
 
 void heartRateModule(void) {
     
+    while (BusyXLCD());
+    SetDDRamAddr(0x50);
+    while (BusyXLCD());
+    putrsXLCD("                ");
     while(BusyXLCD());
     SetDDRamAddr(0x50);
     while(BusyXLCD());
@@ -69,7 +73,7 @@ void timer10sIsr(void)
     while (BusyXLCD());
     SetDDRamAddr(0x50);
     while (BusyXLCD());
-    putrsXLCD("          ");
+    putrsXLCD("                ");
     while (BusyXLCD());
     SetDDRamAddr(0x50);
     while (BusyXLCD());
@@ -84,7 +88,7 @@ void timer10sIsr(void)
     CloseTimer0();              //Disable 10 second Timer
     
     //Perform BPM and Heart Rate variability calculations here !!!!!!!!!!!!
-    if (NN50Count > 0)
+    if (NN50Count > 0)                              //Checks to see if HRVAR would throw an erronious value due to division be 0
     {
         hrVar = (NN50Count / NNCount) * 100;        //Calculating HR Var
         itoa(hrVar,hrVarOutput);
@@ -124,6 +128,37 @@ void timer10sIsr(void)
     SetDDRamAddr(0x04);
     while(BusyXLCD());    
     putsXLCD(bpmOutput);
+    
+    if ((bpm >= 200) || (bpm <= 60))
+    {
+        bpmAlert();
+        if(bpm>=200)
+        {
+            while (BusyXLCD());
+            SetDDRamAddr(0x50);
+            while (BusyXLCD());
+            putrsXLCD("                ");
+            while (BusyXLCD());
+            SetDDRamAddr(0x50);
+            while (BusyXLCD());
+            putrsXLCD("BPM High!");
+            while (BusyXLCD());
+        }
+        else
+        {
+            while (BusyXLCD());
+            SetDDRamAddr(0x50);
+            while (BusyXLCD());
+            putrsXLCD("                ");
+            while (BusyXLCD());
+            SetDDRamAddr(0x50);
+            while (BusyXLCD());
+            putrsXLCD("BPM Low!");
+            while (BusyXLCD());            
+        }
+
+        
+    }
 
     
 

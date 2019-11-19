@@ -59,5 +59,20 @@ void bpmCountIsr(void);
 /***********************SPEAKER MODULE**************************/
 void initSpeakerModule(void);
 void bpmAlert(void);
+
+/***********************TEMPRATURE MODULE***********************/
+#define OW_LAT LATBbits.LATB4
+#define OW_PIN PORTBbits.RB4
+#define OW_TRIS TRISBbits.TRISB4
+
+#define OUTPUT 0
+#define INPUT 1
+
+unsigned char initSequence(void);
+void writeByte(unsigned char data);
+char readByte(void);
+
+
+
 #endif	/* MODULES_H */
 

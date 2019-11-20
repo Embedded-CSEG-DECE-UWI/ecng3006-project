@@ -129,7 +129,7 @@
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
       <item path="C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -149,7 +149,7 @@
             overriding="false">
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/openxlcd.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -165,7 +165,7 @@
             overriding="false">
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -177,7 +177,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -189,7 +189,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/readaddr.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -201,7 +201,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/readdata.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -213,7 +213,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/setcgram.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -225,7 +225,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/setddram.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -237,7 +237,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -249,7 +249,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/writdata.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>

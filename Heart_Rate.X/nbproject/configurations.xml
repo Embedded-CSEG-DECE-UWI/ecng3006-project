@@ -26,7 +26,8 @@
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/writdata.c</itemPath>
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c</itemPath>
       <itemPath>C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c</itemPath>
-      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Heart_Rate.X/pulse_counting.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Heart_Rate.X/heart_rate_counting.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -46,7 +47,7 @@
         <targetDevice>PIC18F452</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.47</languageToolchainVersion>
         <platform>3</platform>
@@ -127,20 +128,8 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
-            ex="true"
-            overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
-      </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/busyxlcd.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -154,17 +143,13 @@
       <item path="C:/MPLabXProjects/Heart_Rate.X/heart_rate_variability.c"
             ex="true"
             overriding="false">
-        <C18>
-        </C18>
-        <C18-AS>
-        </C18-AS>
-        <C18-LD>
-        </C18-LD>
-        <C18LanguageToolchain>
-        </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/hrv_capture_test.c"
+            ex="true"
+            overriding="false">
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/openxlcd.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -175,8 +160,12 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
-      <item path="C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c"
+      <item path="C:/MPLabXProjects/Heart_Rate.X/pulse_counting.c"
             ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Heart_Rate.X/putrxlcd.c"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -188,7 +177,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/putsxlcd.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -200,7 +189,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/readaddr.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -212,7 +201,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/readdata.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -224,7 +213,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/setcgram.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -236,7 +225,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/setddram.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -248,7 +237,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/wcmdxlcd.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -260,7 +249,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Heart_Rate.X/writdata.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -338,13 +327,6 @@
         <property key="periphComp6.gte" value="gt"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
-        <property key="tracecontrol.include.timestamp" value="summarydataenabled"/>
-        <property key="tracecontrol.select" value="0"/>
-        <property key="tracecontrol.stallontracebufferfull" value="false"/>
-        <property key="tracecontrol.timestamp" value="0"/>
-        <property key="tracecontrol.tracebufmax" value="546000"/>
-        <property key="tracecontrol.tracefile" value="defmplabxtrace.log"/>
-        <property key="tracecontrol.traceresetonrun" value="false"/>
         <property key="uart0io.output" value="window"/>
         <property key="uart0io.outputfile" value=""/>
         <property key="uart0io.uartioenabled" value="false"/>

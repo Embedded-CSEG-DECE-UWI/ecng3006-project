@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Wed Nov 20 19:13:35 2019
+Linker Map File - Created Wed Nov 20 19:15:54 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -82,17 +82,18 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
                     STDIO       code   0x002534    program   0x00001c
               D10TCYXCODE       code   0x002550    program   0x000016
       .romdata_vfprintf.o    romdata   0x002566    program   0x000011
-      .idata_openxlcd.o_i    romdata   0x002577    program   0x000000
+      .idata_writdata.o_i    romdata   0x002577    program   0x000000
+        .idata___init.o_i    romdata   0x002577    program   0x000000
+      .idata_putrxlcd.o_i    romdata   0x002577    program   0x000000
          .romdata_c018i.o    romdata   0x002577    program   0x000000
       .romdata_openxlcd.o    romdata   0x002577    program   0x000000
-      .idata_putrxlcd.o_i    romdata   0x002577    program   0x000000
-      .idata_writdata.o_i    romdata   0x002577    program   0x000000
-           .idata_LCD.o_i    romdata   0x002577    program   0x000000
+      .idata_openxlcd.o_i    romdata   0x002577    program   0x000000
     .romdata__user_putc.o    romdata   0x002577    program   0x000000
+           .idata_LCD.o_i    romdata   0x002577    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x002577    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x002577    program   0x000000
       .idata_busyxlcd.o_i    romdata   0x002577    program   0x000000
       .idata_vfprintf.o_i    romdata   0x002577    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x002577    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x002577    program   0x000000
    .romdata_Temperature.o    romdata   0x002577    program   0x000000
       .romdata_setddram.o    romdata   0x002577    program   0x000000
       .idata_setddram.o_i    romdata   0x002577    program   0x000000
@@ -102,20 +103,20 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
       .romdata_readdata.o    romdata   0x002577    program   0x000000
        .idata_t0close.o_i    romdata   0x002577    program   0x000000
        .romdata_t0close.o    romdata   0x002577    program   0x000000
-      .idata_readdata.o_i    romdata   0x002577    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x002577    program   0x000000
-      .romdata_wcmdxlcd.o    romdata   0x002577    program   0x000000
-           .romdata_LCD.o    romdata   0x002577    program   0x000000
-      .romdata_putrxlcd.o    romdata   0x002577    program   0x000000
-      .idata_pw1setdc.o_i    romdata   0x002577    program   0x000000
-      .romdata_pw1setdc.o    romdata   0x002577    program   0x000000
-       .idata_t0write.o_i    romdata   0x002577    program   0x000000
        .romdata_t0write.o    romdata   0x002577    program   0x000000
-        .idata___init.o_i    romdata   0x002577    program   0x000000
+       .idata_t0write.o_i    romdata   0x002577    program   0x000000
+      .romdata_pw1setdc.o    romdata   0x002577    program   0x000000
+      .idata_pw1setdc.o_i    romdata   0x002577    program   0x000000
+      .romdata_putrxlcd.o    romdata   0x002577    program   0x000000
+           .romdata_LCD.o    romdata   0x002577    program   0x000000
+      .romdata_wcmdxlcd.o    romdata   0x002577    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x002577    program   0x000000
+      .idata_readdata.o_i    romdata   0x002577    program   0x000000
            .code___init.o       code   0x002578    program   0x000002
       .idata_mainfile.o_i    romdata   0x00257a    program   0x000004
    .idata_Temperature.o_i    romdata   0x00257e    program   0x000004
      .idata_HeartRate.o_i    romdata   0x002582    program   0x000006
+                    dbgP0       code   0x007dc0    program   0x000240
 .config_300001_mainfile.o    romdata   0x300001    program   0x000001
 .config_300003_mainfile.o    romdata   0x300003    program   0x000001
 .config_300006_mainfile.o    romdata   0x300006    program   0x000001
@@ -132,19 +133,18 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
         .udata_mainfile.o      udata   0x000431       data   0x000003
        .udata_HeartRate.o      udata   0x000434       data   0x000003
           .udata_keypad.o      udata   0x000437       data   0x000002
-      .idata__user_putc.o      idata   0x000439       data   0x000000
-           .idata_c018i.o      idata   0x000439       data   0x000000
-        .udata_fxd1616u.o      udata   0x000439       data   0x000000
-        .idata_fxd1616u.o      idata   0x000439       data   0x000000
-         .udata_pw1open.o      udata   0x000439       data   0x000000
-         .idata_pw1open.o      idata   0x000439       data   0x000000
-          .udata_t0open.o      udata   0x000439       data   0x000000
-      .udata__user_putc.o      udata   0x000439       data   0x000000
-          .idata_t0open.o      idata   0x000439       data   0x000000
-          .udata_t2open.o      udata   0x000439       data   0x000000
-          .idata_t2open.o      idata   0x000439       data   0x000000
-        .udata_pw1setdc.o      udata   0x000439       data   0x000000
         .idata_pw1setdc.o      idata   0x000439       data   0x000000
+        .udata_pw1setdc.o      udata   0x000439       data   0x000000
+          .idata_t2open.o      idata   0x000439       data   0x000000
+          .udata_t2open.o      udata   0x000439       data   0x000000
+          .idata_t0open.o      idata   0x000439       data   0x000000
+          .udata_t0open.o      udata   0x000439       data   0x000000
+         .idata_pw1open.o      idata   0x000439       data   0x000000
+         .udata_pw1open.o      udata   0x000439       data   0x000000
+        .idata_fxd1616u.o      idata   0x000439       data   0x000000
+        .udata_fxd1616u.o      udata   0x000439       data   0x000000
+           .idata_c018i.o      idata   0x000439       data   0x000000
+         .idata_t0close.o      idata   0x000439       data   0x000000
          .udata_t0write.o      udata   0x000439       data   0x000000
          .idata_t0write.o      idata   0x000439       data   0x000000
           .udata___init.o      udata   0x000439       data   0x000000
@@ -159,6 +159,8 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
          .idata_fxm3232.o      idata   0x000439       data   0x000000
             .udata_putc.o      udata   0x000439       data   0x000000
             .idata_putc.o      idata   0x000439       data   0x000000
+      .udata__user_putc.o      udata   0x000439       data   0x000000
+      .idata__user_putc.o      idata   0x000439       data   0x000000
         .udata_openxlcd.o      udata   0x000439       data   0x000000
         .idata_openxlcd.o      idata   0x000439       data   0x000000
         .udata_putrxlcd.o      udata   0x000439       data   0x000000
@@ -187,7 +189,7 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
         .udata_pw1close.o      udata   0x000439       data   0x000000
         .idata_pw1close.o      idata   0x000439       data   0x000000
          .udata_t0close.o      udata   0x000439       data   0x000000
-         .idata_t0close.o      idata   0x000439       data   0x000000
+                    dbgD0      udata   0x0005f4       data   0x00000c
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -198,10 +200,11 @@ Linker Map File - Created Wed Nov 20 19:13:35 2019
                             0x000000    0x002016      
                             0x002018    0x002576      
                             0x002578    0x002587      
+                            0x007dc0    0x007fff      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300006    0x300006      
-            9609 out of 33048 program addresses used, program memory utilization is 29%
+            10185 out of 33048 program addresses used, program memory utilization is 30%
 
 
 

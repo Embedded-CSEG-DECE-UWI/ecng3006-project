@@ -48,7 +48,7 @@ void LcdSetup(void)                                                 //Setup for 
 void MenuMain(void)
 {
         SetDDRamAddr(0x00); 
-        putrsXLCD("~~~~~~MENU~~~~~~");
+        putrsXLCD("------MENU------");
         while(BusyXLCD());
         SetDDRamAddr(0x40);
         putrsXLCD("Live Readings  A");

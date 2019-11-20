@@ -48,10 +48,12 @@ void ReadTemperature(){
     extract_decimal = (whole_reading-extract_integer)*100;                 //extract the decimal part of the average temperature
     sprintf(array,"%3d.%01d",extract_integer,extract_decimal);          //convert the values to a string array
     SetDDRamAddr(0x50); 
-    putrsXLCD("Temp:  ");
+    putrsXLCD("Temp:           ");
     while(BusyXLCD());
+    SetDDRamAddr(0x59);
     putsXLCD(array);
     while(BusyXLCD());
+    SetDDRamAddr(0x5E);
     putrsXLCD(" C");
     while(BusyXLCD());
     return;

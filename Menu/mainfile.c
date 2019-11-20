@@ -7,6 +7,7 @@
 #include <stdio.h> 
 #include <math.h> 
 #include <string.h>
+#include <timers.h>
 
 #pragma config OSC = HS
 #pragma config WDT = OFF
@@ -14,16 +15,38 @@
 
 #define _XTAL_FREQ 4000000 //4Mhz clock
 
+void high_isr (void);
 void low_isr(void); 
 void keypress(void);
-int keyvalue = 13;
-char keyvaluechar[3];
-
-//Function Prototypes
 void LcdSetup(void);
 
-#pragma code low_vector=0x18 
+int keyvalue = 13;
+char keyvaluechar[3];
+int startTimer = 1;
 
+
+
+
+
+/*------------------------HIGH INTERRUPT SERVICE ROUTINE----------------------*/
+#pragma code high_vector = 0x08
+void interrupt_at_high_vector(void)
+{
+    _asm GOTO high_isr _endasm
+}
+#pragma code
+
+#pragma interrupt high_isr
+void high_isr (void)
+{    
+    if(INTCONbits.TMR0IF == 1 && keyvalue == 10){
+        heartRateCal();
+        INTCONbits.TMR0IF = 0;
+    }
+}
+
+/*------------------------LOW INTERRUPT SERVICE ROUTINE----------------------*/
+#pragma code low_vector=0x18 
 void interrupt_at_low_vector(void) 
 {
     _asm 
@@ -36,10 +59,17 @@ void interrupt_at_low_vector(void)
 
 void low_isr(void)
 {
+    if(INTCON3bits.INT1IF){
     WriteCmdXLCD(0b00000001);                         
     keyvalue = press();                             //Calls the key press function inside the ISR
     itoa(keyvalue, keyvaluechar);
+    }
     INTCON3bits.INT1IF = 0;                 //clears the external interrupt flag
+    
+    if(INTCON3bits.INT2IF){
+        pulseCounting();
+    }
+     INTCON3bits.INT2IF = 0;
 }
 
 
@@ -60,14 +90,22 @@ void main(void){
     KeypadSetup();
     LcdSetup();
     TemperatureSetup(); 
+    timer0Setup();
+    irPulseSetup();
     
     while(keyvalue == 13){
         MenuMain();
+        if(startTimer ==0){
+            startTimer = 1;
+            CloseTimer0();
+        }
+        //CloseTimer0();
     }
-    while(keyvalue == 10){
-        //Call heart rate function
+    while(keyvalue == 10){                  //Start live readings
+        ReadTemperature();
+        TimerStart();
         //Call HRV function
         //Call Glucose function
-        ReadTemperature();
+        startTimer = 0;
     }
 }

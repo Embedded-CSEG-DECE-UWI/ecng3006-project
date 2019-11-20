@@ -30,6 +30,9 @@
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_counting.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -131,6 +134,18 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
+      <item path="F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_counting.c"
+            ex="true"
+            overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
+      </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>

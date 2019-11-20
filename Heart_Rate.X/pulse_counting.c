@@ -47,7 +47,7 @@ void heartRateCal(){
     SetDDRamAddr(0x00);
     putrsXLCD("P_Rate:");
     while(BusyXLCD());
-    SetDDRamAddr(0x0A);
+    SetDDRamAddr(0x08);
     while(BusyXLCD());
     putsXLCD(heartRateOutput);
     while(BusyXLCD());

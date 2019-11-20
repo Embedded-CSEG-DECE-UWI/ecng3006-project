@@ -2,7 +2,7 @@
 #include <p18f452.h> 
 #include "delays.h"
 #include "xlcd.h"
-#include "ow.h"
+//#include "ow.h"
 #include <stdlib.h> 
 #include <stdio.h> 
 #include <math.h> 
@@ -16,7 +16,7 @@
 
 void low_isr(void); 
 void keypress(void);
-int keyvalue = 0;
+int keyvalue = 13;
 char keyvaluechar[3];
 
 //Function Prototypes
@@ -55,21 +55,19 @@ void InterruptSetup(void){
 }
 
 void main(void){
+    //Call setups for all modules
     InterruptSetup();
     KeypadSetup();
     LcdSetup();
-    while(1){
-        SetDDRamAddr(0x00);
-        putrsXLCD("~~~~~~MENU~~~~~~");
-        while(BusyXLCD());
-        SetDDRamAddr(0x40);
-        putrsXLCD("Live Readings  A");
-        while(BusyXLCD());
-        SetDDRamAddr(0x10);
-        putrsXLCD("Set Intervals  B");
-        while(BusyXLCD());
-        SetDDRamAddr(0x50);
-        putrsXLCD("Records        C");
-        while(BusyXLCD());
+    TemperatureSetup(); 
+    
+    while(keyvalue == 13){
+        MenuMain();
+    }
+    while(keyvalue == 10){
+        //Call heart rate function
+        //Call HRV function
+        //Call Glucose function
+        ReadTemperature();
     }
 }

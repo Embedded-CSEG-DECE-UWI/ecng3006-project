@@ -27,7 +27,7 @@
       <itemPath>F:/ECNG3006/Group_Project/Temperature/wcmdxlcd.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/Temperature/writdata.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/Temperature/lab1lcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/Temperature/Temperature.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -37,6 +37,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>F:\ECNG3006\Group_Project\Temperature</Elem>
+    <Elem>F:\ECNG3006\Group_Project\ecng3006-project\Temperature</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

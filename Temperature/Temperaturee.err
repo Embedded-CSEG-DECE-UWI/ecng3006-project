@@ -1,0 +1,3 @@
+Warning[2068] F:\ECNG3006\Group_Project\ecng3006-project\Temperature\Temperaturee.c 84 : obsolete use of implicit 'int' detected
+Warning[2066] F:\ECNG3006\Group_Project\ecng3006-project\Temperature\Temperaturee.c 89 : type qualifier mismatch in assignment
+Warning[2058] F:\ECNG3006\Group_Project\ecng3006-project\Temperature\Temperaturee.c 99 : call of function without prototype

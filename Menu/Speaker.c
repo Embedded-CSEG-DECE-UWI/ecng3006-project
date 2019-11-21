@@ -9,7 +9,7 @@ void speaker(void){
     
  int count = 0;
 TRISCbits.RC2 = 0;//Configure RC2 as an output
-SetDCPWM1(5);
+SetDCPWM1(60);
 OpenTimer2( TIMER_INT_OFF & T2_PS_1_16 & T2_POST_1_1);//Configure and enable timer2
 
 
@@ -30,7 +30,7 @@ OpenTimer2( TIMER_INT_OFF & T2_PS_1_16 & T2_POST_1_1);//Configure and enable tim
         ClosePWM1();
         Delay10KTCYx(16);//Delay
         
-        Delay10KTCYx(200);//wait to repeat
+        Delay10KTCYx(150);//wait to repeat
 }
 }
 

@@ -131,14 +131,38 @@
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/heart_rate_counting.c"
             ex="true"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/heart_rate_variability.c"
             ex="true"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
             ex="true"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>

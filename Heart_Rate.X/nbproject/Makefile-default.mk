@@ -91,7 +91,7 @@ endif
 
 MP_PROCESSOR_OPTION=18F452
 MP_PROCESSOR_OPTION_LD=18f452
-MP_LINKER_DEBUG_OPTION=-r=ROM@0x7DC0:0x7FFF -r=RAM@GPR:0x5F4:0x5FF -u_DEBUGSTACK
+MP_LINKER_DEBUG_OPTION=  -u_DEBUGSTACK
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
@@ -105,7 +105,7 @@ ${OBJECTDIR}/_ext/1637256795/busyxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/busyxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/busyxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/busyxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/busyxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -113,7 +113,7 @@ ${OBJECTDIR}/_ext/1637256795/openxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/openxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/openxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/openxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/openxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -121,7 +121,7 @@ ${OBJECTDIR}/_ext/1637256795/putrxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/putrxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/putrxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/putrxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/putrxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -129,7 +129,7 @@ ${OBJECTDIR}/_ext/1637256795/putsxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/putsxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/putsxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/putsxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/putsxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -137,7 +137,7 @@ ${OBJECTDIR}/_ext/1637256795/readaddr.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/readaddr.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/readaddr.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/readaddr.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/readaddr.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -145,7 +145,7 @@ ${OBJECTDIR}/_ext/1637256795/readdata.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/readdata.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/readdata.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/readdata.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/readdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -153,7 +153,7 @@ ${OBJECTDIR}/_ext/1637256795/setcgram.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/setcgram.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/setcgram.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/setcgram.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/setcgram.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -161,7 +161,7 @@ ${OBJECTDIR}/_ext/1637256795/setddram.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/setddram.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/setddram.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/setddram.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/setddram.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -169,7 +169,7 @@ ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -177,7 +177,7 @@ ${OBJECTDIR}/_ext/1637256795/writdata.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/writdata.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/writdata.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/writdata.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -185,7 +185,7 @@ ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o: C:/MPLabXProjects/Group_Project
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -285,7 +285,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/Heart_Rate.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/lab1.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "C:\MPLabXProjects\Group_Project\ecng3006-project\Heart_Rate.X\lab1.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_PK3=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/Heart_Rate.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_LD} $(MP_EXTRA_LD_PRE) "C:\MPLabXProjects\Group_Project\ecng3006-project\Heart_Rate.X\lab1.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_SIMULATOR=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/Heart_Rate.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/Heart_Rate.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/lab1.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 

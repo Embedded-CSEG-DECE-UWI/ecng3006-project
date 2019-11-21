@@ -8,6 +8,45 @@
 #include <math.h> 
 #include <string.h> 
 
+void DelayFor18TCY(void){
+     Nop();
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop();
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop(); 
+     Nop();
+     return;
+}
+
+void DelayXLCD(void){
+    Delay1KTCYx(5);	
+    return;
+}
+
+void DelayPORXLCD(void){
+    Delay1KTCYx(15);
+    return;
+}
+void LCDSetup (void)                                    //Setup of the LCD
+{ 
+    OpenXLCD(FOUR_BIT & LINES_5X7);
+    while(BusyXLCD());
+    SetDDRamAddr(0x00); 
+    while(BusyXLCD()); 
+    WriteCmdXLCD(BLINK_ON);
+    while(BusyXLCD());
+    WriteCmdXLCD(SHIFT_DISP_LEFT);
+    while(BusyXLCD());
+}
+
 void TemperatureSetup(void) {               //Setup of the temperature sensor
   ow_reset(); 
   ow_write(0x0C); 
@@ -42,20 +81,21 @@ int extract_integer;                                //initialize variable for th
 int extract_decimal;                                //initialize variable for the decimal part of the average temperature
 char array[20];                                        //initialize variable to store the value as a string array
 
-void ReadTemperature(){                                                                                     
+ReadTemperature(){
+    while (1){                                                                                          
     whole_reading =TemperatureMeasurement();                                    //call the function to measure the temperature
     extract_integer = whole_reading;                                                    //extract the whole part of the average temperature
     extract_decimal = (whole_reading-extract_integer)*100;                 //extract the decimal part of the average temperature
-    sprintf(array,"%3d.%01d",extract_integer,extract_decimal);          //convert the values to a string array
-    SetDDRamAddr(0x50); 
-    putrsXLCD("Temp:           ");
-    while(BusyXLCD());
-    SetDDRamAddr(0x59);
+    sprintf(array,"%3d.%04d",extract_integer,extract_decimal);          //convert the values to a string array
+    SetDDRamAddr(0x00); 
+    putrsXLCD("temperature ");
     putsXLCD(array);
-    while(BusyXLCD());
-    SetDDRamAddr(0x5E);
-    putrsXLCD(" C");
-    while(BusyXLCD());
-    return;
+    }
 }
 
+void main(void){
+    TemperatureSetup();                     //Call Setup Function
+    LCDSetup();                                  //Call LCD Setup
+    ReadTemperature();                      //Call read temperature function
+    while(BusyXLCD());
+}

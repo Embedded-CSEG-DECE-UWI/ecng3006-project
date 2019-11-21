@@ -32,14 +32,31 @@ void DelayPORXLCD(void){
     Delay1KTCYx(15);
     return;
 }
-void LcdSetup(void)                                             //Setup for the LCD
+void LcdSetup(void)                                                 //Setup for the LCD
 { 
-    OpenXLCD(FOUR_BIT & LINES_5X7);
-    while(BusyXLCD());
-    SetDDRamAddr(0x00); 
-    while(BusyXLCD()); 
+    while( BusyXLCD());
+    OpenXLCD(FOUR_BIT & LINES_5X7); 
+    while( BusyXLCD());
+    WriteCmdXLCD( FOUR_BIT & LINES_5X7);
+    while( BusyXLCD());
     WriteCmdXLCD(BLINK_ON);
-    while(BusyXLCD());
-    WriteCmdXLCD(SHIFT_DISP_LEFT);
-    while(BusyXLCD());
+    while( BusyXLCD() );
+    WriteCmdXLCD( SHIFT_DISP_LEFT);
+    while (BusyXLCD());
+}
+
+void MenuMain(void)
+{
+        SetDDRamAddr(0x00); 
+        putrsXLCD("------MENU------");
+        while(BusyXLCD());
+        SetDDRamAddr(0x40);
+        putrsXLCD("Live Readings  A");
+        while(BusyXLCD());
+        SetDDRamAddr(0x10);
+        putrsXLCD("Set Intervals  B");
+        while(BusyXLCD());
+        SetDDRamAddr(0x50);
+        putrsXLCD("Records        C");
+        while(BusyXLCD());
 }

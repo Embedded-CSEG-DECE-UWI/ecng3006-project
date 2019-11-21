@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/Temperature/busyxlcd.c F:/ECNG3006/Group_Project/Temperature/openxlcd.c F:/ECNG3006/Group_Project/Temperature/putrxlcd.c F:/ECNG3006/Group_Project/Temperature/putsxlcd.c F:/ECNG3006/Group_Project/Temperature/readaddr.c F:/ECNG3006/Group_Project/Temperature/readdata.c F:/ECNG3006/Group_Project/Temperature/setcgram.c F:/ECNG3006/Group_Project/Temperature/setddram.c F:/ECNG3006/Group_Project/Temperature/wcmdxlcd.c F:/ECNG3006/Group_Project/Temperature/writdata.c F:/ECNG3006/Group_Project/Temperature/Temperature.c
+SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/Temperature/busyxlcd.c F:/ECNG3006/Group_Project/Temperature/openxlcd.c F:/ECNG3006/Group_Project/Temperature/putrxlcd.c F:/ECNG3006/Group_Project/Temperature/putsxlcd.c F:/ECNG3006/Group_Project/Temperature/readaddr.c F:/ECNG3006/Group_Project/Temperature/readdata.c F:/ECNG3006/Group_Project/Temperature/setcgram.c F:/ECNG3006/Group_Project/Temperature/setddram.c F:/ECNG3006/Group_Project/Temperature/wcmdxlcd.c F:/ECNG3006/Group_Project/Temperature/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/993291662/busyxlcd.o ${OBJECTDIR}/_ext/993291662/openxlcd.o ${OBJECTDIR}/_ext/993291662/putrxlcd.o ${OBJECTDIR}/_ext/993291662/putsxlcd.o ${OBJECTDIR}/_ext/993291662/readaddr.o ${OBJECTDIR}/_ext/993291662/readdata.o ${OBJECTDIR}/_ext/993291662/setcgram.o ${OBJECTDIR}/_ext/993291662/setddram.o ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o ${OBJECTDIR}/_ext/993291662/writdata.o ${OBJECTDIR}/_ext/993291662/Temperature.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/993291662/busyxlcd.o.d ${OBJECTDIR}/_ext/993291662/openxlcd.o.d ${OBJECTDIR}/_ext/993291662/putrxlcd.o.d ${OBJECTDIR}/_ext/993291662/putsxlcd.o.d ${OBJECTDIR}/_ext/993291662/readaddr.o.d ${OBJECTDIR}/_ext/993291662/readdata.o.d ${OBJECTDIR}/_ext/993291662/setcgram.o.d ${OBJECTDIR}/_ext/993291662/setddram.o.d ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o.d ${OBJECTDIR}/_ext/993291662/writdata.o.d ${OBJECTDIR}/_ext/993291662/Temperature.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/993291662/busyxlcd.o ${OBJECTDIR}/_ext/993291662/openxlcd.o ${OBJECTDIR}/_ext/993291662/putrxlcd.o ${OBJECTDIR}/_ext/993291662/putsxlcd.o ${OBJECTDIR}/_ext/993291662/readaddr.o ${OBJECTDIR}/_ext/993291662/readdata.o ${OBJECTDIR}/_ext/993291662/setcgram.o ${OBJECTDIR}/_ext/993291662/setddram.o ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o ${OBJECTDIR}/_ext/993291662/writdata.o ${OBJECTDIR}/_ext/491720659/Temperature.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/993291662/busyxlcd.o.d ${OBJECTDIR}/_ext/993291662/openxlcd.o.d ${OBJECTDIR}/_ext/993291662/putrxlcd.o.d ${OBJECTDIR}/_ext/993291662/putsxlcd.o.d ${OBJECTDIR}/_ext/993291662/readaddr.o.d ${OBJECTDIR}/_ext/993291662/readdata.o.d ${OBJECTDIR}/_ext/993291662/setcgram.o.d ${OBJECTDIR}/_ext/993291662/setddram.o.d ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o.d ${OBJECTDIR}/_ext/993291662/writdata.o.d ${OBJECTDIR}/_ext/491720659/Temperature.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/993291662/busyxlcd.o ${OBJECTDIR}/_ext/993291662/openxlcd.o ${OBJECTDIR}/_ext/993291662/putrxlcd.o ${OBJECTDIR}/_ext/993291662/putsxlcd.o ${OBJECTDIR}/_ext/993291662/readaddr.o ${OBJECTDIR}/_ext/993291662/readdata.o ${OBJECTDIR}/_ext/993291662/setcgram.o ${OBJECTDIR}/_ext/993291662/setddram.o ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o ${OBJECTDIR}/_ext/993291662/writdata.o ${OBJECTDIR}/_ext/993291662/Temperature.o
+OBJECTFILES=${OBJECTDIR}/_ext/993291662/busyxlcd.o ${OBJECTDIR}/_ext/993291662/openxlcd.o ${OBJECTDIR}/_ext/993291662/putrxlcd.o ${OBJECTDIR}/_ext/993291662/putsxlcd.o ${OBJECTDIR}/_ext/993291662/readaddr.o ${OBJECTDIR}/_ext/993291662/readdata.o ${OBJECTDIR}/_ext/993291662/setcgram.o ${OBJECTDIR}/_ext/993291662/setddram.o ${OBJECTDIR}/_ext/993291662/wcmdxlcd.o ${OBJECTDIR}/_ext/993291662/writdata.o ${OBJECTDIR}/_ext/491720659/Temperature.o
 
 # Source Files
-SOURCEFILES=F:/ECNG3006/Group_Project/Temperature/busyxlcd.c F:/ECNG3006/Group_Project/Temperature/openxlcd.c F:/ECNG3006/Group_Project/Temperature/putrxlcd.c F:/ECNG3006/Group_Project/Temperature/putsxlcd.c F:/ECNG3006/Group_Project/Temperature/readaddr.c F:/ECNG3006/Group_Project/Temperature/readdata.c F:/ECNG3006/Group_Project/Temperature/setcgram.c F:/ECNG3006/Group_Project/Temperature/setddram.c F:/ECNG3006/Group_Project/Temperature/wcmdxlcd.c F:/ECNG3006/Group_Project/Temperature/writdata.c F:/ECNG3006/Group_Project/Temperature/Temperature.c
+SOURCEFILES=F:/ECNG3006/Group_Project/Temperature/busyxlcd.c F:/ECNG3006/Group_Project/Temperature/openxlcd.c F:/ECNG3006/Group_Project/Temperature/putrxlcd.c F:/ECNG3006/Group_Project/Temperature/putsxlcd.c F:/ECNG3006/Group_Project/Temperature/readaddr.c F:/ECNG3006/Group_Project/Temperature/readdata.c F:/ECNG3006/Group_Project/Temperature/setcgram.c F:/ECNG3006/Group_Project/Temperature/setddram.c F:/ECNG3006/Group_Project/Temperature/wcmdxlcd.c F:/ECNG3006/Group_Project/Temperature/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c
 
 
 CFLAGS=
@@ -181,13 +181,13 @@ ${OBJECTDIR}/_ext/993291662/writdata.o: F:/ECNG3006/Group_Project/Temperature/wr
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/993291662/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/993291662/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/993291662/Temperature.o: F:/ECNG3006/Group_Project/Temperature/Temperature.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/993291662" 
-	@${RM} ${OBJECTDIR}/_ext/993291662/Temperature.o.d 
-	@${RM} ${OBJECTDIR}/_ext/993291662/Temperature.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/993291662/Temperature.o   F:/ECNG3006/Group_Project/Temperature/Temperature.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/993291662/Temperature.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/993291662/Temperature.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+${OBJECTDIR}/_ext/491720659/Temperature.o: F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/491720659" 
+	@${RM} ${OBJECTDIR}/_ext/491720659/Temperature.o.d 
+	@${RM} ${OBJECTDIR}/_ext/491720659/Temperature.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/Temperature.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/Temperature.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/Temperature.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/_ext/993291662/busyxlcd.o: F:/ECNG3006/Group_Project/Temperature/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
@@ -270,13 +270,13 @@ ${OBJECTDIR}/_ext/993291662/writdata.o: F:/ECNG3006/Group_Project/Temperature/wr
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/993291662/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/993291662/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/993291662/Temperature.o: F:/ECNG3006/Group_Project/Temperature/Temperature.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/993291662" 
-	@${RM} ${OBJECTDIR}/_ext/993291662/Temperature.o.d 
-	@${RM} ${OBJECTDIR}/_ext/993291662/Temperature.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/993291662/Temperature.o   F:/ECNG3006/Group_Project/Temperature/Temperature.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/993291662/Temperature.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/993291662/Temperature.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+${OBJECTDIR}/_ext/491720659/Temperature.o: F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/491720659" 
+	@${RM} ${OBJECTDIR}/_ext/491720659/Temperature.o.d 
+	@${RM} ${OBJECTDIR}/_ext/491720659/Temperature.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/Temperature.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/Temperature.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/Temperature.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/Temperature.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

@@ -28,6 +28,7 @@
       <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c</itemPath>
       <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c</itemPath>
       <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/heart_rate_variability_functions.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -128,6 +129,10 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/heart_rate_counting.c"
             ex="true"
             overriding="false">
@@ -148,6 +153,14 @@
         <C18LanguageToolchain>
         </C18LanguageToolchain>
       </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c"
+            ex="true"
+            overriding="false">
+      </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
             ex="true"
             overriding="false">
@@ -157,6 +170,38 @@
         </C18-LD>
         <C18LanguageToolchain>
         </C18LanguageToolchain>
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c"
+            ex="true"
+            overriding="false">
       </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>

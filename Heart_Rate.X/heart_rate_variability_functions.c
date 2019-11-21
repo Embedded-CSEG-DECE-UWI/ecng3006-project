@@ -17,17 +17,8 @@ void high_isr (void);
 void low_isr (void);
 void heartRateCal();
 void timer1Setup();
-unsigned long var = 0;
-unsigned long var2 = 0;
 
-int heartBeatcounter = 0;
-unsigned int timer1Period = 0;
-unsigned long double testvar1 = 0;
-unsigned long double testvar2 = 0;
-unsigned long double testvar3 = 0;
-int testtimer1 = 0;
-int testtimer2 = 0;
-int testtimer3 = 0;
+int timer1Period = 0;
 long double HRVvar1 = 0;
 long double HRVvar2 = 0;
 long double HRVvar3 = 0;
@@ -36,15 +27,8 @@ long double hrvInterval2 = 0;
 long double numNNInterval =0;
 long double numNN50 = 0;
 long double pNN50 = 0;
-int displayVal = 0;
-int test = 25;
-int nnIntervalcounter;
 
-unsigned double var1 = 0;
-//unsigned long var2 = 0;
-char ans1[2];
-char ans2[3];
-char ans3[10];
+char hrv_Output[2];
 
 void DelayFor18TCY (void)
 {
@@ -96,26 +80,19 @@ void interrupt_at_high_vector(void)
 #pragma interrupt high_isr
 void high_isr (void)
 {    
+    PIR2bits.CCP2IF = 0; 
+    
     if(PIR2bits.CCP2IF == 1){
         
         PIR2bits.CCP2IF = 0;
         
         if(HRVvar1 == 0 && HRVvar2 == 0 && HRVvar3 ==0){
-            //HRVvar1 = ReadCapture2(); 
-            testvar1 = (long)ReadCapture2();
-            testtimer1 = timer1Period;
-            ////HRVvar1 = HRVvar1 + (timer1Period * 500000);   
-            //HRVvar1 = HRVvar1*timer1Period;
-            //HRVvar1 = testvar1*timer1Period;
-            Nop();
+            HRVvar1 = ReadCapture2(); 
+            HRVvar1 = HRVvar1*timer1Period;
         }
         else if(HRVvar1 != 0 && HRVvar2 == 0 && HRVvar3 == 0){
-            //HRVvar2 = ReadCapture2();
-            testvar2 = (long)ReadCapture2();
-            testtimer2 = timer1Period;
-            HRVvar2 = HRVvar2 + (timer1Period * 500000);
-            //HRVvar2 = HRVvar2 *timer1Period;
-            //HRVvar2 = testvar2 *timer1Period;
+            HRVvar2 = ReadCapture2();
+            HRVvar2 = HRVvar2 *timer1Period;
             if(HRVvar2 < HRVvar1){
                 hrvInterval1 = HRVvar1 - HRVvar2;
             }
@@ -125,12 +102,8 @@ void high_isr (void)
             numNNInterval = numNNInterval + 1.0;           
         }
         else if(HRVvar1 != 0 && HRVvar2 != 0 && HRVvar3 == 0){
-            //HRVvar3 = ReadCapture2();
-            testvar3 = (long)ReadCapture2();
-            testtimer3 = timer1Period;
-            HRVvar3 = HRVvar3 + (timer1Period * 500000);
-            //HRVvar3 = HRVvar3*timer1Period;
-            //HRVvar3 = testvar3*timer1Period;
+            HRVvar3 = ReadCapture2();
+            HRVvar3 = HRVvar3*timer1Period;
             if(HRVvar3 < HRVvar2){
                 hrvInterval2 = HRVvar2 - HRVvar3;
             }
@@ -146,7 +119,6 @@ void high_isr (void)
                 
             }
 
-            Nop();
             HRVvar3 = 0;
             HRVvar2 = 0;
             HRVvar1 = 0;
@@ -154,10 +126,7 @@ void high_isr (void)
             hrvInterval2 = 0;
         }                                
     
-    }         
-        
-    //PIR2bits.CCP2IF = 0;
-    PIR2bits.CCP2IF = 0;  
+    }          
 
 }
 
@@ -171,27 +140,23 @@ void interrupt_at_low_vector(void)
 
 #pragma interrupt low_isr
 void low_isr (void)
-{    
+{      
+    PIR1bits.TMR1IF = 0;      
     //Restarts the timer and checks current period
     if(PIR1bits.TMR1IF == 1){
         if(timer1Period%19 == 0 && numNN50>0){
-            pNN50 = (numNN50/numNNInterval)*100.0;
-            displayVal = (int) pNN50;
-            itoa(displayVal, ans1);
+            pNN50 = (numNN50/numNNInterval)*100.0;;
+            itoa(pNN50, hrv_Output);
             while(BusyXLCD());
             SetDDRamAddr(0x40);
             while(BusyXLCD());
-            putsXLCD(ans1);
-            //pNN50 = 0;
+            putsXLCD(hrv_Output);
         }
-        //else if(timer1Period < 19){
-            //timer1Period = timer1Period++;
-        //}
         timer1Period = timer1Period++;
         WriteTimer1(0x0BDC);
     }
   
-    PIR1bits.TMR1IF = 0;
+ 
 }
 
 void lcdSetup (void)
@@ -204,10 +169,6 @@ void lcdSetup (void)
     WriteCmdXLCD(BLINK_ON );
     while( BusyXLCD() );
     WriteCmdXLCD( SHIFT_DISP_LEFT );
-    while (BusyXLCD());
-    SetDDRamAddr(0x00);
-    while (BusyXLCD());
-    putrsXLCD("Testing HRV");
 }
 
 void main()

@@ -30,7 +30,7 @@ void heartRateCal(){
     while(BusyXLCD());
     
     if(heartRate > 110){
-        speaker(3);
+        speaker();
     }
     
     heartRate = 0;
@@ -62,12 +62,14 @@ void pulseCounting(){
     heartBeatCounter = heartBeatCounter++;
 }
 
-void TimerStart(){
+/*void TimerStart(){
     if(startTimer == 1){
         WriteTimer0(0xF0BD);
         startTimer = 0;
     }
-}
+}*/
+
+
 
 
 

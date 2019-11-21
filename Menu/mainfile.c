@@ -2,7 +2,7 @@
 #include <p18f452.h> 
 #include "delays.h"
 #include "xlcd.h"
-//#include "ow.h"
+#include "Prototypes.h"
 #include <stdlib.h> 
 #include <stdio.h> 
 #include <math.h> 
@@ -15,10 +15,23 @@
 
 #define _XTAL_FREQ 4000000 //4Mhz clock
 
+//Function Prototypes
 void high_isr (void);
 void low_isr(void); 
 void keypress(void);
 void LcdSetup(void);
+void heartRateCal();
+int press();
+void pulseCounting();
+void TemperatureSetup(void);
+void timer0Setup();
+void irPulseSetup();
+void MenuMain(void);
+void ReadTemperature();
+void HRV();
+void Glucose();
+void speaker(void);
+
 
 int keyvalue = 13;
 char keyvaluechar[3];
@@ -103,9 +116,13 @@ void main(void){
     }
     while(keyvalue == 10){                  //Start live readings
         ReadTemperature();
-        TimerStart();
-        //Call HRV function
-        //Call Glucose function
+        //TimerStart();
+        if(startTimer == 1){
+        WriteTimer0(0xF0BD);
         startTimer = 0;
+        }
+        HRV();
+        Glucose();
+        //startTimer = 0;
     }
 }

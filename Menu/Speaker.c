@@ -2,37 +2,36 @@
 #include <pwm.h>
 #include <timers.h>
 #include <delays.h>
+#include "Prototypes.h"
 
 
-void speaker(int count){
+void speaker(void){
+    
+ int count = 0;
 TRISCbits.RC2 = 0;//Configure RC2 as an output
-SetDCPWM1(50);
+SetDCPWM1(5);
 OpenTimer2( TIMER_INT_OFF & T2_PS_1_16 & T2_POST_1_1);//Configure and enable timer2
 
 
-    while(count>0){
+    for(count = 3; count > 0; count--){
         
         OpenPWM1(0xEE); //opening PWM
         Delay10KTCYx(16);//Delay
-        OpenPWM1(1);
+        ClosePWM1();
         Delay10KTCYx(16);//Delay
 
         OpenPWM1(0xEE); //opening PWM
         Delay10KTCYx(16);//Delay
-        OpenPWM1(1);
+        ClosePWM1();
         Delay10KTCYx(16);//Delay
         
         OpenPWM1(0xEE); //opening PWM
         Delay10KTCYx(16);//Delay
-        OpenPWM1(1);
+        ClosePWM1();
         Delay10KTCYx(16);//Delay
         
         Delay10KTCYx(200);//wait to repeat
-        
-        count = count -1;
-        ClosePWM1();
-    }
-    return;
+}
 }
 
     

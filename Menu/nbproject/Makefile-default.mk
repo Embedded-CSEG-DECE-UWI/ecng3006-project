@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c
+SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/491720659/HeartRate.o ${OBJECTDIR}/_ext/1339988166/Speaker.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o.d ${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d ${OBJECTDIR}/_ext/1339988166/openxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d ${OBJECTDIR}/_ext/1339988166/readaddr.o.d ${OBJECTDIR}/_ext/1339988166/readdata.o.d ${OBJECTDIR}/_ext/1339988166/setcgram.o.d ${OBJECTDIR}/_ext/1339988166/setddram.o.d ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1339988166/writdata.o.d ${OBJECTDIR}/_ext/1339988166/LCD.o.d ${OBJECTDIR}/_ext/1339988166/keypad.o.d ${OBJECTDIR}/_ext/1339988166/Temperature.o.d ${OBJECTDIR}/_ext/491720659/HeartRate.o.d ${OBJECTDIR}/_ext/1339988166/Speaker.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/491720659/HeartRate.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o.d ${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d ${OBJECTDIR}/_ext/1339988166/openxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d ${OBJECTDIR}/_ext/1339988166/readaddr.o.d ${OBJECTDIR}/_ext/1339988166/readdata.o.d ${OBJECTDIR}/_ext/1339988166/setcgram.o.d ${OBJECTDIR}/_ext/1339988166/setddram.o.d ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1339988166/writdata.o.d ${OBJECTDIR}/_ext/1339988166/LCD.o.d ${OBJECTDIR}/_ext/1339988166/keypad.o.d ${OBJECTDIR}/_ext/1339988166/Temperature.o.d ${OBJECTDIR}/_ext/491720659/HeartRate.o.d ${OBJECTDIR}/_ext/1339988166/Speaker.o.d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/491720659/HeartRate.o ${OBJECTDIR}/_ext/1339988166/Speaker.o
+OBJECTFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/491720659/HeartRate.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o
 
 # Source Files
-SOURCEFILES=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c
+SOURCEFILES=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c
 
 
 CFLAGS=
@@ -91,7 +91,7 @@ endif
 
 MP_PROCESSOR_OPTION=18F452
 MP_PROCESSOR_OPTION_LD=18f452
-MP_LINKER_DEBUG_OPTION=-r=ROM@0x7DC0:0x7FFF -r=RAM@GPR:0x5F4:0x5FF -u_DEBUGSTACK
+MP_LINKER_DEBUG_OPTION=  -u_DEBUGSTACK
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
@@ -105,7 +105,7 @@ ${OBJECTDIR}/_ext/1339988166/mainfile.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/mainfile.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/mainfile.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/mainfile.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/mainfile.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/mainfile.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/mainfile.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -113,7 +113,7 @@ ${OBJECTDIR}/_ext/1339988166/busyxlcd.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/busyxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/busyxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/busyxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/busyxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -121,7 +121,7 @@ ${OBJECTDIR}/_ext/1339988166/openxlcd.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/openxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/openxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/openxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/openxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/openxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -129,7 +129,7 @@ ${OBJECTDIR}/_ext/1339988166/putrxlcd.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/putrxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/putrxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/putrxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/putrxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -137,7 +137,7 @@ ${OBJECTDIR}/_ext/1339988166/putsxlcd.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/putsxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/putsxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/putsxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/putsxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -145,7 +145,7 @@ ${OBJECTDIR}/_ext/1339988166/readaddr.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/readaddr.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/readaddr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/readaddr.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/readaddr.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/readaddr.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/readaddr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -153,7 +153,7 @@ ${OBJECTDIR}/_ext/1339988166/readdata.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/readdata.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/readdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/readdata.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/readdata.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/readdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/readdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -161,7 +161,7 @@ ${OBJECTDIR}/_ext/1339988166/setcgram.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/setcgram.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/setcgram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/setcgram.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/setcgram.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/setcgram.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/setcgram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -169,7 +169,7 @@ ${OBJECTDIR}/_ext/1339988166/setddram.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/setddram.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/setddram.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/setddram.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/setddram.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/setddram.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/setddram.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -177,7 +177,7 @@ ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -185,7 +185,7 @@ ${OBJECTDIR}/_ext/1339988166/writdata.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/writdata.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/writdata.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/writdata.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/writdata.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -193,7 +193,7 @@ ${OBJECTDIR}/_ext/1339988166/LCD.o: F:/ECNG3006/Group_Project/ecng3006-project/M
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/LCD.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/LCD.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/LCD.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/LCD.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/LCD.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/LCD.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -201,7 +201,7 @@ ${OBJECTDIR}/_ext/1339988166/keypad.o: F:/ECNG3006/Group_Project/ecng3006-projec
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/keypad.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/keypad.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/keypad.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/keypad.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/keypad.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/keypad.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -209,7 +209,7 @@ ${OBJECTDIR}/_ext/1339988166/Temperature.o: F:/ECNG3006/Group_Project/ecng3006-p
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/Temperature.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/Temperature.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Temperature.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Temperature.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/Temperature.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/Temperature.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -217,7 +217,7 @@ ${OBJECTDIR}/_ext/491720659/HeartRate.o: F:/ECNG3006/Group_Project/ecng3006-proj
 	@${MKDIR} "${OBJECTDIR}/_ext/491720659" 
 	@${RM} ${OBJECTDIR}/_ext/491720659/HeartRate.o.d 
 	@${RM} ${OBJECTDIR}/_ext/491720659/HeartRate.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/HeartRate.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/HeartRate.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HeartRate.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/HeartRate.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/HeartRate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -225,9 +225,17 @@ ${OBJECTDIR}/_ext/1339988166/Speaker.o: F:/ECNG3006/Group_Project/ecng3006-proje
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/Speaker.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/Speaker.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Speaker.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Speaker.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/Speaker.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/Speaker.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/491720659/HRVandGlucose.o: F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/491720659" 
+	@${RM} ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d 
+	@${RM} ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/_ext/1339988166/mainfile.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c  nbproject/Makefile-${CND_CONF}.mk
@@ -358,6 +366,14 @@ ${OBJECTDIR}/_ext/1339988166/Speaker.o: F:/ECNG3006/Group_Project/ecng3006-proje
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/Speaker.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/Speaker.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/_ext/491720659/HRVandGlucose.o: F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/491720659" 
+	@${RM} ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d 
+	@${RM} ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o   F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -365,7 +381,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/Menu.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    F:/ECNG3006/Group_Project/ecng3006-project/Menu/lab1_i.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "F:\ECNG3006\Group_Project\ecng3006-project\Menu\lab1_i.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_PK3=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/Menu.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
+	${MP_LD} $(MP_EXTRA_LD_PRE) "F:\ECNG3006\Group_Project\ecng3006-project\Menu\lab1_i.lkr"  -p$(MP_PROCESSOR_OPTION_LD)  -w -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"  -z__MPLAB_BUILD=1  -u_CRUNTIME -z__MPLAB_DEBUG=1 -z__MPLAB_DEBUGGER_SIMULATOR=1 $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}\\..\\lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/Menu.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}   
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/Menu.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   F:/ECNG3006/Group_Project/ecng3006-project/Menu/lab1_i.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 

@@ -13,7 +13,10 @@
 
 //Global Variables
 int key;                //KeyPad GV
-int stopTemp = 0;       //Flag used to prevent displaying temp reading if a BPM reading is taking place (avoiding corruption)
+
+// Brown Out configuration
+#pragma config BOR = ON         // Brown-out Reset Enable bit (Brown-out Reset enabled)
+#pragma config BORV = 42        // Brown-out Reset Voltage bits (VBOR set to 4.2V)
 
 /************************GLOBAL VARIABLES FOR TEMPRATURE SENSOR***********************/
 unsigned char tempLSB;
@@ -35,6 +38,13 @@ int sign = 0;
 #pragma code high_vector = 0x08
 void high_interrupt(void) 
 {
+    if (INTCON3bits.INT1F == 1)
+    {
+        _asm
+                goto LVDisr
+        _endasm
+    }
+    
     if (INTCONbits.TMR0IF == 1)
     {
     _asm
@@ -64,109 +74,52 @@ void KeyPressInterrupt(void)
         key = (BIT0 * 1 + BIT1 * 2 + BIT2 * 4 + BIT3 * 8);
         switch (key) {
             case (0):                       //Key Press 1 to start taking BPM reading
-                stopTemp = 1;
-                heartRateModule();
+                //heartRateModule();
                 break;
             case (1):
                 //TestBeep();
                 break;
             case (2):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("3");
-                while (BusyXLCD());
+
                 break;
             case (3):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("A");
-                while (BusyXLCD());
+                heartRateModule();
                 break;
             case (4):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("4");
-                while (BusyXLCD());
+
                 break;
             case (5):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("5");
-                while (BusyXLCD());
+
                 break;
             case (6):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("6");
-                while (BusyXLCD());
+
                 break;
             case (7):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("B");
-                while (BusyXLCD());
+
                 break;
             case (8):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("7");
-                while (BusyXLCD());
+
                 break;
             case (9):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("8");
-                while (BusyXLCD());
+
                 break;
             case (10):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("9");
-                while (BusyXLCD());
+
                 break;
             case (11):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("C");
-                while (BusyXLCD());
+
                 break;
             case (12):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("0");
-                while (BusyXLCD());
+
                 break;
             case (13):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("F");
-                while (BusyXLCD());
+
                 break;
             case (14):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("E");
-                while (BusyXLCD());
+
                 break;
             case (15):
-                while (BusyXLCD());
-                SetDDRamAddr(0x00);
-                while (BusyXLCD());
-                putrsXLCD("D");
-                while (BusyXLCD());
+
                 break;
             default:
                 while (BusyXLCD());
@@ -185,11 +138,12 @@ void KeyPressInterrupt(void)
 void main(void) {
     //---------------------CONFIGURATIONS----------------------------
     InitLCD();
-    TRISBbits.RB4 = 0;
-    PORTBbits.RB4 = 0;
+    //TRISBbits.RB4 = 0;
+    //PORTBbits.RB4 = 0;
     initSpeakerModule();
+    configBOR();
     configKeypad();         //This Function also enables all interrupts
-    TRISBbits.RB3 = 0;
+    TRISBbits.RB3 = 0;      //Temprature congiuration
     
     //---------------------------------------------------------------
 

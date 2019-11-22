@@ -52,7 +52,7 @@
       <itemPath>C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/keypad.c</itemPath>
       <itemPath>C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/main.c</itemPath>
       <itemPath>C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/speaker.c</itemPath>
-      <itemPath>C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/temprature.c</itemPath>
+      <itemPath>C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/Brown-out.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -152,10 +152,6 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <item path="C:/Users/vasis/Documents/ECNG3006/ecng3006-project2/temprature.c"
-            ex="true"
-            overriding="false">
-      </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>
@@ -164,6 +160,7 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

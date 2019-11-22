@@ -101,6 +101,10 @@ void timer10sIsr(void)
         while(BusyXLCD());
         putsXLCD(hrVarOutput);
         while(BusyXLCD());
+        SetDDRamAddr(0x0E);    
+        while(BusyXLCD());
+        putrsXLCD("%");
+        while(BusyXLCD());
     }
     else
     {
@@ -175,7 +179,7 @@ void bpmCountIsr(void)
 {
     INTCONbits.INT0F = 0;
     
-    PORTBbits.RB4 = !(PORTBbits.RB4);
+    //PORTBbits.RB4 = !(PORTBbits.RB4);
     NNCount = NNCount + 1;
     if (state == 0)
     {

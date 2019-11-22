@@ -72,6 +72,10 @@ unsigned char initSequence(void);
 void writeByte(unsigned char data);
 char readByte(void);
 
+/***************************BOR Modules*************************/
+void LVDisr (void);
+void configBOR (void);
+
 
 
 #endif	/* MODULES_H */

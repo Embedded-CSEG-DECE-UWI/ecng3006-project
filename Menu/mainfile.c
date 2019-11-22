@@ -21,7 +21,6 @@ void low_isr(void);
 void keypress(void);
 void LcdSetup(void);
 void heartRateCal();
-int press();
 void pulseCounting();
 void TemperatureSetup(void);
 void timer0Setup();
@@ -30,7 +29,12 @@ void MenuMain(void);
 void ReadTemperature();
 void HRV();
 void Glucose();
-void speaker(void);
+void bpmAlarm(void);
+void hrvAlarm(void);
+void HRVprint();
+void HRVcal();
+void captureSetup();
+int press();
 
 
 int keyvalue = 13;
@@ -53,8 +57,12 @@ void interrupt_at_high_vector(void)
 void high_isr (void)
 {    
     if(INTCONbits.TMR0IF == 1 && keyvalue == 10){
-        heartRateCal();
         INTCONbits.TMR0IF = 0;
+        heartRateCal();
+    }
+    if(PIR2bits.CCP2IF == 1 && keyvalue == 10 ){
+        PIR2bits.CCP2IF = 0;
+        HRVcal();
     }
 }
 
@@ -73,16 +81,23 @@ void interrupt_at_low_vector(void)
 void low_isr(void)
 {
     if(INTCON3bits.INT1IF){
+    INTCON3bits.INT1IF = 0;                 //clears the external interrupt flag
     WriteCmdXLCD(0b00000001);                         
     keyvalue = press();                             //Calls the key press function inside the ISR
     itoa(keyvalue, keyvaluechar);
     }
-    INTCON3bits.INT1IF = 0;                 //clears the external interrupt flag
+   
     
     if(INTCON3bits.INT2IF){
+        INTCON3bits.INT2IF = 0;
         pulseCounting();
     }
-     INTCON3bits.INT2IF = 0;
+    
+    if (PIR1bits.TMR1IF = 1 && keyvalue == 10)
+    {
+        PIR1bits.TMR1IF = 0; 
+        HRVprint();
+    }
 }
 
 
@@ -105,23 +120,28 @@ void main(void){
     TemperatureSetup(); 
     timer0Setup();
     irPulseSetup();
+    timer1Setup();
+    //captureSetup();
     
     while(keyvalue == 13){
         MenuMain();
-        if(startTimer ==0){
+        /*if(startTimer ==0){
             startTimer = 1;
             CloseTimer0();
-        }
+        }*/
         //CloseTimer0();
     }
     while(keyvalue == 10){                  //Start live readings
+        HeartRt();
+        HRV();
+        captureSetup();
         ReadTemperature();
         //TimerStart();
         if(startTimer == 1){
         WriteTimer0(0xF0BD);
         startTimer = 0;
         }
-        HRV();
+        //HRV();
         Glucose();
         //startTimer = 0;
     }

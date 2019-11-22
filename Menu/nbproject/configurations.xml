@@ -35,6 +35,8 @@
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c</itemPath>
       <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c</itemPath>
+      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -136,6 +138,14 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
+      <item path="F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c"
+            ex="true"
+            overriding="false">
+      </item>
+      <item path="F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c"
+            ex="true"
+            overriding="false">
+      </item>
       <PICkit3PlatformTool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>

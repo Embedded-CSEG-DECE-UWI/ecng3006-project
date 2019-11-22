@@ -23,7 +23,7 @@ float TemperatureMeasurement(void)          //Function to measure the temperatur
     int total_temperature = 0;                      //initialize variable for total temperature 
     float average_temperature = 0.0;            //initialize variable for average temperature
     int count = 0;                                          //initialize variable for count
-    while( count < 200){                                //while loop to sample data multiple times
+    while( count < 101){                                //while loop to sample data multiple times
 	ow_write(0xEE); 
     	ow_write(0x22);                                                                                                                                                                                                                                                                                                                                                                      
     	ow_reset(); 
@@ -33,7 +33,7 @@ float TemperatureMeasurement(void)          //Function to measure the temperatur
     	total_temperature = total_temperature + raw_reading;            //adds all the temperature readings
         count++;                                            //increment count
     }
-     average_temperature = (float) total_temperature / 200;             //finds the average of all the values taken
+     average_temperature = (float) total_temperature / 101;             //finds the average of all the values taken
      return average_temperature;                                                       //return the value 
 }
 

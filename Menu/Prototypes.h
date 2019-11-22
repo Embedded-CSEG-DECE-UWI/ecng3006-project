@@ -8,7 +8,7 @@
 #ifndef PROTOTYPES_H
 #define	PROTOTYPES_H
 
-void speaker(void);
+void bpmAlarm(void);
 void pulseCounting();
 void timer0Setup();
 void irPulseSetup();
@@ -21,6 +21,9 @@ void MainMenu();
 void KeypadSetup(void);
 void ReadTemperature();
 void TemperatureSetup(void);
+void HRVprint();
+void HRVcal();
+void hrvAlarm(void);
 int press();
 
 #endif	/* PROTOTYPES_H */

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c
+SOURCEFILES_QUOTED_IF_SPACED=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o ${OBJECTDIR}/_ext/1339988166/Scrolling.o ${OBJECTDIR}/_ext/1339988166/HeartRate.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o.d ${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d ${OBJECTDIR}/_ext/1339988166/openxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d ${OBJECTDIR}/_ext/1339988166/readaddr.o.d ${OBJECTDIR}/_ext/1339988166/readdata.o.d ${OBJECTDIR}/_ext/1339988166/setcgram.o.d ${OBJECTDIR}/_ext/1339988166/setddram.o.d ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1339988166/writdata.o.d ${OBJECTDIR}/_ext/1339988166/LCD.o.d ${OBJECTDIR}/_ext/1339988166/keypad.o.d ${OBJECTDIR}/_ext/1339988166/Temperature.o.d ${OBJECTDIR}/_ext/1339988166/Speaker.o.d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d ${OBJECTDIR}/_ext/1339988166/Scrolling.o.d ${OBJECTDIR}/_ext/1339988166/HeartRate.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o ${OBJECTDIR}/_ext/1339988166/HeartRate.o ${OBJECTDIR}/_ext/1339988166/HRV.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o.d ${OBJECTDIR}/_ext/1339988166/busyxlcd.o.d ${OBJECTDIR}/_ext/1339988166/openxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putrxlcd.o.d ${OBJECTDIR}/_ext/1339988166/putsxlcd.o.d ${OBJECTDIR}/_ext/1339988166/readaddr.o.d ${OBJECTDIR}/_ext/1339988166/readdata.o.d ${OBJECTDIR}/_ext/1339988166/setcgram.o.d ${OBJECTDIR}/_ext/1339988166/setddram.o.d ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1339988166/writdata.o.d ${OBJECTDIR}/_ext/1339988166/LCD.o.d ${OBJECTDIR}/_ext/1339988166/keypad.o.d ${OBJECTDIR}/_ext/1339988166/Temperature.o.d ${OBJECTDIR}/_ext/1339988166/Speaker.o.d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d ${OBJECTDIR}/_ext/1339988166/HeartRate.o.d ${OBJECTDIR}/_ext/1339988166/HRV.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o ${OBJECTDIR}/_ext/1339988166/Scrolling.o ${OBJECTDIR}/_ext/1339988166/HeartRate.o
+OBJECTFILES=${OBJECTDIR}/_ext/1339988166/mainfile.o ${OBJECTDIR}/_ext/1339988166/busyxlcd.o ${OBJECTDIR}/_ext/1339988166/openxlcd.o ${OBJECTDIR}/_ext/1339988166/putrxlcd.o ${OBJECTDIR}/_ext/1339988166/putsxlcd.o ${OBJECTDIR}/_ext/1339988166/readaddr.o ${OBJECTDIR}/_ext/1339988166/readdata.o ${OBJECTDIR}/_ext/1339988166/setcgram.o ${OBJECTDIR}/_ext/1339988166/setddram.o ${OBJECTDIR}/_ext/1339988166/wcmdxlcd.o ${OBJECTDIR}/_ext/1339988166/writdata.o ${OBJECTDIR}/_ext/1339988166/LCD.o ${OBJECTDIR}/_ext/1339988166/keypad.o ${OBJECTDIR}/_ext/1339988166/Temperature.o ${OBJECTDIR}/_ext/1339988166/Speaker.o ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o ${OBJECTDIR}/_ext/1339988166/HeartRate.o ${OBJECTDIR}/_ext/1339988166/HRV.o
 
 # Source Files
-SOURCEFILES=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c
+SOURCEFILES=F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c
 
 
 CFLAGS=
@@ -229,14 +229,6 @@ ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o: F:/ECNG3006/Group_Project/ecng3006-
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1339988166/Scrolling.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
-	@${RM} ${OBJECTDIR}/_ext/1339988166/Scrolling.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1339988166/Scrolling.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Scrolling.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/Scrolling.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/Scrolling.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/_ext/1339988166/HeartRate.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/HeartRate.o.d 
@@ -244,6 +236,14 @@ ${OBJECTDIR}/_ext/1339988166/HeartRate.o: F:/ECNG3006/Group_Project/ecng3006-pro
 	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/HeartRate.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/HeartRate.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/HeartRate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1339988166/HRV.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
+	@${RM} ${OBJECTDIR}/_ext/1339988166/HRV.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1339988166/HRV.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/HRV.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/HRV.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/HRV.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/_ext/1339988166/mainfile.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c  nbproject/Makefile-${CND_CONF}.mk
@@ -374,14 +374,6 @@ ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o: F:/ECNG3006/Group_Project/ecng3006-
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/491720659/HRVandGlucose.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/491720659/HRVandGlucose.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/_ext/1339988166/Scrolling.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
-	@${RM} ${OBJECTDIR}/_ext/1339988166/Scrolling.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1339988166/Scrolling.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/Scrolling.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/Scrolling.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/Scrolling.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/_ext/1339988166/HeartRate.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
 	@${RM} ${OBJECTDIR}/_ext/1339988166/HeartRate.o.d 
@@ -389,6 +381,14 @@ ${OBJECTDIR}/_ext/1339988166/HeartRate.o: F:/ECNG3006/Group_Project/ecng3006-pro
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/HeartRate.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/HeartRate.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/HeartRate.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1339988166/HRV.o: F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1339988166" 
+	@${RM} ${OBJECTDIR}/_ext/1339988166/HRV.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1339988166/HRV.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1339988166/HRV.o   F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1339988166/HRV.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1339988166/HRV.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

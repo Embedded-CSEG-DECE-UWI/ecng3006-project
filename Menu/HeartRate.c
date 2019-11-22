@@ -19,22 +19,22 @@ void heartRateCal(){
     heartRate = (60*heartBeatCounter)/10;
     itoa(heartRate, heartRateOutput);
     
-    SetDDRamAddr(0x00);
-    putrsXLCD("P_Rate:         ");
+    //SetDDRamAddr(0x00);
+    //putrsXLCD("P_Rate:         ");
     while(BusyXLCD());
     SetDDRamAddr(0x09); 
     putsXLCD(heartRateOutput);
     while(BusyXLCD());
-    SetDDRamAddr(0x0C);
-    putrsXLCD(" bpm");
-    while(BusyXLCD());
+    //SetDDRamAddr(0x0C);
+    //putrsXLCD(" bpm");
+    //while(BusyXLCD());
     
     if(heartRate > 110){
-        speaker();
+        bpmAlarm();
     }
-    if(heartRate < 60){
-        speaker();
-    }
+   // if(heartRate < 60){
+   //     speaker();
+   // }
     
     heartRate = 0;
     heartBeatCounter = 0;

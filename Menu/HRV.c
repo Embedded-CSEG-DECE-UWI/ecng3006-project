@@ -89,14 +89,14 @@ void HRVprint()
 {
         if(timer1Period%19 == 0 && numNN50>0){
             pNN50 = (numNN50/numNNInterval)*100.0;;
-            itoa(pNN50, hrv_Output);       
+            //itoa(pNN50, hrv_Output);       
             //SetDDRamAddr(0x40);
             //while(BusyXLCD());
             //putrsXLCD("HRV:         ");
-            while(BusyXLCD());
-            SetDDRamAddr(0x4B); 
-            putsXLCD(hrv_Output);
-            while(BusyXLCD());
+            //while(BusyXLCD());
+            //SetDDRamAddr(0x4B); 
+            //putsXLCD(hrv_Output);
+            //while(BusyXLCD());
             //SetDDRamAddr(0x4E);
             //putrsXLCD(" %");
             //while(BusyXLCD());

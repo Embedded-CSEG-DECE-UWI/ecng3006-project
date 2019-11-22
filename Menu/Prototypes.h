@@ -26,5 +26,9 @@ void HRVcal();
 void hrvAlarm(void);
 int press();
 
+
+
+extern long double pNN50;
+extern int heartRate1;
 #endif	/* PROTOTYPES_H */
 

@@ -8,6 +8,7 @@
 int heartBeatCounter = 0;
 char heartRateOutput [3];
 int heartRate = 0;
+int heartRate1;
 int startHRV = 0;
 extern int startTimer;
 
@@ -17,14 +18,15 @@ void heartRateCal();
 
 void heartRateCal(){
     heartRate = (60*heartBeatCounter)/10;
-    itoa(heartRate, heartRateOutput);
+    heartRate1=heartRate;
+    //itoa(heartRate, heartRateOutput);
     
     //SetDDRamAddr(0x00);
     //putrsXLCD("P_Rate:         ");
-    while(BusyXLCD());
-    SetDDRamAddr(0x09); 
-    putsXLCD(heartRateOutput);
-    while(BusyXLCD());
+    //while(BusyXLCD());
+    //SetDDRamAddr(0x09); 
+    //putsXLCD(heartRateOutput);
+    //while(BusyXLCD());
     //SetDDRamAddr(0x0C);
     //putrsXLCD(" bpm");
     //while(BusyXLCD());

@@ -39,7 +39,7 @@ void DelayPORXLCD (void)
 }
 
 void heartRateCal(){
-    heartRate = (60*heartBeatCounter)/10;
+    heartRate = (60*heartBeatCounter)/5; //Change from 10s to 5s
     itoa(heartRate, heartRateOutput);
 
     WriteCmdXLCD(0b00000001);
@@ -58,7 +58,7 @@ void heartRateCal(){
     heartRate = 0;
     heartBeatCounter = 0;
     memset(heartRateOutput, 0, sizeof(heartRateOutput));    //Clears char[]
-    WriteTimer0(0x676A);     
+    WriteTimer0(0xb3b4);     
 }
 
 void lcdSetup (void)
@@ -152,7 +152,7 @@ void low_isr (void)
             startTimer = 1;
             timer0Setup();
             WriteCmdXLCD(0b00000001);
-            WriteTimer0(0xF0BD); 
+            WriteTimer0(0xb3b4); 
         }
         if (PORTCbits.RC7 && !PORTCbits.RC6 && PORTCbits.RC5 && PORTCbits.RC4)
         {

@@ -106,16 +106,16 @@ void high_isr (void)
             testtimer1 = timer1Period;
             ////HRVvar1 = HRVvar1 + (timer1Period * 500000);   
             //HRVvar1 = HRVvar1*timer1Period;
-            //HRVvar1 = testvar1*timer1Period;
+            HRVvar1 = testvar1*timer1Period;
             Nop();
         }
         else if(HRVvar1 != 0 && HRVvar2 == 0 && HRVvar3 == 0){
             //HRVvar2 = ReadCapture2();
             testvar2 = (long)ReadCapture2();
             testtimer2 = timer1Period;
-            HRVvar2 = HRVvar2 + (timer1Period * 500000);
+            //HRVvar2 = HRVvar2 + (timer1Period * 500000);
             //HRVvar2 = HRVvar2 *timer1Period;
-            //HRVvar2 = testvar2 *timer1Period;
+            HRVvar2 = testvar2 *timer1Period;
             if(HRVvar2 < HRVvar1){
                 hrvInterval1 = HRVvar1 - HRVvar2;
             }
@@ -128,9 +128,9 @@ void high_isr (void)
             //HRVvar3 = ReadCapture2();
             testvar3 = (long)ReadCapture2();
             testtimer3 = timer1Period;
-            HRVvar3 = HRVvar3 + (timer1Period * 500000);
+            //HRVvar3 = HRVvar3 + (timer1Period * 500000);
             //HRVvar3 = HRVvar3*timer1Period;
-            //HRVvar3 = testvar3*timer1Period;
+            HRVvar3 = testvar3*timer1Period;
             if(HRVvar3 < HRVvar2){
                 hrvInterval2 = HRVvar2 - HRVvar3;
             }
@@ -174,7 +174,7 @@ void low_isr (void)
 {    
     //Restarts the timer and checks current period
     if(PIR1bits.TMR1IF == 1){
-        if(timer1Period%19 == 0 && numNN50>0){
+        if(timer1Period%9 == 0 && numNN50>0){       //Changed from 19 to 9 for 5s
             pNN50 = (numNN50/numNNInterval)*100.0;
             displayVal = (int) pNN50;
             itoa(displayVal, ans1);

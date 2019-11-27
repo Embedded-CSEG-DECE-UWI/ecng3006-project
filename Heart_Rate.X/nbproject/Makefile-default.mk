@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1637256795/busyxlcd.o ${OBJECTDIR}/_ext/1637256795/openxlcd.o ${OBJECTDIR}/_ext/1637256795/pulse_counting.o ${OBJECTDIR}/_ext/1637256795/putrxlcd.o ${OBJECTDIR}/_ext/1637256795/putsxlcd.o ${OBJECTDIR}/_ext/1637256795/readaddr.o ${OBJECTDIR}/_ext/1637256795/readdata.o ${OBJECTDIR}/_ext/1637256795/setcgram.o ${OBJECTDIR}/_ext/1637256795/setddram.o ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o ${OBJECTDIR}/_ext/1637256795/writdata.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1637256795/busyxlcd.o.d ${OBJECTDIR}/_ext/1637256795/openxlcd.o.d ${OBJECTDIR}/_ext/1637256795/pulse_counting.o.d ${OBJECTDIR}/_ext/1637256795/putrxlcd.o.d ${OBJECTDIR}/_ext/1637256795/putsxlcd.o.d ${OBJECTDIR}/_ext/1637256795/readaddr.o.d ${OBJECTDIR}/_ext/1637256795/readdata.o.d ${OBJECTDIR}/_ext/1637256795/setcgram.o.d ${OBJECTDIR}/_ext/1637256795/setddram.o.d ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1637256795/writdata.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1637256795/busyxlcd.o ${OBJECTDIR}/_ext/1637256795/openxlcd.o ${OBJECTDIR}/_ext/1637256795/putrxlcd.o ${OBJECTDIR}/_ext/1637256795/putsxlcd.o ${OBJECTDIR}/_ext/1637256795/readaddr.o ${OBJECTDIR}/_ext/1637256795/readdata.o ${OBJECTDIR}/_ext/1637256795/setcgram.o ${OBJECTDIR}/_ext/1637256795/setddram.o ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o ${OBJECTDIR}/_ext/1637256795/writdata.o ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1637256795/busyxlcd.o.d ${OBJECTDIR}/_ext/1637256795/openxlcd.o.d ${OBJECTDIR}/_ext/1637256795/putrxlcd.o.d ${OBJECTDIR}/_ext/1637256795/putsxlcd.o.d ${OBJECTDIR}/_ext/1637256795/readaddr.o.d ${OBJECTDIR}/_ext/1637256795/readdata.o.d ${OBJECTDIR}/_ext/1637256795/setcgram.o.d ${OBJECTDIR}/_ext/1637256795/setddram.o.d ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o.d ${OBJECTDIR}/_ext/1637256795/writdata.o.d ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1637256795/busyxlcd.o ${OBJECTDIR}/_ext/1637256795/openxlcd.o ${OBJECTDIR}/_ext/1637256795/pulse_counting.o ${OBJECTDIR}/_ext/1637256795/putrxlcd.o ${OBJECTDIR}/_ext/1637256795/putsxlcd.o ${OBJECTDIR}/_ext/1637256795/readaddr.o ${OBJECTDIR}/_ext/1637256795/readdata.o ${OBJECTDIR}/_ext/1637256795/setcgram.o ${OBJECTDIR}/_ext/1637256795/setddram.o ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o ${OBJECTDIR}/_ext/1637256795/writdata.o
+OBJECTFILES=${OBJECTDIR}/_ext/1637256795/busyxlcd.o ${OBJECTDIR}/_ext/1637256795/openxlcd.o ${OBJECTDIR}/_ext/1637256795/putrxlcd.o ${OBJECTDIR}/_ext/1637256795/putsxlcd.o ${OBJECTDIR}/_ext/1637256795/readaddr.o ${OBJECTDIR}/_ext/1637256795/readdata.o ${OBJECTDIR}/_ext/1637256795/setcgram.o ${OBJECTDIR}/_ext/1637256795/setddram.o ${OBJECTDIR}/_ext/1637256795/wcmdxlcd.o ${OBJECTDIR}/_ext/1637256795/writdata.o ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o
 
 # Source Files
-SOURCEFILES=C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c
+SOURCEFILES=C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c
 
 
 CFLAGS=
@@ -116,14 +116,6 @@ ${OBJECTDIR}/_ext/1637256795/openxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/openxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/openxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1637256795/pulse_counting.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
-	@${RM} ${OBJECTDIR}/_ext/1637256795/pulse_counting.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1637256795/pulse_counting.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/pulse_counting.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/pulse_counting.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/pulse_counting.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1637256795/putrxlcd.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
@@ -189,6 +181,14 @@ ${OBJECTDIR}/_ext/1637256795/writdata.o: C:/MPLabXProjects/Group_Project/ecng300
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
+	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/_ext/1637256795/busyxlcd.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
@@ -205,14 +205,6 @@ ${OBJECTDIR}/_ext/1637256795/openxlcd.o: C:/MPLabXProjects/Group_Project/ecng300
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/openxlcd.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/openxlcd.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/openxlcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/_ext/1637256795/pulse_counting.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
-	@${RM} ${OBJECTDIR}/_ext/1637256795/pulse_counting.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1637256795/pulse_counting.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/pulse_counting.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/pulse_counting.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/pulse_counting.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/_ext/1637256795/putrxlcd.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
@@ -277,6 +269,14 @@ ${OBJECTDIR}/_ext/1637256795/writdata.o: C:/MPLabXProjects/Group_Project/ecng300
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/writdata.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/writdata.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/writdata.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o: C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1637256795" 
+	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o   C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1637256795/hrv_capture_test.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

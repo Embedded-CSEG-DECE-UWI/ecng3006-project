@@ -39,6 +39,7 @@
   <sourceRootList>
     <Elem>C:\MPLabXProjects\Heart_Rate.X</Elem>
     <Elem>C:\MPLabXProjects\Group_Project\ecng3006-project\Heart_Rate.X</Elem>
+    <Elem>C:\MPLabXProjects\Group_Project\ecng3006-project\Menu</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -166,11 +167,19 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c"
-            ex="true"
+            ex="false"
             overriding="false">
+        <C18>
+        </C18>
+        <C18-AS>
+        </C18-AS>
+        <C18-LD>
+        </C18-LD>
+        <C18LanguageToolchain>
+        </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -189,6 +198,7 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

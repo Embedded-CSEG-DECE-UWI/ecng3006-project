@@ -41,7 +41,6 @@ int test = 25;
 int nnIntervalcounter;
 
 unsigned double var1 = 0;
-//unsigned long var2 = 0;
 char ans1[2];
 char ans2[3];
 char ans3[10];
@@ -100,6 +99,7 @@ void high_isr (void)
         
         PIR2bits.CCP2IF = 0;
         
+        //Adapted from Asif Edoo
         if(HRVvar1 == 0 && HRVvar2 == 0 && HRVvar3 ==0){
             //HRVvar1 = ReadCapture2(); 
             testvar1 = (long)ReadCapture2();
@@ -174,7 +174,7 @@ void low_isr (void)
 {    
     //Restarts the timer and checks current period
     if(PIR1bits.TMR1IF == 1){
-        if(timer1Period%9 == 0 && numNN50>0){       //Changed from 19 to 9 for 5s
+        if(timer1Period%19 == 0 && numNN50>0){       
             pNN50 = (numNN50/numNNInterval)*100.0;
             displayVal = (int) pNN50;
             itoa(displayVal, ans1);
@@ -182,11 +182,15 @@ void low_isr (void)
             SetDDRamAddr(0x40);
             while(BusyXLCD());
             putsXLCD(ans1);
-            //pNN50 = 0;
-        }
-        //else if(timer1Period < 19){
-            //timer1Period = timer1Period++;
-        //}
+            while(BusyXLCD());
+            SetDDRamAddr(0x44);
+            while(BusyXLCD());
+            putrsXLCD("*");
+            numNNInterval = 0;
+            numNN50 = 0;
+            pNN50 = 0;
+                        
+        }        
         timer1Period = timer1Period++;
         WriteTimer1(0x0BDC);
     }
@@ -208,6 +212,11 @@ void lcdSetup (void)
     SetDDRamAddr(0x00);
     while (BusyXLCD());
     putrsXLCD("Testing HRV");
+    while(BusyXLCD());
+    SetDDRamAddr(0x40);
+    while(BusyXLCD());
+    putrsXLCD("00 %");
+    
 }
 
 void main()

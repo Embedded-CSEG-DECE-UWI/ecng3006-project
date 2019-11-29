@@ -9,6 +9,6 @@ This system is build on the PIC18f452 microcontroller using the FreeRTOS as the 
 This code could not be completed without referencing many different sources, the most impact listed below.
 We would like to thank everyone involved in the development of the system.
 
--(2017-2018)Group-H Team Red Solo 
+-(2017-2018)ECNG3006 Group-H Team Red Solo 
 -C18 Compiler Library
 

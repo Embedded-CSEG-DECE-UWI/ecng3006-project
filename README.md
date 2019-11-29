@@ -1,9 +1,5 @@
-# Batman and Robin
-This project aims to create an embedded system that monitors various input signals such as temperature, heart rate and glucose etc.
-This system is build on the PIC18f452 microcontroller using the FreeRTOS as the RTOS of choice.
-# Built With
--MPLABX IDE v5.05
--C18 Compiler
+# Heart Rate Monitor Code
+This is the software interface programmed in the PIC18F452 that processes the heart pulse signal from the heart rate monitor circuit. 
 
 # Acknowledgements
 This code could not be completed without referencing many different sources, the most impact listed below.

@@ -39,9 +39,17 @@ void captureSetup(){
         C2_EVERY_RISE_EDGE);     
 }
 
+//Adapted Code from Aasif Edoo 2018
+/***************************************************************************************
+*    Title: pulseCounter.c; Function Name: pulseCounter_ccpInt
+*    Author: Aasif Edoo
+*    Date: 28/11/18
+*    Code version: 1.0
+*
+***************************************************************************************/
+
 void HRVcal()
-{
-        
+{    
         if(HRVvar1 == 0 && HRVvar2 == 0 && HRVvar3 ==0){
             HRVvar1 = ReadCapture2(); 
             HRVvar1 = HRVvar1*timer1Period;

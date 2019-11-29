@@ -4,39 +4,38 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/ow.h</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/xlcd.h</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/delays.h</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Prototypes.h</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/Prototypes.h</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/delays.h</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/ow.h</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/xlcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/lab1_i.lkr</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/lab1_i.lkr</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/mainfile.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/busyxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/openxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/putrxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/putsxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/readaddr.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/readdata.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/setcgram.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/setddram.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/wcmdxlcd.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/writdata.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/LCD.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/keypad.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Temperature.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Speaker.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Temperature/HRVandGlucose.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/HeartRate.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c</itemPath>
-      <itemPath>F:/ECNG3006/Group_Project/ecng3006-project/Menu/HRV.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/HRV.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/HeartRate.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/LCD.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/Speaker.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/Temperature.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/busyxlcd.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/keypad.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/mainfile.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/openxlcd.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/putrxlcd.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/putsxlcd.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/readaddr.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/readdata.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/setcgram.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/setddram.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/wcmdxlcd.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/writdata.c</itemPath>
+      <itemPath>C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/HRVandGlucose.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -48,6 +47,7 @@
     <Elem>F:\ECNG3006\Group_Project\ecng3006-project\Temperature</Elem>
     <Elem>F:\ECNG3006\Group_Project\ecng3006-project\Menu</Elem>
     <Elem>F:\ECNG3006\Group_Project\ecng3006-project\keypad</Elem>
+    <Elem>C:\MPLabXProjects\Group_Project\ecng3006-project\Menu</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -138,11 +138,7 @@
         <property key="stack-analysis-mcc18" value="false"/>
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
-      <item path="F:/ECNG3006/Group_Project/ecng3006-project/Menu/Scrolling.c"
-            ex="true"
-            overriding="false">
-      </item>
-      <item path="F:/ECNG3006/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c"
+      <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Menu/heart_rate_variability_functions.c"
             ex="true"
             overriding="false">
       </item>

@@ -83,7 +83,7 @@ void low_isr(void)
     if(INTCON3bits.INT1IF){
     INTCON3bits.INT1IF = 0;                 //clears the external interrupt flag
     WriteCmdXLCD(0b00000001);                         
-    keyvalue = press();                             //Calls the key press function inside the ISR
+    keyvalue = press();                     //Calls the key press function inside the ISR
     itoa(keyvalue, keyvaluechar);
     }
    
@@ -133,8 +133,9 @@ void main(void){
     }
     while(keyvalue == 10){                  //Start live readings
         HeartRt();
+        Delay10KTCYx(10);
         HRV();
-        captureSetup();
+        //captureSetup();
         ReadTemperature();
         //TimerStart();
         if(startTimer == 1){

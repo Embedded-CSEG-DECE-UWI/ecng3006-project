@@ -1,9 +1,5 @@
-# Batman and Robin
-This project aims to create an embedded system that monitors various input signals such as temperature, heart rate and glucose etc.
-This system is build on the PIC18f452 microcontroller using the FreeRTOS as the RTOS of choice.
-# Built With
--MPLABX IDE v5.05
--C18 Compiler
+# FlashRAM code
+This is the software interface that allows the PIC18F452 to read, write, abd erase data to the RAM
 
 # Acknowledgements
 This code could not be completed without referencing many different sources, the most impact listed below.

@@ -55,15 +55,7 @@ void readAndDisplayKey(void){
     int output;    
     char y[20];
     char out[20];
-    //output = 0;
-    //output = output | PORTBbits.RB7;
-    //output = output << 1;
-    //output = output | PORTBbits.RB6;
-    //output = output << 1;
-    //output = output | PORTBbits.RB5;
-    //output = output << 1;
-    //output = output | PORTBbits.RB4;
-	output =(PORTC&bitmask);  
+    output =(PORTC&bitmask);  
     switch (output){
         case 0:
           sprintf(y,"1");

@@ -1,9 +1,5 @@
-# Batman and Robin
-This project aims to create an embedded system that monitors various input signals such as temperature, heart rate and glucose etc.
-This system is build on the PIC18f452 microcontroller using the FreeRTOS as the RTOS of choice.
-# Built With
--MPLABX IDE v5.05
--C18 Compiler
+# Keypad code
+This is the software interface that process the keypad circuit output for each key and defines cases(instructions) for each key when pressed. 
 
 # Acknowledgements
 This code could not be completed without referencing many different sources, the most impact listed below.

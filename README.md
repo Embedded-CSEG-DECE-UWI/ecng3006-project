@@ -1,5 +1,5 @@
 # FlashRAM code
-This is the software interface that allows the PIC18F452 to read, write, abd erase data to the RAM
+This is the software interface that allows the PIC18F452 to read, write, and erase data to the RAM
 
 # Acknowledgements
 This code could not be completed without referencing many different sources, the most impact listed below.

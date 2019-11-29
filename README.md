@@ -1,4 +1,4 @@
-# Plus Ultra
+# Batman and Robin
 This project aims to create an embedded system that monitors various input signals such as temperature, heart rate and glucose etc.
 This system is build on the PIC18f452 microcontroller using the FreeRTOS as the RTOS of choice.
 # Built With

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PU-GroupProject
+PROJECTNAME=lcdtest3.X
 
 # Active Configuration
 DEFAULTCONF=default

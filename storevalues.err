@@ -1,0 +1,3 @@
+Error[1105] H:\ECNG3006\lcdtest3.X\storevalues.c 58 : symbol 'hrv2' has not been defined
+Error[1129] H:\ECNG3006\lcdtest3.X\storevalues.c 58 : [] operator requires a pointer and an integer as operands
+Warning[2054] H:\ECNG3006\lcdtest3.X\storevalues.c 58 : suspicious pointer conversion

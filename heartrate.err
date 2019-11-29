@@ -1,0 +1,9 @@
+Warning[2066] H:\ECNG3006\lcdtest3.X\heartrate.c 93 : type qualifier mismatch in assignment
+Warning[2054] H:\ECNG3006\lcdtest3.X\heartrate.c 103 : suspicious pointer conversion
+Warning[2054] H:\ECNG3006\lcdtest3.X\heartrate.c 113 : suspicious pointer conversion
+Warning[2058] H:\ECNG3006\lcdtest3.X\heartrate.c 281 : call of function without prototype
+Warning[2058] H:\ECNG3006\lcdtest3.X\heartrate.c 291 : call of function without prototype
+Warning[2058] H:\ECNG3006\lcdtest3.X\heartrate.c 307 : call of function without prototype
+Warning[2066] H:\ECNG3006\lcdtest3.X\heartrate.c 309 : type qualifier mismatch in assignment
+Warning[2054] H:\ECNG3006\lcdtest3.X\heartrate.c 330 : suspicious pointer conversion
+Warning[2054] H:\ECNG3006\lcdtest3.X\heartrate.c 331 : suspicious pointer conversion

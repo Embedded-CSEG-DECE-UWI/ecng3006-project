@@ -1,7 +1,6 @@
 #include <p18f452.h>
 #include <delays.h>
 #include "xlcd.h"
-//#include "SST39SF040v2.h"
 #include "flashram.h"
 #include <stdio.h>
 #include <stdlib.h>

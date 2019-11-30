@@ -1,6 +1,11 @@
 # Plus Ultra
 This project aims to create an embedded system that monitors various input signals such as temperature, heart rate and glucose etc.
 This system is build on the PIC18f452 microcontroller using the FreeRTOS as the RTOS of choice.
+There was a change during the project and the group decided on using a foreground/background implementation of the code.
+
+# Changelist
+- Using foreground/background instead of an OS
+
 # Built With
 -MPLABX IDE v5.05
 -C18 Compiler

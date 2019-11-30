@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Fri Nov 22 07:55:48 2019
+Linker Map File - Created Fri Nov 29 17:43:35 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -9,136 +9,136 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
               high_vector       code   0x000008    program   0x000022
                    .cinit    romdata   0x00002a    program   0x00001a
          .code_vfprintf.o       code   0x000044    program   0x000c22
-        .code_heartrate.o       code   0x000c66    program   0x00061a
-                     PROG       code   0x001280    program   0x000558
-             .code_main.o       code   0x0017d8    program   0x000532
-                   STDLIB       code   0x001d0a    program   0x000134
-   .code_DelayFunctions.o       code   0x001e3e    program   0x000130
-        .code_Brown-out.o       code   0x001f6e    program   0x0000f2
-         .code_openxlcd.o       code   0x002060    program   0x0000ce
-          .code_speaker.o       code   0x00212e    program   0x0000bc
-          .code_sprintf.o       code   0x0021ea    program   0x0000ac
-               _cinit_scn       code   0x002296    program   0x00009e
-             .stringtable    romdata   0x002334    program   0x00009d
-        .idata_keypad.o_i    romdata   0x0023d1    program   0x000000
-          .romdata_main.o    romdata   0x0023d1    program   0x000000
-       .idata_t0write.o_i    romdata   0x0023d1    program   0x000000
-       .romdata_t0write.o    romdata   0x0023d1    program   0x000000
-     .romdata_heartrate.o    romdata   0x0023d1    program   0x000000
-      .romdata_writdata.o    romdata   0x0023d1    program   0x000000
-        .idata_t1open.o_i    romdata   0x0023d1    program   0x000000
-        .romdata_t1open.o    romdata   0x0023d1    program   0x000000
-      .idata_wcmdxlcd.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_setddram.o    romdata   0x0023d1    program   0x000000
-       .idata_t1write.o_i    romdata   0x0023d1    program   0x000000
-       .romdata_t1write.o    romdata   0x0023d1    program   0x000000
-      .idata_setddram.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_readdata.o    romdata   0x0023d1    program   0x000000
-      .idata_busyxlcd.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_busyxlcd.o    romdata   0x0023d1    program   0x000000
-      .idata_readdata.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_putsxlcd.o    romdata   0x0023d1    program   0x000000
-      .idata_putsxlcd.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x0023d1    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x0023d1    program   0x000000
-       .romdata_pw1open.o    romdata   0x0023d1    program   0x000000
-       .idata_pw1open.o_i    romdata   0x0023d1    program   0x000000
-      .idata_pw1setoc.o_i    romdata   0x0023d1    program   0x000000
-      .romdata_pw1setoc.o    romdata   0x0023d1    program   0x000000
-          .idata_putc.o_i    romdata   0x0023d1    program   0x000000
-       .romdata_sprintf.o    romdata   0x0023d1    program   0x000000
-          .romdata_putc.o    romdata   0x0023d1    program   0x000000
-       .idata_sprintf.o_i    romdata   0x0023d1    program   0x000000
-        .idata_t2open.o_i    romdata   0x0023d1    program   0x000000
-        .romdata_t2open.o    romdata   0x0023d1    program   0x000000
-        .romdata___init.o    romdata   0x0023d1    program   0x000000
-        .idata___init.o_i    romdata   0x0023d1    program   0x000000
-       .idata_t2write.o_i    romdata   0x0023d1    program   0x000000
-       .romdata_t2write.o    romdata   0x0023d1    program   0x000000
-     .romdata_Brown-out.o    romdata   0x0023d1    program   0x000000
-     .idata_Brown-out.o_i    romdata   0x0023d1    program   0x000000
-        .idata_t0open.o_i    romdata   0x0023d1    program   0x000000
-        .romdata_t0open.o    romdata   0x0023d1    program   0x000000
-             .code_putc.o       code   0x0023d2    program   0x000084
-          .code_fxm3232.o       code   0x002456    program   0x000070
-         .code_pw1setoc.o       code   0x0024c6    program   0x00006c
-                   STRING       code   0x002532    program   0x000066
-         .code_pw1setdc.o       code   0x002598    program   0x00005a
-         .code_setddram.o       code   0x0025f2    program   0x00004e
-         .code_setcgram.o       code   0x002640    program   0x00004e
-         .code_putrxlcd.o       code   0x00268e    program   0x00004e
-         .code_writdata.o       code   0x0026dc    program   0x00004c
-         .code_wcmdxlcd.o       code   0x002728    program   0x00004c
-         .code_putsxlcd.o       code   0x002774    program   0x00004a
-         .code_fxd3232u.o       code   0x0027be    program   0x000048
-         .code_readdata.o       code   0x002806    program   0x000044
-         .code_readaddr.o       code   0x00284a    program   0x000044
-           .code_t1read.o       code   0x00288e    program   0x00003a
-           .code_t0read.o       code   0x0028c8    program   0x00003a
-           .code_t1open.o       code   0x002902    program   0x000036
-         .code_busyxlcd.o       code   0x002938    program   0x000036
-          .code_t1write.o       code   0x00296e    program   0x000034
-          .code_t0write.o       code   0x0029a2    program   0x000034
-             D10KTCYXCODE       code   0x0029d6    program   0x00002e
-           .code_t0open.o       code   0x002a04    program   0x00002c
-           .code_t2open.o       code   0x002a30    program   0x00002a
-                    CTYPE       code   0x002a5a    program   0x000024
-          .code_pw1open.o       code   0x002a7e    program   0x000024
-              D1KTCYXCODE       code   0x002aa2    program   0x000020
-                    .code       code   0x002ac2    program   0x000020
-             _startup_scn       code   0x002ae2    program   0x00001c
-                    STDIO       code   0x002afe    program   0x00001c
-           .code_t2read.o       code   0x002b1a    program   0x00001a
-              D10TCYXCODE       code   0x002b34    program   0x000016
-          .code_t2write.o       code   0x002b4a    program   0x000016
-      .romdata_vfprintf.o    romdata   0x002b60    program   0x000011
-       .idata_t0close.o_i    romdata   0x002b71    program   0x000000
-        .romdata_t2read.o    romdata   0x002b71    program   0x000000
-        .idata_t2read.o_i    romdata   0x002b71    program   0x000000
-       .romdata_t0close.o    romdata   0x002b71    program   0x000000
-       .romdata_t2close.o    romdata   0x002b71    program   0x000000
-       .idata_t2close.o_i    romdata   0x002b71    program   0x000000
-      .idata_vfprintf.o_i    romdata   0x002b71    program   0x000000
-      .romdata_pw1setdc.o    romdata   0x002b71    program   0x000000
-      .idata_pw1setdc.o_i    romdata   0x002b71    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x002b71    program   0x000000
-       .romdata_fxm3232.o    romdata   0x002b71    program   0x000000
-      .romdata_pw1close.o    romdata   0x002b71    program   0x000000
-      .idata_pw1close.o_i    romdata   0x002b71    program   0x000000
-    .idata__user_putc.o_i    romdata   0x002b71    program   0x000000
-    .romdata__user_putc.o    romdata   0x002b71    program   0x000000
-         .romdata_c018i.o    romdata   0x002b71    program   0x000000
-         .idata_c018i.o_i    romdata   0x002b71    program   0x000000
-      .romdata_setcgram.o    romdata   0x002b71    program   0x000000
-.idata_DelayFunctions.o_i    romdata   0x002b71    program   0x000000
-        .romdata_t1read.o    romdata   0x002b71    program   0x000000
-        .idata_t1read.o_i    romdata   0x002b71    program   0x000000
-      .romdata_wcmdxlcd.o    romdata   0x002b71    program   0x000000
-      .idata_writdata.o_i    romdata   0x002b71    program   0x000000
-      .idata_setcgram.o_i    romdata   0x002b71    program   0x000000
-       .romdata_t1close.o    romdata   0x002b71    program   0x000000
-.romdata_DelayFunctions.o    romdata   0x002b71    program   0x000000
-       .idata_t1close.o_i    romdata   0x002b71    program   0x000000
-        .romdata_keypad.o    romdata   0x002b71    program   0x000000
-      .romdata_readaddr.o    romdata   0x002b71    program   0x000000
-      .idata_readaddr.o_i    romdata   0x002b71    program   0x000000
-        .romdata_t0read.o    romdata   0x002b71    program   0x000000
-        .idata_t0read.o_i    romdata   0x002b71    program   0x000000
-      .idata_openxlcd.o_i    romdata   0x002b71    program   0x000000
-      .romdata_openxlcd.o    romdata   0x002b71    program   0x000000
-      .idata_putrxlcd.o_i    romdata   0x002b71    program   0x000000
-       .idata_speaker.o_i    romdata   0x002b71    program   0x000000
-       .romdata_speaker.o    romdata   0x002b71    program   0x000000
-      .romdata_putrxlcd.o    romdata   0x002b71    program   0x000000
-           .code_keypad.o       code   0x002b72    program   0x000010
-            .code_c018i.o       code   0x002b72    program   0x000000
-          .code_t2close.o       code   0x002b82    program   0x000006
-          .code_t1close.o       code   0x002b88    program   0x000006
-          .code_t0close.o       code   0x002b8e    program   0x000006
-         .code_pw1close.o       code   0x002b94    program   0x000004
-           .code___init.o       code   0x002b98    program   0x000002
-          .idata_main.o_i    romdata   0x002b9a    program   0x000011
-     .idata_heartrate.o_i    romdata   0x002bab    program   0x00000a
+        .code_heartrate.o       code   0x000c66    program   0x00063a
+                     PROG       code   0x0012a0    program   0x000558
+             .code_main.o       code   0x0017f8    program   0x000542
+          .code_speaker.o       code   0x001d3a    program   0x00016e
+                   STDLIB       code   0x001ea8    program   0x000134
+   .code_DelayFunctions.o       code   0x001fdc    program   0x000130
+        .code_Brown-out.o       code   0x00210c    program   0x0000f2
+         .code_openxlcd.o       code   0x0021fe    program   0x0000ce
+          .code_sprintf.o       code   0x0022cc    program   0x0000ac
+               _cinit_scn       code   0x002378    program   0x00009e
+             .stringtable    romdata   0x002416    program   0x00009d
+        .idata_keypad.o_i    romdata   0x0024b3    program   0x000000
+       .idata_t0write.o_i    romdata   0x0024b3    program   0x000000
+       .romdata_t0write.o    romdata   0x0024b3    program   0x000000
+          .romdata_main.o    romdata   0x0024b3    program   0x000000
+     .romdata_heartrate.o    romdata   0x0024b3    program   0x000000
+      .romdata_writdata.o    romdata   0x0024b3    program   0x000000
+        .idata_t1open.o_i    romdata   0x0024b3    program   0x000000
+        .romdata_t1open.o    romdata   0x0024b3    program   0x000000
+      .idata_wcmdxlcd.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_setddram.o    romdata   0x0024b3    program   0x000000
+       .idata_t1write.o_i    romdata   0x0024b3    program   0x000000
+       .romdata_t1write.o    romdata   0x0024b3    program   0x000000
+      .idata_setddram.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_readdata.o    romdata   0x0024b3    program   0x000000
+      .idata_busyxlcd.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_busyxlcd.o    romdata   0x0024b3    program   0x000000
+      .idata_readdata.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_putsxlcd.o    romdata   0x0024b3    program   0x000000
+      .idata_putsxlcd.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x0024b3    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x0024b3    program   0x000000
+       .romdata_pw1open.o    romdata   0x0024b3    program   0x000000
+       .idata_pw1open.o_i    romdata   0x0024b3    program   0x000000
+      .idata_pw1setoc.o_i    romdata   0x0024b3    program   0x000000
+      .romdata_pw1setoc.o    romdata   0x0024b3    program   0x000000
+          .idata_putc.o_i    romdata   0x0024b3    program   0x000000
+       .romdata_sprintf.o    romdata   0x0024b3    program   0x000000
+          .romdata_putc.o    romdata   0x0024b3    program   0x000000
+       .idata_sprintf.o_i    romdata   0x0024b3    program   0x000000
+        .idata_t2open.o_i    romdata   0x0024b3    program   0x000000
+        .romdata_t2open.o    romdata   0x0024b3    program   0x000000
+        .romdata___init.o    romdata   0x0024b3    program   0x000000
+        .idata___init.o_i    romdata   0x0024b3    program   0x000000
+       .idata_t2write.o_i    romdata   0x0024b3    program   0x000000
+       .romdata_t2write.o    romdata   0x0024b3    program   0x000000
+     .romdata_Brown-out.o    romdata   0x0024b3    program   0x000000
+     .idata_Brown-out.o_i    romdata   0x0024b3    program   0x000000
+        .idata_t0open.o_i    romdata   0x0024b3    program   0x000000
+        .romdata_t0open.o    romdata   0x0024b3    program   0x000000
+             .code_putc.o       code   0x0024b4    program   0x000084
+          .code_fxm3232.o       code   0x002538    program   0x000070
+         .code_pw1setoc.o       code   0x0025a8    program   0x00006c
+                   STRING       code   0x002614    program   0x000066
+         .code_pw1setdc.o       code   0x00267a    program   0x00005a
+         .code_setddram.o       code   0x0026d4    program   0x00004e
+         .code_setcgram.o       code   0x002722    program   0x00004e
+         .code_putrxlcd.o       code   0x002770    program   0x00004e
+         .code_writdata.o       code   0x0027be    program   0x00004c
+         .code_wcmdxlcd.o       code   0x00280a    program   0x00004c
+         .code_putsxlcd.o       code   0x002856    program   0x00004a
+         .code_fxd3232u.o       code   0x0028a0    program   0x000048
+         .code_readdata.o       code   0x0028e8    program   0x000044
+         .code_readaddr.o       code   0x00292c    program   0x000044
+           .code_t1read.o       code   0x002970    program   0x00003a
+           .code_t0read.o       code   0x0029aa    program   0x00003a
+           .code_t1open.o       code   0x0029e4    program   0x000036
+         .code_busyxlcd.o       code   0x002a1a    program   0x000036
+          .code_t1write.o       code   0x002a50    program   0x000034
+          .code_t0write.o       code   0x002a84    program   0x000034
+             D10KTCYXCODE       code   0x002ab8    program   0x00002e
+           .code_t0open.o       code   0x002ae6    program   0x00002c
+           .code_t2open.o       code   0x002b12    program   0x00002a
+                    CTYPE       code   0x002b3c    program   0x000024
+          .code_pw1open.o       code   0x002b60    program   0x000024
+              D1KTCYXCODE       code   0x002b84    program   0x000020
+                    .code       code   0x002ba4    program   0x000020
+             _startup_scn       code   0x002bc4    program   0x00001c
+                    STDIO       code   0x002be0    program   0x00001c
+           .code_t2read.o       code   0x002bfc    program   0x00001a
+              D10TCYXCODE       code   0x002c16    program   0x000016
+          .code_t2write.o       code   0x002c2c    program   0x000016
+      .romdata_vfprintf.o    romdata   0x002c42    program   0x000011
+       .idata_t0close.o_i    romdata   0x002c53    program   0x000000
+        .romdata_t2read.o    romdata   0x002c53    program   0x000000
+        .idata_t2read.o_i    romdata   0x002c53    program   0x000000
+       .romdata_t0close.o    romdata   0x002c53    program   0x000000
+       .romdata_t2close.o    romdata   0x002c53    program   0x000000
+       .idata_t2close.o_i    romdata   0x002c53    program   0x000000
+      .idata_vfprintf.o_i    romdata   0x002c53    program   0x000000
+      .romdata_pw1setdc.o    romdata   0x002c53    program   0x000000
+      .idata_pw1setdc.o_i    romdata   0x002c53    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x002c53    program   0x000000
+       .romdata_fxm3232.o    romdata   0x002c53    program   0x000000
+      .romdata_pw1close.o    romdata   0x002c53    program   0x000000
+      .idata_pw1close.o_i    romdata   0x002c53    program   0x000000
+    .idata__user_putc.o_i    romdata   0x002c53    program   0x000000
+    .romdata__user_putc.o    romdata   0x002c53    program   0x000000
+         .romdata_c018i.o    romdata   0x002c53    program   0x000000
+         .idata_c018i.o_i    romdata   0x002c53    program   0x000000
+      .romdata_setcgram.o    romdata   0x002c53    program   0x000000
+.idata_DelayFunctions.o_i    romdata   0x002c53    program   0x000000
+        .romdata_t1read.o    romdata   0x002c53    program   0x000000
+        .idata_t1read.o_i    romdata   0x002c53    program   0x000000
+      .romdata_wcmdxlcd.o    romdata   0x002c53    program   0x000000
+      .idata_writdata.o_i    romdata   0x002c53    program   0x000000
+      .idata_setcgram.o_i    romdata   0x002c53    program   0x000000
+       .romdata_t1close.o    romdata   0x002c53    program   0x000000
+.romdata_DelayFunctions.o    romdata   0x002c53    program   0x000000
+       .idata_t1close.o_i    romdata   0x002c53    program   0x000000
+        .romdata_keypad.o    romdata   0x002c53    program   0x000000
+      .romdata_readaddr.o    romdata   0x002c53    program   0x000000
+      .idata_readaddr.o_i    romdata   0x002c53    program   0x000000
+        .romdata_t0read.o    romdata   0x002c53    program   0x000000
+        .idata_t0read.o_i    romdata   0x002c53    program   0x000000
+      .idata_openxlcd.o_i    romdata   0x002c53    program   0x000000
+      .romdata_openxlcd.o    romdata   0x002c53    program   0x000000
+      .idata_putrxlcd.o_i    romdata   0x002c53    program   0x000000
+       .idata_speaker.o_i    romdata   0x002c53    program   0x000000
+       .romdata_speaker.o    romdata   0x002c53    program   0x000000
+      .romdata_putrxlcd.o    romdata   0x002c53    program   0x000000
+           .code_keypad.o       code   0x002c54    program   0x000010
+            .code_c018i.o       code   0x002c54    program   0x000000
+          .code_t2close.o       code   0x002c64    program   0x000006
+          .code_t1close.o       code   0x002c6a    program   0x000006
+          .code_t0close.o       code   0x002c70    program   0x000006
+         .code_pw1close.o       code   0x002c76    program   0x000004
+           .code___init.o       code   0x002c7a    program   0x000002
+          .idata_main.o_i    romdata   0x002c7c    program   0x000011
+     .idata_heartrate.o_i    romdata   0x002c8d    program   0x00000a
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -154,82 +154,82 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
             .idata_main.o      idata   0x000419       data   0x000011
            .udata_c018i.o      udata   0x00042a       data   0x00000a
        .idata_heartrate.o      idata   0x000434       data   0x00000a
-         .udata_speaker.o      udata   0x00043e       data   0x000004
-      .udata__user_putc.o      udata   0x000442       data   0x000000
-          .idata_keypad.o      idata   0x000442       data   0x000000
-          .udata_keypad.o      udata   0x000442       data   0x000000
-         .udata_pw1open.o      udata   0x000442       data   0x000000
-      .idata__user_putc.o      idata   0x000442       data   0x000000
-       .udata_heartrate.o      udata   0x000442       data   0x000000
-        .idata_writdata.o      idata   0x000442       data   0x000000
-        .udata_writdata.o      udata   0x000442       data   0x000000
-        .idata_wcmdxlcd.o      idata   0x000442       data   0x000000
-        .udata_wcmdxlcd.o      udata   0x000442       data   0x000000
-        .idata_setddram.o      idata   0x000442       data   0x000000
-        .udata_setddram.o      udata   0x000442       data   0x000000
-        .idata_setcgram.o      idata   0x000442       data   0x000000
-        .udata_setcgram.o      udata   0x000442       data   0x000000
-        .idata_readdata.o      idata   0x000442       data   0x000000
-        .udata_readdata.o      udata   0x000442       data   0x000000
-        .idata_readaddr.o      idata   0x000442       data   0x000000
-         .idata_fxm3232.o      idata   0x000442       data   0x000000
-         .udata_fxm3232.o      udata   0x000442       data   0x000000
-        .idata_fxd3232u.o      idata   0x000442       data   0x000000
-        .udata_fxd3232u.o      udata   0x000442       data   0x000000
-        .idata_vfprintf.o      idata   0x000442       data   0x000000
-        .udata_vfprintf.o      udata   0x000442       data   0x000000
-         .idata_sprintf.o      idata   0x000442       data   0x000000
-         .udata_sprintf.o      udata   0x000442       data   0x000000
-          .idata___init.o      idata   0x000442       data   0x000000
-          .udata___init.o      udata   0x000442       data   0x000000
-           .idata_c018i.o      idata   0x000442       data   0x000000
-        .udata_pw1close.o      udata   0x000442       data   0x000000
-       .idata_Brown-out.o      idata   0x000442       data   0x000000
-       .udata_Brown-out.o      udata   0x000442       data   0x000000
-         .idata_speaker.o      idata   0x000442       data   0x000000
-            .udata_putc.o      udata   0x000442       data   0x000000
-        .idata_pw1close.o      idata   0x000442       data   0x000000
-            .idata_putc.o      idata   0x000442       data   0x000000
-         .udata_t0write.o      udata   0x000442       data   0x000000
-          .idata_t0read.o      idata   0x000442       data   0x000000
-          .udata_t0read.o      udata   0x000442       data   0x000000
-          .idata_t0open.o      idata   0x000442       data   0x000000
-          .udata_t0open.o      udata   0x000442       data   0x000000
-         .idata_t0close.o      idata   0x000442       data   0x000000
-         .udata_t0close.o      udata   0x000442       data   0x000000
-         .idata_t2write.o      idata   0x000442       data   0x000000
-         .udata_t2write.o      udata   0x000442       data   0x000000
-          .idata_t2read.o      idata   0x000442       data   0x000000
-          .udata_t2read.o      udata   0x000442       data   0x000000
-          .idata_t2open.o      idata   0x000442       data   0x000000
-          .udata_t2open.o      udata   0x000442       data   0x000000
-         .idata_t2close.o      idata   0x000442       data   0x000000
-         .udata_t2close.o      udata   0x000442       data   0x000000
-        .idata_pw1setoc.o      idata   0x000442       data   0x000000
-        .udata_pw1setoc.o      udata   0x000442       data   0x000000
-        .idata_pw1setdc.o      idata   0x000442       data   0x000000
-        .udata_pw1setdc.o      udata   0x000442       data   0x000000
-         .idata_pw1open.o      idata   0x000442       data   0x000000
-        .udata_readaddr.o      udata   0x000442       data   0x000000
-        .idata_putsxlcd.o      idata   0x000442       data   0x000000
-        .udata_putsxlcd.o      udata   0x000442       data   0x000000
-        .idata_putrxlcd.o      idata   0x000442       data   0x000000
-        .udata_putrxlcd.o      udata   0x000442       data   0x000000
-        .idata_openxlcd.o      idata   0x000442       data   0x000000
-        .udata_openxlcd.o      udata   0x000442       data   0x000000
-        .idata_busyxlcd.o      idata   0x000442       data   0x000000
-        .udata_busyxlcd.o      udata   0x000442       data   0x000000
-  .idata_DelayFunctions.o      idata   0x000442       data   0x000000
-  .udata_DelayFunctions.o      udata   0x000442       data   0x000000
-         .idata_t1write.o      idata   0x000442       data   0x000000
-         .udata_t1write.o      udata   0x000442       data   0x000000
-          .idata_t1read.o      idata   0x000442       data   0x000000
-          .udata_t1read.o      udata   0x000442       data   0x000000
-          .idata_t1open.o      idata   0x000442       data   0x000000
-          .udata_t1open.o      udata   0x000442       data   0x000000
-         .idata_t1close.o      idata   0x000442       data   0x000000
-         .udata_t1close.o      udata   0x000442       data   0x000000
-         .idata_t0write.o      idata   0x000442       data   0x000000
+         .udata_speaker.o      udata   0x00043e       data   0x000002
+      .udata__user_putc.o      udata   0x000440       data   0x000000
+          .idata_keypad.o      idata   0x000440       data   0x000000
+          .udata_keypad.o      udata   0x000440       data   0x000000
+         .udata_pw1open.o      udata   0x000440       data   0x000000
+      .idata__user_putc.o      idata   0x000440       data   0x000000
+       .udata_heartrate.o      udata   0x000440       data   0x000000
+        .idata_writdata.o      idata   0x000440       data   0x000000
+        .udata_writdata.o      udata   0x000440       data   0x000000
+        .idata_wcmdxlcd.o      idata   0x000440       data   0x000000
+        .udata_wcmdxlcd.o      udata   0x000440       data   0x000000
+        .idata_setddram.o      idata   0x000440       data   0x000000
+        .udata_setddram.o      udata   0x000440       data   0x000000
+        .idata_setcgram.o      idata   0x000440       data   0x000000
+        .udata_setcgram.o      udata   0x000440       data   0x000000
+        .idata_readdata.o      idata   0x000440       data   0x000000
+        .udata_readdata.o      udata   0x000440       data   0x000000
+        .idata_readaddr.o      idata   0x000440       data   0x000000
+         .idata_fxm3232.o      idata   0x000440       data   0x000000
+         .udata_fxm3232.o      udata   0x000440       data   0x000000
+        .idata_fxd3232u.o      idata   0x000440       data   0x000000
+        .udata_fxd3232u.o      udata   0x000440       data   0x000000
+        .idata_vfprintf.o      idata   0x000440       data   0x000000
+        .udata_vfprintf.o      udata   0x000440       data   0x000000
+         .idata_sprintf.o      idata   0x000440       data   0x000000
+         .udata_sprintf.o      udata   0x000440       data   0x000000
+          .idata___init.o      idata   0x000440       data   0x000000
+          .udata___init.o      udata   0x000440       data   0x000000
+           .idata_c018i.o      idata   0x000440       data   0x000000
+        .udata_pw1close.o      udata   0x000440       data   0x000000
+       .idata_Brown-out.o      idata   0x000440       data   0x000000
+       .udata_Brown-out.o      udata   0x000440       data   0x000000
+         .idata_speaker.o      idata   0x000440       data   0x000000
+            .udata_putc.o      udata   0x000440       data   0x000000
+        .idata_pw1close.o      idata   0x000440       data   0x000000
+            .idata_putc.o      idata   0x000440       data   0x000000
+         .udata_t0write.o      udata   0x000440       data   0x000000
+          .idata_t0read.o      idata   0x000440       data   0x000000
+          .udata_t0read.o      udata   0x000440       data   0x000000
+          .idata_t0open.o      idata   0x000440       data   0x000000
+          .udata_t0open.o      udata   0x000440       data   0x000000
+         .idata_t0close.o      idata   0x000440       data   0x000000
+         .udata_t0close.o      udata   0x000440       data   0x000000
+         .idata_t2write.o      idata   0x000440       data   0x000000
+         .udata_t2write.o      udata   0x000440       data   0x000000
+          .idata_t2read.o      idata   0x000440       data   0x000000
+          .udata_t2read.o      udata   0x000440       data   0x000000
+          .idata_t2open.o      idata   0x000440       data   0x000000
+          .udata_t2open.o      udata   0x000440       data   0x000000
+         .idata_t2close.o      idata   0x000440       data   0x000000
+         .udata_t2close.o      udata   0x000440       data   0x000000
+        .idata_pw1setoc.o      idata   0x000440       data   0x000000
+        .udata_pw1setoc.o      udata   0x000440       data   0x000000
+        .idata_pw1setdc.o      idata   0x000440       data   0x000000
+        .udata_pw1setdc.o      udata   0x000440       data   0x000000
+         .idata_pw1open.o      idata   0x000440       data   0x000000
+        .udata_readaddr.o      udata   0x000440       data   0x000000
+        .idata_putsxlcd.o      idata   0x000440       data   0x000000
+        .udata_putsxlcd.o      udata   0x000440       data   0x000000
+        .idata_putrxlcd.o      idata   0x000440       data   0x000000
+        .udata_putrxlcd.o      udata   0x000440       data   0x000000
+        .idata_openxlcd.o      idata   0x000440       data   0x000000
+        .udata_openxlcd.o      udata   0x000440       data   0x000000
+        .idata_busyxlcd.o      idata   0x000440       data   0x000000
+        .udata_busyxlcd.o      udata   0x000440       data   0x000000
+  .idata_DelayFunctions.o      idata   0x000440       data   0x000000
+  .udata_DelayFunctions.o      udata   0x000440       data   0x000000
+         .idata_t1write.o      idata   0x000440       data   0x000000
+         .udata_t1write.o      udata   0x000440       data   0x000000
+          .idata_t1read.o      idata   0x000440       data   0x000000
+          .udata_t1read.o      udata   0x000440       data   0x000000
+          .idata_t1open.o      idata   0x000440       data   0x000000
+          .udata_t1open.o      udata   0x000440       data   0x000000
+         .idata_t1close.o      idata   0x000440       data   0x000000
+         .udata_t1close.o      udata   0x000440       data   0x000000
+         .idata_t0write.o      idata   0x000440       data   0x000000
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -237,123 +237,122 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x0023d0      
-                            0x0023d2    0x002b70      
-                            0x002b72    0x002bb4      
+                            0x000000    0x0024b2      
+                            0x0024b4    0x002c52      
+                            0x002c54    0x002c96      
                             0x300001    0x300003      
                             0x300006    0x300006      
-            11191 out of 33048 program addresses used, program memory utilization is 33%
+            11417 out of 33048 program addresses used, program memory utilization is 34%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                 BusyXLCD   0x002938    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\busyxlcd.c
-                ClosePWM1   0x002b94    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1close.c
-              CloseTimer0   0x002b8e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0close.c
-              CloseTimer1   0x002b88    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1close.c
-              CloseTimer2   0x002b82    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2close.c
-                   D10K_1   0x0029e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0029ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0029e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10_1   0x002b44    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x002b3c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D1K_1   0x002aae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                     D1Kx   0x002aac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-             Delay10KTCYx   0x0029d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-              Delay10TCYx   0x002b34    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              Delay1KTCYx   0x002aa2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-            DelayFor18TCY   0x001e3e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-             DelayPORXLCD   0x001e64    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                DelayXLCD   0x001e70    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                 FLO1632S   0x001284    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632U   0x001280    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPA32   0x0012ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    FPD32   0x0013d8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    FPM32   0x00147e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                    FPS32   0x0012aa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 FXD3232U   0x0027be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                 FXM1616S   0x001558    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                  FXM3232   0x002456    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-                  INT3216   0x0015b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  InitLCD   0x001e7c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-        KeyPressInterrupt   0x0017d8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-                   LVDisr   0x001f78    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-                  OneByte   0x001e2c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                 OpenPWM1   0x002a7e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
-         OpenPWM1ConfigIO   0x002a9e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
-               OpenTimer0   0x002a04    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0open.c
-               OpenTimer1   0x002902    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1open.c
-               OpenTimer2   0x002a30    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2open.c
-                 OpenXLCD   0x002060    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\openxlcd.c
-                ProcLower   0x001de0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                ProcUpper   0x001dd6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-             ReadAddrXLCD   0x00284a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readaddr.c
-             ReadDataXLCD   0x002806    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readdata.c
-               ReadTimer0   0x0028c8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
-               ReadTimer1   0x00288e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
-               ReadTimer2   0x002b1a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2read.c
-             SetCGRamAddr   0x002640    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setcgram.c
-                SetDCPWM1   0x002598    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
-             SetDDRamAddr   0x0025f2    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setddram.c
-            SetOutputPWM1   0x0024c6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setoc.c
-                  TAGTB32   0x001610    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\gtFP.asm
-               TSIGN1616A   0x0015a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                 TestBeep   0x002198    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                 TstLower   0x001dca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                 TstUpper   0x001dc4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-             WriteCmdXLCD   0x002728    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\wcmdxlcd.c
-            WriteDataXLCD   0x0026dc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\writdata.c
-              WriteTimer0   0x0029a2    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0write.c
-              WriteTimer1   0x00296e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1write.c
-              WriteTimer2   0x002b4a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2write.c
-                   _2jEnd   0x002582    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-       _D10KTCYXCODE_0010   0x0029e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0029f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-        _D10TCYXCODE_000A   0x002b3e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x002b40    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x002b42    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D1KTCYXCODE_0010   0x002ab2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0016   0x002ab8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-              __FpCompare   0x001622    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                 __FpExit   0x0016d8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-            __FpReturnNaN   0x0016cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x0016de    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x0016f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x0016e4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x0016fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x0016da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x0016f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x00175c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x00177c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x0017ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-          ___for_lbl00047   0x001c6c    program     static                          
-          ___for_lbl00048   0x001c70    program     static                          
-          ___for_lbl00049   0x001c1a    program     static                          
-          ___for_lbl00051   0x001ce8    program     static                          
-          ___for_lbl00052   0x001cee    program     static                          
-          ___for_lbl00053   0x001c8c    program     static                          
+                 BusyXLCD   0x002a1a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\busyxlcd.c
+                ClosePWM1   0x002c76    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1close.c
+              CloseTimer0   0x002c70    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0close.c
+              CloseTimer1   0x002c6a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1close.c
+              CloseTimer2   0x002c64    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2close.c
+                   D10K_1   0x002ac4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x002ac2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10_1   0x002c26    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x002c1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D1K_1   0x002b90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x002b8e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+             Delay10KTCYx   0x002ab8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+              Delay10TCYx   0x002c16    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              Delay1KTCYx   0x002b84    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+            DelayFor18TCY   0x001fdc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+             DelayPORXLCD   0x002002    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                DelayXLCD   0x00200e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                 FLO1632S   0x0012a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632U   0x0012a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPA32   0x0012cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    FPD32   0x0013f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    FPM32   0x00149e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                    FPS32   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 FXD3232U   0x0028a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x001578    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  FXM3232   0x002538    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                  INT3216   0x0015d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  InitLCD   0x00201a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+        KeyPressInterrupt   0x0017f8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+                   LVDisr   0x002116    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+                  OneByte   0x001fca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                 OpenPWM1   0x002b60    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
+         OpenPWM1ConfigIO   0x002b80    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
+               OpenTimer0   0x002ae6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0open.c
+               OpenTimer1   0x0029e4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1open.c
+               OpenTimer2   0x002b12    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2open.c
+                 OpenXLCD   0x0021fe    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\openxlcd.c
+                ProcLower   0x001f7e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x001f74    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+             ReadAddrXLCD   0x00292c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readaddr.c
+             ReadDataXLCD   0x0028e8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readdata.c
+               ReadTimer0   0x0029aa    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
+               ReadTimer1   0x002970    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
+               ReadTimer2   0x002bfc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2read.c
+             SetCGRamAddr   0x002722    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setcgram.c
+                SetDCPWM1   0x00267a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
+             SetDDRamAddr   0x0026d4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setddram.c
+            SetOutputPWM1   0x0025a8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setoc.c
+                  TAGTB32   0x001630    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\gtFP.asm
+               TSIGN1616A   0x0015c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 TstLower   0x001f68    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x001f62    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+             WriteCmdXLCD   0x00280a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\wcmdxlcd.c
+            WriteDataXLCD   0x0027be    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\writdata.c
+              WriteTimer0   0x002a84    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0write.c
+              WriteTimer1   0x002a50    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1write.c
+              WriteTimer2   0x002c2c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2write.c
+                   _2jEnd   0x002664    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+       _D10KTCYXCODE_0010   0x002ac8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x002ad4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+        _D10TCYXCODE_000A   0x002c20    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x002c22    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x002c24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D1KTCYXCODE_0010   0x002b94    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x002b9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+              __FpCompare   0x001642    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                 __FpExit   0x0016f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x001724    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x0016ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x0016fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x001716    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x00171e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x0016fa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x001712    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x00177c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x00179c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x0017cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+          ___for_lbl00047   0x001c9c    program     static                          
+          ___for_lbl00048   0x001ca0    program     static                          
+          ___for_lbl00049   0x001c4a    program     static                          
+          ___for_lbl00051   0x001d18    program     static                          
+          ___for_lbl00052   0x001d1e    program     static                          
+          ___for_lbl00053   0x001cbc    program     static                          
            ___if_lbl00001   0x000010    program     static                          
            ___if_lbl00002   0x000018    program     static                          
            ___if_lbl00003   0x000020    program     static                          
            ___if_lbl00004   0x000028    program     static                          
-       ___return_lbl00000   0x00251e    program     static                          
+       ___return_lbl00000   0x0025a6    program     static                          
+       ___return_lbl00000   0x002600    program     static                          
+       ___return_lbl00000   0x0028e6    program     static                          
        ___return_lbl00000   0x000028    program     static                          
-       ___return_lbl00000   0x001e62    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x002804    program     static                          
-       ___return_lbl00000   0x0024c4    program     static                          
-       ___return_lbl00001   0x002afc    program     static                          
-       ___return_lbl00002   0x002332    program     static                          
-       ___return_lbl00046   0x001c70    program     static                          
-       ___return_lbl00050   0x001cf2    program     static                          
+       ___return_lbl00000   0x002000    program     static                          
+       ___return_lbl00001   0x002bde    program     static                          
+       ___return_lbl00002   0x002414    program     static                          
+       ___return_lbl00046   0x001ca0    program     static                          
+       ___return_lbl00050   0x001d22    program     static                          
                __config_0   0x300001    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                __config_1   0x300002    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                __config_2   0x300003    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                __config_3   0x300006    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-                   __init   0x002b98    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __init   0x002c7a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                    __pa_0   0x000984    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_1   0x00098c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   __pa_10   0x000a40    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
@@ -401,148 +400,150 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                    __pa_7   0x0009f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_8   0x0009fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                    __pa_9   0x000a20    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-               __string_0   0x002381    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_0   0x0023c1    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-               __string_0   0x0023aa    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_0   0x002348    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_1   0x002343    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_1   0x002376    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_1   0x0023b4    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-               __string_1   0x00239e    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_2   0x00236f    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_2   0x00233a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_2   0x002392    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_3   0x002334    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_3   0x00236a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_4   0x002368    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_5   0x002364    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_6   0x002360    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_7   0x002356    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_8   0x00234d    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-              __tmplbl_21   0x001c2c    program     static                          
-              __tmplbl_22   0x001ca0    program     static                          
+               __string_0   0x0024a3    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+               __string_0   0x00242a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_0   0x002463    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_0   0x00248c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_1   0x002496    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+               __string_1   0x002458    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_1   0x002480    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_1   0x002425    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_2   0x00241c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_2   0x002451    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_2   0x002474    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_3   0x002416    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_3   0x00244c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_4   0x00244a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_5   0x002446    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_6   0x002442    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_7   0x002438    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_8   0x00242f    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+              __tmplbl_21   0x001c5c    program     static                          
+              __tmplbl_22   0x001cd0    program     static                          
               __tmplbl_42   0x000b1a    program     static                          
               __tmplbl_43   0x000962    program     static                          
               __tmplbl_44   0x000948    program     static                          
               __tmplbl_85   0x00009a    program     static                          
-            __zero_memory   0x002ac2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                _do_cinit   0x002296    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x002ba4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                _do_cinit   0x002378    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x002800    program     static                          
-                 _startup   0x002ae2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              _usart_putc   0x002afe    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                   _false   0x0028e2    program     static                          
+                 _startup   0x002bc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              _usart_putc   0x002be0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
                _user_putc   0x000006    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\_user_putc.c
-                 bpmAlert   0x00213a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-              bpmCountIsr   0x001188    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-                compare_l   0x002ad8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                configBOR   0x001f6e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+                 bpmAlert   0x001d46    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+              bpmCountIsr   0x0011a8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+                compare_l   0x002bba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                configBOR   0x00210c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
            configBPMTimer   0x000c66    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
            configBpmCount   0x000c84    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
         configBpmHrVarTmr   0x000c90    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-             configKeypad   0x002b72    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\keypad.c
-                copy_loop   0x002308    program     static                          
-            copy_one_byte   0x00230e    program     static                          
-                     done   0x002332    program     static                          
-             done_copying   0x00231c    program     static                          
+             configKeypad   0x002c54    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\keypad.c
+                copy_loop   0x0023ea    program     static                          
+            copy_one_byte   0x0023f0    program     static                          
+                     done   0x002414    program     static                          
+             done_copying   0x0023fe    program     static                          
+               glucoseAlt   0x001da4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
           heartRateModule   0x000cae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
            high_interrupt   0x000008    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-             initSequence   0x001bae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-        initSpeakerModule   0x00212e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                  isdigit   0x002a5a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                   itoBCD   0x001dea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                     itoa   0x001d0a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                 jANotInf   0x00149c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 jANotInf   0x0013f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                 jANotInf   0x0012d4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotNeg   0x001368    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jANotZero   0x00140a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-              jAandWsetup   0x001338    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                  jAisNeg   0x00169e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                 jAltBexp   0x001326    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jBANotInf   0x0012ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jBNotInf   0x0012e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jBothFinite   0x0014aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x0014b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x001640    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-            jDifOrPosSign   0x0012f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                     jDo1   0x001d90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo2   0x001d8c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo3   0x001d88    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo4   0x001d84    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo5   0x001d80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                      jEQ   0x00165c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                     jEnd   0x002584    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x00254c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                     jEnd   0x001e28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                    jExch   0x001668    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                    jExit   0x00160e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                   jExpEQ   0x0016ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                   jFinal   0x001692    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-               jFinalSign   0x0013d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jHaveZero   0x0014b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jI2F16Beg   0x001294    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    jLoop   0x00256c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x002542    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x001e02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                    jLoop   0x001432    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    jLoop   0x0015ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                jLoopExit   0x0015fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                   jMatch   0x002a7a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                     jMax   0x0015c2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x0015d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x0015c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                      jNE   0x001660    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                    jNext   0x001458    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jNoAdjust   0x001456    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                  jNoExch   0x001688    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                 jNoMatch   0x002a7c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-             jNotBothZero   0x0012fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                  jNotInf   0x0015de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jPkLoop   0x001712    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x00175c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001744    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x00172e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x0016e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                  jRotate   0x0016ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                   jShift   0x0016a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-               jShiftDone   0x001390    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftLoop   0x001382    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jSignDone   0x0013c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jSignedZero   0x001400    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                 jSignsEQ   0x001644    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                jTstLowZ1   0x001dd4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                jTstSign1   0x001d36    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                  jUnpkA1   0x001786    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x00179e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001794    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x0017b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x0017ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x0017c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x0017a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jWNotNeg   0x00137c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    jZero   0x0015d8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-               jZero1and2   0x0016ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                     loop   0x002b0e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x002af2    program     static                          
-                     loop   0x0027cc    program     static                          
-                   loop_h   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x002ada    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     main   0x00197e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               mainScreen   0x001ec6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                     putc   0x0023d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                putrsXLCD   0x00268e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putrxlcd.c
-                 putsXLCD   0x002774    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putsxlcd.c
-                 readByte   0x001c7a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-                 s_digits   0x002b60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                 hrVarAlt   0x001e26    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+             initSequence   0x001bde    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+        initSpeakerModule   0x001d3a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+                  isdigit   0x002b3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   itoBCD   0x001f88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                     itoa   0x001ea8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 jANotInf   0x0012f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotInf   0x0014bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 jANotInf   0x001416    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                 jANotNeg   0x001388    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jANotZero   0x00142a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+              jAandWsetup   0x001358    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                  jAisNeg   0x0016be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                 jAltBexp   0x001346    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jBANotInf   0x0012ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jBNotInf   0x001302    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jBothFinite   0x0014ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x0014d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x001660    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+            jDifOrPosSign   0x001316    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                     jDo1   0x001f2e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo2   0x001f2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo3   0x001f26    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo4   0x001f22    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo5   0x001f1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                      jEQ   0x00167c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                     jEnd   0x002666    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x00262e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x001fc6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                    jExch   0x001688    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                    jExit   0x00162e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                   jExpEQ   0x0016ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                   jFinal   0x0016b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+               jFinalSign   0x0013f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jHaveZero   0x0014d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jI2F16Beg   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    jLoop   0x00264e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x002624    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x001fa0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x001452    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    jLoop   0x00160e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x00161e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                   jMatch   0x002b5c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                     jMax   0x0015e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x0015f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x0015e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                      jNE   0x001680    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                    jNext   0x001478    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jNoAdjust   0x001476    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                  jNoExch   0x0016a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                 jNoMatch   0x002b5e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+             jNotBothZero   0x00131a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                  jNotInf   0x0015fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jPkLoop   0x001732    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x00177c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x001764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x00174e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x001708    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jRotate   0x0016da    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                   jShift   0x0016c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+               jShiftDone   0x0013b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftLoop   0x0013a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jSignDone   0x0013e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jSignedZero   0x001420    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                 jSignsEQ   0x001664    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                jTstLowZ1   0x001f72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x001ed4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                  jUnpkA1   0x0017a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x0017be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x0017b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x0017d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x0017ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x0017e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x0017c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jWNotNeg   0x00139c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    jZero   0x0015f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+               jZero1and2   0x00170c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                     loop   0x002bf0    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x002bd4    program     static                          
+                     loop   0x0028ae    program     static                          
+                   loop_h   0x002bb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x002bbc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     main   0x0019ae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               mainScreen   0x002064    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                     putc   0x0024b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                putrsXLCD   0x002770    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putrxlcd.c
+                 putsXLCD   0x002856    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putsxlcd.c
+                 readByte   0x001caa    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+                 s_digits   0x002c42    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
             s_put_n_chars   0x000044    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                  sprintf   0x0021ea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
-                   strlen   0x002532    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x00254e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     test   0x0022b0    program     static                          
+                  sprintf   0x0022cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
+                   strlen   0x002614    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002630    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     test   0x002392    program     static                          
               timer10sIsr   0x000d12    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
                  vfprintf   0x000070    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                writeByte   0x001c0e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               zero_block   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                writeByte   0x001c3e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               zero_block   0x002bb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -745,8 +746,9 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                   __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
                   __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
                   __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
+                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
                   __tmp_1   0x000014       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
@@ -761,7 +763,6 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                fractFloat   0x000422       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                  fractInt   0x00041f       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                         i   0x00043e       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                        i   0x000440       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
                   intTemp   0x00041d       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                       key   0x000401       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                      prom   0x00042a       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -846,229 +847,230 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
         configBpmHrVarTmr   0x000c90    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
           heartRateModule   0x000cae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
               timer10sIsr   0x000d12    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-              bpmCountIsr   0x001188    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-                 FLO1632U   0x001280    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                 FLO1632S   0x001284    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                jI2F16Beg   0x001294    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
-                    FPS32   0x0012aa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    FPA32   0x0012ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jBANotInf   0x0012ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotInf   0x0012d4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jBNotInf   0x0012e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-            jDifOrPosSign   0x0012f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-             jNotBothZero   0x0012fa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jAltBexp   0x001326    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-              jAandWsetup   0x001338    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jANotNeg   0x001368    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                 jWNotNeg   0x00137c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftLoop   0x001382    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jShiftDone   0x001390    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                jSignDone   0x0013c0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-               jFinalSign   0x0013d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
-                    FPD32   0x0013d8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                 jANotInf   0x0013f6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-              jSignedZero   0x001400    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jANotZero   0x00140a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    jLoop   0x001432    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                jNoAdjust   0x001456    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    jNext   0x001458    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
-                    FPM32   0x00147e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 jANotInf   0x00149c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-              jBothFinite   0x0014aa    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                jHaveZero   0x0014b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-             jBothNotZero   0x0014b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
-                 FXM1616S   0x001558    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x0015a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                  INT3216   0x0015b2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                     jMax   0x0015c2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxPos   0x0015c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x0015d0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jZero   0x0015d8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  jNotInf   0x0015de    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jLoop   0x0015ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                jLoopExit   0x0015fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                    jExit   0x00160e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
-                  TAGTB32   0x001610    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\gtFP.asm
-              __FpCompare   0x001622    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-             jBothNotZero   0x001640    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                 jSignsEQ   0x001644    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                      jEQ   0x00165c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                      jNE   0x001660    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                    jExch   0x001668    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                  jNoExch   0x001688    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                   jFinal   0x001692    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                  jAisNeg   0x00169e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                   jShift   0x0016a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                   jExpEQ   0x0016ae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-                  jRotate   0x0016ba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
-            __FpReturnNaN   0x0016cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpExit   0x0016d8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x0016da    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x0016de    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x0016e4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x0016e8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jZero1and2   0x0016ec    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x0016f2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x0016f6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x0016fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                 __FpPack   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-                  jPkLoop   0x001712    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkShiftDone   0x00172e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001744    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-             jPkRoundDone   0x00175c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpReturnW   0x00175c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
-              __FpUnPackA   0x00177c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA1   0x001786    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001794    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x00179e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x0017a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x0017ac    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x0017b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x0017c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x0017ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
-        KeyPressInterrupt   0x0017d8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-                     main   0x00197e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-             initSequence   0x001bae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-                writeByte   0x001c0e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-          ___for_lbl00049   0x001c1a    program     static                          
-              __tmplbl_21   0x001c2c    program     static                          
-          ___for_lbl00047   0x001c6c    program     static                          
-          ___for_lbl00048   0x001c70    program     static                          
-       ___return_lbl00046   0x001c70    program     static                          
-                 readByte   0x001c7a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-          ___for_lbl00053   0x001c8c    program     static                          
-              __tmplbl_22   0x001ca0    program     static                          
-          ___for_lbl00051   0x001ce8    program     static                          
-          ___for_lbl00052   0x001cee    program     static                          
-       ___return_lbl00050   0x001cf2    program     static                          
-                     itoa   0x001d0a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                jTstSign1   0x001d36    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo5   0x001d80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo4   0x001d84    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo3   0x001d88    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo2   0x001d8c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                     jDo1   0x001d90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                 TstUpper   0x001dc4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                 TstLower   0x001dca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                jTstLowZ1   0x001dd4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                ProcUpper   0x001dd6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                ProcLower   0x001de0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
-                   itoBCD   0x001dea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                    jLoop   0x001e02    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                     jEnd   0x001e28    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-                  OneByte   0x001e2c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
-            DelayFor18TCY   0x001e3e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-       ___return_lbl00000   0x001e62    program     static                          
-             DelayPORXLCD   0x001e64    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                DelayXLCD   0x001e70    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                  InitLCD   0x001e7c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               mainScreen   0x001ec6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-                configBOR   0x001f6e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-                   LVDisr   0x001f78    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-                 OpenXLCD   0x002060    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\openxlcd.c
-        initSpeakerModule   0x00212e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                 bpmAlert   0x00213a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                 TestBeep   0x002198    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                  sprintf   0x0021ea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
-                _do_cinit   0x002296    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0022b0    program     static                          
-                copy_loop   0x002308    program     static                          
-            copy_one_byte   0x00230e    program     static                          
-             done_copying   0x00231c    program     static                          
-                     done   0x002332    program     static                          
-       ___return_lbl00002   0x002332    program     static                          
-               __string_3   0x002334    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_2   0x00233a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_1   0x002343    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_0   0x002348    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
-               __string_8   0x00234d    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_7   0x002356    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_6   0x002360    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_5   0x002364    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_4   0x002368    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_3   0x00236a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_2   0x00236f    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_1   0x002376    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_0   0x002381    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
-               __string_2   0x002392    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_1   0x00239e    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_0   0x0023aa    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
-               __string_1   0x0023b4    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-               __string_0   0x0023c1    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
-                     putc   0x0023d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                  FXM3232   0x002456    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x0024c4    program     static                          
-            SetOutputPWM1   0x0024c6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setoc.c
-       ___return_lbl00000   0x00251e    program     static                          
-                   strlen   0x002532    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                    jLoop   0x002542    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                     jEnd   0x00254c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
-                strlenpgm   0x00254e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                    jLoop   0x00256c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                   _2jEnd   0x002582    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                     jEnd   0x002584    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
-                SetDCPWM1   0x002598    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
-             SetDDRamAddr   0x0025f2    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setddram.c
-             SetCGRamAddr   0x002640    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setcgram.c
-                putrsXLCD   0x00268e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putrxlcd.c
-            WriteDataXLCD   0x0026dc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\writdata.c
-             WriteCmdXLCD   0x002728    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\wcmdxlcd.c
-                 putsXLCD   0x002774    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putsxlcd.c
-                 FXD3232U   0x0027be    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x0027cc    program     static                          
-                   _false   0x002800    program     static                          
-       ___return_lbl00000   0x002804    program     static                          
-             ReadDataXLCD   0x002806    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readdata.c
-             ReadAddrXLCD   0x00284a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readaddr.c
-               ReadTimer1   0x00288e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
-               ReadTimer0   0x0028c8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
-               OpenTimer1   0x002902    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1open.c
-                 BusyXLCD   0x002938    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\busyxlcd.c
-              WriteTimer1   0x00296e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1write.c
-              WriteTimer0   0x0029a2    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0write.c
-             Delay10KTCYx   0x0029d6    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kx   0x0029e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                   D10K_1   0x0029e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_0010   0x0029e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-                    D10Kl   0x0029ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-       _D10KTCYXCODE_001C   0x0029f2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
-               OpenTimer0   0x002a04    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0open.c
-               OpenTimer2   0x002a30    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2open.c
-                  isdigit   0x002a5a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                   jMatch   0x002a7a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 jNoMatch   0x002a7c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
-                 OpenPWM1   0x002a7e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
-         OpenPWM1ConfigIO   0x002a9e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
-              Delay1KTCYx   0x002aa2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                     D1Kx   0x002aac    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-                    D1K_1   0x002aae    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0010   0x002ab2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-        _D1KTCYXCODE_0016   0x002ab8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
-            __zero_memory   0x002ac2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-               zero_block   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_h   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                compare_l   0x002ad8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   loop_l   0x002ada    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 _startup   0x002ae2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x002af2    program     static                          
-       ___return_lbl00001   0x002afc    program     static                          
-              _usart_putc   0x002afe    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-                     loop   0x002b0e    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
-               ReadTimer2   0x002b1a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2read.c
-              Delay10TCYx   0x002b34    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                     D10x   0x002b3c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000A   0x002b3e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000C   0x002b40    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-        _D10TCYXCODE_000E   0x002b42    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-                    D10_1   0x002b44    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
-              WriteTimer2   0x002b4a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2write.c
-                 s_digits   0x002b60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-             configKeypad   0x002b72    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\keypad.c
-              CloseTimer2   0x002b82    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2close.c
-              CloseTimer1   0x002b88    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1close.c
-              CloseTimer0   0x002b8e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0close.c
-                ClosePWM1   0x002b94    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1close.c
-                   __init   0x002b98    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+              bpmCountIsr   0x0011a8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+                 FLO1632U   0x0012a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                 FLO1632S   0x0012a4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                jI2F16Beg   0x0012b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cast16FP.asm
+                    FPS32   0x0012ca    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    FPA32   0x0012cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jBANotInf   0x0012ea    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotInf   0x0012f4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jBNotInf   0x001302    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+            jDifOrPosSign   0x001316    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+             jNotBothZero   0x00131a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jAltBexp   0x001346    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+              jAandWsetup   0x001358    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jANotNeg   0x001388    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                 jWNotNeg   0x00139c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftLoop   0x0013a2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jShiftDone   0x0013b0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                jSignDone   0x0013e0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+               jFinalSign   0x0013f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\addFP.asm
+                    FPD32   0x0013f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                 jANotInf   0x001416    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+              jSignedZero   0x001420    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jANotZero   0x00142a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    jLoop   0x001452    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                jNoAdjust   0x001476    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    jNext   0x001478    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\divFP.asm
+                    FPM32   0x00149e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 jANotInf   0x0014bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+              jBothFinite   0x0014ca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                jHaveZero   0x0014d2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+             jBothNotZero   0x0014d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\mulFP.asm
+                 FXM1616S   0x001578    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x0015c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                  INT3216   0x0015d2    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                     jMax   0x0015e2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxPos   0x0015e6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x0015f0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jZero   0x0015f8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  jNotInf   0x0015fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jLoop   0x00160e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                jLoopExit   0x00161e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                    jExit   0x00162e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\castFP16.asm
+                  TAGTB32   0x001630    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\gtFP.asm
+              __FpCompare   0x001642    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+             jBothNotZero   0x001660    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                 jSignsEQ   0x001664    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                      jEQ   0x00167c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                      jNE   0x001680    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                    jExch   0x001688    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                  jNoExch   0x0016a8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                   jFinal   0x0016b2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                  jAisNeg   0x0016be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                   jShift   0x0016c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                   jExpEQ   0x0016ce    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+                  jRotate   0x0016da    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\compFP.asm
+            __FpReturnNaN   0x0016ec    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpExit   0x0016f8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x0016fa    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x0016fe    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x001704    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x001708    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jZero1and2   0x00170c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x001712    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x001716    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x00171e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                 __FpPack   0x001724    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+                  jPkLoop   0x001732    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkShiftDone   0x00174e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+               jPkRoundIt   0x001764    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+             jPkRoundDone   0x00177c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpReturnW   0x00177c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\packFP.asm
+              __FpUnPackA   0x00179c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x0017a6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x0017b4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x0017be    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x0017c8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x0017cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x0017d6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x0017e4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x0017ee    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\UnpackFP.asm
+        KeyPressInterrupt   0x0017f8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+                     main   0x0019ae    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+             initSequence   0x001bde    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+                writeByte   0x001c3e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+          ___for_lbl00049   0x001c4a    program     static                          
+              __tmplbl_21   0x001c5c    program     static                          
+          ___for_lbl00047   0x001c9c    program     static                          
+       ___return_lbl00046   0x001ca0    program     static                          
+          ___for_lbl00048   0x001ca0    program     static                          
+                 readByte   0x001caa    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+          ___for_lbl00053   0x001cbc    program     static                          
+              __tmplbl_22   0x001cd0    program     static                          
+          ___for_lbl00051   0x001d18    program     static                          
+          ___for_lbl00052   0x001d1e    program     static                          
+       ___return_lbl00050   0x001d22    program     static                          
+        initSpeakerModule   0x001d3a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+                 bpmAlert   0x001d46    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+               glucoseAlt   0x001da4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+                 hrVarAlt   0x001e26    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
+                     itoa   0x001ea8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x001ed4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo5   0x001f1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo4   0x001f22    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo3   0x001f26    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo2   0x001f2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                     jDo1   0x001f2e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x001f62    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                 TstLower   0x001f68    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                jTstLowZ1   0x001f72    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x001f74    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                ProcLower   0x001f7e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itoa.asm
+                   itoBCD   0x001f88    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x001fa0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x001fc6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+                  OneByte   0x001fca    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\itobcd.asm
+            DelayFor18TCY   0x001fdc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+       ___return_lbl00000   0x002000    program     static                          
+             DelayPORXLCD   0x002002    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                DelayXLCD   0x00200e    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                  InitLCD   0x00201a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               mainScreen   0x002064    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+                configBOR   0x00210c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+                   LVDisr   0x002116    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+                 OpenXLCD   0x0021fe    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\openxlcd.c
+                  sprintf   0x0022cc    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
+                _do_cinit   0x002378    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x002392    program     static                          
+                copy_loop   0x0023ea    program     static                          
+            copy_one_byte   0x0023f0    program     static                          
+             done_copying   0x0023fe    program     static                          
+                     done   0x002414    program     static                          
+       ___return_lbl00002   0x002414    program     static                          
+               __string_3   0x002416    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_2   0x00241c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_1   0x002425    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_0   0x00242a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\DelayFunctions.c
+               __string_8   0x00242f    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_7   0x002438    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_6   0x002442    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_5   0x002446    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_4   0x00244a    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_3   0x00244c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_2   0x002451    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_1   0x002458    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_0   0x002463    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+               __string_2   0x002474    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_1   0x002480    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_0   0x00248c    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
+               __string_1   0x002496    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+               __string_0   0x0024a3    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\Brown-out.c
+                     putc   0x0024b4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  FXM3232   0x002538    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0025a6    program     static                          
+            SetOutputPWM1   0x0025a8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setoc.c
+       ___return_lbl00000   0x002600    program     static                          
+                   strlen   0x002614    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                    jLoop   0x002624    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                     jEnd   0x00262e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\strlen.asm
+                strlenpgm   0x002630    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                    jLoop   0x00264e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                   _2jEnd   0x002664    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                     jEnd   0x002666    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\slenpgm.asm
+                SetDCPWM1   0x00267a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
+             SetDDRamAddr   0x0026d4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setddram.c
+             SetCGRamAddr   0x002722    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\setcgram.c
+                putrsXLCD   0x002770    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putrxlcd.c
+            WriteDataXLCD   0x0027be    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\writdata.c
+             WriteCmdXLCD   0x00280a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\wcmdxlcd.c
+                 putsXLCD   0x002856    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\putsxlcd.c
+                 FXD3232U   0x0028a0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x0028ae    program     static                          
+                   _false   0x0028e2    program     static                          
+       ___return_lbl00000   0x0028e6    program     static                          
+             ReadDataXLCD   0x0028e8    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readdata.c
+             ReadAddrXLCD   0x00292c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\readaddr.c
+               ReadTimer1   0x002970    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
+               ReadTimer0   0x0029aa    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
+               OpenTimer1   0x0029e4    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1open.c
+                 BusyXLCD   0x002a1a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\busyxlcd.c
+              WriteTimer1   0x002a50    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1write.c
+              WriteTimer0   0x002a84    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0write.c
+             Delay10KTCYx   0x002ab8    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x002ac2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x002ac4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x002ac8    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x002ad0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x002ad4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10ktcyx.asm
+               OpenTimer0   0x002ae6    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0open.c
+               OpenTimer2   0x002b12    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2open.c
+                  isdigit   0x002b3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                   jMatch   0x002b5c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 jNoMatch   0x002b5e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\isdigit.asm
+                 OpenPWM1   0x002b60    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
+         OpenPWM1ConfigIO   0x002b80    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1open.c
+              Delay1KTCYx   0x002b84    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x002b8e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+                    D1K_1   0x002b90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0010   0x002b94    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x002b9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d1ktcyx.asm
+            __zero_memory   0x002ba4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+               zero_block   0x002bb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_h   0x002bb2    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                compare_l   0x002bba    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   loop_l   0x002bbc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 _startup   0x002bc4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x002bd4    program     static                          
+       ___return_lbl00001   0x002bde    program     static                          
+              _usart_putc   0x002be0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+                     loop   0x002bf0    program     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\_usartpc.asm
+               ReadTimer2   0x002bfc    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2read.c
+              Delay10TCYx   0x002c16    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                     D10x   0x002c1e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x002c20    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x002c22    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x002c24    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x002c26    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d10tcyx.asm
+              WriteTimer2   0x002c2c    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2write.c
+                 s_digits   0x002c42    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+             configKeypad   0x002c54    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\keypad.c
+              CloseTimer2   0x002c64    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t2close.c
+              CloseTimer1   0x002c6a    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1close.c
+              CloseTimer0   0x002c70    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0close.c
+                ClosePWM1   0x002c76    program     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1close.c
+                   __init   0x002c7a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                __config_1   0x300002    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                __config_2   0x300003    program     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
@@ -1100,13 +1102,14 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                  __TEMPB0   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                    __TEMP   0x000013       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                   __tmp_1   0x000014       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
+                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\pw1setdc.c
-                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
+                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
+                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
+                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
                   __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t1read.c
-                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\putc.c
-                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\vfprintf.c
-                  __tmp_0   0x00001c       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\sprintf.c
+                  __tmp_0   0x00001c       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\t0read.c
                   __tmp_1   0x000023       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\main.c
             DelayCounter2   0x000026       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd2.asm
             DelayCounter1   0x000027       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
@@ -1134,41 +1137,40 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                       BPM   0x00043a       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
                     state   0x00043c       data     extern C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\heartrate.c
                         i   0x00043e       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
-                        i   0x000440       data     static C:\Users\vasis\Documents\ECNG3006\ecng3006-project2\speaker.c
                 PORTAbits   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     PORTA   0x000f80       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTBbits   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTB   0x000f81       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTCbits   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTD   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTC   0x000f82       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTDbits   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    PORTE   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTD   0x000f83       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 PORTEbits   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    PORTE   0x000f84       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATA   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATAbits   0x000f89       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATB   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATBbits   0x000f8a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  LATCbits   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATC   0x000f8b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  LATDbits   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATD   0x000f8c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      LATE   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 LATEbits   0x000f8d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDRAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISA   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISAbits   0x000f92       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 TRISBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     DDRB   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 DDRBbits   0x000f93       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                 DDRCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISC   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISCbits   0x000f94       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TRISD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                TRISDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      DDRD   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 TRISEbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -1177,8 +1179,8 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIE1   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  PIE1bits   0x000f9d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                     PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  PIR1bits   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                     PIR1   0x000f9e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      IPR1   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                  IPR1bits   0x000f9f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                      PIE2   0x000fa0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -1192,10 +1194,10 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                    EECON2   0x000fa7       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    EEDATA   0x000fa8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     EEADR   0x000fa9       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                    TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                 TXSTAbits   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                    TXSTA   0x000fac       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TXREG   0x000fad       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     RCREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     SPBRG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
@@ -1203,15 +1205,15 @@ Linker Map File - Created Fri Nov 22 07:55:48 2019
                 T3CONbits   0x000fb1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR3L   0x000fb2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     TMR3H   0x000fb3       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   CCP2CON   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              CCP2CONbits   0x000fba       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     CCPR2   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR2L   0x000fbb       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR2H   0x000fbc       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-              CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                   CCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
-                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+              CCP1CONbits   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                     CCPR1   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
+                   CCPR1L   0x000fbe       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    CCPR1H   0x000fbf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm
                ADCON1bits   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f452.asm

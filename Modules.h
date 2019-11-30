@@ -59,6 +59,8 @@ void bpmCountIsr(void);
 /***********************SPEAKER MODULE**************************/
 void initSpeakerModule(void);
 void bpmAlert(void);
+void glucoseAlt(void);
+void hrVarAlt(void);
 
 /***********************TEMPRATURE MODULE***********************/
 #define OW_LAT LATBbits.LATB4

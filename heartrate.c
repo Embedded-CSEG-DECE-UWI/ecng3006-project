@@ -121,6 +121,7 @@ void timer10sIsr(void)
 
     //Calculating BPM
     bpm = NNCount * 6;
+    bpm = bpm - 12;         //Error Calibration
     itoa(bpm,bpmOutput);
     
     //Outputting BPM

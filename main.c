@@ -75,12 +75,14 @@ void KeyPressInterrupt(void)
         switch (key) {
             case (0):                       //Key Press 1 to start taking BPM reading
                 //heartRateModule();
+                bpmAlert();
                 break;
             case (1):
                 //TestBeep();
+                hrVarAlt();
                 break;
             case (2):
-
+                glucoseAlt();
                 break;
             case (3):
                 heartRateModule();

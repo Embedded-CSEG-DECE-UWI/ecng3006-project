@@ -20,7 +20,31 @@ void bpmAlert(void) {                   //Alarm that sounds if HR > 200bpm or HR
     ClosePWM1();
 }
 
-void TestBeep(void) {
+void glucoseAlt (void) {                   //GLucose Alarm that sounds
+    int a;
+    for (a = 0; a < 10; a++) {
+        OpenPWM1(0xFF);
+        SetDCPWM1(0x1FF);
+        Delay10KTCYx(25);
+        SetDCPWM1(0x0F1);
+        Delay10KTCYx(25);
+    }
+    ClosePWM1();
+}
+
+void hrVarAlt (void) {                   //Heart Rate variability Alarm that sounds
+    int b;
+    for (b = 0; b < 10; b++) {
+        OpenPWM1(0xFF);
+        SetDCPWM1(0x1FF);
+        Delay10KTCYx(50);
+        SetDCPWM1(0x0F1);
+        Delay10KTCYx(50);
+    }
+    ClosePWM1();
+}
+
+/*void TestBeep(void) {
     static int i;
     for (i = 0; i < 10; i++) {
         OpenPWM1(0xFF);
@@ -29,4 +53,4 @@ void TestBeep(void) {
         ClosePWM1();
         Delay10KTCYx(10);
     }
-}
+}*/

@@ -1,1 +1,3 @@
 This repository contains the Final Project Code for Group C for ECNG 3006.  The links to the specfic files for specfic modules would be provided on the Group Wiki. 
+All the code used in the final implementation of the project was placed in this branch. Links to specfic files for certian modules were placed in the Software Consideration pages of each implmented module (on the group wiki), which link back to this repository. 
+Please note that there are two heartrate.c files, with heartrate2.c being the lastest iteration of the file, which is responsible for both HRV and heart pulse measuring. The temperature sensor is implemented in the file named "newtrymain.c". 

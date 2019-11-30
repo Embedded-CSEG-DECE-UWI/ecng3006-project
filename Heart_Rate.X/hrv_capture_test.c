@@ -1,3 +1,5 @@
+/*This program was used for Software Integration Testing for the HRV module*/
+
 #include <p18f452.h>
 #include "xlcd.h"
 #include <delays.h>
@@ -101,20 +103,14 @@ void high_isr (void)
         
         //Adapted from Asif Edoo
         if(HRVvar1 == 0 && HRVvar2 == 0 && HRVvar3 ==0){
-            //HRVvar1 = ReadCapture2(); 
             testvar1 = (long)ReadCapture2();
-            testtimer1 = timer1Period;
-            ////HRVvar1 = HRVvar1 + (timer1Period * 500000);   
-            //HRVvar1 = HRVvar1*timer1Period;
+            testtimer1 = timer1Period;            
             HRVvar1 = testvar1*timer1Period;
             Nop();
         }
         else if(HRVvar1 != 0 && HRVvar2 == 0 && HRVvar3 == 0){
-            //HRVvar2 = ReadCapture2();
             testvar2 = (long)ReadCapture2();
             testtimer2 = timer1Period;
-            //HRVvar2 = HRVvar2 + (timer1Period * 500000);
-            //HRVvar2 = HRVvar2 *timer1Period;
             HRVvar2 = testvar2 *timer1Period;
             if(HRVvar2 < HRVvar1){
                 hrvInterval1 = HRVvar1 - HRVvar2;
@@ -125,11 +121,8 @@ void high_isr (void)
             numNNInterval = numNNInterval + 1.0;           
         }
         else if(HRVvar1 != 0 && HRVvar2 != 0 && HRVvar3 == 0){
-            //HRVvar3 = ReadCapture2();
             testvar3 = (long)ReadCapture2();
             testtimer3 = timer1Period;
-            //HRVvar3 = HRVvar3 + (timer1Period * 500000);
-            //HRVvar3 = HRVvar3*timer1Period;
             HRVvar3 = testvar3*timer1Period;
             if(HRVvar3 < HRVvar2){
                 hrvInterval2 = HRVvar2 - HRVvar3;
@@ -141,7 +134,7 @@ void high_isr (void)
            if(hrvInterval2 < hrvInterval1 ){
                 if(hrvInterval1 - hrvInterval2 > 50000){ numNN50++; }
             }
-            else if(hrvInterval2 > hrvInterval1){
+           else if(hrvInterval2 > hrvInterval1){
                 if(hrvInterval2 - hrvInterval1 > 50000){ numNN50++; }
                 
             }
@@ -155,10 +148,8 @@ void high_isr (void)
         }                                
     
     }         
-        
-    //PIR2bits.CCP2IF = 0;
+    
     PIR2bits.CCP2IF = 0;  
-
 }
 
 /*------------------------LOW INTERRUPT SERVICE ROUTINE-----------------------*/

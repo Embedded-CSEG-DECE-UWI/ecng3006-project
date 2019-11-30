@@ -21,6 +21,27 @@ void high_isr (void);
 void low_isr (void);
 void heartRateCal();
 
+int heartBeatcounter = 0;
+unsigned int timer1Period = 0;
+unsigned long double testvar1 = 0;
+unsigned long double testvar2 = 0;
+unsigned long double testvar3 = 0;
+int testtimer1 = 0;
+int testtimer2 = 0;
+int testtimer3 = 0;
+long double HRVvar1 = 0;
+long double HRVvar2 = 0;
+long double HRVvar3 = 0;
+long double hrvInterval1 = 0;
+long double hrvInterval2 = 0;
+long double numNNInterval =0;
+long double numNN50 = 0;
+long double pNN50 = 0;
+int displayVal = 0;
+int test = 25;
+int nnIntervalcounter;
+char ans1[2];
+
 void DelayFor18TCY (void)
 {
      Nop();     Nop();      Nop();      Nop();      Nop();      Nop(); 
@@ -39,7 +60,7 @@ void DelayPORXLCD (void)
 }
 
 void heartRateCal(){
-    heartRate = (60*heartBeatCounter)/10;                   //Heart Rate Calculation
+    heartRate = (60*heartBeatCounter)/10; //Change from 10s to 5s
     itoa(heartRate, heartRateOutput);
 
     WriteCmdXLCD(0b00000001);
@@ -59,6 +80,26 @@ void heartRateCal(){
     heartBeatCounter = 0;
     memset(heartRateOutput, 0, sizeof(heartRateOutput));    //Clears char[]
     WriteTimer0(0x676A);     
+}
+
+void hrvCal(){
+    pNN50 = (numNN50/numNNInterval)*100.0;
+    displayVal = (int) pNN50;
+    itoa(displayVal, ans1);
+    while(BusyXLCD());
+    SetDDRamAddr(0x40);
+    while(BusyXLCD());
+    putrsXLCD("HRV Rate:");
+    while(BusyXLCD());
+    SetDDRamAddr(0x48);
+    while(BusyXLCD());
+    putsXLCD(ans1);
+    while(BusyXLCD());
+    putrsXLCD("%");
+    
+    numNNInterval = 0;
+    numNN50 = 0;
+    pNN50 = 0;
 }
 
 void lcdSetup (void)
@@ -94,20 +135,18 @@ void irPulseSetup(){
     INTCON2bits.INTEDG2 = 1;    //Set to interrupt on rising edge
     
     TRISBbits.RB2 = 1;          //Configure RB2 as an input for output from IR module
-}
-  
-void timer0Setup(){
-    //Timer 0 Setup 
-    OpenTimer0(TIMER_INT_ON &
-        T0_16BIT & T0_SOURCE_INT &
-        T0_EDGE_RISE & T0_PS_1_256);
-    INTCONbits.T0IE = 1;        //Enable TMR0 overflow interrupt bit 
-    INTCON2bits.T0IP = 1;       //Set TMR0 Interrupt as high priority
-    INTCONbits.T0IF = 0;        //Clearing TMR0 Interrupt Flag
-}
+} 
 
 void timer1Setup(){
-    //Timer 1 Setup for counting time between NN intervals and 
+    //Timer 1 Setup
+    OpenTimer1(TIMER_INT_ON & 
+        T1_16BIT_RW & T1_SOURCE_INT &
+        T1_PS_1_8 & T1_SOURCE_CCP);
+    IPR1bits.TMR1IP = 0;        //Set TMR1 interrupt LOW priority 
+    PIE1bits.TMR1IE = 1;        //Enable TMR1 interrupt
+    PIR2bits.CCP2IF = 0;        //Set the capture to 0
+    IPR2bits.CCP2IP = 1;        //Set capture to high priority
+    WriteTimer1(0x0BDC);        //Write TMR1 to start for 0.5s    
 }
 
 void pulseCounting(){
@@ -125,10 +164,7 @@ void interrupt_at_high_vector(void)
 #pragma interrupt high_isr
 void high_isr (void)
 {    
-    if(INTCONbits.TMR0IF == 1 && startTimer == 1){
-        heartRateCal();
-        INTCONbits.TMR0IF = 0;
-    }
+    
 }
 
 /*------------------------LOW INTERRUPT SERVICE ROUTINE-----------------------*/
@@ -142,6 +178,16 @@ void interrupt_at_low_vector(void)
 #pragma interrupt low_isr
 void low_isr (void)
 {
+    if(PIR1bits.TMR1IF == 1){
+        if(timer1Period%19 == 0 && numNN50>0){
+            PIR1bits.TMR1IF = 0;
+            heartRateCal(); 
+            hrvCal();
+                        
+        }        
+        timer1Period = timer1Period++;
+        WriteTimer1(0x0BDC);
+    }    
     
     if(INTCON3bits.INT2IF){
         pulseCounting();
@@ -150,13 +196,12 @@ void low_isr (void)
         if (PORTCbits.RC7 && !PORTCbits.RC6 && !PORTCbits.RC5 && !PORTCbits.RC4)
         {
             startTimer = 1;
-            timer0Setup();
+            timer1Setup();
             WriteCmdXLCD(0b00000001);
-            WriteTimer0(0x676A); 
         }
         if (PORTCbits.RC7 && !PORTCbits.RC6 && PORTCbits.RC5 && PORTCbits.RC4)
         {
-            CloseTimer0();          
+            CloseTimer1();          
         }
     }
     INTCON3bits.INT2IF = 0;
@@ -175,3 +220,4 @@ void main()
  
     while(1);
 }
+

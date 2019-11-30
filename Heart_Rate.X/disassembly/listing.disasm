@@ -1,0 +1,2134 @@
+Disassembly Listing for Heart_Rate
+Generated From:
+C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/dist/default/production/Heart_Rate.X.production.cof
+Nov 27, 2019 5:23:11 PM
+
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/stdclib/memset.asm  ---------------------------------
+09EC  0EFE     MOVLW 0xFE
+09EE  CFE3     MOVFF PLUSW1, FSR0
+09F0  FFE9     NOP
+09F2  0EFF     MOVLW 0xFF
+09F4  CFE3     MOVFF PLUSW1, FSR0H
+09F6  FFEA     NOP
+09F8  CFE9     MOVFF FSR0, PROD
+09FA  FFF3     NOP
+09FC  CFEA     MOVFF FSR0H, PRODH
+09FE  FFF4     NOP
+0A00  0EFB     MOVLW 0xFB
+0A02  50E3     MOVF PLUSW1, W, ACCESS
+0A04  E103     BNZ _2jContinue
+0A06  0EFC     MOVLW 0xFC
+0A08  50E3     MOVF PLUSW1, W, ACCESS
+0A0A  E009     BZ jEnd
+0A0C  0EFB     MOVLW 0xFB
+0A0E  06E3     DECF PLUSW1, F, ACCESS
+0A10  E202     BC _3jEnd
+0A12  0EFC     MOVLW 0xFC
+0A14  06E3     DECF PLUSW1, F, ACCESS
+0A16  0EFD     MOVLW 0xFD
+0A18  50E3     MOVF PLUSW1, W, ACCESS
+0A1A  6EEE     MOVWF POSTINC0, ACCESS
+0A1C  D7F1     BRA jLoop
+0A1E  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/stdclib/itobcd.asm  ---------------------------------
+048C  0EFC     MOVLW 0xFC
+048E  CFE3     MOVFF PLUSW1, FSR0
+0490  FFE9     NOP
+0492  0EFD     MOVLW 0xFD
+0494  CFE3     MOVFF PLUSW1, FSR0H
+0496  FFEA     NOP
+0498  0E10     MOVLW 0x10
+049A  6EE6     MOVWF POSTINC1, ACCESS
+049C  6AEE     CLRF POSTINC0, ACCESS
+049E  6AEE     CLRF POSTINC0, ACCESS
+04A0  6AEF     CLRF INDF0, ACCESS
+04A2  90D8     BCF STATUS, 0, ACCESS
+04A4  0EFD     MOVLW 0xFD
+04A6  36E3     RLCF PLUSW1, F, ACCESS
+04A8  0EFE     MOVLW 0xFE
+04AA  36E3     RLCF PLUSW1, F, ACCESS
+04AC  36ED     RLCF POSTDEC0, F, ACCESS
+04AE  36ED     RLCF POSTDEC0, F, ACCESS
+04B0  36EF     RLCF INDF0, F, ACCESS
+04B2  0EFF     MOVLW 0xFF
+04B4  06E3     DECF PLUSW1, F, ACCESS
+04B6  E009     BZ jEnd
+04B8  EC67     CALL 0x4CE, 0
+04BA  F002     NOP
+04BC  52EE     MOVF POSTINC0, F, ACCESS
+04BE  EC67     CALL 0x4CE, 0
+04C0  F002     NOP
+04C2  52EE     MOVF POSTINC0, F, ACCESS
+04C4  EC67     CALL 0x4CE, 0
+04C6  F002     NOP
+04C8  D7ED     BRA jLoop
+04CA  6EE5     MOVWF POSTDEC1, ACCESS
+04CC  0012     RETURN 0
+04CE  0E03     MOVLW 0x3
+04D0  24EF     ADDWF INDF0, W, ACCESS
+04D2  B6E8     BTFSC WREG, 3, ACCESS
+04D4  6EEF     MOVWF INDF0, ACCESS
+04D6  0E30     MOVLW 0x30
+04D8  24EF     ADDWF INDF0, W, ACCESS
+04DA  BEE8     BTFSC WREG, 7, ACCESS
+04DC  6EEF     MOVWF INDF0, ACCESS
+04DE  0C00     RETLW 0x0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/stdclib/itoa.asm  -----------------------------------
+03AC  CFD9     MOVFF FSR2, POSTINC1
+03AE  FFE6     NOP
+03B0  CFDA     MOVFF FSR2H, POSTINC1
+03B2  FFE6     NOP
+03B4  0EFA     MOVLW 0xFA
+03B6  CFE3     MOVFF PLUSW1, FSR2
+03B8  FFD9     NOP
+03BA  0EFB     MOVLW 0xFB
+03BC  CFE3     MOVFF PLUSW1, FSR2H
+03BE  FFDA     NOP
+03C0  0EFD     MOVLW 0xFD
+03C2  52E3     MOVF PLUSW1, F, ACCESS
+03C4  E709     BNN jTstSign1
+03C6  0E2D     MOVLW 0x2D
+03C8  6EDE     MOVWF POSTINC2, ACCESS
+03CA  0EFC     MOVLW 0xFC
+03CC  1EE3     COMF PLUSW1, F, ACCESS
+03CE  2AE3     INCF PLUSW1, F, ACCESS
+03D0  0EFD     MOVLW 0xFD
+03D2  B4D8     BTFSC STATUS, 2, ACCESS
+03D4  06E3     DECF PLUSW1, F, ACCESS
+03D6  1EE3     COMF PLUSW1, F, ACCESS
+03D8  52E6     MOVF POSTINC1, F, ACCESS
+03DA  52E6     MOVF POSTINC1, F, ACCESS
+03DC  52E6     MOVF POSTINC1, F, ACCESS
+03DE  0EFD     MOVLW 0xFD
+03E0  24E1     ADDWF FSR1, W, ACCESS
+03E2  6EE7     MOVWF INDF1, ACCESS
+03E4  0EFF     MOVLW 0xFF
+03E6  20E2     ADDWFC FSR1H, W, ACCESS
+03E8  6EE4     MOVWF PREINC1, ACCESS
+03EA  52E6     MOVF POSTINC1, F, ACCESS
+03EC  0EF7     MOVLW 0xF7
+03EE  CFE3     MOVFF PLUSW1, POSTINC1
+03F0  FFE6     NOP
+03F2  0EF7     MOVLW 0xF7
+03F4  CFE3     MOVFF PLUSW1, POSTINC1
+03F6  FFE6     NOP
+03F8  EC46     CALL 0x48C, 0
+03FA  F002     NOP
+03FC  0EF9     MOVLW 0xF9
+03FE  24E1     ADDWF FSR1, W, ACCESS
+0400  6EE9     MOVWF FSR0, ACCESS
+0402  0EFF     MOVLW 0xFF
+0404  20E2     ADDWFC FSR1H, W, ACCESS
+0406  6EEA     MOVWF FSR0H, ACCESS
+0408  EC36     CALL 0x46C, 0
+040A  F002     NOP
+040C  E10A     BNZ jDo5
+040E  EC33     CALL 0x466, 0
+0410  F002     NOP
+0412  E109     BNZ jDo4
+0414  EC36     CALL 0x46C, 0
+0416  F002     NOP
+0418  E108     BNZ jDo3
+041A  EC33     CALL 0x466, 0
+041C  F002     NOP
+041E  E107     BNZ jDo2
+0420  D008     BRA jDo1
+0422  EC41     CALL 0x482, 0
+0424  F002     NOP
+0426  EC3C     CALL 0x478, 0
+0428  F002     NOP
+042A  EC41     CALL 0x482, 0
+042C  F002     NOP
+042E  EC3C     CALL 0x478, 0
+0430  F002     NOP
+0432  EC41     CALL 0x482, 0
+0434  F002     NOP
+0436  6ADE     CLRF POSTINC2, ACCESS
+0438  0EF9     MOVLW 0xF9
+043A  26E1     ADDWF FSR1, F, ACCESS
+043C  0EFF     MOVLW 0xFF
+043E  22E2     ADDWFC FSR1H, F, ACCESS
+0440  0EFF     MOVLW 0xFF
+0442  CFE3     MOVFF PLUSW1, FSR2H
+0444  FFDA     NOP
+0446  52E5     MOVF POSTDEC1, F, ACCESS
+0448  0EFF     MOVLW 0xFF
+044A  CFE3     MOVFF PLUSW1, FSR2
+044C  FFD9     NOP
+044E  52E5     MOVF POSTDEC1, F, ACCESS
+0450  0EFC     MOVLW 0xFC
+0452  24E1     ADDWF FSR1, W, ACCESS
+0454  6EE9     MOVWF FSR0, ACCESS
+0456  0EFF     MOVLW 0xFF
+0458  20E2     ADDWFC FSR1H, W, ACCESS
+045A  6EEA     MOVWF FSR0H, ACCESS
+045C  CFEE     MOVFF POSTINC0, PROD
+045E  FFF3     NOP
+0460  CFEF     MOVFF INDF0, PRODH
+0462  FFF4     NOP
+0464  0012     RETURN 0
+0466  38EF     SWAPF INDF0, W, ACCESS
+0468  0B0F     ANDLW 0xF
+046A  0012     RETURN 0
+046C  50EF     MOVF INDF0, W, ACCESS
+046E  0B0F     ANDLW 0xF
+0470  E102     BNZ jTstLowZ1
+0472  52EE     MOVF POSTINC0, F, ACCESS
+0474  84D8     BSF STATUS, 2, ACCESS
+0476  0012     RETURN 0
+0478  38EF     SWAPF INDF0, W, ACCESS
+047A  0B0F     ANDLW 0xF
+047C  0F30     ADDLW 0x30
+047E  6EDE     MOVWF POSTINC2, ACCESS
+0480  0012     RETURN 0
+0482  50EE     MOVF POSTINC0, W, ACCESS
+0484  0B0F     ANDLW 0xF
+0486  0F30     ADDLW 0x30
+0488  6EDE     MOVWF POSTINC2, ACCESS
+048A  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/stdclib/__init.c  -----------------------------------
+0006  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/startup/c018i.c  ------------------------------------
+0000  EF5D     GOTO 0xABA
+0002  F005     NOP
+0004  0012     RETURN 0
+0ABA  EE13     LFSR 1, 0x381
+0ABC  F081     NOP
+0ABE  EE23     LFSR 2, 0x381
+0AC0  F081     NOP
+0AC2  6AF8     CLRF TBLPTRU, ACCESS
+0AC4  9C01     BCF 0x1, 6, ACCESS
+0AC6  EC2A     CALL 0x654, 0
+0AC8  F003     NOP
+0ACA  EC03     CALL 0x6, 0
+0ACC  F000     NOP
+0ACE  ECCF     CALL 0x39E, 0
+0AD0  F001     NOP
+0AD2  D7FB     BRA 0xACA
+0AD4  0012     RETURN 0
+0654  0E1E     MOVLW 0x1E
+0656  6EF6     MOVWF TBLPTR, ACCESS
+0658  0E00     MOVLW 0x0
+065A  6EF7     MOVWF TBLPTRH, ACCESS
+065C  0E00     MOVLW 0x0
+065E  6EF8     MOVWF TBLPTRU, ACCESS
+0660  0104     MOVLB 0x4
+0662  0009     TBLRD*+
+0664  50F5     MOVF TABLAT, W, ACCESS
+0666  6F06     MOVWF 0x6, BANKED
+0668  0009     TBLRD*+
+066A  50F5     MOVF TABLAT, W, ACCESS
+066C  6F07     MOVWF 0x7, BANKED
+066E  E103     BNZ 0x676
+0670  6706     TSTFSZ 0x6, BANKED
+0672  D001     BRA 0x676
+0674  D03D     BRA 0x6F0
+0676  0009     TBLRD*+
+0678  50F5     MOVF TABLAT, W, ACCESS
+067A  6F01     MOVWF 0x1, BANKED
+067C  0009     TBLRD*+
+067E  50F5     MOVF TABLAT, W, ACCESS
+0680  6F02     MOVWF 0x2, BANKED
+0682  0009     TBLRD*+
+0684  50F5     MOVF TABLAT, W, ACCESS
+0686  6F03     MOVWF 0x3, BANKED
+0688  0009     TBLRD*+
+068A  0009     TBLRD*+
+068C  50F5     MOVF TABLAT, W, ACCESS
+068E  6EE9     MOVWF FSR0, ACCESS
+0690  0009     TBLRD*+
+0692  50F5     MOVF TABLAT, W, ACCESS
+0694  6EEA     MOVWF FSR0H, ACCESS
+0696  0009     TBLRD*+
+0698  0009     TBLRD*+
+069A  0009     TBLRD*+
+069C  50F5     MOVF TABLAT, W, ACCESS
+069E  6F04     MOVWF 0x4, BANKED
+06A0  0009     TBLRD*+
+06A2  50F5     MOVF TABLAT, W, ACCESS
+06A4  6F05     MOVWF 0x5, BANKED
+06A6  0009     TBLRD*+
+06A8  0009     TBLRD*+
+06AA  CFF6     MOVFF TBLPTR, data_ptr
+06AC  F408     NOP
+06AE  CFF7     MOVFF TBLPTRH, 0x409
+06B0  F409     NOP
+06B2  CFF8     MOVFF TBLPTRU, 0x40A
+06B4  F40A     NOP
+06B6  C401     MOVFF prom, TBLPTR
+06B8  FFF6     NOP
+06BA  C402     MOVFF 0x402, TBLPTRH
+06BC  FFF7     NOP
+06BE  C403     MOVFF 0x403, TBLPTRU
+06C0  FFF8     NOP
+06C2  0104     MOVLB 0x4
+06C4  5304     MOVF 0x4, F, BANKED
+06C6  E102     BNZ 0x6CC
+06C8  5305     MOVF 0x5, F, BANKED
+06CA  E007     BZ 0x6DA
+06CC  0009     TBLRD*+
+06CE  50F5     MOVF TABLAT, W, ACCESS
+06D0  6EEE     MOVWF POSTINC0, ACCESS
+06D2  0704     DECF 0x4, F, BANKED
+06D4  E2F8     BC 0x6C6
+06D6  0705     DECF 0x5, F, BANKED
+06D8  D7F9     BRA 0x6CC
+06DA  C408     MOVFF data_ptr, TBLPTR
+06DC  FFF6     NOP
+06DE  C409     MOVFF 0x409, TBLPTRH
+06E0  FFF7     NOP
+06E2  C40A     MOVFF 0x40A, TBLPTRU
+06E4  FFF8     NOP
+06E6  0104     MOVLB 0x4
+06E8  0706     DECF 0x6, F, BANKED
+06EA  0E00     MOVLW 0x0
+06EC  5B07     SUBWFB 0x7, F, BANKED
+06EE  D7BF     BRA 0x66E
+06F0  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/proc/p18f452.asm  -----------------------------------
+0A9A  0E00     MOVLW 0x0
+0A9C  6EF3     MOVWF PROD, ACCESS
+0A9E  EE00     LFSR 0, 0x0
+0AA0  F000     NOP
+0AA2  0E06     MOVLW 0x6
+0AA4  D801     RCALL zero_block
+0AA6  0012     RETURN 0
+0AA8  60EA     CPFSLT FSR0H, ACCESS
+0AAA  D002     BRA compare_l
+0AAC  6AEE     CLRF POSTINC0, ACCESS
+0AAE  D7FC     BRA zero_block
+0AB0  50F3     MOVF PROD, W, ACCESS
+0AB2  60E9     CPFSLT FSR0, ACCESS
+0AB4  0012     RETURN 0
+0AB6  6AEE     CLRF POSTINC0, ACCESS
+0AB8  D7FC     BRA loop_l
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/math/fxm1616s.asm  ----------------------------------
+05FA  C009     MOVFF 0x9, 0x13
+05FC  F013     NOP
+05FE  C008     MOVFF 0x8, 0x12
+0600  F012     NOP
+0602  5008     MOVF 0x8, W, ACCESS
+0604  020D     MULWF 0xD, ACCESS
+0606  CFF4     MOVFF PRODH, 0x7
+0608  F007     NOP
+060A  CFF3     MOVFF PROD, 0x6
+060C  F006     NOP
+060E  5009     MOVF 0x9, W, ACCESS
+0610  020E     MULWF 0xE, ACCESS
+0612  CFF4     MOVFF PRODH, 0x9
+0614  F009     NOP
+0616  CFF3     MOVFF PROD, 0x8
+0618  F008     NOP
+061A  020D     MULWF 0xD, ACCESS
+061C  50F3     MOVF PROD, W, ACCESS
+061E  2607     ADDWF 0x7, F, ACCESS
+0620  50F4     MOVF PRODH, W, ACCESS
+0622  2208     ADDWFC 0x8, F, ACCESS
+0624  6AE8     CLRF WREG, ACCESS
+0626  2209     ADDWFC 0x9, F, ACCESS
+0628  5012     MOVF 0x12, W, ACCESS
+062A  020E     MULWF 0xE, ACCESS
+062C  50F3     MOVF PROD, W, ACCESS
+062E  2607     ADDWF 0x7, F, ACCESS
+0630  50F4     MOVF PRODH, W, ACCESS
+0632  2208     ADDWFC 0x8, F, ACCESS
+0634  6AE8     CLRF WREG, ACCESS
+0636  2209     ADDWFC 0x9, F, ACCESS
+0638  AE0E     BTFSS 0xE, 7, ACCESS
+063A  EF23     GOTO 0x646
+063C  F003     NOP
+063E  5012     MOVF 0x12, W, ACCESS
+0640  5E08     SUBWF 0x8, F, ACCESS
+0642  5013     MOVF 0x13, W, ACCESS
+0644  5A09     SUBWFB 0x9, F, ACCESS
+0646  AE13     BTFSS 0x13, 7, ACCESS
+0648  0C00     RETLW 0x0
+064A  500D     MOVF 0xD, W, ACCESS
+064C  5E08     SUBWF 0x8, F, ACCESS
+064E  500E     MOVF 0xE, W, ACCESS
+0650  5A09     SUBWFB 0x9, F, ACCESS
+0652  0C00     RETLW 0x0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/math/fxd1616u.c  ------------------------------------
+0A4E  6A05     CLRF 0x5, ACCESS
+0A50  6A04     CLRF 0x4, ACCESS
+0A52  0E10     MOVLW 0x10
+0A54  6EE7     MOVWF INDF1, ACCESS
+0A56  90D8     BCF STATUS, 0, ACCESS
+0A58  3608     RLCF 0x8, F, ACCESS
+0A5A  3609     RLCF 0x9, F, ACCESS
+0A5C  3604     RLCF 0x4, F, ACCESS
+0A5E  3605     RLCF 0x5, F, ACCESS
+0A60  500D     MOVF 0xD, W, ACCESS
+0A62  5C04     SUBWF 0x4, W, ACCESS
+0A64  500E     MOVF 0xE, W, ACCESS
+0A66  5805     SUBWFB 0x5, W, ACCESS
+0A68  E305     BNC 0xA74
+0A6A  500D     MOVF 0xD, W, ACCESS
+0A6C  5E04     SUBWF 0x4, F, ACCESS
+0A6E  500E     MOVF 0xE, W, ACCESS
+0A70  5A05     SUBWFB 0x5, F, ACCESS
+0A72  2A08     INCF 0x8, F, ACCESS
+0A74  2EE7     DECFSZ INDF1, F, ACCESS
+0A76  D7F0     BRA 0xA58
+0A78  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/math/fxd1616s.asm  ----------------------------------
+05AE  6A00     CLRF data, ACCESS
+05B0  AE0E     BTFSS 0xE, 7, ACCESS
+05B2  EFE0     GOTO 0x5C0
+05B4  F002     NOP
+05B6  6C0D     NEGF 0xD, ACCESS
+05B8  1E0E     COMF 0xE, F, ACCESS
+05BA  6AE8     CLRF WREG, ACCESS
+05BC  220E     ADDWFC 0xE, F, ACCESS
+05BE  1E00     COMF data, F, ACCESS
+05C0  AE09     BTFSS 0x9, 7, ACCESS
+05C2  EFE8     GOTO 0x5D0
+05C4  F002     NOP
+05C6  6C08     NEGF 0x8, ACCESS
+05C8  1E09     COMF 0x9, F, ACCESS
+05CA  6AE8     CLRF WREG, ACCESS
+05CC  2209     ADDWFC 0x9, F, ACCESS
+05CE  1E00     COMF data, F, ACCESS
+05D0  EC27     CALL 0xA4E, 0
+05D2  F005     NOP
+05D4  BE09     BTFSC 0x9, 7, ACCESS
+05D6  EFF8     GOTO 0x5F0
+05D8  F002     NOP
+05DA  AE00     BTFSS data, 7, ACCESS
+05DC  0C00     RETLW 0x0
+05DE  6C08     NEGF 0x8, ACCESS
+05E0  1E09     COMF 0x9, F, ACCESS
+05E2  6AE8     CLRF WREG, ACCESS
+05E4  2209     ADDWFC 0x9, F, ACCESS
+05E6  6C04     NEGF 0x4, ACCESS
+05E8  1E05     COMF 0x5, F, ACCESS
+05EA  6AE8     CLRF WREG, ACCESS
+05EC  2205     ADDWFC 0x5, F, ACCESS
+05EE  0C00     RETLW 0x0
+05F0  BE00     BTFSC data, 7, ACCESS
+05F2  EFEF     GOTO 0x5DE
+05F4  F002     NOP
+05F6  8801     BSF 0x1, 4, ACCESS
+05F8  0CFF     RETLW 0xFF
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/delays/d1ktcyx.asm  ---------------------------------
+0A7A  0EFF     MOVLW 0xFF
+0A7C  50E3     MOVF PLUSW1, W, ACCESS
+0A7E  6E15     MOVWF DelayCounter1, ACCESS
+0A80  0E48     MOVLW 0x48
+0A82  D001     BRA D1K_1
+0A84  0E4C     MOVLW 0x4C
+0A86  6EE7     MOVWF INDF1, ACCESS
+0A88  2EE7     DECFSZ INDF1, F, ACCESS
+0A8A  D7FE     BRA 0xA88
+0A8C  6AE7     CLRF INDF1, ACCESS
+0A8E  2EE7     DECFSZ INDF1, F, ACCESS
+0A90  D7FE     BRA 0xA8E
+0A92  2E15     DECFSZ DelayCounter1, F, ACCESS
+0A94  D7F7     BRA D1Kx
+0A96  0000     NOP
+0A98  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/traditional/delays/d10ktcyx.asm  --------------------------------
+0A20  0EFF     MOVLW 0xFF
+0A22  50E3     MOVF PLUSW1, W, ACCESS
+0A24  6E15     MOVWF DelayCounter1, ACCESS
+0A26  0EEF     MOVLW 0xEF
+0A28  D001     BRA D10K_1
+0A2A  0EF3     MOVLW 0xF3
+0A2C  6EE7     MOVWF INDF1, ACCESS
+0A2E  2EE7     DECFSZ INDF1, F, ACCESS
+0A30  EF17     GOTO 0xA2E
+0A32  F005     NOP
+0A34  0E0C     MOVLW 0xC
+0A36  6E14     MOVWF DelayCounter2, ACCESS
+0A38  6AE7     CLRF INDF1, ACCESS
+0A3A  2EE7     DECFSZ INDF1, F, ACCESS
+0A3C  EF1D     GOTO 0xA3A
+0A3E  F005     NOP
+0A40  2E14     DECFSZ DelayCounter2, F, ACCESS
+0A42  EF1C     GOTO 0xA38
+0A44  F005     NOP
+0A46  2E15     DECFSZ DelayCounter1, F, ACCESS
+0A48  EF15     GOTO 0xA2A
+0A4A  F005     NOP
+0A4C  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/pmc_common/Timers/t0write.c  ------------------------------------
+0946  CFD9     MOVFF FSR2, POSTINC1
+0948  FFE6     NOP
+094A  CFDA     MOVFF FSR2H, POSTINC1
+094C  FFE6     NOP
+094E  CFE1     MOVFF FSR1, FSR2
+0950  FFD9     NOP
+0952  CFE2     MOVFF FSR1H, FSR2H
+0954  FFDA     NOP
+0956  52E6     MOVF POSTINC1, F, ACCESS
+0958  52E6     MOVF POSTINC1, F, ACCESS
+095A  0EFC     MOVLW 0xFC
+095C  CFDB     MOVFF PLUSW2, POSTINC2
+095E  FFDE     NOP
+0960  CFDB     MOVFF PLUSW2, POSTDEC2
+0962  FFDD     NOP
+0964  0E01     MOVLW 0x1
+0966  50DB     MOVF PLUSW2, W, ACCESS
+0968  6ED7     MOVWF TMR0H, ACCESS
+096A  50DF     MOVF INDF2, W, ACCESS
+096C  6ED6     MOVWF TMR0, ACCESS
+096E  52E5     MOVF POSTDEC1, F, ACCESS
+0970  52E5     MOVF POSTDEC1, F, ACCESS
+0972  52E5     MOVF POSTDEC1, F, ACCESS
+0974  CFE5     MOVFF POSTDEC1, FSR2H
+0976  FFDA     NOP
+0978  CFE7     MOVFF INDF1, FSR2
+097A  FFD9     NOP
+097C  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/pmc_common/Timers/t0open.c  -------------------------------------
+097E  CFD9     MOVFF FSR2, POSTINC1
+0980  FFE6     NOP
+0982  CFDA     MOVFF FSR2H, POSTINC1
+0984  FFE6     NOP
+0986  CFE1     MOVFF FSR1, FSR2
+0988  FFD9     NOP
+098A  CFE2     MOVFF FSR1H, FSR2H
+098C  FFDA     NOP
+098E  0EFD     MOVLW 0xFD
+0990  50DB     MOVF PLUSW2, W, ACCESS
+0992  0B7F     ANDLW 0x7F
+0994  6ED5     MOVWF T0CON, ACCESS
+0996  6AD7     CLRF TMR0H, ACCESS
+0998  6AD6     CLRF TMR0, ACCESS
+099A  94F2     BCF INTCON, 2, ACCESS
+099C  0EFD     MOVLW 0xFD
+099E  AEDB     BTFSS PLUSW2, 7, ACCESS
+09A0  D002     BRA 0x9A6
+09A2  8AF2     BSF INTCON, 5, ACCESS
+09A4  D001     BRA 0x9A8
+09A6  9AF2     BCF INTCON, 5, ACCESS
+09A8  8ED5     BSF T0CON, 7, ACCESS
+09AA  52E5     MOVF POSTDEC1, F, ACCESS
+09AC  CFE5     MOVFF POSTDEC1, FSR2H
+09AE  FFDA     NOP
+09B0  CFE7     MOVFF INDF1, FSR2
+09B2  FFD9     NOP
+09B4  0012     RETURN 0
+---  E:/3.46/pic18-lt/cxx-framework/src/pmc_common/Timers/t0close.c  ------------------------------------
+000E  9ED5     BCF T0CON, 7, ACCESS
+0010  9AF2     BCF INTCON, 5, ACCESS
+0012  0012     RETURN 0
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/writdata.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  WriteDataXLCD                               *
+6:             *       Return Value:   void                                        *
+7:             *       Parameters:     data: data byte to be written to LCD        *
+8:             *       Description:    This routine writes a data byte to the      *
+9:             *                       Hitachi HD44780 LCD controller. The user    *
+10:            *                       must check to see if the LCD controller is  *
+11:            *                       busy before calling this routine. The data  *
+12:            *                       is written to the character generator RAM or*
+13:            *                       the display data RAM depending on what the  *
+14:            *                       previous SetxxRamAddr routine was called.   *
+15:            ********************************************************************/
+16:            void WriteDataXLCD(char data)
+07DC  CFD9     MOVFF FSR2, POSTINC1
+07DE  FFE6     NOP
+07E0  CFE1     MOVFF FSR1, FSR2
+07E2  FFD9     NOP
+17:            {
+18:            #ifdef BIT8                             // 8-bit interface
+19:                    TRIS_DATA_PORT = 0;             // Make port output
+20:                    DATA_PORT = data;               // Write data to port
+21:                    RS_PIN = 1;                     // Set control bits
+22:                    RW_PIN = 0;
+23:                    DelayFor18TCY();
+24:                    E_PIN = 1;                      // Clock data into LCD
+25:                    DelayFor18TCY();
+26:                    E_PIN = 0;
+27:                    RS_PIN = 0;                     // Reset control bits
+28:                    TRIS_DATA_PORT = 0xff;          // Make port input
+29:            #else                                   // 4-bit interface
+30:            #ifdef UPPER                            // Upper nibble interface
+31:                    TRIS_DATA_PORT &= 0x0f;
+07E4  0E0F     MOVLW 0xF
+07E6  1695     ANDWF TRISD, F, ACCESS
+32:                    DATA_PORT &= 0x0f;
+07E8  1683     ANDWF PORTD, F, ACCESS
+33:                    DATA_PORT |= data&0xf0;
+07EA  0EFE     MOVLW 0xFE
+07EC  50DB     MOVF PLUSW2, W, ACCESS
+07EE  0BF0     ANDLW 0xF0
+07F0  1283     IORWF PORTD, F, ACCESS
+34:            #else                                   // Lower nibble interface
+35:                    TRIS_DATA_PORT &= 0xf0;
+36:                    DATA_PORT &= 0xf0;
+37:                    DATA_PORT |= ((data>>4)&0x0f);
+38:            #endif
+39:                    RS_PIN = 1;                     // Set control bits
+07F2  828C     BSF LATD, 1, ACCESS
+40:                    RW_PIN = 0;
+07F4  948C     BCF LATD, 2, ACCESS
+41:                    DelayFor18TCY();
+07F6  EC16     CALL 0x2C, 0
+07F8  F000     NOP
+42:                    E_PIN = 1;                      // Clock nibble into LCD
+07FA  808C     BSF LATD, 0, ACCESS
+43:                    DelayFor18TCY();
+07FC  EC16     CALL 0x2C, 0
+07FE  F000     NOP
+44:                    E_PIN = 0;
+0800  908C     BCF LATD, 0, ACCESS
+45:            #ifdef UPPER                            // Upper nibble interface
+46:                    DATA_PORT &= 0x0f;
+0802  0E0F     MOVLW 0xF
+0804  1683     ANDWF PORTD, F, ACCESS
+47:                    DATA_PORT |= ((data<<4)&0xf0);
+0806  0EFE     MOVLW 0xFE
+0808  38DB     SWAPF PLUSW2, W, ACCESS
+080A  0BF0     ANDLW 0xF0
+080C  0BF0     ANDLW 0xF0
+080E  1283     IORWF PORTD, F, ACCESS
+48:            #else                                   // Lower nibble interface
+49:                    DATA_PORT &= 0xf0;
+50:                    DATA_PORT |= (data&0x0f);
+51:            #endif
+52:                    DelayFor18TCY();
+0810  EC16     CALL 0x2C, 0
+0812  F000     NOP
+53:                    E_PIN = 1;                      // Clock nibble into LCD
+0814  808C     BSF LATD, 0, ACCESS
+54:                    DelayFor18TCY();
+0816  EC16     CALL 0x2C, 0
+0818  F000     NOP
+55:                    E_PIN = 0;
+081A  908C     BCF LATD, 0, ACCESS
+56:            #ifdef UPPER                            // Upper nibble interface
+57:                    TRIS_DATA_PORT |= 0xf0;
+081C  0EF0     MOVLW 0xF0
+081E  1295     IORWF TRISD, F, ACCESS
+58:            #else                                   // Lower nibble interface
+59:                    TRIS_DATA_PORT |= 0x0f;
+60:            #endif
+61:            #endif
+62:                    return;
+63:            }
+0820  52E5     MOVF POSTDEC1, F, ACCESS
+0822  CFE7     MOVFF INDF1, FSR2
+0824  FFD9     NOP
+0826  0012     RETURN 0
+64:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/wcmdxlcd.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  WriteCmdXLCD                                *
+6:             *       Return Value:   void                                        *
+7:             *       Parameters:     cmd: command to send to LCD                 *
+8:             *       Description:    This routine writes a command to the Hitachi*
+9:             *                       HD44780 LCD controller. The user must check *
+10:            *                       to see if the LCD controller is busy before *
+11:            *                       calling this routine.                       *
+12:            ********************************************************************/
+13:            void WriteCmdXLCD(unsigned char cmd)
+0828  CFD9     MOVFF FSR2, POSTINC1
+082A  FFE6     NOP
+082C  CFE1     MOVFF FSR1, FSR2
+082E  FFD9     NOP
+14:            {
+15:            #ifdef BIT8                             // 8-bit interface
+16:                    TRIS_DATA_PORT = 0;             // Data port output
+17:                    DATA_PORT = cmd;                // Write command to data port
+18:                    RW_PIN = 0;                     // Set the control signals
+19:                    RS_PIN = 0;                     // for sending a command
+20:                    DelayFor18TCY();
+21:                    E_PIN = 1;                      // Clock the command in
+22:                    DelayFor18TCY();
+23:                    E_PIN = 0;
+24:                    DelayFor18TCY();
+25:                    TRIS_DATA_PORT = 0xff;          // Data port input
+26:            #else                                   // 4-bit interface
+27:            #ifdef UPPER                            // Upper nibble interface
+28:                    TRIS_DATA_PORT &= 0x0f;
+0830  0E0F     MOVLW 0xF
+0832  1695     ANDWF TRISD, F, ACCESS
+29:                    DATA_PORT &= 0x0f;
+0834  1683     ANDWF PORTD, F, ACCESS
+30:                    DATA_PORT |= cmd&0xf0;
+0836  0EFE     MOVLW 0xFE
+0838  50DB     MOVF PLUSW2, W, ACCESS
+083A  0BF0     ANDLW 0xF0
+083C  1283     IORWF PORTD, F, ACCESS
+31:            #else                                   // Lower nibble interface
+32:                    TRIS_DATA_PORT &= 0xf0;
+33:                    DATA_PORT &= 0xf0;
+34:                    DATA_PORT |= (cmd>>4)&0x0f;
+35:            #endif
+36:                    RW_PIN = 0;                     // Set control signals for command
+083E  948C     BCF LATD, 2, ACCESS
+37:                    RS_PIN = 0;
+0840  928C     BCF LATD, 1, ACCESS
+38:                    DelayFor18TCY();
+0842  EC16     CALL 0x2C, 0
+0844  F000     NOP
+39:                    E_PIN = 1;                      // Clock command in
+0846  808C     BSF LATD, 0, ACCESS
+40:                    DelayFor18TCY();
+0848  EC16     CALL 0x2C, 0
+084A  F000     NOP
+41:                    E_PIN = 0;
+084C  908C     BCF LATD, 0, ACCESS
+42:            #ifdef UPPER                            // Upper nibble interface
+43:                    DATA_PORT &= 0x0f;
+084E  0E0F     MOVLW 0xF
+0850  1683     ANDWF PORTD, F, ACCESS
+44:                    DATA_PORT |= (cmd<<4)&0xf0;
+0852  0EFE     MOVLW 0xFE
+0854  38DB     SWAPF PLUSW2, W, ACCESS
+0856  0BF0     ANDLW 0xF0
+0858  0BF0     ANDLW 0xF0
+085A  1283     IORWF PORTD, F, ACCESS
+45:            #else                                   // Lower nibble interface
+46:                    DATA_PORT &= 0xf0;
+47:                    DATA_PORT |= cmd&0x0f;
+48:            #endif
+49:                    DelayFor18TCY();
+085C  EC16     CALL 0x2C, 0
+085E  F000     NOP
+50:                    E_PIN = 1;                      // Clock command in
+0860  808C     BSF LATD, 0, ACCESS
+51:                    DelayFor18TCY();
+0862  EC16     CALL 0x2C, 0
+0864  F000     NOP
+52:                    E_PIN = 0;
+0866  908C     BCF LATD, 0, ACCESS
+53:            #ifdef UPPER                            // Make data nibble input
+54:                    TRIS_DATA_PORT |= 0xf0;
+0868  0EF0     MOVLW 0xF0
+086A  1295     IORWF TRISD, F, ACCESS
+55:            #else
+56:                    TRIS_DATA_PORT |= 0x0f;
+57:            #endif
+58:            #endif
+59:                    return;
+60:            }
+086C  52E5     MOVF POSTDEC1, F, ACCESS
+086E  CFE7     MOVFF INDF1, FSR2
+0870  FFD9     NOP
+0872  0012     RETURN 0
+61:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setddram.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  SetDDRamAddr                                *
+6:             *       Return Value:   void                                        *
+7:             *       Parameters:     CGaddr: display data address                *
+8:             *       Description:    This routine sets the display data address  *
+9:             *                       of the Hitachi HD44780 LCD controller. The  *
+10:            *                       user must check to see if the LCD controller*
+11:            *                       is busy before calling this routine.        *
+12:            ********************************************************************/
+13:            void SetDDRamAddr(unsigned char DDaddr)
+06F2  CFD9     MOVFF FSR2, POSTINC1
+06F4  FFE6     NOP
+06F6  CFE1     MOVFF FSR1, FSR2
+06F8  FFD9     NOP
+14:            {
+15:            #ifdef BIT8                                     // 8-bit interface
+16:                    TRIS_DATA_PORT = 0;                     // Make port output
+17:                    DATA_PORT = DDaddr | 0b10000000;        // Write cmd and address to port
+18:                    RW_PIN = 0;                             // Set the control bits
+19:                    RS_PIN = 0;
+20:                    DelayFor18TCY();
+21:                    E_PIN = 1;                              // Clock the cmd and address in
+22:                    DelayFor18TCY();
+23:                    E_PIN = 0;
+24:                    DelayFor18TCY();
+25:                    TRIS_DATA_PORT = 0xff;                  // Make port input
+26:            #else                                           // 4-bit interface
+27:            #ifdef UPPER                                    // Upper nibble  interface
+28:                    TRIS_DATA_PORT &= 0x0f;                 // Make port output
+06FA  0E0F     MOVLW 0xF
+06FC  1695     ANDWF TRISD, F, ACCESS
+29:                    DATA_PORT &= 0x0f;                      // and write upper nibble
+06FE  1683     ANDWF PORTD, F, ACCESS
+30:                    DATA_PORT |= ((DDaddr | 0b10000000) & 0xf0);
+0700  0EFE     MOVLW 0xFE
+0702  50DB     MOVF PLUSW2, W, ACCESS
+0704  0980     IORLW 0x80
+0706  0BF0     ANDLW 0xF0
+0708  1283     IORWF PORTD, F, ACCESS
+31:            #else                                           // Lower nibble interface
+32:                    TRIS_DATA_PORT &= 0xf0;                 // Make port output
+33:                    DATA_PORT &= 0xf0;                      // and write upper nibble
+34:                    DATA_PORT |= (((DDaddr | 0b10000000)>>4) & 0x0f);
+35:            #endif
+36:                    RW_PIN = 0;                             // Set control bits
+070A  948C     BCF LATD, 2, ACCESS
+37:                    RS_PIN = 0;
+070C  928C     BCF LATD, 1, ACCESS
+38:                    DelayFor18TCY();
+070E  EC16     CALL 0x2C, 0
+0710  F000     NOP
+39:                    E_PIN = 1;                              // Clock the cmd and address in
+0712  808C     BSF LATD, 0, ACCESS
+40:                    DelayFor18TCY();
+0714  EC16     CALL 0x2C, 0
+0716  F000     NOP
+41:                    E_PIN = 0;
+0718  908C     BCF LATD, 0, ACCESS
+42:            #ifdef UPPER                                    // Upper nibble interface
+43:                    DATA_PORT &= 0x0f;                      // Write lower nibble
+071A  0E0F     MOVLW 0xF
+071C  1683     ANDWF PORTD, F, ACCESS
+44:                    DATA_PORT |= ((DDaddr<<4)&0xf0);
+071E  0EFE     MOVLW 0xFE
+0720  38DB     SWAPF PLUSW2, W, ACCESS
+0722  0BF0     ANDLW 0xF0
+0724  0BF0     ANDLW 0xF0
+0726  1283     IORWF PORTD, F, ACCESS
+45:            #else                                           // Lower nibble interface
+46:                    DATA_PORT &= 0xf0;                      // Write lower nibble
+47:                    DATA_PORT |= (DDaddr&0x0f);
+48:            #endif
+49:                    DelayFor18TCY();
+0728  EC16     CALL 0x2C, 0
+072A  F000     NOP
+50:                    E_PIN = 1;                              // Clock the cmd and address in
+072C  808C     BSF LATD, 0, ACCESS
+51:                    DelayFor18TCY();
+072E  EC16     CALL 0x2C, 0
+0730  F000     NOP
+52:                    E_PIN = 0;
+0732  908C     BCF LATD, 0, ACCESS
+53:            #ifdef UPPER                                    // Upper nibble interface
+54:                    TRIS_DATA_PORT |= 0xf0;                 // Make port input
+0734  0EF0     MOVLW 0xF0
+0736  1295     IORWF TRISD, F, ACCESS
+55:            #else                                           // Lower nibble interface
+56:                    TRIS_DATA_PORT |= 0x0f;                 // Make port input
+57:            #endif
+58:            #endif
+59:                    return;
+60:            }
+0738  52E5     MOVF POSTDEC1, F, ACCESS
+073A  CFE7     MOVFF INDF1, FSR2
+073C  FFD9     NOP
+073E  0012     RETURN 0
+61:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/setcgram.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  SetCGRamAddr                                *
+6:             *       Return Value:   void                                        *
+7:             *       Parameters:     CGaddr: character generator ram address     *
+8:             *       Description:    This routine sets the character generator   *
+9:             *                       address of the Hitachi HD44780 LCD          *
+10:            *                       controller. The user must check to see if   *
+11:            *                       the LCD controller is busy before calling   *
+12:            *                       this routine.                               *
+13:            ********************************************************************/
+14:            void SetCGRamAddr(unsigned char CGaddr)
+0740  CFD9     MOVFF FSR2, POSTINC1
+0742  FFE6     NOP
+0744  CFE1     MOVFF FSR1, FSR2
+0746  FFD9     NOP
+15:            {
+16:            #ifdef BIT8                                     // 8-bit interface
+17:                    TRIS_DATA_PORT = 0;                     // Make data port ouput
+18:                    DATA_PORT = CGaddr | 0b01000000;        // Write cmd and address to port
+19:                    RW_PIN = 0;                             // Set control signals
+20:                    RS_PIN = 0;
+21:                    DelayFor18TCY();
+22:                    E_PIN = 1;                              // Clock cmd and address in
+23:                    DelayFor18TCY();
+24:                    E_PIN = 0;
+25:                    DelayFor18TCY();
+26:                    TRIS_DATA_PORT = 0xff;                  // Make data port inputs
+27:            #else                                           // 4-bit interface
+28:            #ifdef UPPER                                    // Upper nibble interface
+29:                    TRIS_DATA_PORT &= 0x0f;                 // Make nibble input
+0748  0E0F     MOVLW 0xF
+074A  1695     ANDWF TRISD, F, ACCESS
+30:                    DATA_PORT &= 0x0f;                      // and write upper nibble
+074C  1683     ANDWF PORTD, F, ACCESS
+31:                    DATA_PORT |= ((CGaddr | 0b01000000) & 0xf0);
+074E  0EFE     MOVLW 0xFE
+0750  50DB     MOVF PLUSW2, W, ACCESS
+0752  0940     IORLW 0x40
+0754  0BF0     ANDLW 0xF0
+0756  1283     IORWF PORTD, F, ACCESS
+32:            #else                                           // Lower nibble interface
+33:                    TRIS_DATA_PORT &= 0xf0;                 // Make nibble input
+34:                    DATA_PORT &= 0xf0;                      // and write upper nibble
+35:                    DATA_PORT |= (((CGaddr |0b01000000)>>4) & 0x0f);
+36:            #endif
+37:                    RW_PIN = 0;                             // Set control signals
+0758  948C     BCF LATD, 2, ACCESS
+38:                    RS_PIN = 0;
+075A  928C     BCF LATD, 1, ACCESS
+39:                    DelayFor18TCY();
+075C  EC16     CALL 0x2C, 0
+075E  F000     NOP
+40:                    E_PIN = 1;                              // Clock cmd and address in
+0760  808C     BSF LATD, 0, ACCESS
+41:                    DelayFor18TCY();
+0762  EC16     CALL 0x2C, 0
+0764  F000     NOP
+42:                    E_PIN = 0;
+0766  908C     BCF LATD, 0, ACCESS
+43:            #ifdef UPPER                                    // Upper nibble interface
+44:                    DATA_PORT &= 0x0f;                      // Write lower nibble
+0768  0E0F     MOVLW 0xF
+076A  1683     ANDWF PORTD, F, ACCESS
+45:                    DATA_PORT |= ((CGaddr<<4)&0xf0);
+076C  0EFE     MOVLW 0xFE
+076E  38DB     SWAPF PLUSW2, W, ACCESS
+0770  0BF0     ANDLW 0xF0
+0772  0BF0     ANDLW 0xF0
+0774  1283     IORWF PORTD, F, ACCESS
+46:            #else                                           // Lower nibble interface
+47:                    DATA_PORT &= 0xf0;                      // Write lower nibble
+48:                    DATA_PORT |= (CGaddr&0x0f);
+49:            #endif
+50:                    DelayFor18TCY();
+0776  EC16     CALL 0x2C, 0
+0778  F000     NOP
+51:                    E_PIN = 1;                              // Clock cmd and address in
+077A  808C     BSF LATD, 0, ACCESS
+52:                    DelayFor18TCY();
+077C  EC16     CALL 0x2C, 0
+077E  F000     NOP
+53:                    E_PIN = 0;
+0780  908C     BCF LATD, 0, ACCESS
+54:            #ifdef UPPER                                    // Upper nibble interface
+55:                    TRIS_DATA_PORT |= 0xf0;                 // Make inputs
+0782  0EF0     MOVLW 0xF0
+0784  1295     IORWF TRISD, F, ACCESS
+56:            #else                                           // Lower nibble interface
+57:                    TRIS_DATA_PORT |= 0x0f;                 // Make inputs
+58:            #endif
+59:            #endif
+60:                    return;
+61:            }
+0786  52E5     MOVF POSTDEC1, F, ACCESS
+0788  CFE7     MOVFF INDF1, FSR2
+078A  FFD9     NOP
+078C  0012     RETURN 0
+62:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readdata.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  ReadDataXLCD                                *
+6:             *       Return Value:   char: data byte from LCD controller         *
+7:             *       Parameters:     void                                        *
+8:             *       Description:    This routine reads a data byte from the     *
+9:             *                       Hitachi HD44780 LCD controller. The user    *
+10:            *                       must check to see if the LCD controller is  *
+11:            *                       busy before calling this routine. The data  *
+12:            *                       is read from the character generator RAM or *
+13:            *                       the display data RAM depending on what the  *
+14:            *                       previous SetxxRamAddr routine was called.   *
+15:            ********************************************************************/
+16:            char ReadDataXLCD(void)
+08BE  CFD9     MOVFF FSR2, POSTINC1
+08C0  FFE6     NOP
+08C2  CFE1     MOVFF FSR1, FSR2
+08C4  FFD9     NOP
+08C6  52E6     MOVF POSTINC1, F, ACCESS
+17:            {
+18:                    char data;
+19:            
+20:            #ifdef BIT8                             // 8-bit interface
+21:                    RS_PIN = 1;                     // Set the control bits
+22:                    RW_PIN = 1;
+23:                    DelayFor18TCY();
+24:                    E_PIN = 1;                      // Clock the data out of the LCD
+25:                    DelayFor18TCY();
+26:                    data = DATA_PORT;               // Read the data
+27:                    E_PIN = 0;
+28:                    RS_PIN = 0;                     // Reset the control bits
+29:                    RW_PIN = 0;
+30:            #else                                   // 4-bit interface
+31:                    RW_PIN = 1;
+08C8  848C     BSF LATD, 2, ACCESS
+32:                    RS_PIN = 1;
+08CA  828C     BSF LATD, 1, ACCESS
+33:                    DelayFor18TCY();
+08CC  EC16     CALL 0x2C, 0
+08CE  F000     NOP
+34:                    E_PIN = 1;                      // Clock the data out of the LCD
+08D0  808C     BSF LATD, 0, ACCESS
+35:                    DelayFor18TCY();
+08D2  EC16     CALL 0x2C, 0
+08D4  F000     NOP
+36:            #ifdef UPPER                            // Upper nibble interface
+37:                    data = DATA_PORT&0xf0;          // Read the upper nibble of data
+08D6  0EF0     MOVLW 0xF0
+08D8  1483     ANDWF PORTD, W, ACCESS
+08DA  6EDF     MOVWF INDF2, ACCESS
+38:            #else                                   // Lower nibble interface
+39:                    data = (DATA_PORT<<4)&0xf0;     // read the upper nibble of data
+40:            #endif
+41:                    E_PIN = 0;                      // Reset the clock line
+08DC  908C     BCF LATD, 0, ACCESS
+42:                    DelayFor18TCY();
+08DE  EC16     CALL 0x2C, 0
+08E0  F000     NOP
+43:                    E_PIN = 1;                      // Clock the next nibble out of the LCD
+08E2  808C     BSF LATD, 0, ACCESS
+44:                    DelayFor18TCY();
+08E4  EC16     CALL 0x2C, 0
+08E6  F000     NOP
+45:            #ifdef UPPER                            // Upper nibble interface
+46:                    data |= (DATA_PORT>>4)&0x0f;    // Read the lower nibble of data
+08E8  3883     SWAPF PORTD, W, ACCESS
+08EA  0B0F     ANDLW 0xF
+08EC  0B0F     ANDLW 0xF
+08EE  12DF     IORWF INDF2, F, ACCESS
+47:            #else                                   // Lower nibble interface
+48:                    data |= DATA_PORT&0x0f;         // Read the lower nibble of data
+49:            #endif
+50:                    E_PIN = 0;                                      
+08F0  908C     BCF LATD, 0, ACCESS
+51:                    RS_PIN = 0;                     // Reset the control bits
+08F2  928C     BCF LATD, 1, ACCESS
+52:                    RW_PIN = 0;
+08F4  948C     BCF LATD, 2, ACCESS
+53:            #endif
+54:                    return(data);                   // Return the data byte
+08F6  50DF     MOVF INDF2, W, ACCESS
+55:            }
+08F8  52E5     MOVF POSTDEC1, F, ACCESS
+08FA  52E5     MOVF POSTDEC1, F, ACCESS
+08FC  CFE7     MOVFF INDF1, FSR2
+08FE  FFD9     NOP
+0900  0012     RETURN 0
+56:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/readaddr.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /*********************************************************************
+5:             *       Function Name:  ReadAddrXLCD                                 *
+6:             *       Return Value:   char: address from LCD controller            *
+7:             *       Parameters:     void                                         *
+8:             *       Description:    This routine reads an address byte from the  *
+9:             *                       Hitachi HD44780 LCD controller. The user     *
+10:            *                       must check to see if the LCD controller is   *
+11:            *                       busy before calling this routine. The address*
+12:            *                       is read from the character generator RAM or  *
+13:            *                       the display data RAM depending on what the   *
+14:            *                       previous SetxxRamAddr routine was called.    *
+15:            *********************************************************************/
+16:            unsigned char ReadAddrXLCD(void)
+0902  CFD9     MOVFF FSR2, POSTINC1
+0904  FFE6     NOP
+0906  CFE1     MOVFF FSR1, FSR2
+0908  FFD9     NOP
+090A  52E6     MOVF POSTINC1, F, ACCESS
+17:            {
+18:                    char data;                      // Holds the data retrieved from the LCD
+19:            
+20:            #ifdef BIT8                             // 8-bit interface
+21:                    RW_PIN = 1;                     // Set control bits for the read
+22:                    RS_PIN = 0;
+23:                    DelayFor18TCY();
+24:                    E_PIN = 1;                      // Clock data out of the LCD controller
+25:                    DelayFor18TCY();
+26:                    data = DATA_PORT;               // Save the data in the register
+27:                    E_PIN = 0;
+28:                    RW_PIN = 0;                     // Reset the control bits
+29:            #else                                   // 4-bit interface
+30:                    RW_PIN = 1;                     // Set control bits for the read
+090C  848C     BSF LATD, 2, ACCESS
+31:                    RS_PIN = 0;
+090E  928C     BCF LATD, 1, ACCESS
+32:                    DelayFor18TCY();
+0910  EC16     CALL 0x2C, 0
+0912  F000     NOP
+33:                    E_PIN = 1;                      // Clock data out of the LCD controller
+0914  808C     BSF LATD, 0, ACCESS
+34:                    DelayFor18TCY();
+0916  EC16     CALL 0x2C, 0
+0918  F000     NOP
+35:            #ifdef UPPER                            // Upper nibble interface
+36:                    data = DATA_PORT&0xf0;          // Read the nibble into the upper nibble of data
+091A  0EF0     MOVLW 0xF0
+091C  1483     ANDWF PORTD, W, ACCESS
+091E  6EDF     MOVWF INDF2, ACCESS
+37:            #else                                   // Lower nibble interface
+38:                    data = (DATA_PORT<<4)&0xf0;     // Read the nibble into the upper nibble of data
+39:            #endif
+40:                    E_PIN = 0;                      // Reset the clock
+0920  908C     BCF LATD, 0, ACCESS
+41:                    DelayFor18TCY();
+0922  EC16     CALL 0x2C, 0
+0924  F000     NOP
+42:                    E_PIN = 1;                      // Clock out the lower nibble
+0926  808C     BSF LATD, 0, ACCESS
+43:                    DelayFor18TCY();
+0928  EC16     CALL 0x2C, 0
+092A  F000     NOP
+44:            #ifdef UPPER                            // Upper nibble interface
+45:                    data |= (DATA_PORT>>4)&0x0f;    // Read the nibble into the lower nibble of data
+092C  3883     SWAPF PORTD, W, ACCESS
+092E  0B0F     ANDLW 0xF
+0930  0B0F     ANDLW 0xF
+0932  12DF     IORWF INDF2, F, ACCESS
+46:            #else                                   // Lower nibble interface
+47:                    data |= DATA_PORT&0x0f;         // Read the nibble into the lower nibble of data
+48:            #endif
+49:                    E_PIN = 0;
+0934  908C     BCF LATD, 0, ACCESS
+50:                    RW_PIN = 0;                     // Reset the control lines
+0936  948C     BCF LATD, 2, ACCESS
+51:            #endif
+52:                    return (data&0x7f);             // Return the address, Mask off the busy bit
+0938  0E7F     MOVLW 0x7F
+093A  14DF     ANDWF INDF2, W, ACCESS
+53:            }
+093C  52E5     MOVF POSTDEC1, F, ACCESS
+093E  52E5     MOVF POSTDEC1, F, ACCESS
+0940  CFE7     MOVFF INDF1, FSR2
+0942  FFD9     NOP
+0944  0012     RETURN 0
+54:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putsxlcd.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  putsXLCD
+6:             *       Return Value:   void
+7:             *       Parameters:     buffer: pointer to string
+8:             *       Description:    This routine writes a string of bytes to the
+9:             *                       Hitachi HD44780 LCD controller. The user
+10:            *                       must check to see if the LCD controller is
+11:            *                       busy before calling this routine. The data
+12:            *                       is written to the character generator RAM or
+13:            *                       the display data RAM depending on what the
+14:            *                       previous SetxxRamAddr routine was called.
+15:            ********************************************************************/
+16:            void putsXLCD(char *buffer)
+0874  CFD9     MOVFF FSR2, POSTINC1
+0876  FFE6     NOP
+0878  CFE1     MOVFF FSR1, FSR2
+087A  FFD9     NOP
+17:            {
+18:                    while(*buffer)                  // Write data to LCD up to null
+087C  0EFD     MOVLW 0xFD
+087E  CFDB     MOVFF PLUSW2, FSR0
+0880  FFE9     NOP
+0882  0EFE     MOVLW 0xFE
+0884  CFDB     MOVFF PLUSW2, FSR0H
+0886  FFEA     NOP
+0888  50EF     MOVF INDF0, W, ACCESS
+088A  E015     BZ 0x8B6
+08B4  D7E3     BRA 0x87C
+19:                    {
+20:                            while(BusyXLCD());      // Wait while LCD is busy
+088C  ECDB     CALL 0x9B6, 0
+088E  F004     NOP
+0890  0900     IORLW 0x0
+0892  E1FC     BNZ 0x88C
+21:                            WriteDataXLCD(*buffer); // Write character to LCD
+0894  0EFD     MOVLW 0xFD
+0896  CFDB     MOVFF PLUSW2, FSR0
+0898  FFE9     NOP
+089A  0EFE     MOVLW 0xFE
+089C  CFDB     MOVFF PLUSW2, FSR0H
+089E  FFEA     NOP
+08A0  50EF     MOVF INDF0, W, ACCESS
+08A2  6EE6     MOVWF POSTINC1, ACCESS
+08A4  ECEE     CALL 0x7DC, 0
+08A6  F003     NOP
+08A8  52E5     MOVF POSTDEC1, F, ACCESS
+22:                            buffer++;               // Increment buffer
+08AA  0EFD     MOVLW 0xFD
+08AC  2ADB     INCF PLUSW2, F, ACCESS
+08AE  0EFE     MOVLW 0xFE
+08B0  E3E5     BNC 0x87C
+08B2  2ADB     INCF PLUSW2, F, ACCESS
+23:                    }
+24:                    return;
+25:            }
+08B6  52E5     MOVF POSTDEC1, F, ACCESS
+08B8  CFE7     MOVFF INDF1, FSR2
+08BA  FFD9     NOP
+08BC  0012     RETURN 0
+26:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/putrxlcd.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  putrsXLCD
+6:             *       Return Value:   void
+7:             *       Parameters:     buffer: pointer to string
+8:             *       Description:    This routine writes a string of bytes to the
+9:             *                       Hitachi HD44780 LCD controller. The user
+10:            *                       must check to see if the LCD controller is
+11:            *                       busy before calling this routine. The data
+12:            *                       is written to the character generator RAM or
+13:            *                       the display data RAM depending on what the
+14:            *                       previous SetxxRamAddr routine was called.
+15:            ********************************************************************/
+16:            void putrsXLCD(const rom char *buffer)
+078E  CFD9     MOVFF FSR2, POSTINC1
+0790  FFE6     NOP
+0792  CFE1     MOVFF FSR1, FSR2
+0794  FFD9     NOP
+17:            {
+18:                    while(*buffer)                  // Write data to LCD up to null
+0796  0EFD     MOVLW 0xFD
+0798  CFDB     MOVFF PLUSW2, TBLPTR
+079A  FFF6     NOP
+079C  0EFE     MOVLW 0xFE
+079E  CFDB     MOVFF PLUSW2, TBLPTRH
+07A0  FFF7     NOP
+07A2  0008     TBLRD*
+07A4  50F5     MOVF TABLAT, W, ACCESS
+07A6  E016     BZ 0x7D4
+07D2  D7E1     BRA 0x796
+19:                    {
+20:                            while(BusyXLCD());      // Wait while LCD is busy
+07A8  ECDB     CALL 0x9B6, 0
+07AA  F004     NOP
+07AC  0900     IORLW 0x0
+07AE  E1FC     BNZ 0x7A8
+21:                            WriteDataXLCD(*buffer); // Write character to LCD
+07B0  0EFD     MOVLW 0xFD
+07B2  CFDB     MOVFF PLUSW2, TBLPTR
+07B4  FFF6     NOP
+07B6  0EFE     MOVLW 0xFE
+07B8  CFDB     MOVFF PLUSW2, TBLPTRH
+07BA  FFF7     NOP
+07BC  0008     TBLRD*
+07BE  50F5     MOVF TABLAT, W, ACCESS
+07C0  6EE6     MOVWF POSTINC1, ACCESS
+07C2  ECEE     CALL 0x7DC, 0
+07C4  F003     NOP
+07C6  52E5     MOVF POSTDEC1, F, ACCESS
+22:                            buffer++;               // Increment buffer
+07C8  0EFD     MOVLW 0xFD
+07CA  2ADB     INCF PLUSW2, F, ACCESS
+07CC  0EFE     MOVLW 0xFE
+07CE  E3E3     BNC 0x796
+07D0  2ADB     INCF PLUSW2, F, ACCESS
+23:                    }
+24:                    return;
+25:            }
+07D4  52E5     MOVF POSTDEC1, F, ACCESS
+07D6  CFE7     MOVFF INDF1, FSR2
+07D8  FFD9     NOP
+07DA  0012     RETURN 0
+26:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c  --------------------
+1:             #include <p18f452.h>
+2:             #include "xlcd.h"
+3:             #include <delays.h>
+4:             #include <timers.h>
+5:             #include <stdlib.h>
+6:             #include <string.h>
+7:             
+8:             #pragma config OSC = HS
+9:             #pragma config WDT = OFF
+10:            #pragma config LVP = OFF
+11:            
+12:            #define _XTAL_FREQ 4000000 //4Mhz clock
+13:            
+14:            int heartBeatCounter = 0;
+15:            char heartRateOutput [3];
+16:            int heartRate = 0;
+17:            int startTimer = 0;
+18:            int startHRV = 0;
+19:            
+20:            void high_isr (void);
+21:            void low_isr (void);
+22:            void heartRateCal();
+23:            
+24:            void DelayFor18TCY (void)
+25:            {
+26:                 Nop();     Nop();      Nop();      Nop();      Nop();      Nop(); 
+002C  0000     NOP
+002E  0000     NOP
+0030  0000     NOP
+0032  0000     NOP
+0034  0000     NOP
+0036  0000     NOP
+27:                 Nop();     Nop();      Nop();      Nop();      Nop();      Nop(); 
+0038  0000     NOP
+003A  0000     NOP
+003C  0000     NOP
+003E  0000     NOP
+0040  0000     NOP
+0042  0000     NOP
+28:                 Nop();     Nop();      Nop();      Nop();
+0044  0000     NOP
+0046  0000     NOP
+0048  0000     NOP
+004A  0000     NOP
+29:            }
+004C  0012     RETURN 0
+30:            
+31:            void DelayXLCD (void)
+32:            {
+33:                Delay1KTCYx(5);
+004E  0E05     MOVLW 0x5
+0050  6EE6     MOVWF POSTINC1, ACCESS
+0052  EC3D     CALL 0xA7A, 0
+0054  F005     NOP
+0056  52E5     MOVF POSTDEC1, F, ACCESS
+34:            }
+0058  0012     RETURN 0
+35:            
+36:            void DelayPORXLCD (void)
+37:            {
+38:                Delay1KTCYx(15);   
+005A  0E0F     MOVLW 0xF
+005C  6EE6     MOVWF POSTINC1, ACCESS
+005E  EC3D     CALL 0xA7A, 0
+0060  F005     NOP
+0062  52E5     MOVF POSTDEC1, F, ACCESS
+39:            }
+0064  0012     RETURN 0
+40:            
+41:            void heartRateCal(){
+42:                heartRate = (60*heartBeatCounter)/10; //Change from 10s to 5s
+0066  0E3C     MOVLW 0x3C
+0068  6E08     MOVWF 0x8, ACCESS
+006A  6A09     CLRF 0x9, ACCESS
+006C  C40B     MOVFF heartBeatCounter, 0xD
+006E  F00D     NOP
+0070  C40C     MOVFF 0x40C, 0xE
+0072  F00E     NOP
+0074  ECFD     CALL 0x5FA, 0
+0076  F002     NOP
+0078  C006     MOVFF 0x6, heartRate
+007A  F40D     NOP
+007C  C007     MOVFF 0x7, 0x40E
+007E  F40E     NOP
+0080  0E0A     MOVLW 0xA
+0082  6E0D     MOVWF 0xD, ACCESS
+0084  6A0E     CLRF 0xE, ACCESS
+0086  C006     MOVFF 0x6, 0x8
+0088  F008     NOP
+008A  C007     MOVFF 0x7, 0x9
+008C  F009     NOP
+008E  ECD7     CALL 0x5AE, 0
+0090  F002     NOP
+0092  C008     MOVFF 0x8, heartRate
+0094  F40D     NOP
+0096  C009     MOVFF 0x9, 0x40E
+0098  F40E     NOP
+43:                itoa(heartRate, heartRateOutput);
+009A  0E13     MOVLW 0x13
+009C  6EE6     MOVWF POSTINC1, ACCESS
+009E  0E04     MOVLW 0x4
+00A0  6EE6     MOVWF POSTINC1, ACCESS
+00A2  C008     MOVFF 0x8, POSTINC1
+00A4  FFE6     NOP
+00A6  C009     MOVFF 0x9, POSTINC1
+00A8  FFE6     NOP
+00AA  ECD6     CALL 0x3AC, 0
+00AC  F001     NOP
+00AE  52E5     MOVF POSTDEC1, F, ACCESS
+00B0  52E5     MOVF POSTDEC1, F, ACCESS
+00B2  52E5     MOVF POSTDEC1, F, ACCESS
+00B4  52E5     MOVF POSTDEC1, F, ACCESS
+44:            
+45:                WriteCmdXLCD(0b00000001);
+00B6  0E01     MOVLW 0x1
+00B8  6EE6     MOVWF POSTINC1, ACCESS
+00BA  EC14     CALL 0x828, 0
+00BC  F004     NOP
+00BE  52E5     MOVF POSTDEC1, F, ACCESS
+46:                while(BusyXLCD());
+00C0  ECDB     CALL 0x9B6, 0
+00C2  F004     NOP
+00C4  0900     IORLW 0x0
+00C6  E1FC     BNZ 0xC0
+47:                SetDDRamAddr(0x00);
+00C8  6AE6     CLRF POSTINC1, ACCESS
+00CA  EC79     CALL 0x6F2, 0
+00CC  F003     NOP
+00CE  52E5     MOVF POSTDEC1, F, ACCESS
+48:                putrsXLCD("P_Rate:");
+00D0  0EE7     MOVLW 0xE7
+00D2  6EE6     MOVWF POSTINC1, ACCESS
+00D4  0E0A     MOVLW 0xA
+00D6  6EE6     MOVWF POSTINC1, ACCESS
+00D8  ECC7     CALL 0x78E, 0
+00DA  F003     NOP
+00DC  52E5     MOVF POSTDEC1, F, ACCESS
+00DE  52E5     MOVF POSTDEC1, F, ACCESS
+49:                while(BusyXLCD());
+00E0  ECDB     CALL 0x9B6, 0
+00E2  F004     NOP
+00E4  0900     IORLW 0x0
+00E6  E1FC     BNZ 0xE0
+50:                SetDDRamAddr(0x08);
+00E8  0E08     MOVLW 0x8
+00EA  6EE6     MOVWF POSTINC1, ACCESS
+00EC  EC79     CALL 0x6F2, 0
+00EE  F003     NOP
+00F0  52E5     MOVF POSTDEC1, F, ACCESS
+51:                while(BusyXLCD());
+00F2  ECDB     CALL 0x9B6, 0
+00F4  F004     NOP
+00F6  0900     IORLW 0x0
+00F8  E1FC     BNZ 0xF2
+52:                putsXLCD(heartRateOutput);
+00FA  0E13     MOVLW 0x13
+00FC  6EE6     MOVWF POSTINC1, ACCESS
+00FE  0E04     MOVLW 0x4
+0100  6EE6     MOVWF POSTINC1, ACCESS
+0102  EC3A     CALL 0x874, 0
+0104  F004     NOP
+0106  52E5     MOVF POSTDEC1, F, ACCESS
+0108  52E5     MOVF POSTDEC1, F, ACCESS
+53:                while(BusyXLCD());
+010A  ECDB     CALL 0x9B6, 0
+010C  F004     NOP
+010E  0900     IORLW 0x0
+0110  E1FC     BNZ 0x10A
+54:                SetDDRamAddr(0x0D);
+0112  0E0D     MOVLW 0xD
+0114  6EE6     MOVWF POSTINC1, ACCESS
+0116  EC79     CALL 0x6F2, 0
+0118  F003     NOP
+011A  52E5     MOVF POSTDEC1, F, ACCESS
+55:                while(BusyXLCD());
+011C  ECDB     CALL 0x9B6, 0
+011E  F004     NOP
+0120  0900     IORLW 0x0
+0122  E1FC     BNZ 0x11C
+56:                putrsXLCD("bpm");
+0124  0EE3     MOVLW 0xE3
+0126  6EE6     MOVWF POSTINC1, ACCESS
+0128  0E0A     MOVLW 0xA
+012A  6EE6     MOVWF POSTINC1, ACCESS
+012C  ECC7     CALL 0x78E, 0
+012E  F003     NOP
+0130  52E5     MOVF POSTDEC1, F, ACCESS
+0132  52E5     MOVF POSTDEC1, F, ACCESS
+57:            
+58:                heartRate = 0;
+0134  0104     MOVLB 0x4
+0136  6B0D     CLRF 0xD, BANKED
+0138  6B0E     CLRF 0xE, BANKED
+59:                heartBeatCounter = 0;
+013A  6B0B     CLRF 0xB, BANKED
+013C  6B0C     CLRF 0xC, BANKED
+60:                memset(heartRateOutput, 0, sizeof(heartRateOutput));    //Clears char[]
+013E  0E03     MOVLW 0x3
+0140  6EE6     MOVWF POSTINC1, ACCESS
+0142  6AE6     CLRF POSTINC1, ACCESS
+0144  6AE6     CLRF POSTINC1, ACCESS
+0146  0E13     MOVLW 0x13
+0148  6EE6     MOVWF POSTINC1, ACCESS
+014A  0E04     MOVLW 0x4
+014C  6EE6     MOVWF POSTINC1, ACCESS
+014E  ECF6     CALL 0x9EC, 0
+0150  F004     NOP
+0152  6E16     MOVWF __tmp_0, ACCESS
+0154  0E05     MOVLW 0x5
+0156  5EE1     SUBWF FSR1, F, ACCESS
+0158  5016     MOVF __tmp_0, W, ACCESS
+61:                WriteTimer0(0x676A);     
+015A  0E6A     MOVLW 0x6A
+015C  6EE6     MOVWF POSTINC1, ACCESS
+015E  0E67     MOVLW 0x67
+0160  6EE6     MOVWF POSTINC1, ACCESS
+0162  ECA3     CALL 0x946, 0
+0164  F004     NOP
+0166  52E5     MOVF POSTDEC1, F, ACCESS
+0168  52E5     MOVF POSTDEC1, F, ACCESS
+62:            }
+016A  0012     RETURN 0
+63:            
+64:            void lcdSetup (void)
+65:            { 
+66:                OpenXLCD(FOUR_BIT & LINES_5X7);
+016C  0E28     MOVLW 0x28
+016E  6EE6     MOVWF POSTINC1, ACCESS
+0170  EC70     CALL 0x4E0, 0
+0172  F002     NOP
+0174  52E5     MOVF POSTDEC1, F, ACCESS
+67:                while(BusyXLCD());
+0176  ECDB     CALL 0x9B6, 0
+0178  F004     NOP
+017A  0900     IORLW 0x0
+017C  E1FC     BNZ 0x176
+68:                SetDDRamAddr(0x00); 
+017E  6AE6     CLRF POSTINC1, ACCESS
+0180  EC79     CALL 0x6F2, 0
+0182  F003     NOP
+0184  52E5     MOVF POSTDEC1, F, ACCESS
+69:                while(BusyXLCD()); 
+0186  ECDB     CALL 0x9B6, 0
+0188  F004     NOP
+018A  0900     IORLW 0x0
+018C  E1FC     BNZ 0x186
+70:                WriteCmdXLCD(BLINK_ON);
+018E  0E0F     MOVLW 0xF
+0190  6EE6     MOVWF POSTINC1, ACCESS
+0192  EC14     CALL 0x828, 0
+0194  F004     NOP
+0196  52E5     MOVF POSTDEC1, F, ACCESS
+71:                while(BusyXLCD());
+0198  ECDB     CALL 0x9B6, 0
+019A  F004     NOP
+019C  0900     IORLW 0x0
+019E  E1FC     BNZ 0x198
+72:                WriteCmdXLCD(SHIFT_DISP_LEFT);
+01A0  0E06     MOVLW 0x6
+01A2  6EE6     MOVWF POSTINC1, ACCESS
+01A4  EC14     CALL 0x828, 0
+01A6  F004     NOP
+01A8  52E5     MOVF POSTDEC1, F, ACCESS
+73:                while(BusyXLCD());
+01AA  ECDB     CALL 0x9B6, 0
+01AC  F004     NOP
+01AE  0900     IORLW 0x0
+01B0  E1FC     BNZ 0x1AA
+74:                putrsXLCD("Press A Test");
+01B2  0ED6     MOVLW 0xD6
+01B4  6EE6     MOVWF POSTINC1, ACCESS
+01B6  0E0A     MOVLW 0xA
+01B8  6EE6     MOVWF POSTINC1, ACCESS
+01BA  ECC7     CALL 0x78E, 0
+01BC  F003     NOP
+01BE  52E5     MOVF POSTDEC1, F, ACCESS
+01C0  52E5     MOVF POSTDEC1, F, ACCESS
+75:            }
+01C2  0012     RETURN 0
+76:            
+77:            void keypadSetup(){
+78:                INTCON3bits.INT1IE = 1;     //enable the INT1 external interrupt 
+01C4  86F0     BSF INTCON3, 3, ACCESS
+79:                INTCON3bits.INT1IP = 0;     //INT1 External Interrupt Priority bit LOW for Low priority
+01C6  9CF0     BCF INTCON3, 6, ACCESS
+80:                INTCON3bits.INT1IF = 0;     //Clear INT1 flag bit
+01C8  90F0     BCF INTCON3, 0, ACCESS
+81:            	INTCON2bits.INTEDG1= 1;     //set interrupt INT1 on rising edge    
+01CA  8AF1     BSF INTCON2, 5, ACCESS
+82:                
+83:                //Input pins for the keypad
+84:                TRISDbits.RD7 = 1;          //A
+01CC  8E95     BSF TRISD, 7, ACCESS
+85:                TRISDbits.RD6 = 1;          //B
+01CE  8C95     BSF TRISD, 6, ACCESS
+86:                TRISDbits.RD5 = 1;          //C
+01D0  8A95     BSF TRISD, 5, ACCESS
+87:                TRISDbits.RD4 = 1;          //D
+01D2  8895     BSF TRISD, 4, ACCESS
+88:            }
+01D4  0012     RETURN 0
+89:            
+90:            void irPulseSetup(){
+91:                INTCON3bits.INT2IE = 1;     //Enable INT2 interrupt
+01D6  88F0     BSF INTCON3, 4, ACCESS
+92:                INTCON3bits.INT2IF = 0;     //Clear INT2 interrupt flag
+01D8  92F0     BCF INTCON3, 1, ACCESS
+93:                INTCON3bits.INT2IP = 0;     //Set INT2 priority to low
+01DA  9EF0     BCF INTCON3, 7, ACCESS
+94:                INTCON2bits.INTEDG2 = 1;    //Set to interrupt on rising edge
+01DC  88F1     BSF INTCON2, 4, ACCESS
+95:                
+96:                TRISBbits.RB2 = 1;          //Configure RB2 as an input for output from IR module
+01DE  8493     BSF TRISB, 2, ACCESS
+97:            }
+01E0  0012     RETURN 0
+98:              
+99:            void timer0Setup(){
+100:               //Timer 0 Setup 
+101:               OpenTimer0(TIMER_INT_ON &
+102:                   T0_16BIT & T0_SOURCE_INT &
+103:                   T0_EDGE_RISE & T0_PS_1_256);
+01E2  0E87     MOVLW 0x87
+01E4  6EE6     MOVWF POSTINC1, ACCESS
+01E6  ECBF     CALL 0x97E, 0
+01E8  F004     NOP
+01EA  52E5     MOVF POSTDEC1, F, ACCESS
+104:               INTCONbits.T0IE = 1;        //Enable TMR0 overflow interrupt bit 
+01EC  8AF2     BSF INTCON, 5, ACCESS
+105:               INTCON2bits.T0IP = 1;       //Set TMR0 Interrupt as high priority
+01EE  84F1     BSF INTCON2, 2, ACCESS
+106:               INTCONbits.T0IF = 0;        //Clearing TMR0 Interrupt Flag
+01F0  94F2     BCF INTCON, 2, ACCESS
+107:           }
+01F2  0012     RETURN 0
+108:           
+109:           void timer1Setup(){
+110:               //Timer 1 Setup for counting time between NN intervals and 
+111:           }
+01F4  0012     RETURN 0
+112:           
+113:           void pulseCounting(){
+114:               heartBeatCounter = heartBeatCounter++;
+01F6  0104     MOVLB 0x4
+01F8  2B0B     INCF 0xB, F, BANKED
+01FA  0E00     MOVLW 0x0
+01FC  230C     ADDWFC 0xC, F, BANKED
+115:           }
+01FE  0012     RETURN 0
+116:           
+117:           /*------------------------HIGH INTERRUPT SERVICE ROUTINE----------------------*/
+118:           #pragma code high_vector = 0x08
+119:           void interrupt_at_high_vector(void)
+120:           {
+121:               _asm GOTO high_isr _endasm
+0008  EF00     GOTO 0x200
+000A  F001     NOP
+122:           }
+000C  0012     RETURN 0
+123:           #pragma code
+124:           
+125:           #pragma interrupt high_isr
+126:           void high_isr (void)
+0200  CFDA     MOVFF FSR2H, PREINC1
+0202  FFE4     NOP
+0204  CFE2     MOVFF FSR1H, FSR2H
+0206  FFDA     NOP
+0208  CFE9     MOVFF FSR0, PREINC1
+020A  FFE4     NOP
+020C  CFEA     MOVFF FSR0H, PREINC1
+020E  FFE4     NOP
+0210  CFF6     MOVFF TBLPTR, PREINC1
+0212  FFE4     NOP
+0214  CFF7     MOVFF TBLPTRH, PREINC1
+0216  FFE4     NOP
+0218  CFF5     MOVFF TABLAT, PREINC1
+021A  FFE4     NOP
+021C  CFF3     MOVFF PROD, PREINC1
+021E  FFE4     NOP
+0220  CFF4     MOVFF PRODH, PREINC1
+0222  FFE4     NOP
+0224  CFFA     MOVFF PCLATH, PREINC1
+0226  FFE4     NOP
+0228  EE00     LFSR 0, 0x0
+022A  F000     NOP
+022C  0E14     MOVLW 0x14
+022E  04E8     DECF WREG, W, ACCESS
+0230  E303     BNC 0x238
+0232  CFEE     MOVFF POSTINC0, PREINC1
+0234  FFE4     NOP
+0236  D7FB     BRA 0x22E
+0238  EE00     LFSR 0, 0x16
+023A  F016     NOP
+023C  0E01     MOVLW 0x1
+023E  04E8     DECF WREG, W, ACCESS
+0240  E303     BNC 0x248
+0242  CFEE     MOVFF POSTINC0, PREINC1
+0244  FFE4     NOP
+0246  D7FB     BRA 0x23E
+0248  52E6     MOVF POSTINC1, F, ACCESS
+127:           {    
+128:               if(INTCONbits.TMR0IF == 1 && startTimer == 1){
+024A  50F2     MOVF INTCON, W, ACCESS
+024C  0B04     ANDLW 0x4
+024E  E008     BZ 0x260
+0250  0104     MOVLB 0x4
+0252  0E01     MOVLW 0x1
+0254  190F     XORWF 0xF, W, BANKED
+0256  E104     BNZ 0x260
+0258  5110     MOVF 0x10, W, BANKED
+025A  E102     BNZ 0x260
+129:                   heartRateCal();
+025C  DF04     RCALL heartRateCal
+130:                   INTCONbits.TMR0IF = 0;
+025E  94F2     BCF INTCON, 2, ACCESS
+131:               }
+132:           }
+0260  52E5     MOVF POSTDEC1, F, ACCESS
+0262  EE00     LFSR 0, 0x16
+0264  F016     NOP
+0266  0E01     MOVLW 0x1
+0268  04E8     DECF WREG, W, ACCESS
+026A  E303     BNC 0x272
+026C  CFE5     MOVFF POSTDEC1, POSTDEC0
+026E  FFED     NOP
+0270  D7FB     BRA 0x268
+0272  EE00     LFSR 0, 0x13
+0274  F013     NOP
+0276  0E14     MOVLW 0x14
+0278  04E8     DECF WREG, W, ACCESS
+027A  E303     BNC 0x282
+027C  CFE5     MOVFF POSTDEC1, POSTDEC0
+027E  FFED     NOP
+0280  D7FB     BRA 0x278
+0282  CFE5     MOVFF POSTDEC1, PCLATH
+0284  FFFA     NOP
+0286  CFE5     MOVFF POSTDEC1, PRODH
+0288  FFF4     NOP
+028A  CFE5     MOVFF POSTDEC1, PROD
+028C  FFF3     NOP
+028E  CFE5     MOVFF POSTDEC1, TABLAT
+0290  FFF5     NOP
+0292  CFE5     MOVFF POSTDEC1, TBLPTRH
+0294  FFF7     NOP
+0296  CFE5     MOVFF POSTDEC1, TBLPTR
+0298  FFF6     NOP
+029A  CFE5     MOVFF POSTDEC1, FSR0H
+029C  FFEA     NOP
+029E  CFE5     MOVFF POSTDEC1, FSR0
+02A0  FFE9     NOP
+02A2  CFE5     MOVFF POSTDEC1, FSR2H
+02A4  FFDA     NOP
+02A6  0011     RETFIE 1
+133:           
+134:           /*------------------------LOW INTERRUPT SERVICE ROUTINE-----------------------*/
+135:           #pragma code low_vector = 0x18
+136:           void interrupt_at_low_vector(void)
+137:           {
+138:               _asm GOTO low_isr _endasm
+0018  EF54     GOTO 0x2A8
+001A  F001     NOP
+139:           }
+001C  0012     RETURN 0
+140:           #pragma code
+141:           
+142:           #pragma interrupt low_isr
+143:           void low_isr (void)
+02A8  CFDA     MOVFF FSR2H, PREINC1
+02AA  FFE4     NOP
+02AC  CFE2     MOVFF FSR1H, FSR2H
+02AE  FFDA     NOP
+02B0  CFE9     MOVFF FSR0, PREINC1
+02B2  FFE4     NOP
+02B4  CFEA     MOVFF FSR0H, PREINC1
+02B6  FFE4     NOP
+02B8  CFF6     MOVFF TBLPTR, PREINC1
+02BA  FFE4     NOP
+02BC  CFF7     MOVFF TBLPTRH, PREINC1
+02BE  FFE4     NOP
+02C0  CFF5     MOVFF TABLAT, PREINC1
+02C2  FFE4     NOP
+02C4  CFF3     MOVFF PROD, PREINC1
+02C6  FFE4     NOP
+02C8  CFF4     MOVFF PRODH, PREINC1
+02CA  FFE4     NOP
+02CC  CFFA     MOVFF PCLATH, PREINC1
+02CE  FFE4     NOP
+02D0  EE00     LFSR 0, 0x0
+02D2  F000     NOP
+02D4  0E14     MOVLW 0x14
+02D6  04E8     DECF WREG, W, ACCESS
+02D8  E303     BNC 0x2E0
+02DA  CFEE     MOVFF POSTINC0, PREINC1
+02DC  FFE4     NOP
+02DE  D7FB     BRA 0x2D6
+02E0  EE00     LFSR 0, 0x16
+02E2  F016     NOP
+02E4  0E01     MOVLW 0x1
+02E6  04E8     DECF WREG, W, ACCESS
+02E8  E303     BNC 0x2F0
+02EA  CFEE     MOVFF POSTINC0, PREINC1
+02EC  FFE4     NOP
+02EE  D7FB     BRA 0x2E6
+02F0  52E6     MOVF POSTINC1, F, ACCESS
+144:           {
+145:               
+146:               if(INTCON3bits.INT2IF){
+02F2  B2F0     BTFSC INTCON3, 1, ACCESS
+147:                   pulseCounting();
+02F4  DF80     RCALL pulseCounting
+148:               }
+149:               if(INTCON3bits.INT1IF){
+02F6  A0F0     BTFSS INTCON3, 0, ACCESS
+02F8  D02C     BRA 0x352
+150:                   if (PORTCbits.RC7 && !PORTCbits.RC6 && !PORTCbits.RC5 && !PORTCbits.RC4)
+02FA  5082     MOVF PORTC, W, ACCESS
+02FC  0B80     ANDLW 0x80
+02FE  E01B     BZ 0x336
+0300  5082     MOVF PORTC, W, ACCESS
+0302  0B40     ANDLW 0x40
+0304  E118     BNZ 0x336
+0306  5082     MOVF PORTC, W, ACCESS
+0308  0B20     ANDLW 0x20
+030A  E115     BNZ 0x336
+030C  5082     MOVF PORTC, W, ACCESS
+030E  0B10     ANDLW 0x10
+0310  E112     BNZ 0x336
+151:                   {
+152:                       startTimer = 1;
+0312  0E01     MOVLW 0x1
+0314  0104     MOVLB 0x4
+0316  6F0F     MOVWF 0xF, BANKED
+0318  6B10     CLRF 0x10, BANKED
+153:                       timer0Setup();
+031A  DF63     RCALL timer0Setup
+154:                       WriteCmdXLCD(0b00000001);
+031C  0E01     MOVLW 0x1
+031E  6EE6     MOVWF POSTINC1, ACCESS
+0320  EC14     CALL 0x828, 0
+0322  F004     NOP
+0324  52E5     MOVF POSTDEC1, F, ACCESS
+155:                       WriteTimer0(0x676A); 
+0326  0E6A     MOVLW 0x6A
+0328  6EE6     MOVWF POSTINC1, ACCESS
+032A  0E67     MOVLW 0x67
+032C  6EE6     MOVWF POSTINC1, ACCESS
+032E  ECA3     CALL 0x946, 0
+0330  F004     NOP
+0332  52E5     MOVF POSTDEC1, F, ACCESS
+0334  52E5     MOVF POSTDEC1, F, ACCESS
+156:                   }
+157:                   if (PORTCbits.RC7 && !PORTCbits.RC6 && PORTCbits.RC5 && PORTCbits.RC4)
+0336  5082     MOVF PORTC, W, ACCESS
+0338  0B80     ANDLW 0x80
+033A  E00B     BZ 0x352
+033C  5082     MOVF PORTC, W, ACCESS
+033E  0B40     ANDLW 0x40
+0340  E108     BNZ 0x352
+0342  5082     MOVF PORTC, W, ACCESS
+0344  0B20     ANDLW 0x20
+0346  E005     BZ 0x352
+0348  5082     MOVF PORTC, W, ACCESS
+034A  0B10     ANDLW 0x10
+034C  E002     BZ 0x352
+158:                   {
+159:                       CloseTimer0();          
+034E  EC07     CALL 0xE, 0
+0350  F000     NOP
+160:                   }
+161:               }
+162:               INTCON3bits.INT2IF = 0;
+0352  92F0     BCF INTCON3, 1, ACCESS
+163:               INTCON3bits.INT1IF = 0;
+0354  90F0     BCF INTCON3, 0, ACCESS
+164:           }
+0356  52E5     MOVF POSTDEC1, F, ACCESS
+0358  EE00     LFSR 0, 0x16
+035A  F016     NOP
+035C  0E01     MOVLW 0x1
+035E  04E8     DECF WREG, W, ACCESS
+0360  E303     BNC 0x368
+0362  CFE5     MOVFF POSTDEC1, POSTDEC0
+0364  FFED     NOP
+0366  D7FB     BRA 0x35E
+0368  EE00     LFSR 0, 0x13
+036A  F013     NOP
+036C  0E14     MOVLW 0x14
+036E  04E8     DECF WREG, W, ACCESS
+0370  E303     BNC 0x378
+0372  CFE5     MOVFF POSTDEC1, POSTDEC0
+0374  FFED     NOP
+0376  D7FB     BRA 0x36E
+0378  CFE5     MOVFF POSTDEC1, PCLATH
+037A  FFFA     NOP
+037C  CFE5     MOVFF POSTDEC1, PRODH
+037E  FFF4     NOP
+0380  CFE5     MOVFF POSTDEC1, PROD
+0382  FFF3     NOP
+0384  CFE5     MOVFF POSTDEC1, TABLAT
+0386  FFF5     NOP
+0388  CFE5     MOVFF POSTDEC1, TBLPTRH
+038A  FFF7     NOP
+038C  CFE5     MOVFF POSTDEC1, TBLPTR
+038E  FFF6     NOP
+0390  CFE5     MOVFF POSTDEC1, FSR0H
+0392  FFEA     NOP
+0394  CFE5     MOVFF POSTDEC1, FSR0
+0396  FFE9     NOP
+0398  CFE5     MOVFF POSTDEC1, FSR2H
+039A  FFDA     NOP
+039C  0011     RETFIE 1
+165:           
+166:           void main()
+167:           {
+168:               //SETUP 
+169:               lcdSetup();
+039E  DEE6     RCALL lcdSetup
+170:               keypadSetup();
+03A0  DF11     RCALL keypadSetup
+171:               irPulseSetup();   
+03A2  DF19     RCALL irPulseSetup
+172:               INTCONbits.GIEH = 1;        //Global Interrupt Enable bit
+03A4  8EF2     BSF INTCON, 7, ACCESS
+173:               RCONbits.IPEN = 1;          //Enable Interrupt Priority 
+03A6  8ED0     BSF RCON, 7, ACCESS
+174:               INTCONbits.PEIE =1;         //Enable Peripheral Interrupt Enable bit
+03A8  8CF2     BSF INTCON, 6, ACCESS
+175:            
+176:               while(1);
+03AA  D7FF     BRA 0x3AA
+177:           }
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/openxlcd.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "delays.h"
+3:             #include "xlcd.h"
+4:             
+5:             /********************************************************************
+6:             *       Function Name:  OpenXLCD                                    *
+7:             *       Return Value:   void                                        *
+8:             *       Parameters:     lcdtype: sets the type of LCD (lines)       *
+9:             *       Description:    This routine configures the LCD. Based on   *
+10:            *                       the Hitachi HD44780 LCD controller. The     *
+11:            *                       routine will configure the I/O pins of the  *
+12:            *                       microcontroller, setup the LCD for 4- or    *
+13:            *                       8-bit mode and clear the display. The user  *
+14:            *                       must provide three delay routines:          *
+15:            *                       DelayFor18TCY() provides a 18 Tcy delay     *
+16:            *                       DelayPORXLCD() provides at least 15ms delay *
+17:            *                       DelayXLCD() provides at least 5ms delay     *
+18:            ********************************************************************/
+19:            void OpenXLCD(unsigned char lcdtype)
+04E0  CFD9     MOVFF FSR2, POSTINC1
+04E2  FFE6     NOP
+04E4  CFE1     MOVFF FSR1, FSR2
+04E6  FFD9     NOP
+20:            {
+21:                    // The data bits must be either a 8-bit port or the upper or
+22:                    // lower 4-bits of a port. These pins are made into inputs
+23:            #ifdef BIT8                             // 8-bit mode, use whole port
+24:                    DATA_PORT = 0;
+25:                    TRIS_DATA_PORT = 0x00;
+26:            #else                                   // 4-bit mode
+27:            #ifdef UPPER                            // Upper 4-bits of the port
+28:                    DATA_PORT &= 0x0f;
+04E8  0E0F     MOVLW 0xF
+04EA  1683     ANDWF PORTD, F, ACCESS
+29:                    TRIS_DATA_PORT &= 0x0F;
+04EC  1695     ANDWF TRISD, F, ACCESS
+30:            #else                                   // Lower 4-bits of the port
+31:                    DATA_PORT &= 0xf0;
+32:                    TRIS_DATA_PORT &= 0xF0;
+33:            #endif
+34:            #endif
+35:                    TRIS_RW = 0;                    // All control signals made outputs
+04EE  9495     BCF TRISD, 2, ACCESS
+36:                    TRIS_RS = 0;
+04F0  9295     BCF TRISD, 1, ACCESS
+37:                    TRIS_E = 0;
+04F2  9095     BCF TRISD, 0, ACCESS
+38:                    RW_PIN = 0;                     // R/W pin made low
+04F4  948C     BCF LATD, 2, ACCESS
+39:                    RS_PIN = 0;                     // Register select pin made low
+04F6  928C     BCF LATD, 1, ACCESS
+40:                    E_PIN = 0;                      // Clock pin made low
+04F8  908C     BCF LATD, 0, ACCESS
+41:            
+42:                    // Delay for 15ms to allow for LCD Power on reset
+43:                    DelayPORXLCD();
+04FA  EC2D     CALL 0x5A, 0
+04FC  F000     NOP
+44:             //-------------------reset procedure through software----------------------       
+45:            		 WriteCmdXLCD(0x30);
+04FE  0E30     MOVLW 0x30
+0500  6EE6     MOVWF POSTINC1, ACCESS
+0502  EC14     CALL 0x828, 0
+0504  F004     NOP
+0506  52E5     MOVF POSTDEC1, F, ACCESS
+46:            			Delay10KTCYx(0x05);
+0508  0E05     MOVLW 0x5
+050A  6EE6     MOVWF POSTINC1, ACCESS
+050C  EC10     CALL 0xA20, 0
+050E  F005     NOP
+0510  52E5     MOVF POSTDEC1, F, ACCESS
+47:            
+48:            		 WriteCmdXLCD(0x30);
+0512  0E30     MOVLW 0x30
+0514  6EE6     MOVWF POSTINC1, ACCESS
+0516  EC14     CALL 0x828, 0
+0518  F004     NOP
+051A  52E5     MOVF POSTDEC1, F, ACCESS
+49:            			Delay10KTCYx(0x01);
+051C  0E01     MOVLW 0x1
+051E  6EE6     MOVWF POSTINC1, ACCESS
+0520  EC10     CALL 0xA20, 0
+0522  F005     NOP
+0524  52E5     MOVF POSTDEC1, F, ACCESS
+50:            
+51:            
+52:            		 WriteCmdXLCD(0x32);
+0526  0E32     MOVLW 0x32
+0528  6EE6     MOVWF POSTINC1, ACCESS
+052A  EC14     CALL 0x828, 0
+052C  F004     NOP
+052E  52E5     MOVF POSTDEC1, F, ACCESS
+53:            		while( BusyXLCD() );
+0530  ECDB     CALL 0x9B6, 0
+0532  F004     NOP
+0534  0900     IORLW 0x0
+0536  E1FC     BNZ 0x530
+54:            //------------------------------------------------------------------------------------------
+55:            
+56:            
+57:                    // Set data interface width, # lines, font
+58:                    while(BusyXLCD());              // Wait if LCD busy
+0538  ECDB     CALL 0x9B6, 0
+053A  F004     NOP
+053C  0900     IORLW 0x0
+053E  E1FC     BNZ 0x538
+59:                    WriteCmdXLCD(lcdtype);          // Function set cmd
+0540  0EFE     MOVLW 0xFE
+0542  CFDB     MOVFF PLUSW2, POSTINC1
+0544  FFE6     NOP
+0546  EC14     CALL 0x828, 0
+0548  F004     NOP
+054A  52E5     MOVF POSTDEC1, F, ACCESS
+60:            
+61:                    // Turn the display on then off
+62:                    while(BusyXLCD());              // Wait if LCD busy
+054C  ECDB     CALL 0x9B6, 0
+054E  F004     NOP
+0550  0900     IORLW 0x0
+0552  E1FC     BNZ 0x54C
+63:                    WriteCmdXLCD(DOFF&CURSOR_OFF&BLINK_OFF);        // Display OFF/Blink OFF
+0554  0E08     MOVLW 0x8
+0556  6EE6     MOVWF POSTINC1, ACCESS
+0558  EC14     CALL 0x828, 0
+055A  F004     NOP
+055C  52E5     MOVF POSTDEC1, F, ACCESS
+64:                    while(BusyXLCD());              // Wait if LCD busy
+055E  ECDB     CALL 0x9B6, 0
+0560  F004     NOP
+0562  0900     IORLW 0x0
+0564  E1FC     BNZ 0x55E
+65:                    WriteCmdXLCD(DON&CURSOR_ON&BLINK_ON);           // Display ON/Blink ON
+0566  0E0F     MOVLW 0xF
+0568  6EE6     MOVWF POSTINC1, ACCESS
+056A  EC14     CALL 0x828, 0
+056C  F004     NOP
+056E  52E5     MOVF POSTDEC1, F, ACCESS
+66:            
+67:                    // Clear display
+68:                    while(BusyXLCD());              // Wait if LCD busy
+0570  ECDB     CALL 0x9B6, 0
+0572  F004     NOP
+0574  0900     IORLW 0x0
+0576  E1FC     BNZ 0x570
+69:                    WriteCmdXLCD(0x01);             // Clear display
+0578  0E01     MOVLW 0x1
+057A  6EE6     MOVWF POSTINC1, ACCESS
+057C  EC14     CALL 0x828, 0
+057E  F004     NOP
+0580  52E5     MOVF POSTDEC1, F, ACCESS
+70:            
+71:                    // Set entry mode inc, no shift
+72:                    while(BusyXLCD());              // Wait if LCD busy
+0582  ECDB     CALL 0x9B6, 0
+0584  F004     NOP
+0586  0900     IORLW 0x0
+0588  E1FC     BNZ 0x582
+73:                    WriteCmdXLCD(SHIFT_CUR_LEFT);   // Entry Mode
+058A  0E04     MOVLW 0x4
+058C  6EE6     MOVWF POSTINC1, ACCESS
+058E  EC14     CALL 0x828, 0
+0590  F004     NOP
+0592  52E5     MOVF POSTDEC1, F, ACCESS
+74:            
+75:                    // Set DD Ram address to 0
+76:                    while(BusyXLCD());              // Wait if LCD busy
+0594  ECDB     CALL 0x9B6, 0
+0596  F004     NOP
+0598  0900     IORLW 0x0
+059A  E1FC     BNZ 0x594
+77:                    SetDDRamAddr(0x80);                // Set Display data ram address to 0
+059C  0E80     MOVLW 0x80
+059E  6EE6     MOVWF POSTINC1, ACCESS
+05A0  EC79     CALL 0x6F2, 0
+05A2  F003     NOP
+05A4  52E5     MOVF POSTDEC1, F, ACCESS
+78:            
+79:                    return;
+80:            }
+05A6  52E5     MOVF POSTDEC1, F, ACCESS
+05A8  CFE7     MOVFF INDF1, FSR2
+05AA  FFD9     NOP
+05AC  0012     RETURN 0
+81:            
+---  C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/busyxlcd.c  --------------------------
+1:             #include <p18cxxx.h>
+2:             #include "xlcd.h"
+3:             
+4:             /********************************************************************
+5:             *       Function Name:  BusyXLCD                                    *
+6:             *       Return Value:   char: busy status of LCD controller         *
+7:             *       Parameters:     void                                        *
+8:             *       Description:    This routine reads the busy status of the   *
+9:             *                       Hitachi HD44780 LCD controller.             *
+10:            ********************************************************************/
+11:            unsigned char BusyXLCD(void)
+12:            {
+13:                    RW_PIN = 1;                     // Set the control bits for read
+09B6  848C     BSF LATD, 2, ACCESS
+14:                    RS_PIN = 0;
+09B8  928C     BCF LATD, 1, ACCESS
+15:                    DelayFor18TCY();
+09BA  EC16     CALL 0x2C, 0
+09BC  F000     NOP
+16:                    E_PIN = 1;                      // Clock in the command
+09BE  808C     BSF LATD, 0, ACCESS
+17:                    DelayFor18TCY();
+09C0  EC16     CALL 0x2C, 0
+09C2  F000     NOP
+18:            #ifdef BIT8                             // 8-bit interface
+19:                    if(DATA_PORT&0x80)                      // Read bit 7 (busy bit)
+20:                    {                               // If high
+21:                            E_PIN = 0;              // Reset clock line
+22:                            RW_PIN = 0;             // Reset control line
+23:                            return 1;               // Return TRUE
+24:                    }
+25:                    else                            // Bit 7 low
+26:                    {
+27:                            E_PIN = 0;              // Reset clock line
+28:                            RW_PIN = 0;             // Reset control line
+29:                            return 0;               // Return FALSE
+30:                    }
+31:            #else                                   // 4-bit interface
+32:            #ifdef UPPER                            // Upper nibble interface
+33:                    if(DATA_PORT&0x80)
+09C4  AE83     BTFSS PORTD, 7, ACCESS
+09C6  D009     BRA 0x9DA
+34:            #else                                   // Lower nibble interface
+35:                    if(DATA_PORT&0x08)
+36:            #endif
+37:                    {
+38:                            E_PIN = 0;              // Reset clock line
+09C8  908C     BCF LATD, 0, ACCESS
+39:                            DelayFor18TCY();
+09CA  EC16     CALL 0x2C, 0
+09CC  F000     NOP
+40:                            E_PIN = 1;              // Clock out other nibble
+09CE  808C     BSF LATD, 0, ACCESS
+41:                            DelayFor18TCY();
+09D0  EC16     CALL 0x2C, 0
+09D2  F000     NOP
+42:                            E_PIN = 0;
+09D4  908C     BCF LATD, 0, ACCESS
+43:                            RW_PIN = 0;             // Reset control line
+09D6  948C     BCF LATD, 2, ACCESS
+44:                            return 1;               // Return TRUE
+09D8  0C01     RETLW 0x1
+45:                    }
+46:                    else                            // Busy bit is low
+47:                    {
+48:                            E_PIN = 0;              // Reset clock line
+09DA  908C     BCF LATD, 0, ACCESS
+49:                            DelayFor18TCY();
+09DC  EC16     CALL 0x2C, 0
+09DE  F000     NOP
+50:                            E_PIN = 1;              // Clock out other nibble
+09E0  808C     BSF LATD, 0, ACCESS
+51:                            DelayFor18TCY();
+09E2  EC16     CALL 0x2C, 0
+09E4  F000     NOP
+52:                            E_PIN = 0;
+09E6  908C     BCF LATD, 0, ACCESS
+53:                            RW_PIN = 0;             // Reset control line
+09E8  948C     BCF LATD, 2, ACCESS
+54:                            return 0;               // Return FALSE
+55:                    }
+56:            #endif
+57:            }
+09EA  0C00     RETLW 0x0
+58:            

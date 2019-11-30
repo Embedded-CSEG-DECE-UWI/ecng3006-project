@@ -66,7 +66,7 @@
         </archiverTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
-          <parseOnProdLoad>false</parseOnProdLoad>
+          <parseOnProdLoad>true</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
@@ -167,7 +167,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/hrv_capture_test.c"
-            ex="false"
+            ex="true"
             overriding="false">
         <C18>
         </C18>
@@ -179,7 +179,7 @@
         </C18LanguageToolchain>
       </item>
       <item path="C:/MPLabXProjects/Group_Project/ecng3006-project/Heart_Rate.X/pulse_counting.c"
-            ex="true"
+            ex="false"
             overriding="false">
         <C18>
         </C18>
@@ -198,7 +198,6 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

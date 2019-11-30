@@ -7,7 +7,7 @@
 
 void bpmAlarm(void){
     
- int count = 0;
+int count = 0;
 TRISCbits.RC2 = 0;//Configure RC2 as an output
 SetDCPWM1(60);
 OpenTimer2( TIMER_INT_OFF & T2_PS_1_16 & T2_POST_1_1);//Configure and enable timer2

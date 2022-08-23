@@ -6,5 +6,5 @@ This system is build on the PIC18f452 microcontroller using the FreeRTOS as the 
 -C18 Compiler
 
 # Acknowledgements
-This code could not be completed without referencing many different sources, the most impact listed below.
+This code could not be completed without referencing many different sources, the most impactful are listed below.
 We would like to thank everyone involved in the development of the system.
